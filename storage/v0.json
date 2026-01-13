@@ -1,0 +1,959 @@
+[
+    {
+        "name": "v0",
+        "url": "https://v0.app/changelog"
+    },
+    {
+        "name": "feature",
+        "features": [
+            {
+                "title": "Bug fixes and improvements for Jan 8th",
+                "description": "• Improved the speed and token use of the Web Search tool\n• Improved how large inputs are stored in the agent's filesystem for better recall\n• Attachments added via the ?files parameter are now cloned instead of used directly (requested by ChatPRD)\n• Fixed a layout shift when hovering over the upvote/downvote buttons in Safari\n• Improved the error message when an Enterprise user adds an integration they don't have access to\n• Improved the TailwindCSS v4 upgrade flow\n• Fixed a bug causing some Restore actions to fail with a vague error\n• Added an inline chat in the new VS Code editor",
+                "time": "2026-01-08",
+                "tags": [
+                    {
+                        "name": "Bug Fixes",
+                        "subtags": []
+                    },
+                    {
+                        "name": "Performance",
+                        "subtags": [
+                            {
+                                "name": "Speed"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Agent",
+                        "subtags": []
+                    },
+                    {
+                        "name": "Integration",
+                        "subtags": []
+                    },
+                    {
+                        "name": "Framework",
+                        "subtags": [
+                            {
+                                "name": "TailwindCSS"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Editor",
+                        "subtags": [
+                            {
+                                "name": "Code Editor"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Team & Enterprise",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Build with Glean via MCP",
+                "description": "You can now connect v0 to your Glean workspace and build directly from your company's knowledge.\nWith Glean connected, you can ask v0 to:\nShip with full context using Glean and v0.\n• Generate auth flows from your internal docs\n• Design UI from PRDs stored in Glean\n• Draft website copy from your latest product updates",
+                "time": "2025-12-22",
+                "tags": [
+                    {
+                        "name": "Integration",
+                        "subtags": [
+                            {
+                                "name": "Glean"
+                            },
+                            {
+                                "name": "MCP"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Keyboard shortcuts in Design Mode",
+                "description": "You can now use keyboard shortcuts in v0's design mode.\nNavigate elements with arrow keys, enter to edit, and ⌘+click to quick select.",
+                "time": "2025-12-18",
+                "tags": [
+                    {
+                        "name": "Editor",
+                        "subtags": [
+                            {
+                                "name": "Design View"
+                            },
+                            {
+                                "name": "Keyboard Shortcuts"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Agent",
+                        "subtags": [
+                            {
+                                "name": "Design Mode"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "v0 can now ask clarifying questions",
+                "description": "v0 can now ask clarifying questions before it starts generating to better understand your requirements and create more tailored results.",
+                "time": "2025-12-17",
+                "tags": [
+                    {
+                        "name": "Agent",
+                        "subtags": [
+                            {
+                                "name": "Clarifying Questions"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Linear MCP Integration",
+                "description": "You can now connect v0 to your Linear workspace and build straight from your backlog.\nWith the Linear integration, v0 can:\n• Search across your tickets\n• Pull in info from your projects, teams, and users\n• Create and update issues",
+                "time": "2025-12-16",
+                "tags": [
+                    {
+                        "name": "Integration",
+                        "subtags": [
+                            {
+                                "name": "Linear"
+                            },
+                            {
+                                "name": "MCP"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Build with Notion via MCP",
+                "description": "You can now securely connect v0 to your Notion workspace to build using your team's existing context, docs, and databases.\nUse Notion x v0 to ship:\nIf it lives in Notion, v0 can build with it.\nRead more about how the v0 team replaced a multi-tool workflow with a single prompt using v0 x Notion.\n• Dashboards and internal tools built from databases\n• Prototypes from PRDs\n• Presentation slides from outline docs",
+                "time": "2025-12-16",
+                "tags": [
+                    {
+                        "name": "Integration",
+                        "subtags": [
+                            {
+                                "name": "Notion"
+                            },
+                            {
+                                "name": "MCP"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Three new models to choose from",
+                "description": "You can now select from three different models in v0:\n• v0 Mini: Fastest and most cost-efficient\n• v0 Pro: Superior performance for most tasks\n• v0 Max: Maximum intelligence for complex work and best designs",
+                "time": "2025-12-12",
+                "tags": [
+                    {
+                        "name": "AI Model",
+                        "subtags": [
+                            {
+                                "name": "v0 Mini"
+                            },
+                            {
+                                "name": "v0 Pro"
+                            },
+                            {
+                                "name": "v0 Max"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Additional React Server Components vulnerabilities patched",
+                "description": "Following the React2Shell disclosure, two additional vulnerabilities in React Server Components were discovered and patched:\nAll v0 projects have been automatically updated to protect against these new vulnerabilities. We strongly recommend enabling Standard Protection for all deployments and auditing shareable links.\n• CVE-2025-55184: Denial of Service (DoS) vulnerability\n• CVE-2025-55183: Source code disclosure vulnerability",
+                "time": "2025-12-12",
+                "tags": [
+                    {
+                        "name": "Security",
+                        "subtags": [
+                            {
+                                "name": "Vulnerability Patch"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Framework",
+                        "subtags": [
+                            {
+                                "name": "React"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Search across all your scopes",
+                "description": "The command palette now searches across all your accessible workspaces, not just your current one. Results are grouped by workspace with avatars, and your current workspace is shown first. Clicking a result from a different workspace automatically switches to that scope before navigating.",
+                "time": "2025-12-11",
+                "tags": [
+                    {
+                        "name": "Team & Enterprise",
+                        "subtags": [
+                            {
+                                "name": "Workspace"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": [
+                            {
+                                "name": "Navigation"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Bug fixes and improvements for Dec 10th",
+                "description": "• Fixed default favicons in deployments\n• Added previews for svg and md files to the new editor\n• Added default design systems for Teams\n• Added automatic oauth refresh for MCP servers\n• Added day/week/month usage stats to the Usage page\n• Fixed a rare bug with not showing the right import path when there’s a runtime error in the preview\n• Fixed the Fix with v0 errors from overflowing when the error was long",
+                "time": "2025-12-10",
+                "tags": [
+                    {
+                        "name": "Bug Fixes",
+                        "subtags": []
+                    },
+                    {
+                        "name": "Deployment",
+                        "subtags": [
+                            {
+                                "name": "Preview"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Editor",
+                        "subtags": [
+                            {
+                                "name": "SVG Preview"
+                            },
+                            {
+                                "name": "Markdown Preview"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Team & Enterprise",
+                        "subtags": []
+                    },
+                    {
+                        "name": "Integration",
+                        "subtags": [
+                            {
+                                "name": "MCP"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Analytics",
+                        "subtags": [
+                            {
+                                "name": "Usage Stats"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "v0's editor just got a major upgrade",
+                "description": "v0's editor just got a major upgrade. You can now:\n• Edit code in a more stable editor\n• Create files and folders\n• Search & replace globally across files\n• View v0's changes in a new diff view\n• Edit files side-by-side with split view",
+                "time": "2025-12-10",
+                "tags": [
+                    {
+                        "name": "Editor",
+                        "subtags": [
+                            {
+                                "name": "Code Editor"
+                            },
+                            {
+                                "name": "Diff View"
+                            },
+                            {
+                                "name": "Split View"
+                            },
+                            {
+                                "name": "Search Replace"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Bug fixes and improvements for Dec 9th",
+                "description": "• Added a /changelog page (that you're looking at now!)\n• Updated Linear's logo\n• Improved MCP UI styles, minor improvements\n• Optimized preview loading performance when using Design Mode\n• Made v0 better at writing code for Postgres integrations\n• Fixed a bug where pending edits were lost when switching between the Code and Preview panels\n• Fixed a bug with showing an AI Gateway connection dialog when it was already connected\n• Added an autofixer when v0 writes a middleware.ts file with Next.js 16\n• Fixed a bug where certain npm modules failed to load in the preview",
+                "time": "2025-12-09",
+                "tags": [
+                    {
+                        "name": "Bug Fixes",
+                        "subtags": []
+                    },
+                    {
+                        "name": "Integration",
+                        "subtags": [
+                            {
+                                "name": "Linear"
+                            },
+                            {
+                                "name": "MCP"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Performance",
+                        "subtags": [
+                            {
+                                "name": "Loading"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Agent",
+                        "subtags": [
+                            {
+                                "name": "Design Mode"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Editor",
+                        "subtags": [
+                            {
+                                "name": "Code Editor"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Framework",
+                        "subtags": [
+                            {
+                                "name": "Next.js"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Database",
+                        "subtags": []
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "React2Shell Vulnerability Patch",
+                "description": "v0 has now automatically updated every React2Shell-vulnerable project deployed with v0, covering more than 800,000 affected deployments.\nGoing forward, the v0 agent will detect and recommend a free fix for any projects using vulnerable React or Next.js versions.",
+                "time": "2025-12-09",
+                "tags": [
+                    {
+                        "name": "Security",
+                        "subtags": [
+                            {
+                                "name": "Vulnerability Patch"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Framework",
+                        "subtags": [
+                            {
+                                "name": "React"
+                            },
+                            {
+                                "name": "Next.js"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Buy Custom Domains",
+                "description": "You can now easily purchase and add custom domains to your v0 projects directly from the in-chat sidebar.",
+                "time": "2025-12-04",
+                "tags": [
+                    {
+                        "name": "Deployment",
+                        "subtags": [
+                            {
+                                "name": "Custom Domain"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Billing & Credits",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Bring your own MCPs",
+                "description": "You can now bring your own MCPs to v0.\nStart with one of our presets or configure your own remote MCP in just a few clicks.",
+                "time": "2025-12-03",
+                "tags": [
+                    {
+                        "name": "Integration",
+                        "subtags": [
+                            {
+                                "name": "MCP"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Project Settings in the Sidebar",
+                "description": "You can now access project settings in v0 using the in-chat sidebar.\nView connected Vercel Projects, GitHub Repositories, or domains, and easily access project analytics.",
+                "time": "2025-12-02",
+                "tags": [
+                    {
+                        "name": "UI/UX",
+                        "subtags": [
+                            {
+                                "name": "Sidebar"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Integration",
+                        "subtags": [
+                            {
+                                "name": "Vercel"
+                            },
+                            {
+                                "name": "GitHub"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Deployment",
+                        "subtags": [
+                            {
+                                "name": "Custom Domain"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Analytics",
+                        "subtags": [
+                            {
+                                "name": "Project Analytics"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "v0 for Students",
+                "description": "v0 for Students is now live at 5 more schools:\n• San Francisco State University\n• Arizona State University\n• Georgia Institute of Technology\n• University of Waterloo\n• New York University",
+                "time": "2025-11-26",
+                "tags": [
+                    {
+                        "name": "Billing & Credits",
+                        "subtags": [
+                            {
+                                "name": "Subscription"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Team & Enterprise",
+                        "subtags": [
+                            {
+                                "name": "Enterprise Plan"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Snowflake Integration",
+                "description": "Build apps in v0 with your Snowflake data.",
+                "time": "2025-11-25",
+                "tags": [
+                    {
+                        "name": "Integration",
+                        "subtags": [
+                            {
+                                "name": "Snowflake"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Claude Opus 4.5 Preview",
+                "description": "You can now use v0 with Claude Opus 4.5 at no extra cost.",
+                "time": "2025-11-24",
+                "tags": [
+                    {
+                        "name": "AI Model",
+                        "subtags": [
+                            {
+                                "name": "Claude"
+                            },
+                            {
+                                "name": "Opus 4.5"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Nano Banana Pro",
+                "description": "Nano Banana Pro is now available in v0 via Vercel's AI Gateway.",
+                "time": "2025-11-20",
+                "tags": [
+                    {
+                        "name": "AI Model",
+                        "subtags": [
+                            {
+                                "name": "Nano Banana"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Integration",
+                        "subtags": [
+                            {
+                                "name": "Vercel"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Gemini 3 Pro Preview",
+                "description": "All users can now try v0 with Gemini 3 Pro Preview for one week.",
+                "time": "2025-11-18",
+                "tags": [
+                    {
+                        "name": "AI Model",
+                        "subtags": [
+                            {
+                                "name": "Gemini"
+                            },
+                            {
+                                "name": "Gemini 3"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Sign in with Apple",
+                "description": "The v0 iOS app now supports Sign in with Apple.",
+                "time": "2025-11-18",
+                "tags": [
+                    {
+                        "name": "Authentication",
+                        "subtags": [
+                            {
+                                "name": "Apple Sign In"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Mobile",
+                        "subtags": [
+                            {
+                                "name": "iOS App"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Enterprise",
+                "description": "We launched a new Enterprise page.",
+                "time": "2025-11-17",
+                "tags": [
+                    {
+                        "name": "Team & Enterprise",
+                        "subtags": [
+                            {
+                                "name": "Enterprise Plan"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "MCP Presets",
+                "description": "v0 now supports MCPs for Stripe, Supabase, Neon, and Upstash.\nQuery databases, seed data, and ask about revenue, all with natural language and zero setup.",
+                "time": "2025-11-17",
+                "tags": [
+                    {
+                        "name": "Integration",
+                        "subtags": [
+                            {
+                                "name": "MCP"
+                            },
+                            {
+                                "name": "Stripe"
+                            },
+                            {
+                                "name": "Supabase"
+                            },
+                            {
+                                "name": "Neon"
+                            },
+                            {
+                                "name": "Upstash"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Stripe Integration",
+                "description": "Stripe is now a native integration in v0.",
+                "time": "2025-11-10",
+                "tags": [
+                    {
+                        "name": "Integration",
+                        "subtags": [
+                            {
+                                "name": "Stripe"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Daily Credits",
+                "description": "All paid users now get $2 in free credits every day.",
+                "time": "2025-11-05",
+                "tags": [
+                    {
+                        "name": "Billing & Credits",
+                        "subtags": [
+                            {
+                                "name": "Credits"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Business Plan",
+                "description": "We launched a new plan: Business.\n$100/user/month, sits between Team and Enterprise. Includes training opt-out by default, shared credit purchasing, centralized billing, and team collaboration.",
+                "time": "2025-10-31",
+                "tags": [
+                    {
+                        "name": "Team & Enterprise",
+                        "subtags": [
+                            {
+                                "name": "Business Plan"
+                            },
+                            {
+                                "name": "Team Management"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Billing & Credits",
+                        "subtags": [
+                            {
+                                "name": "Pricing"
+                            },
+                            {
+                                "name": "Credits"
+                            },
+                            {
+                                "name": "Subscription"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Environment-Specific Environment Variables",
+                "description": "You can now set environment variables for specific environments in v0—Prod, Preview, Dev, or all.",
+                "time": "2025-10-31",
+                "tags": [
+                    {
+                        "name": "Deployment",
+                        "subtags": [
+                            {
+                                "name": "Environment Variables"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Integration Wizard",
+                "description": "We launched a new Integration Wizard for connecting integrations and running scripts. Easily connect services like Supabase directly from the chat.",
+                "time": "2025-10-31",
+                "tags": [
+                    {
+                        "name": "Integration",
+                        "subtags": [
+                            {
+                                "name": "Supabase"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Work Details",
+                "description": "v0 now shows work details after each generation: time worked, files modified, lines of code changed, and credits used.",
+                "time": "2025-10-31",
+                "tags": [
+                    {
+                        "name": "Analytics",
+                        "subtags": [
+                            {
+                                "name": "Usage Stats"
+                            },
+                            {
+                                "name": "Token Usage"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Redesigned Chat Sidebar",
+                "description": "We redesigned the chat sidebar with better organization, faster navigation, and a cleaner interface.\nYou can now manage your Integrations, Rules, Environment Variables, and Design Systems all from your v0 sidebar.",
+                "time": "2025-10-30",
+                "tags": [
+                    {
+                        "name": "UI/UX",
+                        "subtags": [
+                            {
+                                "name": "Sidebar"
+                            },
+                            {
+                                "name": "Navigation"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Image Editing with Nano Banana",
+                "description": "You can now edit images using Nano Banana in v0. Turn on design mode, select an image, and prompt your changes.",
+                "time": "2025-10-30",
+                "tags": [
+                    {
+                        "name": "Image Generation",
+                        "subtags": [
+                            {
+                                "name": "AI Image Edit"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "AI Model",
+                        "subtags": [
+                            {
+                                "name": "Nano Banana"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Agent",
+                        "subtags": [
+                            {
+                                "name": "Design Mode"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "12x Faster Chat Loading",
+                "description": "Large chats on v0 now load up to 12x faster.",
+                "time": "2025-10-29",
+                "tags": [
+                    {
+                        "name": "Performance",
+                        "subtags": [
+                            {
+                                "name": "Loading"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "v0 IRLs",
+                "description": "Introducing v0 IRLs. You can now easily apply to host your own v0 meetup or event. Share your event details and apply to receive a v0 IRLs toolkit including credits, swag, and more.",
+                "time": "2025-10-28",
+                "tags": [
+                    {
+                        "name": "Billing & Credits",
+                        "subtags": [
+                            {
+                                "name": "Credits"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Referrals Program",
+                "description": "Referrals are now live in v0. Invite a new user to subscribe to v0 with your link, and you each get $20 in v0 credits.",
+                "time": "2025-10-27",
+                "tags": [
+                    {
+                        "name": "Billing & Credits",
+                        "subtags": [
+                            {
+                                "name": "Referral"
+                            },
+                            {
+                                "name": "Credits"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "v0 for Students",
+                "description": "v0 for students is now live for our first 5 schools: Stanford, Harvard, MIT, and more.",
+                "time": "2025-10-24",
+                "tags": [
+                    {
+                        "name": "Billing & Credits",
+                        "subtags": [
+                            {
+                                "name": "Pricing"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Team & Enterprise",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "v0 iOS App",
+                "description": "The v0 iOS app is now live on the App Store. Build apps on the go with the full power of v0 in your pocket.",
+                "time": "2025-10-23",
+                "tags": [
+                    {
+                        "name": "Mobile",
+                        "subtags": [
+                            {
+                                "name": "iOS App"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Next.js 16 Support",
+                "description": "v0 now uses Next.js 16 for all new chats.",
+                "time": "2025-10-22",
+                "tags": [
+                    {
+                        "name": "Framework",
+                        "subtags": [
+                            {
+                                "name": "Next.js"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Markdown and SVG Preview",
+                "description": "You can now preview markdown and SVGs inside v0's editor.",
+                "time": "2025-10-21",
+                "tags": [
+                    {
+                        "name": "Editor",
+                        "subtags": [
+                            {
+                                "name": "Markdown Preview"
+                            },
+                            {
+                                "name": "SVG Preview"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Custom Instructions",
+                "description": "Custom Instructions are now available in v0. Use preset instructions like \"Be Concise\" and \"Plan Mode\", or create your own and apply them on-demand.",
+                "time": "2025-10-06",
+                "tags": [
+                    {
+                        "name": "Agent",
+                        "subtags": [
+                            {
+                                "name": "Plan Mode"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Day 1 Support for New shadcn Components",
+                "description": "v0 is now the first place you can access the new components by shadcn.",
+                "time": "2025-10-03",
+                "tags": [
+                    {
+                        "name": "Framework",
+                        "subtags": [
+                            {
+                                "name": "shadcn"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Fix with v0 is Now Free",
+                "description": "It no longer costs credits to use \"Fix with v0\" when v0 makes an error.",
+                "time": "2025-10-01",
+                "tags": [
+                    {
+                        "name": "Billing & Credits",
+                        "subtags": [
+                            {
+                                "name": "Credits"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Bug Fixes",
+                        "subtags": []
+                    }
+                ]
+            }
+        ]
+    }
+]

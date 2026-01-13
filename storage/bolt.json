@@ -1,0 +1,1091 @@
+[
+    {
+        "name": "bolt",
+        "url": "https://support.bolt.new/release-notes"
+    },
+    {
+        "name": "feature",
+        "features": [
+            {
+                "title": "Claude Agent",
+                "description": "Claude Agent is now the default large language model (LLM) powering Bolt. While the v1 Agent (legacy) remains available, Claude Agent delivers major upgrades in performance and fewer errors, making it the better choice for most users.\nLearn more about Agents, including Claude Agent.",
+                "time": "New features - Bolt V2",
+                "tags": [
+                    {
+                        "name": "Agent",
+                        "subtags": [
+                            {
+                                "name": "Agent Mode"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "AI Model",
+                        "subtags": [
+                            {
+                                "name": "Claude"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Bolt Database",
+                "description": "Bolt Database joins Bolt Hosting and Domains to make app development even simpler. Every project now includes unlimited built-in databases that are created automatically when needed. Supabase integration is still supported for added flexibility.\nBolt Database includes features such as authentication, server (edge) functions, secrets, user management, and file storage.\nLearn more about Bolt Database.",
+                "time": "New features - Bolt V2",
+                "tags": [
+                    {
+                        "name": "Database",
+                        "subtags": [
+                            {
+                                "name": "Database Editor"
+                            },
+                            {
+                                "name": "Storage"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Authentication",
+                        "subtags": []
+                    },
+                    {
+                        "name": "Deployment",
+                        "subtags": [
+                            {
+                                "name": "Hosting"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Integration",
+                        "subtags": [
+                            {
+                                "name": "Supabase"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Analytics",
+                "description": "You can now access web analytics for your published project right from the Project Settings menu. View details like unique visitors, page views, top pages, bandwidth usage, and more. Learn more about Analytics.",
+                "time": "New features - Bolt V2",
+                "tags": [
+                    {
+                        "name": "Analytics",
+                        "subtags": [
+                            {
+                                "name": "Usage Stats"
+                            },
+                            {
+                                "name": "Project Analytics"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "You’ll now hear a notification chime when Bolt completes a task",
+                "description": "You’ll now hear a notification chime when Bolt completes a task.",
+                "time": "New features - Bolt V2",
+                "tags": [
+                    {
+                        "name": "UI/UX",
+                        "subtags": [
+                            {
+                                "name": "Notifications"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "We’ve implemented a new billing upgrade system that offers pro-rated upgrades with immediate token a...",
+                "description": "We’ve implemented a new billing upgrade system that offers pro-rated upgrades with immediate token access. Learn more about upgrading Bolt.",
+                "time": "New features - Bolt V2",
+                "tags": [
+                    {
+                        "name": "Billing & Credits",
+                        "subtags": [
+                            {
+                                "name": "Subscription"
+                            },
+                            {
+                                "name": "Credits"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "You can now view your database’s row-level security (RLS) policies at a glance",
+                "description": "You can now view your database’s row-level security (RLS) policies at a glance.",
+                "time": "New features - Bolt V2",
+                "tags": [
+                    {
+                        "name": "Database",
+                        "subtags": [
+                            {
+                                "name": "Database Editor"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Security",
+                        "subtags": [
+                            {
+                                "name": "Access Control"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Project sharing",
+                "description": "You can now share your working prototypes privately with others without exposing your project files. Use the new Share option in the top-right corner of your screen to create a private link that invited viewers can open in their browser.\nPeople with the link can explore your hosted app, provide feedback, or test features before public launch. Sharing is available on paid plans, and on Teams plans you can also whitelist an email domain for easier internal access.\nLearn more about Sharing.",
+                "time": "2026-01-02",
+                "tags": [
+                    {
+                        "name": "Team & Enterprise",
+                        "subtags": [
+                            {
+                                "name": "Project Sharing"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Deployment",
+                        "subtags": [
+                            {
+                                "name": "Hosting"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "AI image editing with Nano Banana",
+                "description": "You can now edit and refine images directly inside the Bolt chatbox. When you select an existing image in your project, you can ask Bolt to make specific edits using the Nano Banana model. Bolt updates only the part of the image you describe while keeping the rest of the design intact.\nThis feature is only available on paid plans. To learn more, see AI image editing.",
+                "time": "2026-01-02",
+                "tags": [
+                    {
+                        "name": "Image Generation",
+                        "subtags": [
+                            {
+                                "name": "AI Image Edit"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "AI Model",
+                        "subtags": [
+                            {
+                                "name": "Nano Banana"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Copy and export database data",
+                "description": "You can now easily copy or export row data from your databases using the Tables section of Database Settings.\nSelect the rows you want, then choose Copy or Export to get the data in the format you want.",
+                "time": "2025-12-07",
+                "tags": [
+                    {
+                        "name": "Database",
+                        "subtags": [
+                            {
+                                "name": "Database Editor"
+                            },
+                            {
+                                "name": "Data Export"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Subdomains as primary domains",
+                "description": "You can now use a subdomain as the primary domain for your published Bolt projects. You may add it as an alias first and then set it as primary, or connect it as the primary domain right from the start.",
+                "time": "2025-12-07",
+                "tags": [
+                    {
+                        "name": "Deployment",
+                        "subtags": [
+                            {
+                                "name": "Custom Domain"
+                            },
+                            {
+                                "name": "DNS"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Manual SSL certificate requests",
+                "description": "If your published project is having trouble generating an SSL certificate, you can now request one manually. This helps you resolve certificate issues without waiting for the automatic process to retry.",
+                "time": "2025-12-07",
+                "tags": [
+                    {
+                        "name": "Deployment",
+                        "subtags": [
+                            {
+                                "name": "SSL"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Restrict integrations as a Teams admin",
+                "description": "Teams admins can now manage which third-party integrations team members can use. This includes services like Netlify, Supabase, and GitHub. You can allow or block access directly in your admin settings.",
+                "time": "2025-12-07",
+                "tags": [
+                    {
+                        "name": "Team & Enterprise",
+                        "subtags": [
+                            {
+                                "name": "Permissions"
+                            },
+                            {
+                                "name": "Team Management"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Integration",
+                        "subtags": [
+                            {
+                                "name": "Netlify"
+                            },
+                            {
+                                "name": "Supabase"
+                            },
+                            {
+                                "name": "GitHub"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "You can now reset email templates to their default versions, and the overall interface has been upda...",
+                "description": "You can now reset email templates to their default versions, and the overall interface has been updated for easier use.",
+                "time": "2025-12-07",
+                "tags": [
+                    {
+                        "name": "UI/UX",
+                        "subtags": []
+                    },
+                    {
+                        "name": "Authentication",
+                        "subtags": [
+                            {
+                                "name": "Email Auth"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Connecting domains is now more straightforward, with clearer errors and warnings when something need...",
+                "description": "Connecting domains is now more straightforward, with clearer errors and warnings when something needs attention.",
+                "time": "2025-12-07",
+                "tags": [
+                    {
+                        "name": "Deployment",
+                        "subtags": [
+                            {
+                                "name": "Custom Domain"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Manually add or invite users to your project",
+                "description": "You can add users to your project by creating a new row in the database or by sending an invitation email. For details, see how to add new users to your project.",
+                "time": "2025-11-01",
+                "tags": [
+                    {
+                        "name": "Team & Enterprise",
+                        "subtags": [
+                            {
+                                "name": "Team Management"
+                            },
+                            {
+                                "name": "Invite"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Authentication",
+                        "subtags": [
+                            {
+                                "name": "Email Auth"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Database",
+                        "subtags": [
+                            {
+                                "name": "Database Editor"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Editable email templates",
+                "description": "Bolt now supports editing the email templates that are sent to your users. This includes sign up confirmation, user invitations, email address changes, and password reset messages.\nSee the Database docs to learn how to edit your templates.",
+                "time": "2025-11-01",
+                "tags": [
+                    {
+                        "name": "Authentication",
+                        "subtags": [
+                            {
+                                "name": "Email Auth"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Open recent projects when working in a project",
+                "description": "Before, projects could only be opened from the Bolt homepage. You can now click the title bar inside any project to view your recent projects.",
+                "time": "2025-11-01",
+                "tags": [
+                    {
+                        "name": "UI/UX",
+                        "subtags": [
+                            {
+                                "name": "Navigation"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Automatic security reviews when publishing",
+                "description": "Bolt automatically checks for security vulnerabilities when you publish your site. Learn more about automatic security reviews when publishing your project.",
+                "time": "2025-10-18",
+                "tags": [
+                    {
+                        "name": "Security",
+                        "subtags": [
+                            {
+                                "name": "Security Scan"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Deployment",
+                        "subtags": [
+                            {
+                                "name": "Publishing"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Google (SSO) for user authentication",
+                "description": "Bolt now supports Google SSO (Single Sign-On) as an authentication option. This means users can sign in to your website using their Google account instead of creating a separate email and password.\nLearn more about using Google SSO for authentication.",
+                "time": "2025-10-18",
+                "tags": [
+                    {
+                        "name": "Authentication",
+                        "subtags": [
+                            {
+                                "name": "SSO"
+                            },
+                            {
+                                "name": "Google Sign In"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Customize your Bolt hosting domain",
+                "description": "You can now change the default bolt.host domain that’s created when you publish your app with Bolt hosting.\nLearn how to change your Bolt hosting URL.",
+                "time": "2025-10-18",
+                "tags": [
+                    {
+                        "name": "Deployment",
+                        "subtags": [
+                            {
+                                "name": "Custom Domain"
+                            },
+                            {
+                                "name": "Hosting"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Manually edit Bolt database rows",
+                "description": "You can now manually manage database table rows directly in the Tables tab within your Database Settings.\nLearn more about Viewing and editing your databases.",
+                "time": "2025-10-18",
+                "tags": [
+                    {
+                        "name": "Database",
+                        "subtags": [
+                            {
+                                "name": "Database Editor"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Added support for user-created A and AAAA DNS records",
+                "description": "Added support for user-created A and AAAA DNS records.",
+                "time": "2025-10-18",
+                "tags": [
+                    {
+                        "name": "Deployment",
+                        "subtags": [
+                            {
+                                "name": "DNS"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "When Claude Agent sets up a database, you’ll now see a clear success confirmation message",
+                "description": "When Claude Agent sets up a database, you’ll now see a clear success confirmation message.",
+                "time": "2025-10-18",
+                "tags": [
+                    {
+                        "name": "Database",
+                        "subtags": []
+                    },
+                    {
+                        "name": "Agent",
+                        "subtags": [
+                            {
+                                "name": "Agent Mode"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": [
+                            {
+                                "name": "Notifications"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Improved the flow for adding a custom domain or subdomain with clearer notifications",
+                "description": "Improved the flow for adding a custom domain or subdomain with clearer notifications.",
+                "time": "2025-10-18",
+                "tags": [
+                    {
+                        "name": "Deployment",
+                        "subtags": [
+                            {
+                                "name": "Custom Domain"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": [
+                            {
+                                "name": "Notifications"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Team admins can now set a default deploy provider for all team projects",
+                "description": "Team admins can now set a default deploy provider for all team projects.",
+                "time": "2025-10-18",
+                "tags": [
+                    {
+                        "name": "Team & Enterprise",
+                        "subtags": [
+                            {
+                                "name": "Team Management"
+                            },
+                            {
+                                "name": "Workspace"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Deployment",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "DNS records management",
+                "description": "Bolt now gives you the ability to add, edit, or delete your own custom DNS records for domains purchased through Bolt.\nLearn more about DNS records.",
+                "time": "2025-10-01",
+                "tags": [
+                    {
+                        "name": "Deployment",
+                        "subtags": [
+                            {
+                                "name": "DNS"
+                            },
+                            {
+                                "name": "Custom Domain"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Clear context",
+                "description": "In your project chatbox, you can now clear Bolt’s context by entering the /clear command. Clearing context resets Bolt’s understanding of your project and removes unnecessary information, or “noise,” that might otherwise confuse Bolt.",
+                "time": "2025-10-01",
+                "tags": [
+                    {
+                        "name": "Agent",
+                        "subtags": []
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Connect to a new or existing Supabase database",
+                "description": "If you already have a Supabase database you want to use in your Bolt project, or want to create a new one, you can now connect it through your Database settings.",
+                "time": "2025-10-01",
+                "tags": [
+                    {
+                        "name": "Integration",
+                        "subtags": [
+                            {
+                                "name": "Supabase"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Database",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "You can now clone Bolt databases when you duplicate a project",
+                "description": "You can now clone Bolt databases when you duplicate a project. The cloned database includes the schema but not the data. To learn more, see Database duplication.",
+                "time": "2025-10-01",
+                "tags": [
+                    {
+                        "name": "Database",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Bolt can now view plain text files, such as CSV and TXT files",
+                "description": "Bolt can now view plain text files, such as CSV and TXT files.",
+                "time": "2025-10-01",
+                "tags": [
+                    {
+                        "name": "Editor",
+                        "subtags": [
+                            {
+                                "name": "Code Editor"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "We’ve removed the “Delete chat history” buttons from Project and Personal Settings to avoid confusio...",
+                "description": "We’ve removed the “Delete chat history” buttons from Project and Personal Settings to avoid confusion. You can still easily delete projects.",
+                "time": "2025-10-01",
+                "tags": [
+                    {
+                        "name": "UI/UX",
+                        "subtags": [
+                            {
+                                "name": "Navigation"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "You can now view all Bolt Cloud usage limits in one place and increase your hosting limits in your C...",
+                "description": "You can now view all Bolt Cloud usage limits in one place and increase your hosting limits in your Cloud settings.",
+                "time": "2025-10-01",
+                "tags": [
+                    {
+                        "name": "Deployment",
+                        "subtags": [
+                            {
+                                "name": "Hosting"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Analytics",
+                        "subtags": [
+                            {
+                                "name": "Usage Stats"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": [
+                            {
+                                "name": "Dashboard"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Bolt Cloud — Domains and Hosting",
+                "description": "Bolt Cloud has arrived with the introduction of Bolt Hosting and Domains. Instead of managing separate services for hosting and domains, you can handle everything in one place inside Bolt. This keeps your workflow simple, allowing you to focus on building your product rather than setting up cloud infrastructure.\nPublish in seconds to a custom bolt.host domain, or purchase or connect your own custom domain.\nLearn more about Bolt Hosting or Bolt Domains.",
+                "time": "August 2025",
+                "tags": [
+                    {
+                        "name": "Deployment",
+                        "subtags": [
+                            {
+                                "name": "Custom Domain"
+                            },
+                            {
+                                "name": "Hosting"
+                            },
+                            {
+                                "name": "Publishing"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Version History",
+                "description": "Bolt’s new visual Version History feature allows you to quickly and easily browse previous versions of your project, preview them, then restore them with a click.",
+                "time": "August 2025",
+                "tags": [
+                    {
+                        "name": "Editor",
+                        "subtags": [
+                            {
+                                "name": "Diff View"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Project Settings",
+                "description": "You can now quickly access your Project Settings by clicking the cog wheel icon at the top of your screen. From there, you’ll be able to change your knowledge, domain, and hosting settings, as well as your general settings.",
+                "time": "August 2025",
+                "tags": [
+                    {
+                        "name": "UI/UX",
+                        "subtags": [
+                            {
+                                "name": "Navigation"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Deployment",
+                        "subtags": [
+                            {
+                                "name": "Custom Domain"
+                            },
+                            {
+                                "name": "Hosting"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Bolt now lazy loads previous messages to improve performance",
+                "description": "Bolt now lazy loads previous messages to improve performance.",
+                "time": "August 2025",
+                "tags": [
+                    {
+                        "name": "Performance",
+                        "subtags": [
+                            {
+                                "name": "Loading"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Free tier users will see a “Made in Bolt” badge on their projects",
+                "description": "Free tier users will see a “Made in Bolt” badge on their projects. Upgrading to any paid plan removes this badge.",
+                "time": "August 2025",
+                "tags": [
+                    {
+                        "name": "Billing & Credits",
+                        "subtags": [
+                            {
+                                "name": "Pricing"
+                            },
+                            {
+                                "name": "Subscription"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "You can now unpublish projects at any time to make them private",
+                "description": "You can now unpublish projects at any time to make them private.",
+                "time": "August 2025",
+                "tags": [
+                    {
+                        "name": "Deployment",
+                        "subtags": [
+                            {
+                                "name": "Publishing"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Users on the highest-tier plan can now purchase token reloads",
+                "description": "Users on the highest-tier plan can now purchase token reloads.",
+                "time": "August 2025",
+                "tags": [
+                    {
+                        "name": "Billing & Credits",
+                        "subtags": [
+                            {
+                                "name": "Credits"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "The Bolt Help Center is now accessible directly from the chatbox by clicking the question mark icon",
+                "description": "The Bolt Help Center is now accessible directly from the chatbox by clicking the question mark icon.",
+                "time": "August 2025",
+                "tags": [
+                    {
+                        "name": "UI/UX",
+                        "subtags": [
+                            {
+                                "name": "Navigation"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Prompt Library",
+                "description": "To help you save time and improve the quality of your prompts, your chatbox now includes a Prompt Library feature with popular prompts and the ability to save your own. Learn more about the Prompt Library.",
+                "time": "July 2025",
+                "tags": [
+                    {
+                        "name": "UI/UX",
+                        "subtags": []
+                    },
+                    {
+                        "name": "Agent",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "View token consumption for teams",
+                "description": "As a Teams admin, you can now view a table that lists your team members along with the number of tokens allocated to each person and the number they’ve used.",
+                "time": "July 2025",
+                "tags": [
+                    {
+                        "name": "Team & Enterprise",
+                        "subtags": [
+                            {
+                                "name": "Team Management"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Analytics",
+                        "subtags": [
+                            {
+                                "name": "Token Usage"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "We’ve released a dedicated Pricing page, making it easier to browse and understand available plans",
+                "description": "We’ve released a dedicated Pricing page, making it easier to browse and understand available plans.",
+                "time": "July 2025",
+                "tags": [
+                    {
+                        "name": "Billing & Credits",
+                        "subtags": [
+                            {
+                                "name": "Pricing"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Subscription management, including for Teams, has moved from StackBlitz into Bolt, making it quicker...",
+                "description": "Subscription management, including for Teams, has moved from StackBlitz into Bolt, making it quicker and easier to manage both personal and team plans. You can now upgrade your subscription by clicking Subscriptions & Tokens in the menu that appears when you hover over the left side of the screen. See Billing to learn more.",
+                "time": "July 2025",
+                "tags": [
+                    {
+                        "name": "Billing & Credits",
+                        "subtags": [
+                            {
+                                "name": "Subscription"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Team & Enterprise",
+                        "subtags": [
+                            {
+                                "name": "Team Management"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": [
+                            {
+                                "name": "Navigation"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "We’ve renamed the Deploy button to Publish",
+                "description": "We’ve renamed the Deploy button to Publish. Clicking it now provides better visibility into your publishing status, including a link to your site, the last published time, and any unpublished changes.",
+                "time": "July 2025",
+                "tags": [
+                    {
+                        "name": "Deployment",
+                        "subtags": [
+                            {
+                                "name": "Publishing"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Bolt now uses the Sonnet 4 model permanently, offering a larger context window for better performanc...",
+                "description": "Bolt now uses the Sonnet 4 model permanently, offering a larger context window for better performance and support for more complex projects.",
+                "time": "July 2025",
+                "tags": [
+                    {
+                        "name": "AI Model",
+                        "subtags": [
+                            {
+                                "name": "Claude"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "You can now preview images by clicking them in Code View",
+                "description": "You can now preview images by clicking them in Code View.",
+                "time": "July 2025",
+                "tags": [
+                    {
+                        "name": "Editor",
+                        "subtags": [
+                            {
+                                "name": "Code Editor"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "We’ve revamped the Settings menu to make navigation more intuitive",
+                "description": "We’ve revamped the Settings menu to make navigation more intuitive.",
+                "time": "July 2025",
+                "tags": [
+                    {
+                        "name": "UI/UX",
+                        "subtags": [
+                            {
+                                "name": "Navigation"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "You can now view a visualization of your token usage and balance by selecting Subscriptions & Tokens",
+                "description": "You can now view a visualization of your token usage and balance by selecting Subscriptions & Tokens.",
+                "time": "July 2025",
+                "tags": [
+                    {
+                        "name": "Analytics",
+                        "subtags": [
+                            {
+                                "name": "Token Usage"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Billing & Credits",
+                        "subtags": [
+                            {
+                                "name": "Subscription"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "We’ve added Package Knowledge and NPM registries to expand technical functionality",
+                "description": "We’ve added Package Knowledge and NPM registries to expand technical functionality.",
+                "time": "July 2025",
+                "tags": [
+                    {
+                        "name": "Integration",
+                        "subtags": [
+                            {
+                                "name": "NPM"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Upload files",
+                "description": "Adding files to your project is now easier with the new Upload file feature in your chatbox. Drag and drop your file over the chatbox, or click the file icon to browse your local machine for a file to upload.",
+                "time": "June 2025",
+                "tags": [
+                    {
+                        "name": "UI/UX",
+                        "subtags": []
+                    },
+                    {
+                        "name": "Image Generation",
+                        "subtags": [
+                            {
+                                "name": "Image Upload"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "You can now connect a GitHub repository to Bolt by entering its URL when using the Import an existin...",
+                "description": "You can now connect a GitHub repository to Bolt by entering its URL when using the Import an existing GitHub repository feature.",
+                "time": "June 2025",
+                "tags": [
+                    {
+                        "name": "Integration",
+                        "subtags": [
+                            {
+                                "name": "GitHub"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Bolt now autofixes errors for you, saving you time and frustration",
+                "description": "Bolt now autofixes errors for you, saving you time and frustration. You can see the autofixed errors tracked as separate error types in your chat history.",
+                "time": "June 2025",
+                "tags": [
+                    {
+                        "name": "Agent",
+                        "subtags": [
+                            {
+                                "name": "Automation"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Bug Fixes",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "You can now see the",
+                "description": "You can now see the .bolt folder in Code View, allowing you to directly edit the .bolt/ignore file. See Using the .bolt/ignore file to learn more.",
+                "time": "June 2025",
+                "tags": [
+                    {
+                        "name": "Editor",
+                        "subtags": [
+                            {
+                                "name": "Code Editor"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "If you open Bolt in a non-Chromium browser, you’ll now see a warning reminding you that Bolt works b...",
+                "description": "If you open Bolt in a non-Chromium browser, you’ll now see a warning reminding you that Bolt works best in Chromium-based browsers such as Chrome, Edge, Opera, or Brave.",
+                "time": "June 2025",
+                "tags": [
+                    {
+                        "name": "UI/UX",
+                        "subtags": [
+                            {
+                                "name": "Notifications"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

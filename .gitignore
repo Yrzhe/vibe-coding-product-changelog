@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build output
+dist/
+build/
+*.pyc
+__pycache__/
+
+# Sensitive files - DO NOT COMMIT
+script/prompts/llm_config.json
+
+# Logs
+logs/
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Playwright
+.playwright/
+
+# Misc
+*.bak
+*.tmp

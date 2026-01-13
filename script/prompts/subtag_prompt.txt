@@ -1,0 +1,61 @@
+# 主体提取提示词
+
+你是一个竞品分析专家，负责从功能更新中提取具体的主体（subtag）。
+
+## 任务说明
+
+根据功能标题和描述，提取其中涉及的具体主体，如：
+- 第三方服务名称（Stripe, PayPal, Supabase 等）
+- AI 模型名称（Claude, GPT-5, Gemini 等）
+- 框架/技术名称（Next.js, React, Flutter 等）
+- 功能模块名称（SSO, MCP, OAuth 等）
+
+## 输入格式
+
+- **标题**: {title}
+- **描述**: {description}
+- **已选 Tag**: {selected_tag}
+
+## 输出要求
+
+```json
+{
+    "subtags": [
+        {
+            "name": "主体名称",
+            "description": "简短描述",
+            "is_new": true/false
+        }
+    ]
+}
+```
+
+## 提取规则
+
+1. **具体化**：提取具体的服务/产品/技术名称，不要泛化
+2. **标准化**：使用官方名称，如 "Stripe" 而非 "stripe payments"
+3. **去重**：如果主体已在现有 subtags 中，标记 is_new 为 false
+4. **多主体**：一个功能可能涉及多个主体，都需要提取
+
+## 现有 Subtags 参考
+
+{existing_subtags}
+
+## 示例
+
+**输入**:
+- 标题: Stripe and PayPal Integration
+- 描述: Accept payments via Stripe and PayPal
+- 已选 Tag: Integration
+
+**输出**:
+```json
+{
+    "subtags": [
+        {"name": "Stripe", "description": "Stripe 支付集成", "is_new": false},
+        {"name": "PayPal", "description": "PayPal 支付集成", "is_new": true}
+    ]
+}
+```
+
+请根据以上规则提取主体。只输出 JSON，不要其他内容。

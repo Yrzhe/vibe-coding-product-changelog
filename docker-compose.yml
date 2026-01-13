@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  # Web 前端服务
+  web:
+    build: ./webapp
+    image: product-changelog-viewer:latest
+    container_name: changelog-viewer
+    ports:
+      - "8080:80"
+    volumes:
+      - ./storage:/usr/share/nginx/html/data/storage:ro
+      - ./info:/usr/share/nginx/html/data/info:ro
+    restart: unless-stopped
+
+  # 爬虫/监控服务（内置定时任务，每天上午 10 点自动运行）
+  crawler:
+    build: ./script
+    image: changelog-crawler:latest
+    container_name: changelog-crawler
+    volumes:
+      - ./storage:/app/storage
+      - ./info:/app/info
+      - ./logs:/app/logs
+    environment:
+      - TZ=Asia/Shanghai
+    restart: unless-stopped

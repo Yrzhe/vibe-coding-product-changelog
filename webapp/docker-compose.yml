@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    image: product-changelog-viewer:latest
+    container_name: changelog-viewer
+    ports:
+      - "8080:80"
+    volumes:
+      # Mount data directories - data updates will be reflected immediately
+      - ../storage:/usr/share/nginx/html/data/storage:ro
+      - ../info:/usr/share/nginx/html/data/info:ro
+    restart: unless-stopped

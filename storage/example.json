@@ -1,0 +1,26 @@
+[
+    {
+        "name": "app",
+        "url": "https://xxx.com/changelog"
+    },
+    {
+        "name": "feature",
+        "features": [
+            {
+                "title": "title",
+                "description": "description",
+                "time": "2026-01-01",
+                "tags": [
+                    {
+                        "name": "tag1",
+                        "subtags": [
+                            {
+                                "name": "subtag1"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

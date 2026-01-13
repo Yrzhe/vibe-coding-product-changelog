@@ -1,0 +1,30 @@
+[
+    {
+        "name": "v0",
+        "url": "https://v0.app/changelog"
+    },
+    {
+        "name": "replit",
+        "url": "https://docs.replit.com/updates/"
+    },
+    {
+        "name": "lovable",
+        "url": "https://docs.lovable.dev/changelog"
+    },
+    {
+        "name": "trickle",
+        "url": "https://feedback.trickle.so/changelog"
+    },
+    {
+        "name": "base44",
+        "url": "https://base44.com/changelog"
+    },
+    {
+        "name": "bolt",
+        "url": "https://support.bolt.new/release-notes"
+    },
+    {
+        "name": "rocket",
+        "url": "https://docs.rocket.new/inspiration-and-help/changelog"
+    }
+]

@@ -1,0 +1,1302 @@
+[
+    {
+        "name": "rocket",
+        "url": "https://docs.rocket.new/inspiration-and-help/changelog"
+    },
+    {
+        "name": "feature",
+        "features": [
+            {
+                "title": "Screenshot Feature",
+                "description": "Capture screenshots directly from the preview panel to share with Rocket.\nAdded screenshot capture functionality in the preview panel, allowing you to capture full screen or selected area screenshots.\nDrag and drop captured screenshots directly into the chat input to share them with Rocket for faster iteration and clearer communication.\nSee the Preview guide for details.",
+                "time": "2025-12-24",
+                "tags": [
+                    {
+                        "name": "Image Generation",
+                        "subtags": [
+                            {
+                                "name": "Screenshot"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "React and Next.js Language Support",
+                "description": "React projects only support JavaScript, and Next.js projects only support TypeScript.",
+                "time": "2025-12-24",
+                "tags": [
+                    {
+                        "name": "Framework",
+                        "subtags": [
+                            {
+                                "name": "React"
+                            },
+                            {
+                                "name": "Next.js"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Smart Suggestions",
+                "description": "Rocket now provides intelligent suggestions to help you build faster.\nAdded smart suggestions that analyze your project context and building patterns to automatically suggest personalized ideas for what to build next.\nClick any suggestion to convert it into a prompt in the chat input, making it easier to discover and implement new features.\nSee the Chat interface guide for details.",
+                "time": "2025-12-17",
+                "tags": [
+                    {
+                        "name": "Agent",
+                        "subtags": []
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "New command support",
+                "description": "We added support for more built-in commands across Rocket, so you can run common actions with short, fixed triggers instead of long prompts.",
+                "time": "2025-11-12",
+                "tags": [
+                    {
+                        "name": "Agent",
+                        "subtags": [
+                            {
+                                "name": "Automation"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": [
+                            {
+                                "name": "Navigation"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Flutter SDK package validation",
+                "description": "PackageRegistryTool now validates built-in Flutter SDK packages, so invalid or mismatched dependencies are caught before they cause issues.",
+                "time": "2025-11-12",
+                "tags": [
+                    {
+                        "name": "Mobile",
+                        "subtags": [
+                            {
+                                "name": "Flutter"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Next.js (JS/TS) support",
+                "description": "Build Next.js apps in JavaScript or TypeScript, complete with Rocket integrations (Auth, DB, Storage, Analytics, Providers). Generate, wire up, and deploy without extra setup.",
+                "time": "2025-11-05",
+                "tags": [
+                    {
+                        "name": "Framework",
+                        "subtags": [
+                            {
+                                "name": "Next.js"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Deployment",
+                        "subtags": []
+                    },
+                    {
+                        "name": "Authentication",
+                        "subtags": []
+                    },
+                    {
+                        "name": "Database",
+                        "subtags": []
+                    },
+                    {
+                        "name": "Analytics",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "React (TypeScript) support",
+                "description": "Spin up React (TS) projects with the same end-to-end integration support. Strong typing, cleaner refactors, and a smoother path to production.",
+                "time": "2025-11-05",
+                "tags": [
+                    {
+                        "name": "Framework",
+                        "subtags": [
+                            {
+                                "name": "React"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Flutter: dropdown package compatibility",
+                "description": "We’ve adjusted dropdown-related package versions for better compatibility with Flutter version used. Fewer conflicts, more reliable builds.",
+                "time": "2025-11-05",
+                "tags": [
+                    {
+                        "name": "Mobile",
+                        "subtags": [
+                            {
+                                "name": "Flutter"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Bug Fixes",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Smarter Supabase migrations",
+                "description": "Migration generation now uses richer context, producing more accurate scripts and reducing mismatches on reruns.",
+                "time": "2025-11-05",
+                "tags": [
+                    {
+                        "name": "Integration",
+                        "subtags": [
+                            {
+                                "name": "Supabase"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Database",
+                        "subtags": [
+                            {
+                                "name": "Migrations"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Faster AI responses",
+                "description": "Streaming replies are now snappier, so answers feel more real‑time and fluid.",
+                "time": "2025-10-29",
+                "tags": [
+                    {
+                        "name": "Performance",
+                        "subtags": [
+                            {
+                                "name": "Speed"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Clearer Android APK downloads",
+                "description": "You’ll see a friendly queue message while your APK is being prepared, plus a simple summary when it’s ready to download.",
+                "time": "2025-10-29",
+                "tags": [
+                    {
+                        "name": "Mobile",
+                        "subtags": [
+                            {
+                                "name": "APK"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "More reliable Flutter packages",
+                "description": "We now avoid unstable “pre‑release” package versions by default, keeping your Flutter builds steady and predictable.",
+                "time": "2025-10-29",
+                "tags": [
+                    {
+                        "name": "Mobile",
+                        "subtags": [
+                            {
+                                "name": "Flutter"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Auto‑run for common commands",
+                "description": "Safe, routine actions can run automatically to save you clicks, while you stay in control.",
+                "time": "2025-10-29",
+                "tags": [
+                    {
+                        "name": "Agent",
+                        "subtags": [
+                            {
+                                "name": "Automation"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Token rollover policy",
+                "description": "Unused tokens carry over to the next month. For yearly plans, rollover applies only within your 12‑month term and resets at renewal. Learn more on the Pricing Plans page.",
+                "time": "2025-10-29",
+                "tags": [
+                    {
+                        "name": "Billing & Credits",
+                        "subtags": [
+                            {
+                                "name": "Credits"
+                            },
+                            {
+                                "name": "Subscription"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Google Authentication for Flutter",
+                "description": "Enable sign in with Google in your Flutter apps. Faster onboarding and fewer drop offs.",
+                "time": "2025-10-08",
+                "tags": [
+                    {
+                        "name": "Authentication",
+                        "subtags": [
+                            {
+                                "name": "Google Sign In"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Mobile",
+                        "subtags": [
+                            {
+                                "name": "Flutter"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Commands & Context",
+                "description": "Use Commands and Context to make precise, scoped changes without back and forth. Clear intent and cleaner results.",
+                "time": "2025-10-08",
+                "tags": [
+                    {
+                        "name": "Agent",
+                        "subtags": [
+                            {
+                                "name": "Clarifying Questions"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Editor",
+                        "subtags": [
+                            {
+                                "name": "Code Editor"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "APK Agent",
+                "description": "A new build time helper that detects and resolves common APK errors automatically. Android builds ship without the snags.",
+                "time": "2025-10-08",
+                "tags": [
+                    {
+                        "name": "Mobile",
+                        "subtags": [
+                            {
+                                "name": "APK"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Agent",
+                        "subtags": [
+                            {
+                                "name": "Automation"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Bug Fixes",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Flutter Package Identification",
+                "description": "Improved detection and mapping of Flutter packages to the correct versions. Fewer mismatches and more reliable builds.",
+                "time": "2025-10-08",
+                "tags": [
+                    {
+                        "name": "Mobile",
+                        "subtags": [
+                            {
+                                "name": "Flutter"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Faster Code Generation",
+                "description": "Rocket now delivers code in just 3 minutes instead of 10, helping you move faster.",
+                "time": "2025-09-10",
+                "tags": [
+                    {
+                        "name": "Performance",
+                        "subtags": [
+                            {
+                                "name": "Speed"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Smoother Integrations",
+                "description": "Connecting services like Claude, OpenAI, Google Analytics, Perplexity, Gemini, and AdSense is now simpler and more reliable.",
+                "time": "2025-09-10",
+                "tags": [
+                    {
+                        "name": "Integration",
+                        "subtags": [
+                            {
+                                "name": "Google Analytics"
+                            },
+                            {
+                                "name": "Perplexity"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "AI Model",
+                        "subtags": [
+                            {
+                                "name": "Claude"
+                            },
+                            {
+                                "name": "GPT"
+                            },
+                            {
+                                "name": "Gemini"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Amazon Bedrock Support",
+                "description": "Rocket now has Amazon Bedrock as an additional provider, giving you more flexibility and reliability during code generation.",
+                "time": "2025-09-10",
+                "tags": [
+                    {
+                        "name": "AI Model",
+                        "subtags": [
+                            {
+                                "name": "Amazon Bedrock"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Smarter Model Switching",
+                "description": "Rocket automatically switches to a backup provider if one is unavailable, so your build won’t stall.",
+                "time": "2025-09-10",
+                "tags": [
+                    {
+                        "name": "AI Model",
+                        "subtags": []
+                    },
+                    {
+                        "name": "Performance",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Flutter Package Guidance",
+                "description": "Rocket suggests the right versions for Flutter packages and keeps template packages safe during updates to prevent errors.",
+                "time": "2025-09-10",
+                "tags": [
+                    {
+                        "name": "Mobile",
+                        "subtags": [
+                            {
+                                "name": "Flutter"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Agent",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Supabase Improvements",
+                "description": "Schema and migration scripts now show clearer messages.\nGenerated AuthContext.jsx is easier to read and less prone to errors.",
+                "time": "2025-09-10",
+                "tags": [
+                    {
+                        "name": "Integration",
+                        "subtags": [
+                            {
+                                "name": "Supabase"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Database",
+                        "subtags": [
+                            {
+                                "name": "Migrations"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Authentication",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Fixed Code Generation Retry",
+                "description": "When AI generation produces an empty result, Rocket now shows “failed” instead of marking it as completed.\nYou can retry immediately instead of getting stuck.\nFewer empty responses mean more consistent builds.",
+                "time": "2025-09-03",
+                "tags": [
+                    {
+                        "name": "Bug Fixes",
+                        "subtags": []
+                    },
+                    {
+                        "name": "Agent",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Better Error Visibility",
+                "description": "Supabase runtime errors now appear directly in the UI.\nYou can spot backend issues at a glance.\nDebug faster without digging through logs.",
+                "time": "2025-09-03",
+                "tags": [
+                    {
+                        "name": "Integration",
+                        "subtags": [
+                            {
+                                "name": "Supabase"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Twilio SMS Integration",
+                "description": "Rocket now connects with Twilio so your apps can send SMS messages instantly.",
+                "time": "2025-08-27",
+                "tags": [
+                    {
+                        "name": "Integration",
+                        "subtags": [
+                            {
+                                "name": "Twilio"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Smarter Agent",
+                "description": "Improved Thinking: The agent now takes extra time to understand your query before acting, resulting in sharper and more accurate results.\nIntegration Suggestions: After app creation, the agent proactively recommends integrations to supercharge your app.\nEnhanced Context Awareness: Better understanding of your app’s state such as active integrations and current screens for more relevant responses.",
+                "time": "2025-08-27",
+                "tags": [
+                    {
+                        "name": "Agent",
+                        "subtags": [
+                            {
+                                "name": "Agent Mode"
+                            },
+                            {
+                                "name": "Clarifying Questions"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Integration",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Google Maps for Flutter",
+                "description": "You can now add interactive Google Maps directly inside your Flutter apps.\nPackage Manager:\nFixed issues with follow-up requests, including wrong indentations, missing dependencies, and incorrect package versions.\nEnsured new package versions align with the current Flutter SDK.",
+                "time": "2025-08-27",
+                "tags": [
+                    {
+                        "name": "Mobile",
+                        "subtags": [
+                            {
+                                "name": "Flutter"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Integration",
+                        "subtags": [
+                            {
+                                "name": "Google Maps"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Bug Fixes",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Clearer Error Handling",
+                "description": "A banner now appears in the UI when Rocket encounters LLM errors such as overload or inactivity.\nSuccess messages are now smarter: when no code changes are needed, you’ll see a clear confirmation instead of the generic “Code has been generated successfully.”\nActual console errors are now retrieved via API and displayed in the UI, giving you more visibility and easier troubleshooting.",
+                "time": "2025-08-20",
+                "tags": [
+                    {
+                        "name": "UI/UX",
+                        "subtags": [
+                            {
+                                "name": "Notifications"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Bug Fixes",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Smoother Integration Experience",
+                "description": "Instead of asking for an integration key right after your first message, Rocket now suggests next steps, reducing confusion and making setup friendlier.",
+                "time": "2025-08-20",
+                "tags": [
+                    {
+                        "name": "Integration",
+                        "subtags": []
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Long Thread Improvements",
+                "description": "Better context handling in long threads (2000+ messages) keeps your conversations sharp and relevant.",
+                "time": "2025-08-20",
+                "tags": [
+                    {
+                        "name": "Performance",
+                        "subtags": []
+                    },
+                    {
+                        "name": "Agent",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Connect to Custom Domains",
+                "description": "You can now link your Rocket app to your own domain. No external setup required.",
+                "time": "2025-08-06",
+                "tags": [
+                    {
+                        "name": "Deployment",
+                        "subtags": [
+                            {
+                                "name": "Custom Domain"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Download APKs from Rocket",
+                "description": "Get an installable Android APK for your app with a single click. No need for external build tools.",
+                "time": "2025-08-06",
+                "tags": [
+                    {
+                        "name": "Mobile",
+                        "subtags": [
+                            {
+                                "name": "APK"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Deployment",
+                        "subtags": [
+                            {
+                                "name": "Publishing"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Figma to Flutter",
+                "description": "Faster Code Generation: Code generation time reduced by 35-40%.\nExpanded Component Support: Now supports 50+ components with dynamic library integration for greater flexibility.\nEnhanced Component Detection: Improved accuracy ensures cleaner, more maintainable code.\nImproved Code Quality: More consistent color naming and better custom component structuring.",
+                "time": "2025-08-06",
+                "tags": [
+                    {
+                        "name": "Integration",
+                        "subtags": [
+                            {
+                                "name": "Figma"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Mobile",
+                        "subtags": [
+                            {
+                                "name": "Flutter"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Performance",
+                        "subtags": [
+                            {
+                                "name": "Speed"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Supabase Storage",
+                "description": "Upload, retrieve, and manage files directly in Rocket with zero setup required.",
+                "time": "2025-08-06",
+                "tags": [
+                    {
+                        "name": "Integration",
+                        "subtags": [
+                            {
+                                "name": "Supabase"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Database",
+                        "subtags": [
+                            {
+                                "name": "Storage"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Backup LLM Provider Support",
+                "description": "We’ve added support for an alternate LLM provider to reduce downtime and keep Rocket responsive.",
+                "time": "2025-07-30",
+                "tags": [
+                    {
+                        "name": "AI Model",
+                        "subtags": []
+                    },
+                    {
+                        "name": "Performance",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Supabase Integration with Existing Databases",
+                "description": "You can now connect Rocket to your existing Supabase projects, even if they already have data, tables, and structure set up.\nBefore: Only new, empty Supabase projects were supported.\nNow: Use your current database without starting over.\nWhy this matters:\nKeep your existing data and schema.\nAdd features to live apps without disruption.\nBuild realistic demos and admin tools faster.",
+                "time": "2025-07-23",
+                "tags": [
+                    {
+                        "name": "Integration",
+                        "subtags": [
+                            {
+                                "name": "Supabase"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Database",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Smarter System Behavior",
+                "description": "Better understanding of instructions across multiple messages.\nRocket now remembers uploaded images when you reference them later.\nImproved recognition of terms like “this screen” or “current screen.”\nFaster screen list loading and UI response.\nRocket no longer repeats provider prompts if you choose to skip.",
+                "time": "2025-07-23",
+                "tags": [
+                    {
+                        "name": "Agent",
+                        "subtags": []
+                    },
+                    {
+                        "name": "Performance",
+                        "subtags": [
+                            {
+                                "name": "Speed"
+                            },
+                            {
+                                "name": "Loading"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Image Generation",
+                        "subtags": [
+                            {
+                                "name": "Image Upload"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Performance & Reliability",
+                "description": "More accurate detection of changes when committing files.\nImproved flow to avoid generating unnecessary screens.",
+                "time": "2025-07-23",
+                "tags": [
+                    {
+                        "name": "Performance",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Deployment Experience",
+                "description": "Disabled publish button while preview is being generated to prevent accidental actions.",
+                "time": "2025-07-16",
+                "tags": [
+                    {
+                        "name": "Deployment",
+                        "subtags": [
+                            {
+                                "name": "Preview"
+                            },
+                            {
+                                "name": "Publishing"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Classification & Context Handling",
+                "description": "Improved parsing for longer threads to correctly group tool usage and results.\nEnhanced understanding of user instructions and context across messages.\nBetter image context linking across follow-ups.\nFaster screen list display, independent of design theme loading.\nProactive error handling to guide recovery after repeated failures.",
+                "time": "2025-07-16",
+                "tags": [
+                    {
+                        "name": "Agent",
+                        "subtags": [
+                            {
+                                "name": "Clarifying Questions"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Performance",
+                        "subtags": [
+                            {
+                                "name": "Speed"
+                            },
+                            {
+                                "name": "Loading"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": []
+                    },
+                    {
+                        "name": "Image Generation",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Web App Editing",
+                "description": "Improved overall reliability and responsiveness of visual editing for web apps.",
+                "time": "2025-07-16",
+                "tags": [
+                    {
+                        "name": "Editor",
+                        "subtags": [
+                            {
+                                "name": "Visual Editor"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Performance",
+                        "subtags": [
+                            {
+                                "name": "Speed"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Code Generation & Preview (2025-07-09)",
+                "description": "Improvements to code generation and preview functionality.",
+                "time": "2025-07-09",
+                "tags": [
+                    {
+                        "name": "Editor",
+                        "subtags": [
+                            {
+                                "name": "Code Editor"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Deployment",
+                        "subtags": [
+                            {
+                                "name": "Preview"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "UI & Navigation (2025-07-02)",
+                "description": "Improved user interface and navigation experience.",
+                "time": "2025-07-02",
+                "tags": [
+                    {
+                        "name": "UI/UX",
+                        "subtags": [
+                            {
+                                "name": "Navigation"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Error Handling (2025-06-25)",
+                "description": "Better error messages and handling across the platform.",
+                "time": "2025-06-25",
+                "tags": [
+                    {
+                        "name": "Bug Fixes",
+                        "subtags": []
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Performance Improvements (2025-06-18)",
+                "description": "Various performance optimizations and bug fixes.",
+                "time": "2025-06-18",
+                "tags": [
+                    {
+                        "name": "Performance",
+                        "subtags": []
+                    },
+                    {
+                        "name": "Bug Fixes",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Supabase Integration (2025-06-11)",
+                "description": "Enhanced Supabase integration and database features.",
+                "time": "2025-06-11",
+                "tags": [
+                    {
+                        "name": "Integration",
+                        "subtags": [
+                            {
+                                "name": "Supabase"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Database",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Visual Editing Updates (2025-06-04)",
+                "description": "Improvements to visual editing capabilities.",
+                "time": "2025-06-04",
+                "tags": [
+                    {
+                        "name": "Editor",
+                        "subtags": [
+                            {
+                                "name": "Visual Editor"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Code Generation",
+                "description": "Fixed Supabase credential issues. React: Fixed import issues and ensured correct code block order.",
+                "time": "2025-05-28",
+                "tags": [
+                    {
+                        "name": "Integration",
+                        "subtags": [
+                            {
+                                "name": "Supabase"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Framework",
+                        "subtags": [
+                            {
+                                "name": "React"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Bug Fixes",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Figma to Code",
+                "description": "Screen status is now displayed in screen details for React, Next.js, HTML, and Flutter projects.",
+                "time": "2025-05-28",
+                "tags": [
+                    {
+                        "name": "Integration",
+                        "subtags": [
+                            {
+                                "name": "Figma"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Framework",
+                        "subtags": [
+                            {
+                                "name": "React"
+                            },
+                            {
+                                "name": "Next.js"
+                            },
+                            {
+                                "name": "Flutter"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "UI & Backend",
+                "description": "Users are notified when builds complete, even on inactive tabs. Centered preview loader. Improved dropdowns and visual editing in mobile preview.",
+                "time": "2025-05-28",
+                "tags": [
+                    {
+                        "name": "UI/UX",
+                        "subtags": [
+                            {
+                                "name": "Notifications"
+                            },
+                            {
+                                "name": "Mobile"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Performance",
+                        "subtags": [
+                            {
+                                "name": "Loading"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "UI & Navigation",
+                "description": "Unified design system across React, Flutter, and HTML platforms. Streamlined app navigation for smoother user journeys.",
+                "time": "2025-05-21",
+                "tags": [
+                    {
+                        "name": "UI/UX",
+                        "subtags": [
+                            {
+                                "name": "Navigation"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Framework",
+                        "subtags": [
+                            {
+                                "name": "React"
+                            },
+                            {
+                                "name": "Flutter"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Authentication",
+                "description": "Redesigned login/signup modals for a better user experience.",
+                "time": "2025-05-21",
+                "tags": [
+                    {
+                        "name": "Authentication",
+                        "subtags": []
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Natural Language Editing (NLC)",
+                "description": "Natural language editing is now live. Describe your changes and Rocket will implement them.",
+                "time": "2025-05-14",
+                "tags": [
+                    {
+                        "name": "Editor",
+                        "subtags": [
+                            {
+                                "name": "Code Editor"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Agent",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Image Upload",
+                "description": "You can now upload images within Rocket.",
+                "time": "2025-05-14",
+                "tags": [
+                    {
+                        "name": "Image Generation",
+                        "subtags": [
+                            {
+                                "name": "Image Upload"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Chat Improvements",
+                "description": "Time stamps now visible on user messages. Added scroll-down button. Chat now shows token balance. Preview supports fullscreen toggle.",
+                "time": "2025-05-14",
+                "tags": [
+                    {
+                        "name": "UI/UX",
+                        "subtags": [
+                            {
+                                "name": "Navigation"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Analytics",
+                        "subtags": [
+                            {
+                                "name": "Token Usage"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Deployment",
+                        "subtags": [
+                            {
+                                "name": "Preview"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Subscription Handling",
+                "description": "End-of-cycle subscription cancellations are now handled correctly.",
+                "time": "2025-05-07",
+                "tags": [
+                    {
+                        "name": "Billing & Credits",
+                        "subtags": [
+                            {
+                                "name": "Subscription"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Bug Fixes",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Cookie Consent",
+                "description": "Added a cookie consent banner for compliance. Updated Netlify branding within Rocket.",
+                "time": "2025-05-07",
+                "tags": [
+                    {
+                        "name": "Integration",
+                        "subtags": [
+                            {
+                                "name": "Netlify"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Security",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Code Generation & Preview",
+                "description": "Prevented regeneration of already-created screens (especially in React). Screen names now display in preview.",
+                "time": "2025-04-30",
+                "tags": [
+                    {
+                        "name": "Editor",
+                        "subtags": [
+                            {
+                                "name": "Code Editor"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Deployment",
+                        "subtags": [
+                            {
+                                "name": "Preview"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Performance",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Templates",
+                "description": "HTML preview now supports in-preview navigation. Webpage previews can now be opened in a new tab.",
+                "time": "2025-04-30",
+                "tags": [
+                    {
+                        "name": "Editor",
+                        "subtags": [
+                            {
+                                "name": "Visual Editor"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Deployment",
+                        "subtags": [
+                            {
+                                "name": "Preview"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Flutter State Management",
+                "description": "Added support for multiple state management approaches in Flutter: Bloc (default), GetX, and Stateless. Fixed Tailwind HTML deployment issues.",
+                "time": "2025-04-30",
+                "tags": [
+                    {
+                        "name": "Mobile",
+                        "subtags": [
+                            {
+                                "name": "Flutter"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Bug Fixes",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Code Editor",
+                "description": "CMD/CTRL + S now saves all modified code files at once. Source map upload and version tracking added for Sentry integration.",
+                "time": "2025-04-30",
+                "tags": [
+                    {
+                        "name": "Editor",
+                        "subtags": [
+                            {
+                                "name": "Code Editor"
+                            },
+                            {
+                                "name": "Keyboard Shortcuts"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Integration",
+                        "subtags": [
+                            {
+                                "name": "Sentry"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

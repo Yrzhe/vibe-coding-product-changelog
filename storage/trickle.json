@@ -1,0 +1,810 @@
+[
+    {
+        "name": "trickle",
+        "url": "https://feedback.trickle.so/changelog"
+    },
+    {
+        "name": "feature",
+        "features": [
+            {
+                "title": "Smarter agents and better image handling on canvas",
+                "description": "New\n\n• Improved database editing experience with support for floating editors\n\n• Agents can now read and access asset images for better contextual understanding\n\nImprovements\n\n• You can now copy selected images on the canvas\n\n• Image pasting is now supported directly onto the canvas\n\n• Fixed an issue where canvas pages would expand infinitely\n\n• Refined UI styles on the project share page for a cleaner look\n\nBug Fixes\n\n• Fixed an issue where deleting a table field via an agent caused data display errors",
+                "time": "2025-12-30",
+                "tags": [
+                    {
+                        "name": "Agent",
+                        "subtags": [
+                            {
+                                "name": "Agent Mode"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Database",
+                        "subtags": [
+                            {
+                                "name": "Database Editor"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Image Generation",
+                        "subtags": [
+                            {
+                                "name": "Image Upload"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Editor",
+                        "subtags": [
+                            {
+                                "name": "Visual Editor"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": []
+                    },
+                    {
+                        "name": "Bug Fixes",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Clean layouts, better agents, no more stuck moments",
+                "description": "New\n\nCanvas auto-layout and alignment guides\n\nYou can now clean up messy layouts with one click and get helpful alignment guides when placing elements on the image canvas. It’s easier than ever to keep things neat.\n\nImprovements\n\nThe image canvas layout has been redesigned: the left-side chat box has been removed, the toolbar is now on the left, and the bottom panel has been replaced with a focused input bar. The generating animation has also been updated for a smoother experience.\n\nAgents are no longer allowed to update field names in database schemas, preventing accidental loss of existing data.\n\nRemix projects will now load even when subscription info is missing, avoiding unnecessary interruptions.\n\nBug Fixes\n\nFixed a crash when stopping a running agent task\n\nFixed canvas shift caused by scrollIntoView behavior\n\nVideo is still processing, it should be ready shortly...",
+                "time": "2025-12-23",
+                "tags": [
+                    {
+                        "name": "UI/UX",
+                        "subtags": []
+                    },
+                    {
+                        "name": "Agent",
+                        "subtags": [
+                            {
+                                "name": "Agent Mode"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Database",
+                        "subtags": []
+                    },
+                    {
+                        "name": "Bug Fixes",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Gemini 3 Flash lands on Trickle",
+                "description": "Video is still processing, it should be ready shortly...\n\nGemini 3 Flash is now available on Trickle, bringing faster responses, stronger visual understanding, and more stable reasoning across complex workflows.\n\nWhat’s improved\n\nInstant canvas response\n\nLower latency makes interactions feel immediate. Your canvas reacts as fast as your thinking, even in complex builds.\n\nMore coherent reasoning across iterations\n\nLonger and cleaner context handling keeps ideas consistent as you iterate. Complex logic stays intact instead of drifting over time.\n\nStronger visual understanding\n\nVisual inputs are interpreted with structural intent rather than treated as loose references. This results in more accurate layout, logic, and decision making when working with visual context.\n\nWhat this means for building on Trickle\n\nWith Gemini 3 Flash, vibe coding feels faster without sacrificing quality. You spend less time explaining and correcting, and more time iterating and shaping ideas as they form.\n\nThe canvas keeps up with you.\n\nDive in here https://trickle.so/gemini3-flash",
+                "time": "2025-12-17",
+                "tags": [
+                    {
+                        "name": "AI Model",
+                        "subtags": [
+                            {
+                                "name": "Gemini 3"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Performance",
+                        "subtags": [
+                            {
+                                "name": "Speed"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Seedream 4.5 upgrade",
+                "description": "Improvement\n\n• Upgraded the Seedream model to version 4.5\n\nBug Fixes\n\n• Fixed an issue where published sites still displayed the Trickle badge\n\n• Deleting text in the input box no longer removes selected images on the canvas\n\n• Fixed parameter click issues below generated videos\n\n• Fixed canvas offset/shift issues during interactions\n\n• Fixed an issue where the chat sidebar did not display image ratio settings",
+                "time": "2025-12-05",
+                "tags": [
+                    {
+                        "name": "AI Model",
+                        "subtags": [
+                            {
+                                "name": "Seedream 4.5"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Bug Fixes",
+                        "subtags": []
+                    },
+                    {
+                        "name": "Image Generation",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Nano Banana Pro is now live on Trickle",
+                "description": "Nano Banana Pro brings next-level image generation and creative control to Trickle. You’re no longer limited to static visuals or manual layout work. From product mockups and crisp infographics to vector-style graphics and complete creative workflows, everything can be built directly inside Trickle with Nano Banana Pro. Here’s what this upgrade unlocks:\n\nGenerate high-fidelity visuals with precise prompt control\n\nEdit images interactively with maintained consistency\n\nUnlock unlimited creative workflows, whether you’re designing marketing assets, UI components, or fully integrated content pieces\n\nAll of this is powered within your Trickle workspace, no separate tools required. Try it now → https://trickle.so/nano-banana-pro",
+                "time": "2025-12-05",
+                "tags": [
+                    {
+                        "name": "AI Model",
+                        "subtags": [
+                            {
+                                "name": "Nano Banana"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Image Generation",
+                        "subtags": [
+                            {
+                                "name": "AI Image Edit"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Gemini 3 is now live on Trickle",
+                "description": "Gemini 3 has landed on Trickle and the results honestly feel unreal.\n\nEvery single demo in the video was generated inside Trickle with Gemini 3 in one go. Content, structure, logic, interactions, UI layout, flow, SVG shapes, vector widgets, animations, code snippets, interactive components – all generated automatically.\n\nJust a few prompts and everything comes together at once, with speed and quality way beyond what we expected.\n\nYou can try Gemini 3 for free right now.\n\nOpen Settings → Experimental Features and switch on the Model Toggle.\n\nGo build something wild.",
+                "time": "2025-12-05",
+                "tags": [
+                    {
+                        "name": "AI Model",
+                        "subtags": [
+                            {
+                                "name": "Gemini 3"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "New Tools and Improvements",
+                "description": "New\n\nLaunched over 50 new tool pages.\n\nImprovements\n\nAdded structured data schema to tools, blogs, and templates.\n\nEnhanced tool page visibility for search bots by improving template linking, comment indexing, and FAQ content coverage.\n\nBugs\n\nFiles are being automatically added to a new project when switching quickly from a project detail page back to the home page.",
+                "time": "2025-11-18",
+                "tags": [
+                    {
+                        "name": "Performance",
+                        "subtags": [
+                            {
+                                "name": "SEO"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Bug Fixes",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Sonnet 4.5 is now default, and content gets a new home",
+                "description": "New\n\nThe default AI model has been updated to Claude Sonnet 4.5 for a more stable and capable generation experience.\n\nImprovements\n\nBlog, template, and tools pages previously hosted under content.trickle.so have been fully migrated to trickle.so for better SEO performance and cleaner URLs.",
+                "time": "2025-10-17",
+                "tags": [
+                    {
+                        "name": "AI Model",
+                        "subtags": [
+                            {
+                                "name": "Sonnet 4.5"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Performance",
+                        "subtags": [
+                            {
+                                "name": "SEO"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Experience the new Kimi K2 Turbo upgrade on Trickle",
+                "description": "News\n\nKimi K2 Turbo is now supported on Trickle. With this powerful new model, you can expect noticeably faster output and a smarter overall experience. It brings stronger coding and reasoning capabilities, handles complex context more effectively, and generates cleaner, more practical front-end code — with better aesthetics too.\n\nTo try it out, go to your workspace settings, open the Experimental features section, and enable “Switch model” to activate Kimi K2 Turbo.\n\nImprovements\n\nImproved error message display during login\n\nAdded SEO content to the Templates page\n\nAdded header field checks to prevent potential hijacking attacks\n\nBug Fixes\n\nFixed a white screen issue when opening share links in Safari on mobile",
+                "time": "2025-10-14",
+                "tags": [
+                    {
+                        "name": "AI Model",
+                        "subtags": [
+                            {
+                                "name": "Kimi K2"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Performance",
+                        "subtags": [
+                            {
+                                "name": "SEO"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Security",
+                        "subtags": [
+                            {
+                                "name": "Access Control"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Bug Fixes",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Fresh Content & Smoother Experience",
+                "description": "News\n\n3 new blog posts are now live — check them out for insights and inspiration\n\nImprovements\n\nUpdated and optimized sitemap for better SEO coverage.\n\nPricing page loads faster with a smoother experience for logged-in users.\n\nComponent picker is now simpler. You can add components directly without extra page jumps.",
+                "time": "2025-09-29",
+                "tags": [
+                    {
+                        "name": "Performance",
+                        "subtags": [
+                            {
+                                "name": "SEO"
+                            },
+                            {
+                                "name": "Loading"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": [
+                            {
+                                "name": "Navigation"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Build Faster with Trickle Templates & Components",
+                "description": "Trickle apps & sites templates and components are live! The long-awaited feature is finally here. After countless requests from our community, Trickle is officially launching its very own templates & components Library packed with sleek animations, stylish cards, interactive buttons, and more, all ready to use out of the box.\n\nEven better, it’s a true credit-saver, making your creation process smoother and more efficient.\n\nTry it now 👉 trickle.so/templates\n\nAnd this is just the beginning! Soon, we’ll open up template & component trading, so you can publish and sell your own work directly on Trickle. Create, share, and monetize all in one place.\n\nNews\n\nYou can now selectively delete historical versions of your projects\n\nA new navigation bar has been added to the homepage for faster access\n\nChat input is now available inside the Library. You can now generate images or videos directly from the Library using natural language prompts\n\nImprovements\n\nRefined the UI for Branding Settings to make it more intuitive\n\nMajor Help Center update with refreshed content and improved organization\n\nBug Fixes\n\nFixed an issue where remix project share links were incorrectly tied to the original project",
+                "time": "2025-09-29",
+                "tags": [
+                    {
+                        "name": "UI/UX",
+                        "subtags": [
+                            {
+                                "name": "Navigation"
+                            },
+                            {
+                                "name": "Dashboard"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Image Generation",
+                        "subtags": []
+                    },
+                    {
+                        "name": "Bug Fixes",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "🎉 Big update — Generate image & video features are now live in Trickle",
+                "description": "News\n\nYou can now generate high-quality images and videos directly in Trickle, just write a prompt or upload a reference, and let the AI bring your ideas to life. Powered by models including Nana Banana, Seedream 4.0, and Seedance 1.0 Pro, the results are stunning and instantly usable in your site. You can:\n\nWrite a prompt or upload a reference image,\n\nGenerate custom visuals for your projects,\n\nInstantly save outputs to your Library and upload them into your site,\n\nRemix your images, refine them, and even generate videos from a single image,\n\nThis unlocks a whole new layer of creativity From immersive storytelling to advanced product showcases, here are a few ideas: Interactive story websites\n\nVideo is still processing, it should be ready shortly...\n\nHero banners with autoplay videos\n\nVideo is still processing, it should be ready shortly...\n\nDynamic product shots\n\nVideo is still processing, it should be ready shortly...\n\nImprovements\n\nHomepage mode has been renamed to Visual Mode, now supporting both image and video generation,\n\nAdded clear placeholders for generation inputs: “Describe an image” and “Describe a video”,\n\nVideo generation now supports image-based prompts, limited to one uploaded image,\n\nModel selection on the homepage now defaults to a fixed option and no longer switches based on previous user toggles,\n\nThe Generate Video icon is now more prominently displayed above the selected image on the canvas,\n\nLibrary dialog now auto-refreshes its data when opened",
+                "time": "2025-09-25",
+                "tags": [
+                    {
+                        "name": "Image Generation",
+                        "subtags": [
+                            {
+                                "name": "AI Image Edit"
+                            },
+                            {
+                                "name": "Image Upload"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "AI Model",
+                        "subtags": [
+                            {
+                                "name": "Nano Banana"
+                            },
+                            {
+                                "name": "Seedream 4.5"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "New tools, smoother canvas",
+                "description": "News\n\nOver 50 new tools are now live in English, Japanese, Korean, and Portuguese — that’s 200+ pages of AI-powered workflows, templates, and creative shortcuts. Whether you’re building landing pages or writing product copy, there’s something for every use case. Explore them here → https://trickle.so/tools,\n\nImprovements\n\nImage Mode now supports drag-and-drop image upload directly onto the canvas\n\nBug Fixes\n\nIn Canvas Mode, images generated in Assets were not being saved to the Library,\n\nIn Canvas Mode, generating new images from an old Asset image caused both the original and new images to occasionally disappear,\n\nWhen importing multiple images manually from the Library and asking AI to update the webpage, some images disappeared from Assets after the page was modified,\n\nImproved label naming for mode options in the homepage input dropdown,\n\nResolved a bug that caused incorrect credit display for new users upon registration",
+                "time": "2025-09-23",
+                "tags": [
+                    {
+                        "name": "Image Generation",
+                        "subtags": [
+                            {
+                                "name": "Image Upload"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Bug Fixes",
+                        "subtags": []
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Whiteboard to Image just dropped",
+                "description": "New\nWhiteboard-to-Image is here\n\nA major update. You can now sketch your idea directly on the whiteboard and turn it into an image instantly. It’s a smoother way to express your vision than typing prompts. Powered by Nano Banana 🍌, what you draw is what the AI sees. Let your imagination lead the way.\n\nVideo is still processing, it should be ready shortly...\n\nYou can also search for reference images from Unsplash right inside the canvas, then remix them with Banana to generate something entirely new.\n\nVideo is still processing, it should be ready shortly...\n\nDatabase export\n\nAll data collected in Trickle can now be exported with one click.\n\nNew Tools page is live\n\nWe’ve launched a dedicated Tools page on our website. No matter what industry you’re in, you’ll find a use case that fits your workflow. Visit here: https://trickle.so/tools\n\nImprovements\n\nSmoother login experience — the Trickle 2.0 intro video no longer appears after logging out and back in,\n\nImproved socket reconnection behavior and UI feedback for better stability during network interruptions,\n\nUpdated referral icon with a clearer, more polished look,\n\nNano Banana image generation is now integrated into the asset panel, making it easier to use while building,\n\nBetter selection interactions on canvas\n\nThe Select button is now disabled until preview finishes loading,\n\nIcons are excluded from multi-select to avoid accidental selection noise",
+                "time": "2025-09-09",
+                "tags": [
+                    {
+                        "name": "Image Generation",
+                        "subtags": [
+                            {
+                                "name": "AI Image Edit"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "AI Model",
+                        "subtags": [
+                            {
+                                "name": "Nano Banana"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Database",
+                        "subtags": [
+                            {
+                                "name": "Data Export"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": []
+                    },
+                    {
+                        "name": "Billing & Credits",
+                        "subtags": [
+                            {
+                                "name": "Referral"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Invoke AI model switch and credit handling improvements",
+                "description": "Improvements\n\nSwitched Invoke AI model to OpenAI GPT-5-mini\n\nBug Fixes\n\nFixed a billing credit issue when upgrading from Pro to Premium",
+                "time": "2025-09-02",
+                "tags": [
+                    {
+                        "name": "AI Model",
+                        "subtags": [
+                            {
+                                "name": "GPT"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Billing & Credits",
+                        "subtags": [
+                            {
+                                "name": "Credits"
+                            },
+                            {
+                                "name": "Subscription"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Bug Fixes",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "🍌Nano-banana🍌 is now in Trickle Magic Canvas",
+                "description": "Trickle Magic Canvas just got a big upgrade with nano-banana built right in. You can now generate images directly on the canvas, place them into the site you are building, and publish right away. It feels incredibly smooth when nano-banana meets the vibe coding canvas. Just describe what you need, and banana will create the visuals for you. This opens up a wide range of possibilities. Here are some examples: (edited)\n\nProduct Shots\n\nGenerate clean, consistent product visuals from a simple description and place them straight into your site. (edited)\n\nVideo is still processing, it should be ready shortly...\n\nMulti View Displays,\n\nShowcase the same product from multiple angles with a consistent style, all generated by banana.\n\nVideo is still processing, it should be ready shortly...\n\nParody Apps\n\nSpin up fun apps in seconds. One demo lets every click bring Elon Musk and Ultraman Tiga into a hug.\n\nVideo is still processing, it should be ready shortly...\n\nHand Drawn Actions\n\nA Trickle-built app that connects to banana. Upload two characters, sketch a simple stick figure move, and banana makes them act it out on the canvas.\n\nVideo is still processing, it should be ready shortly...\n\nOOTD Breakdown\n\nAnother Trickle-built app powered by banana. Upload an outfit photo and banana breaks it down into individual items for clean visuals.\n\nVideo is still processing, it should be ready shortly...\n\nImprovements\n\nIncreased the custom domain limit for Premium Plan to 3\n\nBug Fixes\n\nFixed an issue where newly built pages did not fully expand on the canvas",
+                "time": "2025-08-29",
+                "tags": [
+                    {
+                        "name": "Image Generation",
+                        "subtags": [
+                            {
+                                "name": "AI Image Edit"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "AI Model",
+                        "subtags": [
+                            {
+                                "name": "Nano Banana"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Deployment",
+                        "subtags": [
+                            {
+                                "name": "Custom Domain"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Bug Fixes",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Now Live: Invite Friends and Earn Rewards 🎁",
+                "description": "New\n\nEarn rewards by inviting friends to try Trickle. Your friends get 200 credits when they sign up, and you earn 200 too when they publish their first site. Share the link, grow the community, and rack up credits along the way. To get started, log in to Trickle, click the gift icon in the top right corner, and copy your unique invitation link from the popup window. Share it with anyone who hasn’t signed up yet and start earning.\n\nImprovement\n\nReduced scroll-to-zoom sensitivity on canvas and added a zoom menu for easier control\n\nAdded clearer UI cues in chat-only mode to improve visibility and guidance\n\nBug Fixes\n\nFixed an issue where AI-generated code caused unexpected sign-outs\n\nFixed a layout bug where the canvas toolbar was not centered after panning\n\nVideo is still processing, it should be ready shortly...",
+                "time": "2025-08-26",
+                "tags": [
+                    {
+                        "name": "Billing & Credits",
+                        "subtags": [
+                            {
+                                "name": "Referral"
+                            },
+                            {
+                                "name": "Credits"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": [
+                            {
+                                "name": "Navigation"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Bug Fixes",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "New Canvas Zoom Control, Smoother Navigation, and Stability Fixes",
+                "description": "New\n\nAdded a new zoom control to the canvas: you can now zoom in and out by clicking the zoom tool, and quickly refocus the view on the main content area. This improves navigation and overall usability on large canvases.\n\nBug Fixes\n\nFixed an issue where mouse tracking was not available on the canvas during AI-driven database operations.\n\nFixed a bug where AI-generated code with input autoFocus logic interfered with canvas drag functionality.",
+                "time": "2025-08-21",
+                "tags": [
+                    {
+                        "name": "UI/UX",
+                        "subtags": [
+                            {
+                                "name": "Navigation"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Bug Fixes",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Bedrock & GPT-5 Mini Upgrade, Smarter Error Reporting, and Canvas Stability Fixes",
+                "description": "Improvements\n\nSwitched Claude Sonnet 4 model deployment to AWS Bedrock,\n\nUpgraded in-app AI model to GPT-5 Mini (via OpenRouter),\n\nImproved error reporting by detecting and filtering out Chrome extension errors,\n\nBug Fixes\n\nFixed an issue where some pages on the canvas occasionally failed to fully expand,\n\nFixed a bug where colored bounding boxes on the canvas didn’t disappear after AI responses completed,\n\nFixed a crash when clicking the refresh icon in the header while in Focus Mode",
+                "time": "2025-08-19",
+                "tags": [
+                    {
+                        "name": "AI Model",
+                        "subtags": [
+                            {
+                                "name": "Claude"
+                            },
+                            {
+                                "name": "GPT"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Integration",
+                        "subtags": [
+                            {
+                                "name": "Amazon Bedrock"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Bug Fixes",
+                        "subtags": []
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Easy Image Cropping, Better Home Input Hints & Smarter Preview Links",
+                "description": "New\n\nSimple image editing – uploaded assets/images now support basic crop.\n\nImprovements\n\nHome chat input – clearer tips when adding assets, rules, and knowledge.\n\nPreview links – standardized the preview URL format so browsers recognize/share it more reliably.\n\nCopy consistency – unified the Sign out wording in Account settings.\n\nBug Fixes\n\nRename Project dialog – the project name field no longer appears empty when renaming from the project dropdown.",
+                "time": "2025-08-18",
+                "tags": [
+                    {
+                        "name": "Image Generation",
+                        "subtags": [
+                            {
+                                "name": "AI Image Edit"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": [
+                            {
+                                "name": "Dashboard"
+                            },
+                            {
+                                "name": "Navigation"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Deployment",
+                        "subtags": [
+                            {
+                                "name": "Preview"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Bug Fixes",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Unpublish Controls, Domain Cache Fixes, and More Reliable Deploys",
+                "description": "New\n\nUnpublish projects – you can now unpublish a project manually, and deleting a project will automatically unpublish it.\n\nBug Fixes\n\nCustom domains – fixed an issue where cache invalidation didn’t properly clear for custom domains.\n\nChat images – resolved errors that could occur when sending or viewing images in Chat.\n\nDeploys after page deletion – fixed a problem where deleted pages could still be accessed after redeploying.",
+                "time": "2025-08-13",
+                "tags": [
+                    {
+                        "name": "Deployment",
+                        "subtags": [
+                            {
+                                "name": "Publishing"
+                            },
+                            {
+                                "name": "Custom Domain"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Bug Fixes",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Build with Gemini 2.5 Pro or Grok 4 or GPT-5, Flexible Dragging, and a New Web Search Tool",
+                "description": "New\n\nExperimental features\n\nChoose from multiple models (e.g., Gemini 2.5 Pro, Grok 4) when building apps.\n\nConfigurable dragging modes: free drag or layout-constrained drag.\n\nImprovements\n\nWeb search tool – fetch content directly from web pages.\n\nBug Fixes\n\nFixed an issue that prevented loading more messages when scrolling up in chat.",
+                "time": "2025-08-09",
+                "tags": [
+                    {
+                        "name": "AI Model",
+                        "subtags": [
+                            {
+                                "name": "Gemini"
+                            },
+                            {
+                                "name": "Grok 3"
+                            },
+                            {
+                                "name": "GPT-5"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Integration",
+                        "subtags": [
+                            {
+                                "name": "Web Search"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Editor",
+                        "subtags": []
+                    },
+                    {
+                        "name": "Bug Fixes",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Cleaner Canvas History and Smarter Analytics",
+                "description": "Improvements\n\nCanvas history tidy-up – the default view shows only the latest version (down from five).\n\nInstant image uploads in project chat – images you paste upload immediately (now in sync with Home); image URLs now include w= and h= parameters for width and height.\n\nContext-aware canvas drag – in database view, canvas movement is disabled only when a scrollbar is present.\n\nComprehensive page-view analytics – every page now reports events, giving richer insight.\n\nFooter update – “What’s new” is now Changelog, linking straight to the full update log.\n\nBug Fixes\n\nFixed a rare issue where user messages could occasionally disappear from chat history.",
+                "time": "2025-08-01",
+                "tags": [
+                    {
+                        "name": "UI/UX",
+                        "subtags": [
+                            {
+                                "name": "Navigation"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Analytics",
+                        "subtags": [
+                            {
+                                "name": "Project Analytics"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Image Generation",
+                        "subtags": [
+                            {
+                                "name": "Image Upload"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Bug Fixes",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Sharper FAQs, Sleeker Canvas, and an Improved Mobile Experience",
+                "description": "Improvements\n\nPricing FAQ refresh – clearer, more helpful answers.\n\nUpdated site sitemap – better SEO and easier crawling.\n\nTouch Screen Canvas enhancements – smoother interactions and improved compatibility.\n\nMobile input styling – cleaner look and feel across small screens.\n\nBug Fixes\n\nFixed a lost-event issue when the socket reconnected during AI replies.\n\nRestored correct behaviour for canvas following.\n\nResolved errors when loading additional chat history.\n\nCorrected “small changes” mishandling when edits contained the $1 placeholder.\n\nFixed the gradient background glitch on the Create button (Safari).",
+                "time": "2025-07-31",
+                "tags": [
+                    {
+                        "name": "UI/UX",
+                        "subtags": [
+                            {
+                                "name": "Mobile"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Performance",
+                        "subtags": [
+                            {
+                                "name": "SEO"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Bug Fixes",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Smarter Chat, Cleaner UI, and a More Helpful Pricing Page",
+                "description": "New\n\nBlog section’s been updated to new URL https://trickle.so/blog\n\nImprovements\n\nAdded FAQs and updated metadata on the pricing page\n\nEnabled streaming preview for pure HTML pages\n\nYou can now load more chat history.\n\nBug Fixes\n\nUser email is now hidden in community projects\n\nUpdated Twitter and OG image URLs\n\nFixed table styling issues for sites, rules, and knowledge views\n\nResolved socket reconnection errors that caused unexpected behavior",
+                "time": "2025-07-30",
+                "tags": [
+                    {
+                        "name": "UI/UX",
+                        "subtags": [
+                            {
+                                "name": "Navigation"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Billing & Credits",
+                        "subtags": [
+                            {
+                                "name": "Pricing"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Bug Fixes",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Introducing Magic Canvas: A Visual, Agentic Way to Build with AI",
+                "description": "New\n\nWe’ve launched Trickle Magic Canvas, the core of a new way to build with AI, where you don’t just prompt, you co-create. Unlike traditional linear chats, Magic Canvas gives you a fully visual canvas to work alongside AI and build production-ready websites, apps, and forms.\n\nHere’s what you can do with Magic Canvas:\n\nVisually co-create with AI\n\nLay out pages, drag in assets, write notes, and add rules directly onto the canvas. The AI understands context not just through prompts, but through structure and layout.\n\nBuild multi-page apps in one flow\n\nCreate and organize entire product structures across multiple screens and flows, with versioning and clear visual hierarchy.\n\nSee how AI thinks\n\nWatch every AI step unfold transparently, with real-time feedback and editable outputs. No more black box generations.\n\nDirectly edit any element\n\nClick into any frame to tweak text, styles, and layout with instant feedback. All changes sync to clean, production-grade code behind the scenes.\n\nPublish instantly\n\nFrom canvas to live site, publish your work with one click. No extra tooling or setup required.",
+                "time": "2025-07-22",
+                "tags": [
+                    {
+                        "name": "Agent",
+                        "subtags": [
+                            {
+                                "name": "Agent Mode"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Editor",
+                        "subtags": [
+                            {
+                                "name": "Visual Editor"
+                            },
+                            {
+                                "name": "Design View"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Deployment",
+                        "subtags": [
+                            {
+                                "name": "Publishing"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Introducing Trickle 1.5: A More Fluid Way to Build with AI",
+                "description": "New\n\nTrickle 1.5 is here — and it’s all about giving you more control, better AI collaboration, and a cleaner, more intuitive building experience. From visual polish to deeper agent intelligence, this update brings meaningful improvements to every step of the creation flow.\n\nHere’s what’s new in 1.5:\n\nTrickle Direct Edit\n\nInstantly edit any text, style, or layout element directly on the canvas. No need to re-prompt or start over — just click and change.\n\nSmarter AI Agent\n\nOur agent now supports automatic continuation, intelligent error recovery, and more natural interactions during the build process.\n\nNew Chat Mode\n\nCollaborate with AI in a more conversational way. Ask questions, make requests, and guide the flow in back-and-forth dialogue.\n\nRedesigned Interface\n\nCleaner layout, improved visual hierarchy, and a unified design system make the workspace easier to use and more consistent.\n\nDark Mode and Light Mode Toggle\n\nSwitch between themes anytime for a more comfortable building experience, day or night.\n\nImproved Layout Engine\n\nBetter spacing, alignment, and responsiveness — everything feels more intentional and balanced.\n\nUpdated Typography System\n\nEnhanced type scale and clarity make your content more readable and polished across devices.\n\nWhether you’re editing a landing page, customizing a form, or fine-tuning layout details, Trickle 1.5 makes it all feel faster, clearer, and more effortless.",
+                "time": "2025-07-01",
+                "tags": [
+                    {
+                        "name": "Agent",
+                        "subtags": [
+                            {
+                                "name": "Agent Mode"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Editor",
+                        "subtags": [
+                            {
+                                "name": "Visual Editor"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": [
+                            {
+                                "name": "Dark Mode"
+                            },
+                            {
+                                "name": "Themes"
+                            },
+                            {
+                                "name": "Navigation"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Performance",
+                        "subtags": []
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,1157 @@
+[
+    {
+        "name": "base44",
+        "url": "https://base44.com/changelog"
+    },
+    {
+        "name": "feature",
+        "features": [
+            {
+                "title": "GitHub 2 way sync",
+                "description": "January 25, 2026\nOur GitHub integration just upgrade with 2-way sync, bringing full version control and a smoother development workflow.\n\nWith this update, you can:\n\nKeep your Base44 app and GitHub repository automatically in sync\n\nCollaborate with multiple contributors on the same app through GitHub\n\nWork in your preferred IDE and sync changes back through GitHub\n\nThis makes it easier to manage changes, collaborate at scale, and build with the tools you already use.\nBase44 is the AI-powered platform that lets users build fully functioning apps in minutes. Using nothing but natural language, Base44 enables anyone to turn their words into personal productivity apps, back-office tools, customer portals, or complete enterprise products that are ready to use, no integrations required.\n© 2026 Base44 Inc. All rights reserved.\nWe use cookies and similar technologies. You can opt-out by clicking 'Do Not Sell or Share My Personal Information' at the bottom of the page.",
+                "time": "2026-01-01",
+                "tags": [
+                    {
+                        "name": "Integration",
+                        "subtags": [
+                            {
+                                "name": "GitHub"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "NPM packages",
+                "description": "December 4, 2025\nYou can now bring any web library from NPM into your Base44 apps, including GSAP, Radix UI, anime.js, and many more.\n\nThese packages cover animation, 3D, UI components, charts, forms, and media, all accessible directly from the builder. Just tell the builder which package you want to use and it will be added automatically.\n\nThis unlocks a new level of creativity and functionality. You can build apps with premium motion, advanced 3D scenes, smarter interactions, richer dashboards, file uploads, image editing, and video players, all with more polish and capability.\nBase44 is the AI-powered platform that lets users build fully functioning apps in minutes. Using nothing but natural language, Base44 enables anyone to turn their words into personal productivity apps, back-office tools, customer portals, or complete enterprise products that are ready to use, no integrations required.\n© 2026 Base44 Inc. All rights reserved.\nWe use cookies and similar technologies. You can opt-out by clicking 'Do Not Sell or Share My Personal Information' at the bottom of the page.",
+                "time": "2026-01-01",
+                "tags": [
+                    {
+                        "name": "Integration",
+                        "subtags": [
+                            {
+                                "name": "NPM"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Framework",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Act as a user",
+                "description": "December 3, 2025\nApp admins can now select any user or role and instantly view the app from their point of view, making it easy to reproduce issues in real time, validate flows end-to-end, and confirm user access levels.\n\nOne of the fastest ways to test, troubleshoot, and fine-tune your user experience, now live in your dashboard.\nBase44 is the AI-powered platform that lets users build fully functioning apps in minutes. Using nothing but natural language, Base44 enables anyone to turn their words into personal productivity apps, back-office tools, customer portals, or complete enterprise products that are ready to use, no integrations required.\n© 2026 Base44 Inc. All rights reserved.\nWe use cookies and similar technologies. You can opt-out by clicking 'Do Not Sell or Share My Personal Information' at the bottom of the page.",
+                "time": "2026-01-01",
+                "tags": [
+                    {
+                        "name": "Team & Enterprise",
+                        "subtags": [
+                            {
+                                "name": "Permissions"
+                            },
+                            {
+                                "name": "Roles"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": [
+                            {
+                                "name": "Dashboard"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "One-click connector tools",
+                "description": "November 18, 2025\nWe’ve made integrations effortless. With our new Connectors, you can instantly link your go-to tools like Google Calendar, Notion, Slack, and Salesforce right inside the builder. Just prompt, click, and you’re connected.\n\nLearn more: https://docs.base44.com/Integrations/Connectors\nBase44 is the AI-powered platform that lets users build fully functioning apps in minutes. Using nothing but natural language, Base44 enables anyone to turn their words into personal productivity apps, back-office tools, customer portals, or complete enterprise products that are ready to use, no integrations required.\n© 2026 Base44 Inc. All rights reserved.\nWe use cookies and similar technologies. You can opt-out by clicking 'Do Not Sell or Share My Personal Information' at the bottom of the page.",
+                "time": "2026-01-01",
+                "tags": [
+                    {
+                        "name": "Integration",
+                        "subtags": [
+                            {
+                                "name": "Google Services"
+                            },
+                            {
+                                "name": "Notion"
+                            },
+                            {
+                                "name": "Slack"
+                            },
+                            {
+                                "name": "Salesforce"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "New Agent builder",
+                "description": "October 26, 2025\nWe rolled out the new Agent Builder, now powering all new apps in Base44. (Existing Base/Wix apps will continue using the legacy builder for now. The new Agent Builder lets you describe a task, then it automatically selects and orchestrates the right tools to complete it.\n\nInitial toolset includes:\n-Edit / read files\n-Create / read / update / delete database entities\n-Web search\n-Fetch content from URLs\n\nWhat to expect:\n-Fewer errors and more stable multi-step flows\n-Improved composition for complex, multi-agent apps\nBase44 is the AI-powered platform that lets users build fully functioning apps in minutes. Using nothing but natural language, Base44 enables anyone to turn their words into personal productivity apps, back-office tools, customer portals, or complete enterprise products that are ready to use, no integrations required.\n© 2026 Base44 Inc. All rights reserved.\nWe use cookies and similar technologies. You can opt-out by clicking 'Do Not Sell or Share My Personal Information' at the bottom of the page.",
+                "time": "2026-01-01",
+                "tags": [
+                    {
+                        "name": "Agent",
+                        "subtags": [
+                            {
+                                "name": "Agent Mode"
+                            },
+                            {
+                                "name": "Automation"
+                            },
+                            {
+                                "name": "Tasks"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Database",
+                        "subtags": [
+                            {
+                                "name": "Database Editor"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Integration",
+                        "subtags": [
+                            {
+                                "name": "Web Search"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "WhatsApp integration for Agents",
+                "description": "September 21, 2025\nBase44 now supports seamless integration with WhatsApp, enabling you to bring your agents directly into the messaging platform. This enhancement allows your applications to be more intelligent, practical, and interconnected.\n\nWith this integration, Base44 Agents can perform the following actions:\n- Read, create, edit, and delete records in your entities\n- Trigger backend functions\n- Process images using Optical Character Recognition (OCR)\n- Receive and manage voice messages\nBase44 is the AI-powered platform that lets users build fully functioning apps in minutes. Using nothing but natural language, Base44 enables anyone to turn their words into personal productivity apps, back-office tools, customer portals, or complete enterprise products that are ready to use, no integrations required.\n© 2026 Base44 Inc. All rights reserved.\nWe use cookies and similar technologies. You can opt-out by clicking 'Do Not Sell or Share My Personal Information' at the bottom of the page.",
+                "time": "2026-01-01",
+                "tags": [
+                    {
+                        "name": "Integration",
+                        "subtags": [
+                            {
+                                "name": "WhatsApp"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Agent",
+                        "subtags": [
+                            {
+                                "name": "Agent Mode"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Agentic apps",
+                "description": "September 14, 2025\nIntroducing Base44 Agentic Apps: you can now integrate AI agents into your apps effortlessly. Agents leverage built-in tools such as database access, backend function integrations, and web data, among others. This versatility supports a wide range of applications, empowering you to innovate with ease and bring ideas to life without the need for complex development.\n\nUse Cases:\n\nnteractive CRM: Communicate with your CRM to access and update records seamlessly.\n\nTask Management: Convert meeting notes into tasks automatically with an AI-driven task management app.\n\nContent Production: Scale your content creation with an AI agent that learns and adapts to your writing style.\n\nGaming: Utilize an AI agent to write game code, transforming your game ideas into reality.\nBase44 is the AI-powered platform that lets users build fully functioning apps in minutes. Using nothing but natural language, Base44 enables anyone to turn their words into personal productivity apps, back-office tools, customer portals, or complete enterprise products that are ready to use, no integrations required.\n© 2026 Base44 Inc. All rights reserved.\nWe use cookies and similar technologies. You can opt-out by clicking 'Do Not Sell or Share My Personal Information' at the bottom of the page.",
+                "time": "2026-01-01",
+                "tags": [
+                    {
+                        "name": "Agent",
+                        "subtags": [
+                            {
+                                "name": "Agent Mode"
+                            },
+                            {
+                                "name": "Automation"
+                            },
+                            {
+                                "name": "Tasks"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Database",
+                        "subtags": []
+                    },
+                    {
+                        "name": "Integration",
+                        "subtags": [
+                            {
+                                "name": "Web Search"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Base44 Partners",
+                "description": "September 11, 2025\nA new Partners section is now available in the dashboard, allowing users to connect with approved agencies and freelancers for help with app development, launch, security, and scaling.\n\nUsers can browse the full list of approved Partners and contact them directly via email to start working together.\n\nPartners can apply through a streamlined application flow. Approval is based on the submitted application and alignment with program criteria.\nBase44 is the AI-powered platform that lets users build fully functioning apps in minutes. Using nothing but natural language, Base44 enables anyone to turn their words into personal productivity apps, back-office tools, customer portals, or complete enterprise products that are ready to use, no integrations required.\n© 2026 Base44 Inc. All rights reserved.\nWe use cookies and similar technologies. You can opt-out by clicking 'Do Not Sell or Share My Personal Information' at the bottom of the page.",
+                "time": "2026-01-01",
+                "tags": [
+                    {
+                        "name": "Team & Enterprise",
+                        "subtags": [
+                            {
+                                "name": "Project Sharing"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": [
+                            {
+                                "name": "Dashboard"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Referral credits",
+                "description": "September 5, 2025\nUsers can now invite friends and earn credits. Refer others to Base44 and get rewarded when they start building.\n\nNew users get 10 free credits when they sign up through your link. Once they publish their first site, you’ll get 10 credits too. Limited to 5 successful referrals per user.\nBase44 is the AI-powered platform that lets users build fully functioning apps in minutes. Using nothing but natural language, Base44 enables anyone to turn their words into personal productivity apps, back-office tools, customer portals, or complete enterprise products that are ready to use, no integrations required.\n© 2026 Base44 Inc. All rights reserved.\nWe use cookies and similar technologies. You can opt-out by clicking 'Do Not Sell or Share My Personal Information' at the bottom of the page.",
+                "time": "2026-01-01",
+                "tags": [
+                    {
+                        "name": "Billing & Credits",
+                        "subtags": [
+                            {
+                                "name": "Referral"
+                            },
+                            {
+                                "name": "Credits"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "App templates",
+                "description": "August 4, 2025\nDiscover and share apps in the new App Template catalog.\n\nFor creators: publish your own templates and grow your presence in the Base44 community.\n\nFor users: browse apps curated and approved by our team. Clone, customize, and build faster, while saving credits along the way.\nBase44 is the AI-powered platform that lets users build fully functioning apps in minutes. Using nothing but natural language, Base44 enables anyone to turn their words into personal productivity apps, back-office tools, customer portals, or complete enterprise products that are ready to use, no integrations required.\n© 2026 Base44 Inc. All rights reserved.\nWe use cookies and similar technologies. You can opt-out by clicking 'Do Not Sell or Share My Personal Information' at the bottom of the page.",
+                "time": "2026-01-01",
+                "tags": [
+                    {
+                        "name": "UI/UX",
+                        "subtags": [
+                            {
+                                "name": "Dashboard"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Team & Enterprise",
+                        "subtags": [
+                            {
+                                "name": "Project Sharing"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "More auth login options",
+                "description": "July 28, 2025\nLet users log in using their Google, Microsoft, or Facebook accounts.\nEnable it in your app’s auth settings, no extra setup needed.\nBase44 is the AI-powered platform that lets users build fully functioning apps in minutes. Using nothing but natural language, Base44 enables anyone to turn their words into personal productivity apps, back-office tools, customer portals, or complete enterprise products that are ready to use, no integrations required.\n© 2026 Base44 Inc. All rights reserved.\nWe use cookies and similar technologies. You can opt-out by clicking 'Do Not Sell or Share My Personal Information' at the bottom of the page.",
+                "time": "2026-01-01",
+                "tags": [
+                    {
+                        "name": "Authentication",
+                        "subtags": [
+                            {
+                                "name": "Google Sign In"
+                            },
+                            {
+                                "name": "OAuth"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Custom SSO & permissions",
+                "description": "July 28, 2025\nUsers can set up their own SSO provider and take full control of their app’s authentication. Let teammates log in with your company’s SSO. Request specific permissions like Gmail or calendar access.\nBase44 is the AI-powered platform that lets users build fully functioning apps in minutes. Using nothing but natural language, Base44 enables anyone to turn their words into personal productivity apps, back-office tools, customer portals, or complete enterprise products that are ready to use, no integrations required.\n© 2026 Base44 Inc. All rights reserved.\nWe use cookies and similar technologies. You can opt-out by clicking 'Do Not Sell or Share My Personal Information' at the bottom of the page.",
+                "time": "2026-01-01",
+                "tags": [
+                    {
+                        "name": "Authentication",
+                        "subtags": [
+                            {
+                                "name": "SSO"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Team & Enterprise",
+                        "subtags": [
+                            {
+                                "name": "Permissions"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Annual plans",
+                "description": "July 24, 2025\nYou can now choose an annual billing plan and save 20% when you switch from monthly to annual.\nBase44 is the AI-powered platform that lets users build fully functioning apps in minutes. Using nothing but natural language, Base44 enables anyone to turn their words into personal productivity apps, back-office tools, customer portals, or complete enterprise products that are ready to use, no integrations required.\n© 2026 Base44 Inc. All rights reserved.\nWe use cookies and similar technologies. You can opt-out by clicking 'Do Not Sell or Share My Personal Information' at the bottom of the page.",
+                "time": "2026-01-01",
+                "tags": [
+                    {
+                        "name": "Billing & Credits",
+                        "subtags": [
+                            {
+                                "name": "Subscription"
+                            },
+                            {
+                                "name": "Pricing"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Workspaces",
+                "description": "July 8, 2025\nCollaborate more effectively with the introduction of Workspaces. Invite your teammates, assign roles, and easily add seats as your team grows, all from a single, streamlined dashboard.\nBase44 is the AI-powered platform that lets users build fully functioning apps in minutes. Using nothing but natural language, Base44 enables anyone to turn their words into personal productivity apps, back-office tools, customer portals, or complete enterprise products that are ready to use, no integrations required.\n© 2026 Base44 Inc. All rights reserved.\nWe use cookies and similar technologies. You can opt-out by clicking 'Do Not Sell or Share My Personal Information' at the bottom of the page.",
+                "time": "2026-01-01",
+                "tags": [
+                    {
+                        "name": "Team & Enterprise",
+                        "subtags": [
+                            {
+                                "name": "Workspace"
+                            },
+                            {
+                                "name": "Team Management"
+                            },
+                            {
+                                "name": "Roles"
+                            },
+                            {
+                                "name": "Invite"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": [
+                            {
+                                "name": "Dashboard"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Visual edits",
+                "description": "July 4, 2025\nMore control and fluidity when editing your app visually. Make quick changes to text, tweak colors with precision, and enjoy a smoother, faster design flow throughout.\nBase44 is the AI-powered platform that lets users build fully functioning apps in minutes. Using nothing but natural language, Base44 enables anyone to turn their words into personal productivity apps, back-office tools, customer portals, or complete enterprise products that are ready to use, no integrations required.\n© 2026 Base44 Inc. All rights reserved.\nWe use cookies and similar technologies. You can opt-out by clicking 'Do Not Sell or Share My Personal Information' at the bottom of the page.",
+                "time": "2026-01-01",
+                "tags": [
+                    {
+                        "name": "Editor",
+                        "subtags": [
+                            {
+                                "name": "Visual Editor"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Flexible log-in",
+                "description": "July 2, 2025\nYour users can now log in to your apps with any email and password, not just Google login. This means more people can access what you’ve built, without extra steps or barriers.\nBase44 is the AI-powered platform that lets users build fully functioning apps in minutes. Using nothing but natural language, Base44 enables anyone to turn their words into personal productivity apps, back-office tools, customer portals, or complete enterprise products that are ready to use, no integrations required.\n© 2026 Base44 Inc. All rights reserved.\nWe use cookies and similar technologies. You can opt-out by clicking 'Do Not Sell or Share My Personal Information' at the bottom of the page.",
+                "time": "2026-01-01",
+                "tags": [
+                    {
+                        "name": "Authentication",
+                        "subtags": [
+                            {
+                                "name": "Email Auth"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Mid-generation chat stop",
+                "description": "June 13, 2025\nYou now have the ability to stop AI chat responses mid-generation. Whether the output is taking too long, isn’t heading in the right direction, or you just want to rephrase your input, this feature gives you more control during live interactions with the AI.\nBase44 is the AI-powered platform that lets users build fully functioning apps in minutes. Using nothing but natural language, Base44 enables anyone to turn their words into personal productivity apps, back-office tools, customer portals, or complete enterprise products that are ready to use, no integrations required.\n© 2026 Base44 Inc. All rights reserved.\nWe use cookies and similar technologies. You can opt-out by clicking 'Do Not Sell or Share My Personal Information' at the bottom of the page.",
+                "time": "2026-01-01",
+                "tags": [
+                    {
+                        "name": "Agent",
+                        "subtags": []
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Improved versioning & project history",
+                "description": "June 10, 2025\nYou can now view, load, and revert to any version of your project, past or future. This new versioning system brings Git-like flexibility to your app development process, letting you experiment freely, recover from mistakes, or track changes over time with confidence.\nBase44 is the AI-powered platform that lets users build fully functioning apps in minutes. Using nothing but natural language, Base44 enables anyone to turn their words into personal productivity apps, back-office tools, customer portals, or complete enterprise products that are ready to use, no integrations required.\n© 2026 Base44 Inc. All rights reserved.\nWe use cookies and similar technologies. You can opt-out by clicking 'Do Not Sell or Share My Personal Information' at the bottom of the page.",
+                "time": "2026-01-01",
+                "tags": [
+                    {
+                        "name": "Editor",
+                        "subtags": [
+                            {
+                                "name": "Diff View"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": [
+                            {
+                                "name": "Dashboard"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Fewer LLM Calls with Claude 4",
+                "description": "June 9, 2025\nWith Claude 4’s expanded context window, your app creation process now requires fewer LLM calls. That means faster responses and lower operational costs, especially when working with large datasets or complex instructions.\nBase44 is the AI-powered platform that lets users build fully functioning apps in minutes. Using nothing but natural language, Base44 enables anyone to turn their words into personal productivity apps, back-office tools, customer portals, or complete enterprise products that are ready to use, no integrations required.\n© 2026 Base44 Inc. All rights reserved.\nWe use cookies and similar technologies. You can opt-out by clicking 'Do Not Sell or Share My Personal Information' at the bottom of the page.",
+                "time": "2026-01-01",
+                "tags": [
+                    {
+                        "name": "AI Model",
+                        "subtags": [
+                            {
+                                "name": "Claude"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Performance",
+                        "subtags": [
+                            {
+                                "name": "Speed"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Prompt caching optimization",
+                "description": "June 6, 2025\nYou can now reuse prompts for up to 1 hour, thanks to an extended caching window (up from 5 minutes). This significantly reduces token usage and speeds up your workflow, ideal for refining prompts during development sessions.\nBase44 is the AI-powered platform that lets users build fully functioning apps in minutes. Using nothing but natural language, Base44 enables anyone to turn their words into personal productivity apps, back-office tools, customer portals, or complete enterprise products that are ready to use, no integrations required.\n© 2026 Base44 Inc. All rights reserved.\nWe use cookies and similar technologies. You can opt-out by clicking 'Do Not Sell or Share My Personal Information' at the bottom of the page.",
+                "time": "2026-01-01",
+                "tags": [
+                    {
+                        "name": "Performance",
+                        "subtags": [
+                            {
+                                "name": "Caching"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Billing & Credits",
+                        "subtags": [
+                            {
+                                "name": "Credits"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Backend function & image upload bugs",
+                "description": "June 4, 2025\nWe fixed several issues affecting reliability, including:\n\n-Problems reverting backend functions after edits\n-Errors when redeploying apps with secrets\nBroken or stalled image uploads\n\nWith these fixes, your editing and deployment processes should be smoother and more stable.\nBase44 is the AI-powered platform that lets users build fully functioning apps in minutes. Using nothing but natural language, Base44 enables anyone to turn their words into personal productivity apps, back-office tools, customer portals, or complete enterprise products that are ready to use, no integrations required.\n© 2026 Base44 Inc. All rights reserved.\nWe use cookies and similar technologies. You can opt-out by clicking 'Do Not Sell or Share My Personal Information' at the bottom of the page.",
+                "time": "2026-01-01",
+                "tags": [
+                    {
+                        "name": "Bug Fixes",
+                        "subtags": []
+                    },
+                    {
+                        "name": "Image Generation",
+                        "subtags": [
+                            {
+                                "name": "Image Upload"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Deployment",
+                        "subtags": [
+                            {
+                                "name": "Publishing"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "No-charge policy on App bugs",
+                "description": "June 3, 2025\nIf you encounter certain bugs during development and use “Resolve with AI”, you won’t be charged for that action. This update ensures you’re never penalized for fixing issues caused on our end, making the build experience more transparent and developer-friendly.\nBase44 is the AI-powered platform that lets users build fully functioning apps in minutes. Using nothing but natural language, Base44 enables anyone to turn their words into personal productivity apps, back-office tools, customer portals, or complete enterprise products that are ready to use, no integrations required.\n© 2026 Base44 Inc. All rights reserved.\nWe use cookies and similar technologies. You can opt-out by clicking 'Do Not Sell or Share My Personal Information' at the bottom of the page.",
+                "time": "2026-01-01",
+                "tags": [
+                    {
+                        "name": "Billing & Credits",
+                        "subtags": [
+                            {
+                                "name": "Credits"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Bug Fixes",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "In-app domain purchase & management",
+                "description": "May 23, 2025\nYou can purchase and automatically connect domains directly within Base44. Once a domain is selected, it's automatically connected to your project, eliminating the need for manual configuration or third-party setup.\nBase44 is the AI-powered platform that lets users build fully functioning apps in minutes. Using nothing but natural language, Base44 enables anyone to turn their words into personal productivity apps, back-office tools, customer portals, or complete enterprise products that are ready to use, no integrations required.\n© 2026 Base44 Inc. All rights reserved.\nWe use cookies and similar technologies. You can opt-out by clicking 'Do Not Sell or Share My Personal Information' at the bottom of the page.",
+                "time": "2026-01-01",
+                "tags": [
+                    {
+                        "name": "Deployment",
+                        "subtags": [
+                            {
+                                "name": "Custom Domain"
+                            },
+                            {
+                                "name": "DNS"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "10-minute full app launch workflow",
+                "description": "May 21, 2025\nStreamlined workflow allows users to launch fully featured apps, database, authentication, integrations, analytics, and domain, in about 10 minutes.\nBase44 is the AI-powered platform that lets users build fully functioning apps in minutes. Using nothing but natural language, Base44 enables anyone to turn their words into personal productivity apps, back-office tools, customer portals, or complete enterprise products that are ready to use, no integrations required.\n© 2026 Base44 Inc. All rights reserved.\nWe use cookies and similar technologies. You can opt-out by clicking 'Do Not Sell or Share My Personal Information' at the bottom of the page.",
+                "time": "2026-01-01",
+                "tags": [
+                    {
+                        "name": "Deployment",
+                        "subtags": [
+                            {
+                                "name": "Custom Domain"
+                            },
+                            {
+                                "name": "Publishing"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Database",
+                        "subtags": []
+                    },
+                    {
+                        "name": "Authentication",
+                        "subtags": []
+                    },
+                    {
+                        "name": "Integration",
+                        "subtags": []
+                    },
+                    {
+                        "name": "Analytics",
+                        "subtags": []
+                    },
+                    {
+                        "name": "Performance",
+                        "subtags": [
+                            {
+                                "name": "Speed"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Backend functions for custom UI and internal tooling",
+                "description": "May 19, 2025\nEnabled building advanced UIs and internal tools by integrating custom backend functions on company data and APIs.\nBase44 is the AI-powered platform that lets users build fully functioning apps in minutes. Using nothing but natural language, Base44 enables anyone to turn their words into personal productivity apps, back-office tools, customer portals, or complete enterprise products that are ready to use, no integrations required.\n© 2026 Base44 Inc. All rights reserved.\nWe use cookies and similar technologies. You can opt-out by clicking 'Do Not Sell or Share My Personal Information' at the bottom of the page.",
+                "time": "2026-01-01",
+                "tags": [
+                    {
+                        "name": "Integration",
+                        "subtags": []
+                    },
+                    {
+                        "name": "Editor",
+                        "subtags": [
+                            {
+                                "name": "Visual Editor"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "B2B data integration",
+                "description": "May 16, 2025\nIntroduced direct access to B2B data (CRM enrichments, business directories, AI-powered prospecting) with integration available via the new catalog.\nBase44 is the AI-powered platform that lets users build fully functioning apps in minutes. Using nothing but natural language, Base44 enables anyone to turn their words into personal productivity apps, back-office tools, customer portals, or complete enterprise products that are ready to use, no integrations required.\n© 2026 Base44 Inc. All rights reserved.\nWe use cookies and similar technologies. You can opt-out by clicking 'Do Not Sell or Share My Personal Information' at the bottom of the page.",
+                "time": "2026-01-01",
+                "tags": [
+                    {
+                        "name": "Integration",
+                        "subtags": [
+                            {
+                                "name": "Salesforce"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Database",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Integration catalog",
+                "description": "May 13, 2025\nMade available a catalog to automate connections between apps and a variety of external tools.\nBase44 is the AI-powered platform that lets users build fully functioning apps in minutes. Using nothing but natural language, Base44 enables anyone to turn their words into personal productivity apps, back-office tools, customer portals, or complete enterprise products that are ready to use, no integrations required.\n© 2026 Base44 Inc. All rights reserved.\nWe use cookies and similar technologies. You can opt-out by clicking 'Do Not Sell or Share My Personal Information' at the bottom of the page.",
+                "time": "2026-01-01",
+                "tags": [
+                    {
+                        "name": "Integration",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Claude Sonnet 4 default engine",
+                "description": "May 9, 2025\nSet Claude Sonnet 4 as the default LLM powering Base44 for higher quality AI results.\nBase44 is the AI-powered platform that lets users build fully functioning apps in minutes. Using nothing but natural language, Base44 enables anyone to turn their words into personal productivity apps, back-office tools, customer portals, or complete enterprise products that are ready to use, no integrations required.\n© 2026 Base44 Inc. All rights reserved.\nWe use cookies and similar technologies. You can opt-out by clicking 'Do Not Sell or Share My Personal Information' at the bottom of the page.",
+                "time": "2026-01-01",
+                "tags": [
+                    {
+                        "name": "AI Model",
+                        "subtags": [
+                            {
+                                "name": "Claude"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Safe publishing (dev/prod separation)",
+                "description": "May 8, 2025\nIntroduced dev and prod separation so users can test and update their apps before publishing live changes.\nBase44 is the AI-powered platform that lets users build fully functioning apps in minutes. Using nothing but natural language, Base44 enables anyone to turn their words into personal productivity apps, back-office tools, customer portals, or complete enterprise products that are ready to use, no integrations required.\n© 2026 Base44 Inc. All rights reserved.\nWe use cookies and similar technologies. You can opt-out by clicking 'Do Not Sell or Share My Personal Information' at the bottom of the page.",
+                "time": "2026-01-01",
+                "tags": [
+                    {
+                        "name": "Deployment",
+                        "subtags": [
+                            {
+                                "name": "Publishing"
+                            },
+                            {
+                                "name": "Preview"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "UI generation 10x better",
+                "description": "May 8, 2025\nReleased significant UI design generation improvements based on user feedback.\nBase44 is the AI-powered platform that lets users build fully functioning apps in minutes. Using nothing but natural language, Base44 enables anyone to turn their words into personal productivity apps, back-office tools, customer portals, or complete enterprise products that are ready to use, no integrations required.\n© 2026 Base44 Inc. All rights reserved.\nWe use cookies and similar technologies. You can opt-out by clicking 'Do Not Sell or Share My Personal Information' at the bottom of the page.",
+                "time": "2026-01-01",
+                "tags": [
+                    {
+                        "name": "UI/UX",
+                        "subtags": []
+                    },
+                    {
+                        "name": "Image Generation",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Built-in IDE overhaul",
+                "description": "May 7, 2025\nImproved built-in IDE with search-anywhere, better file tree, and resizable sidebar for technical editing.\nBase44 is the AI-powered platform that lets users build fully functioning apps in minutes. Using nothing but natural language, Base44 enables anyone to turn their words into personal productivity apps, back-office tools, customer portals, or complete enterprise products that are ready to use, no integrations required.\n© 2026 Base44 Inc. All rights reserved.\nWe use cookies and similar technologies. You can opt-out by clicking 'Do Not Sell or Share My Personal Information' at the bottom of the page.",
+                "time": "2026-01-01",
+                "tags": [
+                    {
+                        "name": "Editor",
+                        "subtags": [
+                            {
+                                "name": "Code Editor"
+                            },
+                            {
+                                "name": "Search Replace"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": [
+                            {
+                                "name": "Sidebar"
+                            },
+                            {
+                                "name": "Navigation"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Network logger component",
+                "description": "May 6, 2025\nLaunched a real-time network logger for external API requests, data actions, and integration debugging.\nBase44 is the AI-powered platform that lets users build fully functioning apps in minutes. Using nothing but natural language, Base44 enables anyone to turn their words into personal productivity apps, back-office tools, customer portals, or complete enterprise products that are ready to use, no integrations required.\n© 2026 Base44 Inc. All rights reserved.\nWe use cookies and similar technologies. You can opt-out by clicking 'Do Not Sell or Share My Personal Information' at the bottom of the page.",
+                "time": "2026-01-01",
+                "tags": [
+                    {
+                        "name": "Integration",
+                        "subtags": []
+                    },
+                    {
+                        "name": "Editor",
+                        "subtags": []
+                    },
+                    {
+                        "name": "Analytics",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Enhanced internet context",
+                "description": "May 6, 2025\nApps can now access up-to-date web information (news, profiles, knowledge bases) in real-time.\nBase44 is the AI-powered platform that lets users build fully functioning apps in minutes. Using nothing but natural language, Base44 enables anyone to turn their words into personal productivity apps, back-office tools, customer portals, or complete enterprise products that are ready to use, no integrations required.\n© 2026 Base44 Inc. All rights reserved.\nWe use cookies and similar technologies. You can opt-out by clicking 'Do Not Sell or Share My Personal Information' at the bottom of the page.",
+                "time": "2026-01-01",
+                "tags": [
+                    {
+                        "name": "Integration",
+                        "subtags": [
+                            {
+                                "name": "Web Search"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Expanded context windows",
+                "description": "May 5, 2025\nImproved the platform’s handling of larger projects to reduce AI confusion.\nBase44 is the AI-powered platform that lets users build fully functioning apps in minutes. Using nothing but natural language, Base44 enables anyone to turn their words into personal productivity apps, back-office tools, customer portals, or complete enterprise products that are ready to use, no integrations required.\n© 2026 Base44 Inc. All rights reserved.\nWe use cookies and similar technologies. You can opt-out by clicking 'Do Not Sell or Share My Personal Information' at the bottom of the page.",
+                "time": "2026-01-01",
+                "tags": [
+                    {
+                        "name": "Performance",
+                        "subtags": []
+                    },
+                    {
+                        "name": "AI Model",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Styling instructions templates",
+                "description": "April 25, 2025\nAdded the option to select a styling template at project start for consistent and personalized UI design.\nBase44 is the AI-powered platform that lets users build fully functioning apps in minutes. Using nothing but natural language, Base44 enables anyone to turn their words into personal productivity apps, back-office tools, customer portals, or complete enterprise products that are ready to use, no integrations required.\n© 2026 Base44 Inc. All rights reserved.\nWe use cookies and similar technologies. You can opt-out by clicking 'Do Not Sell or Share My Personal Information' at the bottom of the page.",
+                "time": "2026-01-01",
+                "tags": [
+                    {
+                        "name": "UI/UX",
+                        "subtags": [
+                            {
+                                "name": "Themes"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Editor",
+                        "subtags": [
+                            {
+                                "name": "Visual Editor"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "App security dashboard",
+                "description": "April 22, 2025\nCentralized management of security rules including support for row-level security and CRUD role logic.\nBase44 is the AI-powered platform that lets users build fully functioning apps in minutes. Using nothing but natural language, Base44 enables anyone to turn their words into personal productivity apps, back-office tools, customer portals, or complete enterprise products that are ready to use, no integrations required.\n© 2026 Base44 Inc. All rights reserved.\nWe use cookies and similar technologies. You can opt-out by clicking 'Do Not Sell or Share My Personal Information' at the bottom of the page.",
+                "time": "2026-01-01",
+                "tags": [
+                    {
+                        "name": "Security",
+                        "subtags": [
+                            {
+                                "name": "Access Control"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Database",
+                        "subtags": []
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": [
+                            {
+                                "name": "Dashboard"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Standalone subdomains",
+                "description": "April 17, 2025\nChanged app hosting so every app is on its own subdomain by default, with backward compatibility for old URLs.\nBase44 is the AI-powered platform that lets users build fully functioning apps in minutes. Using nothing but natural language, Base44 enables anyone to turn their words into personal productivity apps, back-office tools, customer portals, or complete enterprise products that are ready to use, no integrations required.\n© 2026 Base44 Inc. All rights reserved.\nWe use cookies and similar technologies. You can opt-out by clicking 'Do Not Sell or Share My Personal Information' at the bottom of the page.",
+                "time": "2026-01-01",
+                "tags": [
+                    {
+                        "name": "Deployment",
+                        "subtags": [
+                            {
+                                "name": "Hosting"
+                            },
+                            {
+                                "name": "Custom Domain"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "AI controls (custom instructions & file locking)",
+                "description": "April 14, 2025\nAdded the ability to provide detailed AI instructions and lock files/features against unwanted AI changes.\nBase44 is the AI-powered platform that lets users build fully functioning apps in minutes. Using nothing but natural language, Base44 enables anyone to turn their words into personal productivity apps, back-office tools, customer portals, or complete enterprise products that are ready to use, no integrations required.\n© 2026 Base44 Inc. All rights reserved.\nWe use cookies and similar technologies. You can opt-out by clicking 'Do Not Sell or Share My Personal Information' at the bottom of the page.",
+                "time": "2026-01-01",
+                "tags": [
+                    {
+                        "name": "Agent",
+                        "subtags": []
+                    },
+                    {
+                        "name": "Editor",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Inline code change viewing",
+                "description": "April 10, 2025\nImplemented a UI feature to show code diffs for every AI message in-app.\nBase44 is the AI-powered platform that lets users build fully functioning apps in minutes. Using nothing but natural language, Base44 enables anyone to turn their words into personal productivity apps, back-office tools, customer portals, or complete enterprise products that are ready to use, no integrations required.\n© 2026 Base44 Inc. All rights reserved.\nWe use cookies and similar technologies. You can opt-out by clicking 'Do Not Sell or Share My Personal Information' at the bottom of the page.",
+                "time": "2026-01-01",
+                "tags": [
+                    {
+                        "name": "Editor",
+                        "subtags": [
+                            {
+                                "name": "Diff View"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Higher data query rate limits",
+                "description": "March 20, 2025\nIncreased the rate cap for querying app databases and entities.\nBase44 is the AI-powered platform that lets users build fully functioning apps in minutes. Using nothing but natural language, Base44 enables anyone to turn their words into personal productivity apps, back-office tools, customer portals, or complete enterprise products that are ready to use, no integrations required.\n© 2026 Base44 Inc. All rights reserved.\nWe use cookies and similar technologies. You can opt-out by clicking 'Do Not Sell or Share My Personal Information' at the bottom of the page.",
+                "time": "2026-01-01",
+                "tags": [
+                    {
+                        "name": "Database",
+                        "subtags": []
+                    },
+                    {
+                        "name": "Performance",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "GitHub integration",
+                "description": "March 20, 2025\nEnabled exporting app codebases directly to GitHub for collaboration or external deployment.\nBase44 is the AI-powered platform that lets users build fully functioning apps in minutes. Using nothing but natural language, Base44 enables anyone to turn their words into personal productivity apps, back-office tools, customer portals, or complete enterprise products that are ready to use, no integrations required.\n© 2026 Base44 Inc. All rights reserved.\nWe use cookies and similar technologies. You can opt-out by clicking 'Do Not Sell or Share My Personal Information' at the bottom of the page.",
+                "time": "2026-01-01",
+                "tags": [
+                    {
+                        "name": "Integration",
+                        "subtags": [
+                            {
+                                "name": "GitHub"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Project export/import improvements",
+                "description": "March 19, 2025\nUpgraded project export functionality (ZIP, improved GitHub export).\nBase44 is the AI-powered platform that lets users build fully functioning apps in minutes. Using nothing but natural language, Base44 enables anyone to turn their words into personal productivity apps, back-office tools, customer portals, or complete enterprise products that are ready to use, no integrations required.\n© 2026 Base44 Inc. All rights reserved.\nWe use cookies and similar technologies. You can opt-out by clicking 'Do Not Sell or Share My Personal Information' at the bottom of the page.",
+                "time": "2026-01-01",
+                "tags": [
+                    {
+                        "name": "Integration",
+                        "subtags": [
+                            {
+                                "name": "GitHub"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Deployment",
+                        "subtags": [
+                            {
+                                "name": "Publishing"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Mobile preview mode",
+                "description": "March 18, 2025\nIntroduced a mode for previewing and testing how apps look on mobile devices.\nBase44 is the AI-powered platform that lets users build fully functioning apps in minutes. Using nothing but natural language, Base44 enables anyone to turn their words into personal productivity apps, back-office tools, customer portals, or complete enterprise products that are ready to use, no integrations required.\n© 2026 Base44 Inc. All rights reserved.\nWe use cookies and similar technologies. You can opt-out by clicking 'Do Not Sell or Share My Personal Information' at the bottom of the page.",
+                "time": "2026-01-01",
+                "tags": [
+                    {
+                        "name": "UI/UX",
+                        "subtags": [
+                            {
+                                "name": "Mobile"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Deployment",
+                        "subtags": [
+                            {
+                                "name": "Preview"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "App performance & speed",
+                "description": "March 14, 2025\nImproved speed and backend/UI performance.\nBase44 is the AI-powered platform that lets users build fully functioning apps in minutes. Using nothing but natural language, Base44 enables anyone to turn their words into personal productivity apps, back-office tools, customer portals, or complete enterprise products that are ready to use, no integrations required.\n© 2026 Base44 Inc. All rights reserved.\nWe use cookies and similar technologies. You can opt-out by clicking 'Do Not Sell or Share My Personal Information' at the bottom of the page.",
+                "time": "2026-01-01",
+                "tags": [
+                    {
+                        "name": "Performance",
+                        "subtags": [
+                            {
+                                "name": "Speed"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Sonnet 3.7 model availability",
+                "description": "March 14, 2025\nAdded Anthropic’s Sonnet 3.7 as an available language model.\nBase44 is the AI-powered platform that lets users build fully functioning apps in minutes. Using nothing but natural language, Base44 enables anyone to turn their words into personal productivity apps, back-office tools, customer portals, or complete enterprise products that are ready to use, no integrations required.\n© 2026 Base44 Inc. All rights reserved.\nWe use cookies and similar technologies. You can opt-out by clicking 'Do Not Sell or Share My Personal Information' at the bottom of the page.",
+                "time": "2026-01-01",
+                "tags": [
+                    {
+                        "name": "AI Model",
+                        "subtags": [
+                            {
+                                "name": "Claude"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Improved context & rate limiting",
+                "description": "March 12, 2025\nEnhanced context management and API rate limit handling (especially for external AI APIs).\nBase44 is the AI-powered platform that lets users build fully functioning apps in minutes. Using nothing but natural language, Base44 enables anyone to turn their words into personal productivity apps, back-office tools, customer portals, or complete enterprise products that are ready to use, no integrations required.\n© 2026 Base44 Inc. All rights reserved.\nWe use cookies and similar technologies. You can opt-out by clicking 'Do Not Sell or Share My Personal Information' at the bottom of the page.",
+                "time": "2026-01-01",
+                "tags": [
+                    {
+                        "name": "Performance",
+                        "subtags": []
+                    },
+                    {
+                        "name": "Integration",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Custom email domains",
+                "description": "December 11, 2025\nYou can now send emails from your own domain, instead of a base44-apps.com sender address. Your app emails will appear fully branded and professional, coming directly from yourcompany.com.\n\nThis highly requested feature enables a complete white-label email experience for your apps.\n\nDetails\n\nCosts 2 integration credits\n\nAvailable on Builder+ plans\n\nRequires custom domain setup\nBase44 is the AI-powered platform that lets users build fully functioning apps in minutes. Using nothing but natural language, Base44 enables anyone to turn their words into personal productivity apps, back-office tools, customer portals, or complete enterprise products that are ready to use, no integrations required.\n© 2026 Base44 Inc. All rights reserved.\nWe use cookies and similar technologies. You can opt-out by clicking 'Do Not Sell or Share My Personal Information' at the bottom of the page.",
+                "time": "2025-12-01",
+                "tags": [
+                    {
+                        "name": "Deployment",
+                        "subtags": [
+                            {
+                                "name": "Custom Domain"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Team & Enterprise",
+                        "subtags": [
+                            {
+                                "name": "Business Plan"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "The App Template Marketplace",
+                "description": "November 18, 2025\nYou can now shop and sell templates directly in Base44. Browse polished templates to jumpstart your next build. Or list your own and turn your best work into income.\n\nCheck it out: https://docs.base44.com/Getting-Started/App-templates\nBase44 is the AI-powered platform that lets users build fully functioning apps in minutes. Using nothing but natural language, Base44 enables anyone to turn their words into personal productivity apps, back-office tools, customer portals, or complete enterprise products that are ready to use, no integrations required.\n© 2026 Base44 Inc. All rights reserved.\nWe use cookies and similar technologies. You can opt-out by clicking 'Do Not Sell or Share My Personal Information' at the bottom of the page.",
+                "time": "2025-11-01",
+                "tags": [
+                    {
+                        "name": "UI/UX",
+                        "subtags": []
+                    },
+                    {
+                        "name": "Billing & Credits",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Workspace-level SSO",
+                "description": "October 31, 2025\nEnterprise admins can now set up SSO once at the workspace level and have it automatically apply across all apps, no more configuring auth for each app individually.\n\nWhat’s new:\n-App builders can enable Workspace SSO with a simple toggle in their app’s authentication settings.\n-All apps in the workspace will use the same SSO provider (Google, Okta, etc.) configured by the admin.\n-Enterprise admins can enforce workspace SSO, locking authentication across all apps and preventing changes.\nBase44 is the AI-powered platform that lets users build fully functioning apps in minutes. Using nothing but natural language, Base44 enables anyone to turn their words into personal productivity apps, back-office tools, customer portals, or complete enterprise products that are ready to use, no integrations required.\n© 2026 Base44 Inc. All rights reserved.\nWe use cookies and similar technologies. You can opt-out by clicking 'Do Not Sell or Share My Personal Information' at the bottom of the page.",
+                "time": "2025-10-01",
+                "tags": [
+                    {
+                        "name": "Authentication",
+                        "subtags": [
+                            {
+                                "name": "SSO"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Team & Enterprise",
+                        "subtags": [
+                            {
+                                "name": "Workspace"
+                            },
+                            {
+                                "name": "Enterprise Plan"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Claude Sonnet 4.5",
+                "description": "September 29, 2025\nWe’ve rolled out Claude Sonnet 4.5, Anthropic’s most capable model yet. And, it’s now the default engine in Base44 so you’ll get these improvements automatically when you start building.\n\nSonnet 4.5 delivers major upgrades across reasoning, context length, and execution speed. It handles long-running tasks, multi-step workflows, and domain-specific logic (e.g. finance, research, cybersecurity, data analysis) with ease.\n\nFeature highlights:\n-Extended context for larger prompts and documents\n-Improved accuracy and consistency in complex workflows\n-Faster, cleaner outputs even from single prompts\n-Optimized for specialized use cases, from spreadsheets to presentations\nBase44 is the AI-powered platform that lets users build fully functioning apps in minutes. Using nothing but natural language, Base44 enables anyone to turn their words into personal productivity apps, back-office tools, customer portals, or complete enterprise products that are ready to use, no integrations required.\n© 2026 Base44 Inc. All rights reserved.\nWe use cookies and similar technologies. You can opt-out by clicking 'Do Not Sell or Share My Personal Information' at the bottom of the page.",
+                "time": "2025-09-01",
+                "tags": [
+                    {
+                        "name": "AI Model",
+                        "subtags": [
+                            {
+                                "name": "Sonnet 4.5"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "GPT-5 chat model",
+                "description": "August 13, 2025\nYou can now choose GPT-5 as your chat model from the chat settings. Unlock smarter, faster, and more accurate AI conversations, available wherever chat is enabled.\nBase44 is the AI-powered platform that lets users build fully functioning apps in minutes. Using nothing but natural language, Base44 enables anyone to turn their words into personal productivity apps, back-office tools, customer portals, or complete enterprise products that are ready to use, no integrations required.\n© 2026 Base44 Inc. All rights reserved.\nWe use cookies and similar technologies. You can opt-out by clicking 'Do Not Sell or Share My Personal Information' at the bottom of the page.",
+                "time": "2025-08-01",
+                "tags": [
+                    {
+                        "name": "AI Model",
+                        "subtags": [
+                            {
+                                "name": "GPT-5"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Private apps for your Workspace",
+                "description": "July 29, 2025\nYou can now restrict access to your app so only people in your Workspace can see it. External users are blocked automatically.\nBase44 is the AI-powered platform that lets users build fully functioning apps in minutes. Using nothing but natural language, Base44 enables anyone to turn their words into personal productivity apps, back-office tools, customer portals, or complete enterprise products that are ready to use, no integrations required.\n© 2026 Base44 Inc. All rights reserved.\nWe use cookies and similar technologies. You can opt-out by clicking 'Do Not Sell or Share My Personal Information' at the bottom of the page.",
+                "time": "2025-07-01",
+                "tags": [
+                    {
+                        "name": "Team & Enterprise",
+                        "subtags": [
+                            {
+                                "name": "Workspace"
+                            },
+                            {
+                                "name": "Permissions"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Security",
+                        "subtags": [
+                            {
+                                "name": "Access Control"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Gemini Pro model integration",
+                "description": "June 18, 2025\nWe’ve integrated Gemini 2.5 Pro as a new primary large language model (LLM) option for AI tasks. You can now seamlessly toggle between Gemini 2.5 Pro and Claude 4 Sonnet, depending on your needs.\nBase44 is the AI-powered platform that lets users build fully functioning apps in minutes. Using nothing but natural language, Base44 enables anyone to turn their words into personal productivity apps, back-office tools, customer portals, or complete enterprise products that are ready to use, no integrations required.\n© 2026 Base44 Inc. All rights reserved.\nWe use cookies and similar technologies. You can opt-out by clicking 'Do Not Sell or Share My Personal Information' at the bottom of the page.",
+                "time": "2025-06-01",
+                "tags": [
+                    {
+                        "name": "AI Model",
+                        "subtags": [
+                            {
+                                "name": "Gemini"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Integration",
+                        "subtags": [
+                            {
+                                "name": "Google Services"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Discussion mode",
+                "description": "May 26, 2025\nAdded a context-rich AI chat mode for discussing, planning, and analyzing apps with no code changes and low credit usage.\nBase44 is the AI-powered platform that lets users build fully functioning apps in minutes. Using nothing but natural language, Base44 enables anyone to turn their words into personal productivity apps, back-office tools, customer portals, or complete enterprise products that are ready to use, no integrations required.\n© 2026 Base44 Inc. All rights reserved.\nWe use cookies and similar technologies. You can opt-out by clicking 'Do Not Sell or Share My Personal Information' at the bottom of the page.",
+                "time": "2025-05-01",
+                "tags": [
+                    {
+                        "name": "Agent",
+                        "subtags": [
+                            {
+                                "name": "Plan Mode"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Billing & Credits",
+                        "subtags": [
+                            {
+                                "name": "Credits"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Backend functions",
+                "description": "April 28, 2025\nEnabled integration of Base44 apps with any API, database, or service using isolated JavaScript functions.\nBase44 is the AI-powered platform that lets users build fully functioning apps in minutes. Using nothing but natural language, Base44 enables anyone to turn their words into personal productivity apps, back-office tools, customer portals, or complete enterprise products that are ready to use, no integrations required.\n© 2026 Base44 Inc. All rights reserved.\nWe use cookies and similar technologies. You can opt-out by clicking 'Do Not Sell or Share My Personal Information' at the bottom of the page.",
+                "time": "2025-04-01",
+                "tags": [
+                    {
+                        "name": "Integration",
+                        "subtags": []
+                    }
+                ]
+            },
+            {
+                "title": "Built-in IDE (fast code edits)",
+                "description": "March 25, 2025\nGave users a browser-based IDE for instant, direct code edits of their app.\nBase44 is the AI-powered platform that lets users build fully functioning apps in minutes. Using nothing but natural language, Base44 enables anyone to turn their words into personal productivity apps, back-office tools, customer portals, or complete enterprise products that are ready to use, no integrations required.\n© 2026 Base44 Inc. All rights reserved.\nWe use cookies and similar technologies. You can opt-out by clicking 'Do Not Sell or Share My Personal Information' at the bottom of the page.",
+                "time": "2025-03-01",
+                "tags": [
+                    {
+                        "name": "Editor",
+                        "subtags": [
+                            {
+                                "name": "Code Editor"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
