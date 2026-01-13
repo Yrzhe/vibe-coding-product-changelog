@@ -13,7 +13,7 @@ services:
       - ./info:/usr/share/nginx/html/data/info:ro
     restart: unless-stopped
 
-  # 爬虫/监控服务（内置定时任务，每天上午 10 点自动运行）
+  # 爬虫/监控服务（用于手动触发或定时任务）
   crawler:
     build: ./script
     image: changelog-crawler:latest
@@ -22,6 +22,8 @@ services:
       - ./storage:/app/storage
       - ./info:/app/info
       - ./logs:/app/logs
+    # 默认不自动启动，需要手动运行或通过 cron 触发
+    profiles:
+      - crawler
     environment:
       - TZ=Asia/Shanghai
-    restart: unless-stopped
