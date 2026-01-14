@@ -26,6 +26,14 @@
                         ]
                     },
                     {
+                        "name": "Media Generation",
+                        "subtags": [
+                            {
+                                "name": "Audio Generation"
+                            }
+                        ]
+                    },
+                    {
                         "name": "Team & Enterprise",
                         "subtags": [
                             {
@@ -44,15 +52,15 @@
                         "name": "Integration",
                         "subtags": [
                             {
-                                "name": "ChatGPT"
+                                "name": "OpenAI"
                             }
                         ]
                     },
                     {
-                        "name": "AI Model",
+                        "name": "Agent",
                         "subtags": [
                             {
-                                "name": "GPT"
+                                "name": "Agent Mode"
                             }
                         ]
                     }
@@ -83,6 +91,17 @@
                         "subtags": [
                             {
                                 "name": "Tasks"
+                            },
+                            {
+                                "name": "Agent Mode"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": [
+                            {
+                                "name": "Dashboard"
                             }
                         ]
                     }
@@ -102,8 +121,12 @@
                         ]
                     },
                     {
-                        "name": "Agent",
-                        "subtags": []
+                        "name": "File & Upload",
+                        "subtags": [
+                            {
+                                "name": "File Upload"
+                            }
+                        ]
                     }
                 ]
             },
@@ -116,7 +139,10 @@
                         "name": "Analytics",
                         "subtags": [
                             {
-                                "name": "Usage Stats"
+                                "name": "Project Analytics"
+                            },
+                            {
+                                "name": "Token Usage"
                             }
                         ]
                     },
@@ -142,10 +168,21 @@
                                 "name": "Workspace"
                             },
                             {
+                                "name": "Team Management"
+                            },
+                            {
                                 "name": "Enterprise Plan"
                             },
                             {
                                 "name": "Business Plan"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Authentication",
+                        "subtags": [
+                            {
+                                "name": "Email Auth"
                             }
                         ]
                     }
@@ -206,6 +243,14 @@
                                 "name": "Enterprise Plan"
                             }
                         ]
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": [
+                            {
+                                "name": "Onboarding"
+                            }
+                        ]
                     }
                 ]
             },
@@ -220,7 +265,11 @@
                     },
                     {
                         "name": "UI/UX",
-                        "subtags": []
+                        "subtags": [
+                            {
+                                "name": "Notifications"
+                            }
+                        ]
                     },
                     {
                         "name": "Deployment",
@@ -240,6 +289,14 @@
                     {
                         "name": "Bug Fixes",
                         "subtags": []
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": [
+                            {
+                                "name": "Navigation"
+                            }
+                        ]
                     }
                 ]
             },
@@ -282,6 +339,17 @@
                         ]
                     },
                     {
+                        "name": "Community",
+                        "subtags": [
+                            {
+                                "name": "Search"
+                            },
+                            {
+                                "name": "Explore"
+                            }
+                        ]
+                    },
+                    {
                         "name": "Team & Enterprise",
                         "subtags": [
                             {
@@ -300,13 +368,17 @@
                         "name": "Agent",
                         "subtags": [
                             {
-                                "name": "Plan Mode"
+                                "name": "Agent Mode"
                             }
                         ]
                     },
                     {
                         "name": "UI/UX",
-                        "subtags": []
+                        "subtags": [
+                            {
+                                "name": "Onboarding"
+                            }
+                        ]
                     }
                 ]
             },
@@ -319,7 +391,7 @@
                         "name": "AI Model",
                         "subtags": [
                             {
-                                "name": "Opus 4.5"
+                                "name": "Anthropic"
                             }
                         ]
                     },
@@ -328,9 +400,14 @@
                         "subtags": [
                             {
                                 "name": "Agent Mode"
-                            },
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Performance",
+                        "subtags": [
                             {
-                                "name": "Plan Mode"
+                                "name": "Speed"
                             }
                         ]
                     }
@@ -351,6 +428,14 @@
                                 "name": "DNS"
                             }
                         ]
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": [
+                            {
+                                "name": "Dashboard"
+                            }
+                        ]
                     }
                 ]
             },
@@ -360,10 +445,10 @@
                 "time": "2025-12-10",
                 "tags": [
                     {
-                        "name": "Deployment",
+                        "name": "Performance",
                         "subtags": [
                             {
-                                "name": "Hosting"
+                                "name": "Loading"
                             }
                         ]
                     },
@@ -471,6 +556,10 @@
                                 "name": "Enterprise Plan"
                             }
                         ]
+                    },
+                    {
+                        "name": "Authentication",
+                        "subtags": []
                     }
                 ]
             },
@@ -480,14 +569,6 @@
                 "time": "2025-12-10",
                 "tags": [
                     {
-                        "name": "Integration",
-                        "subtags": [
-                            {
-                                "name": "MCP"
-                            }
-                        ]
-                    },
-                    {
                         "name": "Agent",
                         "subtags": [
                             {
@@ -496,12 +577,16 @@
                         ]
                     },
                     {
-                        "name": "Security",
+                        "name": "Team & Enterprise",
                         "subtags": [
                             {
-                                "name": "Access Control"
+                                "name": "Permissions"
                             }
                         ]
+                    },
+                    {
+                        "name": "Integration",
+                        "subtags": []
                     }
                 ]
             },
@@ -514,18 +599,10 @@
                         "name": "Team & Enterprise",
                         "subtags": [
                             {
-                                "name": "Permissions"
+                                "name": "Enterprise Plan"
                             },
                             {
-                                "name": "Enterprise Plan"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Security",
-                        "subtags": [
-                            {
-                                "name": "Access Control"
+                                "name": "Permissions"
                             }
                         ]
                     },
@@ -534,6 +611,14 @@
                         "subtags": [
                             {
                                 "name": "Publishing"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Security",
+                        "subtags": [
+                            {
+                                "name": "Access Control"
                             }
                         ]
                     }
@@ -545,10 +630,13 @@
                 "time": "2025-12-10",
                 "tags": [
                     {
-                        "name": "UI/UX",
+                        "name": "Mobile",
                         "subtags": [
                             {
-                                "name": "Mobile"
+                                "name": "iOS App"
+                            },
+                            {
+                                "name": "Android App"
                             }
                         ]
                     },
@@ -556,7 +644,15 @@
                         "name": "Agent",
                         "subtags": [
                             {
-                                "name": "Clarifying Questions"
+                                "name": "Suggested Actions"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": [
+                            {
+                                "name": "Mobile UI"
                             }
                         ]
                     }
@@ -572,6 +668,14 @@
                         "subtags": [
                             {
                                 "name": "Navigation"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Community",
+                        "subtags": [
+                            {
+                                "name": "Search"
                             }
                         ]
                     }
@@ -591,12 +695,8 @@
                         ]
                     },
                     {
-                        "name": "Team & Enterprise",
-                        "subtags": [
-                            {
-                                "name": "Workspace"
-                            }
-                        ]
+                        "name": "File & Upload",
+                        "subtags": []
                     }
                 ]
             },
@@ -606,10 +706,18 @@
                 "time": "2025-12-10",
                 "tags": [
                     {
+                        "name": "Community",
+                        "subtags": [
+                            {
+                                "name": "Search"
+                            }
+                        ]
+                    },
+                    {
                         "name": "UI/UX",
                         "subtags": [
                             {
-                                "name": "Navigation"
+                                "name": "Dashboard"
                             }
                         ]
                     }
@@ -621,10 +729,13 @@
                 "time": "2025-12-10",
                 "tags": [
                     {
-                        "name": "UI/UX",
+                        "name": "Community",
                         "subtags": [
                             {
-                                "name": "Dashboard"
+                                "name": "Explore"
+                            },
+                            {
+                                "name": "Templates"
                             }
                         ]
                     }
@@ -722,6 +833,14 @@
                                 "name": "DNS"
                             }
                         ]
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": [
+                            {
+                                "name": "Notifications"
+                            }
+                        ]
                     }
                 ]
             },
@@ -735,6 +854,14 @@
                         "subtags": [
                             {
                                 "name": "Custom Domain"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": [
+                            {
+                                "name": "Dashboard"
                             }
                         ]
                     }
@@ -784,6 +911,14 @@
                                 "name": "Miro"
                             }
                         ]
+                    },
+                    {
+                        "name": "Team & Enterprise",
+                        "subtags": [
+                            {
+                                "name": "Workspace"
+                            }
+                        ]
                     }
                 ]
             },
@@ -793,16 +928,16 @@
                 "time": "2025-12-10",
                 "tags": [
                     {
-                        "name": "UI/UX",
-                        "subtags": []
-                    },
-                    {
                         "name": "Agent",
                         "subtags": [
                             {
                                 "name": "Design Mode"
                             }
                         ]
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": []
                     }
                 ]
             },
@@ -811,6 +946,14 @@
                 "description": "Lovable is now better at understanding and using your imported packages, leading to fewer errors and smoother builds.",
                 "time": "2025-12-10",
                 "tags": [
+                    {
+                        "name": "Framework",
+                        "subtags": [
+                            {
+                                "name": "NPM"
+                            }
+                        ]
+                    },
                     {
                         "name": "Performance",
                         "subtags": []
@@ -894,13 +1037,13 @@
                                 "name": "Linear"
                             },
                             {
-                                "name": "n8n"
-                            },
-                            {
                                 "name": "Salesforce"
                             },
                             {
                                 "name": "Slack"
+                            },
+                            {
+                                "name": "n8n"
                             }
                         ]
                     },
@@ -912,6 +1055,9 @@
                             },
                             {
                                 "name": "Enterprise Plan"
+                            },
+                            {
+                                "name": "Permissions"
                             }
                         ]
                     }
@@ -942,8 +1088,12 @@
                         ]
                     },
                     {
-                        "name": "Image Generation",
-                        "subtags": []
+                        "name": "Media Generation",
+                        "subtags": [
+                            {
+                                "name": "Image Generation"
+                            }
+                        ]
                     }
                 ]
             },
@@ -979,10 +1129,13 @@
                         ]
                     },
                     {
-                        "name": "Image Generation",
+                        "name": "Media Generation",
                         "subtags": [
                             {
-                                "name": "AI Image Edit"
+                                "name": "Image Generation"
+                            },
+                            {
+                                "name": "Image Edit"
                             }
                         ]
                     }
@@ -994,10 +1147,10 @@
                 "time": "2025-11-26",
                 "tags": [
                     {
-                        "name": "Image Generation",
+                        "name": "Media Generation",
                         "subtags": [
                             {
-                                "name": "AI Image Edit"
+                                "name": "Image Generation"
                             }
                         ]
                     },
@@ -1021,6 +1174,9 @@
                         "subtags": [
                             {
                                 "name": "Workspace"
+                            },
+                            {
+                                "name": "Project Sharing"
                             },
                             {
                                 "name": "Permissions"
@@ -1051,6 +1207,14 @@
                         ]
                     },
                     {
+                        "name": "Authentication",
+                        "subtags": [
+                            {
+                                "name": "Email Auth"
+                            }
+                        ]
+                    },
+                    {
                         "name": "Team & Enterprise",
                         "subtags": [
                             {
@@ -1077,16 +1241,17 @@
                         "name": "AI Model",
                         "subtags": [
                             {
-                                "name": "Gemini 3"
-                            },
-                            {
-                                "name": "Nano Banana"
+                                "name": "Google"
                             }
                         ]
                     },
                     {
-                        "name": "Image Generation",
-                        "subtags": []
+                        "name": "Media Generation",
+                        "subtags": [
+                            {
+                                "name": "Image Generation"
+                            }
+                        ]
                     }
                 ]
             },
@@ -1099,10 +1264,13 @@
                         "name": "Team & Enterprise",
                         "subtags": [
                             {
+                                "name": "Project Sharing"
+                            },
+                            {
                                 "name": "Permissions"
                             },
                             {
-                                "name": "Project Sharing"
+                                "name": "Invite"
                             }
                         ]
                     },
@@ -1126,10 +1294,10 @@
                         ]
                     },
                     {
-                        "name": "UI/UX",
+                        "name": "File & Upload",
                         "subtags": [
                             {
-                                "name": "Dashboard"
+                                "name": "File Upload"
                             }
                         ]
                     }
@@ -1191,7 +1359,7 @@
                         "name": "Agent",
                         "subtags": [
                             {
-                                "name": "Clarifying Questions"
+                                "name": "Suggested Actions"
                             }
                         ]
                     },
@@ -1233,17 +1401,13 @@
                         "name": "Authentication",
                         "subtags": [
                             {
-                                "name": "Email Auth"
+                                "name": "Passcode"
                             }
                         ]
                     },
                     {
                         "name": "Team & Enterprise",
-                        "subtags": [
-                            {
-                                "name": "Team Management"
-                            }
-                        ]
+                        "subtags": []
                     }
                 ]
             },
@@ -1253,6 +1417,14 @@
                 "time": "2025-11-26",
                 "tags": [
                     {
+                        "name": "Community",
+                        "subtags": [
+                            {
+                                "name": "Remix"
+                            }
+                        ]
+                    },
+                    {
                         "name": "UI/UX",
                         "subtags": [
                             {
@@ -1261,10 +1433,10 @@
                         ]
                     },
                     {
-                        "name": "Performance",
+                        "name": "Deployment",
                         "subtags": [
                             {
-                                "name": "Loading"
+                                "name": "Environment Variables"
                             }
                         ]
                     }
@@ -1275,10 +1447,6 @@
                 "description": "“Restore” is now “Revert”. Jump back to any point in your chat history, or edit a past message to explore a new direction. Your original work stays in the chat and can be reapplied anytime.",
                 "time": "2025-11-26",
                 "tags": [
-                    {
-                        "name": "Editor",
-                        "subtags": []
-                    },
                     {
                         "name": "UI/UX",
                         "subtags": []
@@ -1294,9 +1462,16 @@
                         "name": "Deployment",
                         "subtags": [
                             {
+                                "name": "Custom Domain"
+                            },
+                            {
                                 "name": "Publishing"
                             }
                         ]
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": []
                     }
                 ]
             },
@@ -1329,15 +1504,15 @@
                 "time": "2025-11-26",
                 "tags": [
                     {
-                        "name": "Integration",
+                        "name": "Editor",
                         "subtags": [
                             {
-                                "name": "GitHub"
+                                "name": "Code Editor"
                             }
                         ]
                     },
                     {
-                        "name": "UI/UX",
+                        "name": "Deployment",
                         "subtags": []
                     }
                 ]
@@ -1357,11 +1532,7 @@
                     },
                     {
                         "name": "Security",
-                        "subtags": [
-                            {
-                                "name": "Access Control"
-                            }
-                        ]
+                        "subtags": []
                     }
                 ]
             },
@@ -1375,18 +1546,18 @@
                         "subtags": []
                     },
                     {
-                        "name": "Integration",
-                        "subtags": [
-                            {
-                                "name": "Figma"
-                            }
-                        ]
-                    },
-                    {
                         "name": "Deployment",
                         "subtags": [
                             {
                                 "name": "Preview"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Integration",
+                        "subtags": [
+                            {
+                                "name": "Figma"
                             }
                         ]
                     }
@@ -1398,26 +1569,18 @@
                 "time": "2025-11-26",
                 "tags": [
                     {
-                        "name": "Integration",
-                        "subtags": [
-                            {
-                                "name": "Shopify"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Security",
-                        "subtags": [
-                            {
-                                "name": "Access Control"
-                            }
-                        ]
-                    },
-                    {
                         "name": "Team & Enterprise",
                         "subtags": [
                             {
                                 "name": "Permissions"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Integration",
+                        "subtags": [
+                            {
+                                "name": "Shopify"
                             }
                         ]
                     }
@@ -1462,6 +1625,14 @@
                                 "name": "Preview"
                             }
                         ]
+                    },
+                    {
+                        "name": "Agent",
+                        "subtags": [
+                            {
+                                "name": "Automation"
+                            }
+                        ]
                     }
                 ]
             },
@@ -1477,6 +1648,10 @@
                                 "name": "Figma"
                             }
                         ]
+                    },
+                    {
+                        "name": "Bug Fixes",
+                        "subtags": []
                     }
                 ]
             },
@@ -1492,6 +1667,22 @@
                                 "name": "Shopify"
                             }
                         ]
+                    },
+                    {
+                        "name": "Agent",
+                        "subtags": [
+                            {
+                                "name": "Automation"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Billing & Credits",
+                        "subtags": [
+                            {
+                                "name": "Subscription"
+                            }
+                        ]
                     }
                 ]
             },
@@ -1502,13 +1693,25 @@
                 "tags": [
                     {
                         "name": "Agent",
-                        "subtags": []
+                        "subtags": [
+                            {
+                                "name": "Agent Mode"
+                            }
+                        ]
                     },
                     {
-                        "name": "Image Generation",
+                        "name": "Media Generation",
                         "subtags": [
                             {
                                 "name": "Screenshot"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Editor",
+                        "subtags": [
+                            {
+                                "name": "Code Editor"
                             }
                         ]
                     },
@@ -1528,6 +1731,9 @@
                         "subtags": [
                             {
                                 "name": "Credits"
+                            },
+                            {
+                                "name": "Subscription"
                             }
                         ]
                     },
@@ -1562,7 +1768,11 @@
                     },
                     {
                         "name": "UI/UX",
-                        "subtags": []
+                        "subtags": [
+                            {
+                                "name": "Onboarding"
+                            }
+                        ]
                     }
                 ]
             },
@@ -1575,20 +1785,16 @@
                         "name": "Team & Enterprise",
                         "subtags": [
                             {
-                                "name": "Project Sharing"
+                                "name": "Permissions"
                             },
                             {
-                                "name": "Permissions"
+                                "name": "Project Sharing"
                             }
                         ]
                     },
                     {
-                        "name": "Security",
-                        "subtags": [
-                            {
-                                "name": "Access Control"
-                            }
-                        ]
+                        "name": "Community",
+                        "subtags": []
                     }
                 ]
             },
@@ -1604,6 +1810,10 @@
                                 "name": "Publishing"
                             }
                         ]
+                    },
+                    {
+                        "name": "Authentication",
+                        "subtags": []
                     },
                     {
                         "name": "Team & Enterprise",
@@ -1659,6 +1869,14 @@
                                 "name": "GitHub"
                             }
                         ]
+                    },
+                    {
+                        "name": "Deployment",
+                        "subtags": [
+                            {
+                                "name": "Code Download"
+                            }
+                        ]
                     }
                 ]
             },
@@ -1678,10 +1896,6 @@
                                 "name": "Agent Mode"
                             }
                         ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
                     }
                 ]
             },
@@ -1695,6 +1909,9 @@
                         "subtags": [
                             {
                                 "name": "Notifications"
+                            },
+                            {
+                                "name": "Onboarding"
                             }
                         ]
                     }
@@ -1712,10 +1929,6 @@
                                 "name": "Notifications"
                             }
                         ]
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
                     }
                 ]
             },
@@ -1727,6 +1940,10 @@
                     {
                         "name": "UI/UX",
                         "subtags": []
+                    },
+                    {
+                        "name": "Bug Fixes",
+                        "subtags": []
                     }
                 ]
             },
@@ -1736,8 +1953,19 @@
                 "time": "2025-10-06",
                 "tags": [
                     {
+                        "name": "Integration",
+                        "subtags": [
+                            {
+                                "name": "Supabase"
+                            }
+                        ]
+                    },
+                    {
                         "name": "Database",
                         "subtags": [
+                            {
+                                "name": "Database Editor"
+                            },
                             {
                                 "name": "Storage"
                             }
@@ -1766,15 +1994,23 @@
                         "name": "AI Model",
                         "subtags": [
                             {
-                                "name": "Gemini"
+                                "name": "Google"
                             }
                         ]
                     },
                     {
-                        "name": "Image Generation",
+                        "name": "Media Generation",
                         "subtags": [
                             {
-                                "name": "AI Image Edit"
+                                "name": "Image Generation"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Agent",
+                        "subtags": [
+                            {
+                                "name": "Agent Mode"
                             }
                         ]
                     },
@@ -1797,12 +2033,20 @@
                 "time": "2025-10-06",
                 "tags": [
                     {
-                        "name": "Agent",
-                        "subtags": []
+                        "name": "Mobile",
+                        "subtags": [
+                            {
+                                "name": "Voice Input"
+                            }
+                        ]
                     },
                     {
-                        "name": "UI/UX",
-                        "subtags": []
+                        "name": "Agent",
+                        "subtags": [
+                            {
+                                "name": "Agent Mode"
+                            }
+                        ]
                     }
                 ]
             },
@@ -1812,18 +2056,21 @@
                 "time": "2025-10-06",
                 "tags": [
                     {
-                        "name": "Agent",
+                        "name": "File & Upload",
                         "subtags": [
                             {
-                                "name": "Automation"
+                                "name": "File Upload"
+                            },
+                            {
+                                "name": "File Conversion"
                             }
                         ]
                     },
                     {
-                        "name": "UI/UX",
+                        "name": "Agent",
                         "subtags": [
                             {
-                                "name": "Dashboard"
+                                "name": "Agent Mode"
                             }
                         ]
                     }
@@ -1838,7 +2085,7 @@
                         "name": "AI Model",
                         "subtags": [
                             {
-                                "name": "Sonnet 4.5"
+                                "name": "Anthropic"
                             }
                         ]
                     }
@@ -1861,16 +2108,20 @@
                         ]
                     },
                     {
-                        "name": "UI/UX",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Image Generation",
+                        "name": "Media Generation",
                         "subtags": [
                             {
                                 "name": "Image Upload"
                             }
                         ]
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": []
+                    },
+                    {
+                        "name": "Performance",
+                        "subtags": []
                     }
                 ]
             },
@@ -1884,6 +2135,9 @@
                         "subtags": [
                             {
                                 "name": "Publishing"
+                            },
+                            {
+                                "name": "Preview"
                             }
                         ]
                     },
@@ -1905,6 +2159,10 @@
                                 "name": "Stripe"
                             }
                         ]
+                    },
+                    {
+                        "name": "Billing & Credits",
+                        "subtags": []
                     }
                 ]
             },
@@ -1914,20 +2172,19 @@
                 "time": "2025-10-06",
                 "tags": [
                     {
-                        "name": "UI/UX",
+                        "name": "Community",
                         "subtags": [
                             {
-                                "name": "Navigation"
+                                "name": "Remix"
+                            },
+                            {
+                                "name": "Explore"
                             }
                         ]
                     },
                     {
-                        "name": "Team & Enterprise",
-                        "subtags": [
-                            {
-                                "name": "Project Sharing"
-                            }
-                        ]
+                        "name": "UI/UX",
+                        "subtags": []
                     }
                 ]
             },
@@ -1955,14 +2212,17 @@
                         "subtags": [
                             {
                                 "name": "SSO"
+                            },
+                            {
+                                "name": "SCIM"
                             }
                         ]
                     },
                     {
-                        "name": "Security",
+                        "name": "Analytics",
                         "subtags": [
                             {
-                                "name": "Access Control"
+                                "name": "Usage Stats"
                             }
                         ]
                     }
@@ -1975,13 +2235,17 @@
                 "tags": [
                     {
                         "name": "Agent",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Integration",
                         "subtags": [
                             {
-                                "name": "ChatGPT"
+                                "name": "Agent Mode"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Community",
+                        "subtags": [
+                            {
+                                "name": "Templates"
                             }
                         ]
                     }
@@ -1993,10 +2257,13 @@
                 "time": "2025-10-06",
                 "tags": [
                     {
-                        "name": "Image Generation",
+                        "name": "Media Generation",
                         "subtags": [
                             {
-                                "name": "AI Image Edit"
+                                "name": "Image Generation"
+                            },
+                            {
+                                "name": "Image Edit"
                             }
                         ]
                     }
@@ -2011,13 +2278,9 @@
                         "name": "Agent",
                         "subtags": [
                             {
-                                "name": "Automation"
+                                "name": "Agent Mode"
                             }
                         ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
                     }
                 ]
             },
@@ -2027,18 +2290,18 @@
                 "time": "2025-10-06",
                 "tags": [
                     {
-                        "name": "UI/UX",
+                        "name": "Database",
                         "subtags": [
                             {
-                                "name": "Dashboard"
+                                "name": "Database Editor"
                             }
                         ]
                     },
                     {
-                        "name": "Analytics",
+                        "name": "UI/UX",
                         "subtags": [
                             {
-                                "name": "Project Analytics"
+                                "name": "Dashboard"
                             }
                         ]
                     }
@@ -2053,7 +2316,7 @@
                         "name": "UI/UX",
                         "subtags": [
                             {
-                                "name": "Navigation"
+                                "name": "Dashboard"
                             }
                         ]
                     }
@@ -2065,8 +2328,20 @@
                 "time": "2025-10-06",
                 "tags": [
                     {
-                        "name": "UI/UX",
-                        "subtags": []
+                        "name": "Media Generation",
+                        "subtags": [
+                            {
+                                "name": "Image Generation"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Agent",
+                        "subtags": [
+                            {
+                                "name": "Design Mode"
+                            }
+                        ]
                     }
                 ]
             },
@@ -2081,7 +2356,11 @@
                     },
                     {
                         "name": "UI/UX",
-                        "subtags": []
+                        "subtags": [
+                            {
+                                "name": "Mobile UI"
+                            }
+                        ]
                     }
                 ]
             },
@@ -2110,9 +2389,6 @@
                         "subtags": [
                             {
                                 "name": "Pricing"
-                            },
-                            {
-                                "name": "Subscription"
                             }
                         ]
                     }
@@ -2125,7 +2401,14 @@
                 "tags": [
                     {
                         "name": "Security",
-                        "subtags": []
+                        "subtags": [
+                            {
+                                "name": "Security Scan"
+                            },
+                            {
+                                "name": "Access Control"
+                            }
+                        ]
                     },
                     {
                         "name": "Team & Enterprise",
@@ -2154,10 +2437,10 @@
                         "name": "Team & Enterprise",
                         "subtags": [
                             {
-                                "name": "Invite"
+                                "name": "Workspace"
                             },
                             {
-                                "name": "Workspace"
+                                "name": "Invite"
                             }
                         ]
                     }
@@ -2169,14 +2452,18 @@
                 "time": "2025-09-01",
                 "tags": [
                     {
-                        "name": "Agent",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Deployment",
+                        "name": "Performance",
                         "subtags": [
                             {
-                                "name": "Publishing"
+                                "name": "SEO"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Agent",
+                        "subtags": [
+                            {
+                                "name": "Agent Mode"
                             }
                         ]
                     }
@@ -2215,7 +2502,7 @@
                                 "name": "Subscription"
                             },
                             {
-                                "name": "Credits"
+                                "name": "Pricing"
                             }
                         ]
                     }
@@ -2246,18 +2533,18 @@
                 "time": "2025-09-01",
                 "tags": [
                     {
-                        "name": "Analytics",
-                        "subtags": [
-                            {
-                                "name": "Usage Stats"
-                            }
-                        ]
-                    },
-                    {
                         "name": "UI/UX",
                         "subtags": [
                             {
                                 "name": "Dashboard"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Analytics",
+                        "subtags": [
+                            {
+                                "name": "Usage Stats"
                             }
                         ]
                     }
@@ -2287,10 +2574,18 @@
                         "name": "Analytics",
                         "subtags": [
                             {
-                                "name": "Usage Stats"
+                                "name": "Project Analytics"
                             },
                             {
-                                "name": "Project Analytics"
+                                "name": "Usage Stats"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": [
+                            {
+                                "name": "Dashboard"
                             }
                         ]
                     }
@@ -2332,12 +2627,6 @@
                         "subtags": [
                             {
                                 "name": "Business Plan"
-                            },
-                            {
-                                "name": "Workspace"
-                            },
-                            {
-                                "name": "Project Sharing"
                             }
                         ]
                     },
@@ -2359,6 +2648,14 @@
                                 "name": "Pricing"
                             }
                         ]
+                    },
+                    {
+                        "name": "Community",
+                        "subtags": [
+                            {
+                                "name": "Templates"
+                            }
+                        ]
                     }
                 ]
             },
@@ -2374,13 +2671,25 @@
                                 "name": "Visual Editor"
                             },
                             {
-                                "name": "Design View"
+                                "name": "Code Editor"
                             }
                         ]
                     },
                     {
                         "name": "UI/UX",
-                        "subtags": []
+                        "subtags": [
+                            {
+                                "name": "Navigation"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Performance",
+                        "subtags": [
+                            {
+                                "name": "Speed"
+                            }
+                        ]
                     }
                 ]
             },
@@ -2396,7 +2705,15 @@
                                 "name": "Invite"
                             },
                             {
-                                "name": "Project Sharing"
+                                "name": "Team Management"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": [
+                            {
+                                "name": "Notifications"
                             }
                         ]
                     }
@@ -2453,9 +2770,6 @@
                         "subtags": [
                             {
                                 "name": "Team Management"
-                            },
-                            {
-                                "name": "Workspace"
                             }
                         ]
                     },
@@ -2463,7 +2777,7 @@
                         "name": "UI/UX",
                         "subtags": [
                             {
-                                "name": "Navigation"
+                                "name": "Dashboard"
                             }
                         ]
                     }
@@ -2479,6 +2793,9 @@
                         "subtags": [
                             {
                                 "name": "Workspace"
+                            },
+                            {
+                                "name": "Team Management"
                             }
                         ]
                     },
@@ -2557,7 +2874,7 @@
                         "name": "Analytics",
                         "subtags": [
                             {
-                                "name": "Usage Stats"
+                                "name": "Project Analytics"
                             }
                         ]
                     }
@@ -2573,6 +2890,9 @@
                         "subtags": [
                             {
                                 "name": "Usage Stats"
+                            },
+                            {
+                                "name": "Project Analytics"
                             }
                         ]
                     }
@@ -2598,6 +2918,14 @@
                                 "name": "Enterprise Plan"
                             }
                         ]
+                    },
+                    {
+                        "name": "Security",
+                        "subtags": [
+                            {
+                                "name": "Access Control"
+                            }
+                        ]
                     }
                 ]
             },
@@ -2610,10 +2938,18 @@
                         "name": "Team & Enterprise",
                         "subtags": [
                             {
-                                "name": "Permissions"
+                                "name": "Workspace"
                             },
                             {
-                                "name": "Project Sharing"
+                                "name": "Permissions"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Security",
+                        "subtags": [
+                            {
+                                "name": "Access Control"
                             }
                         ]
                     }
@@ -2625,16 +2961,20 @@
                 "time": "2025-08-11",
                 "tags": [
                     {
+                        "name": "Community",
+                        "subtags": [
+                            {
+                                "name": "Templates"
+                            }
+                        ]
+                    },
+                    {
                         "name": "UI/UX",
                         "subtags": [
                             {
                                 "name": "Themes"
                             }
                         ]
-                    },
-                    {
-                        "name": "Framework",
-                        "subtags": []
                     }
                 ]
             },
@@ -2659,16 +2999,20 @@
                 "time": "2025-08-11",
                 "tags": [
                     {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Image Generation",
+                        "name": "Media Generation",
                         "subtags": [
                             {
                                 "name": "Image Upload"
                             }
                         ]
+                    },
+                    {
+                        "name": "Bug Fixes",
+                        "subtags": []
+                    },
+                    {
+                        "name": "Authentication",
+                        "subtags": []
                     }
                 ]
             },
@@ -2687,7 +3031,11 @@
                     },
                     {
                         "name": "Performance",
-                        "subtags": []
+                        "subtags": [
+                            {
+                                "name": "Loading"
+                            }
+                        ]
                     }
                 ]
             },
@@ -2703,6 +3051,14 @@
                                 "name": "Supabase"
                             }
                         ]
+                    },
+                    {
+                        "name": "Team & Enterprise",
+                        "subtags": [
+                            {
+                                "name": "Workspace"
+                            }
+                        ]
                     }
                 ]
             },
@@ -2716,6 +3072,14 @@
                         "subtags": [
                             {
                                 "name": "OAuth"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Team & Enterprise",
+                        "subtags": [
+                            {
+                                "name": "Workspace"
                             }
                         ]
                     },
@@ -2744,9 +3108,6 @@
                             },
                             {
                                 "name": "Roles"
-                            },
-                            {
-                                "name": "Invite"
                             }
                         ]
                     },
@@ -2770,16 +3131,9 @@
                 "tags": [
                     {
                         "name": "Mobile",
-                        "subtags": []
-                    },
-                    {
-                        "name": "UI/UX",
                         "subtags": [
                             {
-                                "name": "Navigation"
-                            },
-                            {
-                                "name": "Dashboard"
+                                "name": "Mobile Editor"
                             }
                         ]
                     },
@@ -2792,10 +3146,26 @@
                         ]
                     },
                     {
+                        "name": "Community",
+                        "subtags": [
+                            {
+                                "name": "Search"
+                            }
+                        ]
+                    },
+                    {
                         "name": "Integration",
                         "subtags": [
                             {
                                 "name": "Supabase"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": [
+                            {
+                                "name": "Navigation"
                             }
                         ]
                     }
@@ -2947,6 +3317,9 @@
                         "subtags": [
                             {
                                 "name": "Pricing"
+                            },
+                            {
+                                "name": "Credits"
                             }
                         ]
                     }
@@ -2962,6 +3335,9 @@
                         "subtags": [
                             {
                                 "name": "Workspace"
+                            },
+                            {
+                                "name": "Permissions"
                             }
                         ]
                     }
@@ -2973,16 +3349,20 @@
                 "time": "2025-06-26",
                 "tags": [
                     {
-                        "name": "UI/UX",
+                        "name": "Mobile",
                         "subtags": [
                             {
-                                "name": "Mobile"
+                                "name": "Mobile Editor"
                             }
                         ]
                     },
                     {
-                        "name": "Mobile",
-                        "subtags": []
+                        "name": "UI/UX",
+                        "subtags": [
+                            {
+                                "name": "Mobile UI"
+                            }
+                        ]
                     }
                 ]
             },
@@ -3011,10 +3391,18 @@
                 "time": "2025-06-26",
                 "tags": [
                     {
+                        "name": "Community",
+                        "subtags": [
+                            {
+                                "name": "Search"
+                            }
+                        ]
+                    },
+                    {
                         "name": "UI/UX",
                         "subtags": [
                             {
-                                "name": "Navigation"
+                                "name": "Dashboard"
                             }
                         ]
                     }
@@ -3034,7 +3422,7 @@
                         ]
                     },
                     {
-                        "name": "Database",
+                        "name": "Deployment",
                         "subtags": []
                     }
                 ]
@@ -3073,7 +3461,12 @@
                 "title": "Updated the careers page with latest information. Check it out here.",
                 "description": "Updated the careers page with latest information. Check it out here.",
                 "time": "2025-06-26",
-                "tags": "None"
+                "tags": [
+                    {
+                        "name": "UI/UX",
+                        "subtags": []
+                    }
+                ]
             },
             {
                 "title": "Fixed admin access to integration settings for user projects.",
@@ -3081,7 +3474,7 @@
                 "time": "2025-06-26",
                 "tags": [
                     {
-                        "name": "Integration",
+                        "name": "Bug Fixes",
                         "subtags": []
                     },
                     {
@@ -3093,7 +3486,7 @@
                         ]
                     },
                     {
-                        "name": "Bug Fixes",
+                        "name": "Integration",
                         "subtags": []
                     }
                 ]
@@ -3104,10 +3497,6 @@
                 "time": "2025-06-26",
                 "tags": [
                     {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    },
-                    {
                         "name": "Team & Enterprise",
                         "subtags": [
                             {
@@ -3117,6 +3506,10 @@
                                 "name": "Permissions"
                             }
                         ]
+                    },
+                    {
+                        "name": "Bug Fixes",
+                        "subtags": []
                     }
                 ]
             },
@@ -3141,6 +3534,9 @@
                         "subtags": [
                             {
                                 "name": "Security Scan"
+                            },
+                            {
+                                "name": "Content Moderation"
                             }
                         ]
                     }
@@ -3155,7 +3551,15 @@
                         "name": "UI/UX",
                         "subtags": [
                             {
-                                "name": "Navigation"
+                                "name": "Dashboard"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Community",
+                        "subtags": [
+                            {
+                                "name": "Search"
                             }
                         ]
                     }
@@ -3167,10 +3571,13 @@
                 "time": "2025-06-04",
                 "tags": [
                     {
-                        "name": "UI/UX",
+                        "name": "Community",
                         "subtags": [
                             {
-                                "name": "Navigation"
+                                "name": "Explore"
+                            },
+                            {
+                                "name": "Search"
                             }
                         ]
                     }
@@ -3185,7 +3592,7 @@
                         "name": "Editor",
                         "subtags": [
                             {
-                                "name": "Markdown Preview"
+                                "name": "Code Editor"
                             }
                         ]
                     },
@@ -3210,11 +3617,7 @@
                     },
                     {
                         "name": "Authentication",
-                        "subtags": [
-                            {
-                                "name": "OAuth"
-                            }
-                        ]
+                        "subtags": []
                     }
                 ]
             },
@@ -3230,6 +3633,14 @@
                                 "name": "Notifications"
                             }
                         ]
+                    },
+                    {
+                        "name": "Community",
+                        "subtags": [
+                            {
+                                "name": "Reactions"
+                            }
+                        ]
                     }
                 ]
             },
@@ -3242,7 +3653,7 @@
                         "name": "Agent",
                         "subtags": [
                             {
-                                "name": "Agent Mode"
+                                "name": "Suggested Actions"
                             }
                         ]
                     },
@@ -3250,7 +3661,7 @@
                         "name": "UI/UX",
                         "subtags": [
                             {
-                                "name": "Navigation"
+                                "name": "Notifications"
                             }
                         ]
                     }
@@ -3263,13 +3674,17 @@
                 "tags": [
                     {
                         "name": "UI/UX",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Image Generation",
                         "subtags": [
                             {
-                                "name": "Screenshot"
+                                "name": "Dashboard"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Editor",
+                        "subtags": [
+                            {
+                                "name": "Code Editor"
                             }
                         ]
                     }
@@ -3322,7 +3737,7 @@
                         "name": "AI Model",
                         "subtags": [
                             {
-                                "name": "Claude"
+                                "name": "Anthropic"
                             }
                         ]
                     },
@@ -3354,7 +3769,11 @@
                     },
                     {
                         "name": "UI/UX",
-                        "subtags": []
+                        "subtags": [
+                            {
+                                "name": "Onboarding"
+                            }
+                        ]
                     }
                 ]
             },
@@ -3364,12 +3783,16 @@
                 "time": "2025-05-24",
                 "tags": [
                     {
-                        "name": "UI/UX",
+                        "name": "Community",
                         "subtags": [
                             {
-                                "name": "Dashboard"
+                                "name": "Explore"
                             }
                         ]
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": []
                     }
                 ]
             },
@@ -3430,7 +3853,7 @@
                         ]
                     },
                     {
-                        "name": "UI/UX",
+                        "name": "Bug Fixes",
                         "subtags": []
                     }
                 ]
@@ -3445,9 +3868,6 @@
                         "subtags": [
                             {
                                 "name": "Roles"
-                            },
-                            {
-                                "name": "Permissions"
                             }
                         ]
                     },
@@ -3490,7 +3910,11 @@
                     },
                     {
                         "name": "UI/UX",
-                        "subtags": []
+                        "subtags": [
+                            {
+                                "name": "Notifications"
+                            }
+                        ]
                     }
                 ]
             },
@@ -3500,12 +3924,16 @@
                 "time": "2025-05-24",
                 "tags": [
                     {
-                        "name": "Integration",
+                        "name": "Editor",
                         "subtags": [
                             {
-                                "name": "GitHub"
+                                "name": "Code Editor"
                             }
                         ]
+                    },
+                    {
+                        "name": "Agent",
+                        "subtags": []
                     }
                 ]
             },
@@ -3518,7 +3946,7 @@
                         "name": "Performance",
                         "subtags": [
                             {
-                                "name": "Loading"
+                                "name": "Speed"
                             }
                         ]
                     },
@@ -3534,16 +3962,16 @@
                 "time": "2025-05-24",
                 "tags": [
                     {
-                        "name": "Team & Enterprise",
-                        "subtags": [
-                            {
-                                "name": "Project Sharing"
-                            }
-                        ]
-                    },
-                    {
                         "name": "Authentication",
                         "subtags": []
+                    },
+                    {
+                        "name": "Community",
+                        "subtags": [
+                            {
+                                "name": "Explore"
+                            }
+                        ]
                     }
                 ]
             },
@@ -3572,6 +4000,14 @@
                         "subtags": [
                             {
                                 "name": "Code Editor"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Deployment",
+                        "subtags": [
+                            {
+                                "name": "Preview"
                             }
                         ]
                     },
@@ -3666,16 +4102,23 @@
                 "time": "2025-05-09",
                 "tags": [
                     {
-                        "name": "Image Generation",
+                        "name": "Media Generation",
                         "subtags": [
                             {
                                 "name": "Image Upload"
+                            },
+                            {
+                                "name": "Image Understanding"
                             }
                         ]
                     },
                     {
-                        "name": "AI Model",
-                        "subtags": []
+                        "name": "Agent",
+                        "subtags": [
+                            {
+                                "name": "Clarifying Questions"
+                            }
+                        ]
                     }
                 ]
             },
@@ -3714,6 +4157,9 @@
                             },
                             {
                                 "name": "Permissions"
+                            },
+                            {
+                                "name": "Project Sharing"
                             }
                         ]
                     }
@@ -3747,10 +4193,6 @@
                 "time": "2025-05-09",
                 "tags": [
                     {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    },
-                    {
                         "name": "Billing & Credits",
                         "subtags": [
                             {
@@ -3759,12 +4201,8 @@
                         ]
                     },
                     {
-                        "name": "Integration",
-                        "subtags": [
-                            {
-                                "name": "Stripe"
-                            }
-                        ]
+                        "name": "Bug Fixes",
+                        "subtags": []
                     }
                 ]
             },
@@ -3774,16 +4212,16 @@
                 "time": "2025-05-09",
                 "tags": [
                     {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    },
-                    {
                         "name": "Billing & Credits",
                         "subtags": [
                             {
                                 "name": "Subscription"
                             }
                         ]
+                    },
+                    {
+                        "name": "Bug Fixes",
+                        "subtags": []
                     }
                 ]
             },
@@ -3802,7 +4240,11 @@
                     },
                     {
                         "name": "UI/UX",
-                        "subtags": []
+                        "subtags": [
+                            {
+                                "name": "Notifications"
+                            }
+                        ]
                     }
                 ]
             },
@@ -3818,10 +4260,10 @@
                                 "name": "Invite"
                             },
                             {
-                                "name": "Workspace"
+                                "name": "Team Management"
                             },
                             {
-                                "name": "Team Management"
+                                "name": "Workspace"
                             }
                         ]
                     }
@@ -3834,7 +4276,11 @@
                 "tags": [
                     {
                         "name": "UI/UX",
-                        "subtags": []
+                        "subtags": [
+                            {
+                                "name": "Notifications"
+                            }
+                        ]
                     },
                     {
                         "name": "Integration",
@@ -3843,6 +4289,10 @@
                                 "name": "Supabase"
                             }
                         ]
+                    },
+                    {
+                        "name": "Bug Fixes",
+                        "subtags": []
                     }
                 ]
             },
@@ -3890,10 +4340,10 @@
                         "subtags": []
                     },
                     {
-                        "name": "Integration",
+                        "name": "Deployment",
                         "subtags": [
                             {
-                                "name": "Supabase"
+                                "name": "Edge Functions"
                             }
                         ]
                     }
@@ -3924,16 +4374,16 @@
                 "time": "2025-05-02",
                 "tags": [
                     {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    },
-                    {
                         "name": "Database",
                         "subtags": [
                             {
                                 "name": "Migrations"
                             }
                         ]
+                    },
+                    {
+                        "name": "Bug Fixes",
+                        "subtags": []
                     }
                 ]
             },
@@ -3946,7 +4396,7 @@
                         "name": "UI/UX",
                         "subtags": [
                             {
-                                "name": "Mobile"
+                                "name": "Mobile UI"
                             }
                         ]
                     },
@@ -4000,16 +4450,16 @@
                 "time": "2025-05-02",
                 "tags": [
                     {
+                        "name": "Bug Fixes",
+                        "subtags": []
+                    },
+                    {
                         "name": "Integration",
                         "subtags": [
                             {
                                 "name": "Supabase"
                             }
                         ]
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
                     },
                     {
                         "name": "Authentication",
@@ -4042,11 +4492,23 @@
                 "time": "2025-05-02",
                 "tags": [
                     {
-                        "name": "Bug Fixes",
-                        "subtags": []
+                        "name": "Team & Enterprise",
+                        "subtags": [
+                            {
+                                "name": "Team Management"
+                            }
+                        ]
                     },
                     {
-                        "name": "Team & Enterprise",
+                        "name": "UI/UX",
+                        "subtags": [
+                            {
+                                "name": "Notifications"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Bug Fixes",
                         "subtags": []
                     }
                 ]
@@ -4084,6 +4546,10 @@
                                 "name": "Invite"
                             }
                         ]
+                    },
+                    {
+                        "name": "Agent",
+                        "subtags": []
                     }
                 ]
             },
@@ -4102,6 +4568,14 @@
                                 "name": "Subscription"
                             }
                         ]
+                    },
+                    {
+                        "name": "Team & Enterprise",
+                        "subtags": [
+                            {
+                                "name": "Business Plan"
+                            }
+                        ]
                     }
                 ]
             },
@@ -4115,6 +4589,9 @@
                         "subtags": [
                             {
                                 "name": "Security Scan"
+                            },
+                            {
+                                "name": "Vulnerability Patch"
                             }
                         ]
                     },
@@ -4150,7 +4627,7 @@
                         ]
                     },
                     {
-                        "name": "UI/UX",
+                        "name": "Editor",
                         "subtags": []
                     }
                 ]
@@ -4164,7 +4641,7 @@
                         "name": "Agent",
                         "subtags": [
                             {
-                                "name": "Plan Mode"
+                                "name": "Agent Mode"
                             }
                         ]
                     }
@@ -4195,16 +4672,16 @@
                 "time": "2025-04-17",
                 "tags": [
                     {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    },
-                    {
                         "name": "Deployment",
                         "subtags": [
                             {
                                 "name": "Preview"
                             }
                         ]
+                    },
+                    {
+                        "name": "Bug Fixes",
+                        "subtags": []
                     }
                 ]
             },
@@ -4222,10 +4699,10 @@
                         ]
                     },
                     {
-                        "name": "Integration",
+                        "name": "UI/UX",
                         "subtags": [
                             {
-                                "name": "GitHub"
+                                "name": "Notifications"
                             }
                         ]
                     }
@@ -4246,11 +4723,7 @@
                     },
                     {
                         "name": "Integration",
-                        "subtags": [
-                            {
-                                "name": "IONOS"
-                            }
-                        ]
+                        "subtags": []
                     }
                 ]
             },
@@ -4281,6 +4754,10 @@
                                 "name": "Loading"
                             }
                         ]
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": []
                     }
                 ]
             },
@@ -4301,7 +4778,7 @@
                         "name": "UI/UX",
                         "subtags": [
                             {
-                                "name": "Navigation"
+                                "name": "Onboarding"
                             }
                         ]
                     }
@@ -4313,16 +4790,20 @@
                 "time": "2025-04-04",
                 "tags": [
                     {
+                        "name": "Editor",
+                        "subtags": [
+                            {
+                                "name": "Code Editor"
+                            }
+                        ]
+                    },
+                    {
                         "name": "UI/UX",
                         "subtags": [
                             {
                                 "name": "Navigation"
                             }
                         ]
-                    },
-                    {
-                        "name": "Editor",
-                        "subtags": []
                     }
                 ]
             },
@@ -4338,10 +4819,6 @@
                                 "name": "Diff View"
                             }
                         ]
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
                     }
                 ]
             },
@@ -4367,7 +4844,11 @@
                 "tags": [
                     {
                         "name": "UI/UX",
-                        "subtags": []
+                        "subtags": [
+                            {
+                                "name": "Navigation"
+                            }
+                        ]
                     }
                 ]
             },
@@ -4411,19 +4892,24 @@
                 "time": "2025-04-04",
                 "tags": [
                     {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    },
-                    {
                         "name": "Editor",
                         "subtags": [
                             {
                                 "name": "Visual Editor"
-                            },
-                            {
-                                "name": "Keyboard Shortcuts"
                             }
                         ]
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": [
+                            {
+                                "name": "Navigation"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Bug Fixes",
+                        "subtags": []
                     }
                 ]
             },
@@ -4437,6 +4923,14 @@
                         "subtags": [
                             {
                                 "name": "LinkedIn"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Community",
+                        "subtags": [
+                            {
+                                "name": "Creator Profile"
                             }
                         ]
                     }
@@ -4465,6 +4959,14 @@
                     {
                         "name": "Bug Fixes",
                         "subtags": []
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": [
+                            {
+                                "name": "Dashboard"
+                            }
+                        ]
                     }
                 ]
             },
@@ -4476,6 +4978,14 @@
                     {
                         "name": "Bug Fixes",
                         "subtags": []
+                    },
+                    {
+                        "name": "Database",
+                        "subtags": [
+                            {
+                                "name": "Edge Functions"
+                            }
+                        ]
                     }
                 ]
             },
@@ -4487,6 +4997,14 @@
                     {
                         "name": "Bug Fixes",
                         "subtags": []
+                    },
+                    {
+                        "name": "Community",
+                        "subtags": [
+                            {
+                                "name": "Creator Profile"
+                            }
+                        ]
                     }
                 ]
             },
@@ -4559,6 +5077,14 @@
                         ]
                     },
                     {
+                        "name": "Deployment",
+                        "subtags": [
+                            {
+                                "name": "Edge Functions"
+                            }
+                        ]
+                    },
+                    {
                         "name": "Bug Fixes",
                         "subtags": []
                     }
@@ -4589,7 +5115,7 @@
                         "name": "Deployment",
                         "subtags": [
                             {
-                                "name": "Publishing"
+                                "name": "Edge Functions"
                             }
                         ]
                     }
@@ -4603,6 +5129,14 @@
                     {
                         "name": "Bug Fixes",
                         "subtags": []
+                    },
+                    {
+                        "name": "Database",
+                        "subtags": [
+                            {
+                                "name": "Edge Functions"
+                            }
+                        ]
                     }
                 ]
             },
@@ -4612,11 +5146,15 @@
                 "time": "2025-03-21",
                 "tags": [
                     {
-                        "name": "UI/UX",
-                        "subtags": []
+                        "name": "Team & Enterprise",
+                        "subtags": [
+                            {
+                                "name": "Workspace"
+                            }
+                        ]
                     },
                     {
-                        "name": "Team & Enterprise",
+                        "name": "UI/UX",
                         "subtags": []
                     }
                 ]
@@ -4652,14 +5190,6 @@
                     {
                         "name": "Bug Fixes",
                         "subtags": []
-                    },
-                    {
-                        "name": "Editor",
-                        "subtags": [
-                            {
-                                "name": "Visual Editor"
-                            }
-                        ]
                     },
                     {
                         "name": "Deployment",
@@ -4704,6 +5234,9 @@
                         "subtags": [
                             {
                                 "name": "Custom Domain"
+                            },
+                            {
+                                "name": "DNS"
                             }
                         ]
                     },
@@ -4776,9 +5309,6 @@
                         "subtags": [
                             {
                                 "name": "Dashboard"
-                            },
-                            {
-                                "name": "Navigation"
                             }
                         ]
                     }
@@ -4790,16 +5320,20 @@
                 "time": "2025-03-21",
                 "tags": [
                     {
-                        "name": "Deployment",
+                        "name": "Performance",
                         "subtags": [
                             {
-                                "name": "Publishing"
+                                "name": "SEO"
                             }
                         ]
                     },
                     {
-                        "name": "UI/UX",
-                        "subtags": []
+                        "name": "Deployment",
+                        "subtags": [
+                            {
+                                "name": "Preview"
+                            }
+                        ]
                     }
                 ]
             },
@@ -4841,7 +5375,11 @@
                     },
                     {
                         "name": "Performance",
-                        "subtags": []
+                        "subtags": [
+                            {
+                                "name": "Speed"
+                            }
+                        ]
                     }
                 ]
             },
@@ -4858,7 +5396,7 @@
                         "name": "Agent",
                         "subtags": [
                             {
-                                "name": "Agent Mode"
+                                "name": "Automation"
                             }
                         ]
                     }
@@ -4874,6 +5412,9 @@
                         "subtags": [
                             {
                                 "name": "Navigation"
+                            },
+                            {
+                                "name": "Dashboard"
                             }
                         ]
                     }
@@ -4900,21 +5441,24 @@
                 "time": "2025-03-14",
                 "tags": [
                     {
+                        "name": "Community",
+                        "subtags": [
+                            {
+                                "name": "Explore"
+                            }
+                        ]
+                    },
+                    {
                         "name": "Integration",
                         "subtags": [
+                            {
+                                "name": "Anthropic"
+                            },
                             {
                                 "name": "Supabase"
                             },
                             {
                                 "name": "Sentry"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "AI Model",
-                        "subtags": [
-                            {
-                                "name": "Claude"
                             }
                         ]
                     }
@@ -4926,12 +5470,16 @@
                 "time": "2025-03-14",
                 "tags": [
                     {
-                        "name": "Billing & Credits",
+                        "name": "Community",
                         "subtags": [
                             {
-                                "name": "Referral"
+                                "name": "Templates"
                             }
                         ]
+                    },
+                    {
+                        "name": "Billing & Credits",
+                        "subtags": []
                     }
                 ]
             },
@@ -4940,10 +5488,6 @@
                 "description": "Introducing Versioning 2.0 enabling bookmarking, easier restores and improved history view.",
                 "time": "2025-03-07",
                 "tags": [
-                    {
-                        "name": "Editor",
-                        "subtags": []
-                    },
                     {
                         "name": "UI/UX",
                         "subtags": []
@@ -4962,6 +5506,10 @@
                                 "name": "Code Editor"
                             }
                         ]
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": []
                     }
                 ]
             },
@@ -4993,16 +5541,16 @@
                 "time": "2025-03-07",
                 "tags": [
                     {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    },
-                    {
                         "name": "AI Model",
                         "subtags": [
                             {
-                                "name": "Claude"
+                                "name": "Anthropic"
                             }
                         ]
+                    },
+                    {
+                        "name": "Bug Fixes",
+                        "subtags": []
                     }
                 ]
             },
@@ -5035,6 +5583,14 @@
                         ]
                     },
                     {
+                        "name": "Deployment",
+                        "subtags": [
+                            {
+                                "name": "Environment Variables"
+                            }
+                        ]
+                    },
+                    {
                         "name": "Bug Fixes",
                         "subtags": []
                     }
@@ -5049,7 +5605,7 @@
                         "name": "AI Model",
                         "subtags": [
                             {
-                                "name": "Claude"
+                                "name": "Anthropic"
                             }
                         ]
                     }
@@ -5103,16 +5659,16 @@
                 "time": "2025-02-28",
                 "tags": [
                     {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    },
-                    {
                         "name": "Integration",
                         "subtags": [
                             {
                                 "name": "Supabase"
                             }
                         ]
+                    },
+                    {
+                        "name": "Bug Fixes",
+                        "subtags": []
                     }
                 ]
             },
@@ -5125,7 +5681,7 @@
                         "name": "Editor",
                         "subtags": [
                             {
-                                "name": "Visual Editor"
+                                "name": "Code Editor"
                             }
                         ]
                     },
@@ -5170,6 +5726,10 @@
                     {
                         "name": "Bug Fixes",
                         "subtags": []
+                    },
+                    {
+                        "name": "Deployment",
+                        "subtags": []
                     }
                 ]
             },
@@ -5181,14 +5741,6 @@
                     {
                         "name": "Bug Fixes",
                         "subtags": []
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Navigation"
-                            }
-                        ]
                     }
                 ]
             },
@@ -5202,11 +5754,15 @@
                         "subtags": []
                     },
                     {
-                        "name": "Bug Fixes",
-                        "subtags": []
+                        "name": "Agent",
+                        "subtags": [
+                            {
+                                "name": "Automation"
+                            }
+                        ]
                     },
                     {
-                        "name": "UI/UX",
+                        "name": "Bug Fixes",
                         "subtags": []
                     }
                 ]
@@ -5288,7 +5844,7 @@
                         "name": "UI/UX",
                         "subtags": [
                             {
-                                "name": "Navigation"
+                                "name": "Dashboard"
                             }
                         ]
                     }
@@ -5300,11 +5856,7 @@
                 "time": "2025-02-12",
                 "tags": [
                     {
-                        "name": "Integration",
-                        "subtags": []
-                    },
-                    {
-                        "name": "UI/UX",
+                        "name": "Community",
                         "subtags": []
                     }
                 ]
@@ -5313,7 +5865,7 @@
                 "title": "Worldwide Lovable Hackathon. Apply here.",
                 "description": "Worldwide Lovable Hackathon. Apply here.",
                 "time": "2025-02-12",
-                "tags": "None"
+                "tags": []
             },
             {
                 "title": "Increased capacity for LLM calls, reducing the risk of mid-process rate limits.",
@@ -5322,10 +5874,6 @@
                 "tags": [
                     {
                         "name": "Performance",
-                        "subtags": []
-                    },
-                    {
-                        "name": "AI Model",
                         "subtags": []
                     }
                 ]
@@ -5342,7 +5890,7 @@
                                 "name": "Preview"
                             },
                             {
-                                "name": "Publishing"
+                                "name": "Hosting"
                             }
                         ]
                     },
@@ -5379,6 +5927,14 @@
                                 "name": "GitHub"
                             }
                         ]
+                    },
+                    {
+                        "name": "Database",
+                        "subtags": [
+                            {
+                                "name": "Storage"
+                            }
+                        ]
                     }
                 ]
             },
@@ -5390,6 +5946,14 @@
                     {
                         "name": "Bug Fixes",
                         "subtags": []
+                    },
+                    {
+                        "name": "Community",
+                        "subtags": [
+                            {
+                                "name": "Remix"
+                            }
+                        ]
                     },
                     {
                         "name": "Integration",
@@ -5425,7 +5989,7 @@
                         "name": "Editor",
                         "subtags": [
                             {
-                                "name": "Visual Editor"
+                                "name": "Code Editor"
                             }
                         ]
                     }
@@ -5439,6 +6003,10 @@
                     {
                         "name": "UI/UX",
                         "subtags": []
+                    },
+                    {
+                        "name": "Editor",
+                        "subtags": []
                     }
                 ]
             },
@@ -5449,7 +6017,11 @@
                 "tags": [
                     {
                         "name": "Agent",
-                        "subtags": []
+                        "subtags": [
+                            {
+                                "name": "Agent Mode"
+                            }
+                        ]
                     },
                     {
                         "name": "Billing & Credits",
@@ -5468,6 +6040,14 @@
                 "tags": [
                     {
                         "name": "Team & Enterprise",
+                        "subtags": [
+                            {
+                                "name": "Team Management"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Community",
                         "subtags": []
                     }
                 ]
@@ -5499,6 +6079,14 @@
                                 "name": "Publishing"
                             }
                         ]
+                    },
+                    {
+                        "name": "Community",
+                        "subtags": [
+                            {
+                                "name": "Explore"
+                            }
+                        ]
                     }
                 ]
             },
@@ -5508,8 +6096,20 @@
                 "time": "2025-02-07",
                 "tags": [
                     {
-                        "name": "Bug Fixes",
-                        "subtags": []
+                        "name": "Integration",
+                        "subtags": [
+                            {
+                                "name": "Cloudflare"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Database",
+                        "subtags": [
+                            {
+                                "name": "Storage"
+                            }
+                        ]
                     }
                 ]
             },
@@ -5518,6 +6118,10 @@
                 "description": "Lovable support 2.0 is up and running.",
                 "time": "2025-02-07",
                 "tags": [
+                    {
+                        "name": "Team & Enterprise",
+                        "subtags": []
+                    },
                     {
                         "name": "UI/UX",
                         "subtags": []
@@ -5539,6 +6143,14 @@
                                 "name": "Builder.io"
                             }
                         ]
+                    },
+                    {
+                        "name": "Editor",
+                        "subtags": [
+                            {
+                                "name": "Design View"
+                            }
+                        ]
                     }
                 ]
             },
@@ -5547,10 +6159,6 @@
                 "description": "Improved visibility of reverts.",
                 "time": "2025-01-28",
                 "tags": [
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
-                    },
                     {
                         "name": "Editor",
                         "subtags": [
@@ -5598,7 +6206,11 @@
                 "tags": [
                     {
                         "name": "Authentication",
-                        "subtags": []
+                        "subtags": [
+                            {
+                                "name": "Email Auth"
+                            }
+                        ]
                     },
                     {
                         "name": "UI/UX",
@@ -5639,18 +6251,18 @@
                 "time": "2025-01-28",
                 "tags": [
                     {
-                        "name": "Integration",
+                        "name": "AI Model",
                         "subtags": [
                             {
-                                "name": "OpenAI Realtime"
+                                "name": "OpenAI"
                             }
                         ]
                     },
                     {
-                        "name": "AI Model",
+                        "name": "Integration",
                         "subtags": [
                             {
-                                "name": "GPT"
+                                "name": "OpenAI"
                             }
                         ]
                     }
@@ -5733,7 +6345,7 @@
                         "name": "UI/UX",
                         "subtags": [
                             {
-                                "name": "Navigation"
+                                "name": "Dashboard"
                             }
                         ]
                     }
@@ -5745,12 +6357,8 @@
                 "time": "2025-01-06",
                 "tags": [
                     {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Navigation"
-                            }
-                        ]
+                        "name": "Community",
+                        "subtags": []
                     }
                 ]
             },
@@ -5787,12 +6395,8 @@
                         "subtags": []
                     },
                     {
-                        "name": "Deployment",
-                        "subtags": [
-                            {
-                                "name": "Publishing"
-                            }
-                        ]
+                        "name": "Community",
+                        "subtags": []
                     }
                 ]
             },
@@ -5819,7 +6423,7 @@
                 "title": "Upcoming 5-part live series to build & launch an AI-powered Spanish tutor.",
                 "description": "Upcoming 5-part live series to build & launch an AI-powered Spanish tutor.",
                 "time": "2025-01-06",
-                "tags": "None"
+                "tags": []
             },
             {
                 "title": "Customisable messaging limits to the Scale plan.",
@@ -5836,11 +6440,7 @@
                     },
                     {
                         "name": "Team & Enterprise",
-                        "subtags": [
-                            {
-                                "name": "Enterprise Plan"
-                            }
-                        ]
+                        "subtags": []
                     }
                 ]
             },
@@ -5858,8 +6458,12 @@
                         ]
                     },
                     {
-                        "name": "Bug Fixes",
-                        "subtags": []
+                        "name": "Agent",
+                        "subtags": [
+                            {
+                                "name": "Automation"
+                            }
+                        ]
                     }
                 ]
             },
@@ -5869,10 +6473,10 @@
                 "time": "2024-12-11",
                 "tags": [
                     {
-                        "name": "UI/UX",
+                        "name": "Community",
                         "subtags": [
                             {
-                                "name": "Dashboard"
+                                "name": "Explore"
                             }
                         ]
                     }
@@ -5891,15 +6495,14 @@
                             },
                             {
                                 "name": "Resend"
-                            },
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Framework",
+                        "subtags": [
                             {
                                 "name": "Three.js"
-                            },
-                            {
-                                "name": "p5.js"
-                            },
-                            {
-                                "name": "Fabric.js"
                             }
                         ]
                     }
@@ -5909,7 +6512,12 @@
                 "title": "Christmas Hackathon to win $3,000+ in prizes.",
                 "description": "Christmas Hackathon to win $3,000+ in prizes.",
                 "time": "2024-12-11",
-                "tags": "None"
+                "tags": [
+                    {
+                        "name": "Community",
+                        "subtags": []
+                    }
+                ]
             },
             {
                 "title": "Issues with our cloud provider resolved.",
@@ -5917,16 +6525,12 @@
                 "time": "2024-12-11",
                 "tags": [
                     {
-                        "name": "Bug Fixes",
+                        "name": "Performance",
                         "subtags": []
                     },
                     {
-                        "name": "Deployment",
-                        "subtags": [
-                            {
-                                "name": "Hosting"
-                            }
-                        ]
+                        "name": "Bug Fixes",
+                        "subtags": []
                     }
                 ]
             },
@@ -5936,8 +6540,12 @@
                 "time": "2024-12-03",
                 "tags": [
                     {
-                        "name": "UI/UX",
-                        "subtags": []
+                        "name": "Community",
+                        "subtags": [
+                            {
+                                "name": "Templates"
+                            }
+                        ]
                     }
                 ]
             },
@@ -5947,8 +6555,12 @@
                 "time": "2024-12-03",
                 "tags": [
                     {
-                        "name": "UI/UX",
-                        "subtags": []
+                        "name": "Community",
+                        "subtags": [
+                            {
+                                "name": "Comments"
+                            }
+                        ]
                     }
                 ]
             },
@@ -5962,12 +6574,7 @@
                         "subtags": [
                             {
                                 "name": "shadcn"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Integration",
-                        "subtags": [
+                            },
                             {
                                 "name": "Three.js"
                             }
@@ -5992,15 +6599,7 @@
                         "name": "Billing & Credits",
                         "subtags": [
                             {
-                                "name": "Credits"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Dashboard"
+                                "name": "Subscription"
                             }
                         ]
                     },
@@ -6009,6 +6608,14 @@
                         "subtags": [
                             {
                                 "name": "Usage Stats"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": [
+                            {
+                                "name": "Dashboard"
                             }
                         ]
                     }
@@ -6023,7 +6630,7 @@
                         "name": "Agent",
                         "subtags": [
                             {
-                                "name": "Agent Mode"
+                                "name": "Automation"
                             }
                         ]
                     }
@@ -6080,7 +6687,7 @@
                         "name": "UI/UX",
                         "subtags": [
                             {
-                                "name": "Navigation"
+                                "name": "Onboarding"
                             }
                         ]
                     }
@@ -6092,16 +6699,20 @@
                 "time": "2024-12-03",
                 "tags": [
                     {
-                        "name": "Integration",
+                        "name": "Performance",
+                        "subtags": [
+                            {
+                                "name": "Speed"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Framework",
                         "subtags": [
                             {
                                 "name": "NPM"
                             }
                         ]
-                    },
-                    {
-                        "name": "Performance",
-                        "subtags": []
                     }
                 ]
             }

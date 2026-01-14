@@ -17,9 +17,25 @@ MAX_RETRIES = 3
 RETRY_DELAY = 2  # 秒
 
 
+def get_project_root():
+    """获取项目根目录（支持本地和 Docker 环境）"""
+    script_dir = Path(__file__).parent
+    if script_dir == Path("/app"):
+        return Path("/app")
+    return script_dir.parent
+
+
+def get_script_dir():
+    """获取脚本目录"""
+    script_dir = Path(__file__).parent
+    if script_dir == Path("/app"):
+        return Path("/app")
+    return script_dir
+
+
 def load_config():
     """加载 LLM 配置"""
-    config_path = Path(__file__).parent / "prompts" / "llm_config.json"
+    config_path = get_script_dir() / "prompts" / "llm_config.json"
     with open(config_path, "r", encoding="utf-8") as f:
         configs = json.load(f)
     return configs[0]  # 使用第一个配置
@@ -27,14 +43,14 @@ def load_config():
 
 def load_tags():
     """加载标签体系"""
-    tags_path = Path(__file__).parent.parent / "info" / "tag.json"
+    tags_path = get_project_root() / "info" / "tag.json"
     with open(tags_path, "r", encoding="utf-8") as f:
         return json.load(f)
 
 
 def save_tags(tags_data: list):
     """保存标签体系"""
-    tags_path = Path(__file__).parent.parent / "info" / "tag.json"
+    tags_path = get_project_root() / "info" / "tag.json"
     with open(tags_path, "w", encoding="utf-8") as f:
         json.dump(tags_data, f, ensure_ascii=False, indent=4)
 
@@ -351,6 +367,38 @@ def build_prompt(title: str, description: str, tags_data: list) -> str:
 
 请从现有标签体系中选择最合适的标签（tag）和子标签（subtag）。
 
+## ⚠️ 重要打标指南
+
+### AI Model 打标规则
+- AI Model 的 subtag 按**厂商/品牌**分类，不是按具体版本
+- GPT-4, GPT-5, GPT-5.1, o1, o3, Codex 等 → 使用 subtag "OpenAI"
+- Claude Opus 4.5, Sonnet 4.5, Haiku 4.5 等 → 使用 subtag "Anthropic"  
+- Gemini 3, Gemini Pro, Veo, Imagen 等 → 使用 subtag "Google"
+- Grok 3 等 → 使用 subtag "xAI"
+- Kimi K2 等 → 使用 subtag "Moonshot"
+- MiniMax M2.1 等 → 使用 subtag "MiniMax"
+- GLM 4.5, GLM 4.6 等 → 使用 subtag "GLM"
+- 如果提到"自动模型选择"或"Auto mode" → 使用 subtag "Auto Mode"
+- 如果提到"模型切换" → 使用 subtag "Model Switching"
+
+### Media Generation 打标规则（多媒体生成）
+- Midjourney, DALL-E, Imagen, Doubao 等图像生成 → Media Generation > Image Generation
+- 图像编辑、AI 修图 → Media Generation > Image Edit
+- Sora, Veo 等视频生成 → Media Generation > Video Generation
+- 视频理解、视频分析 → Media Generation > Video Understanding
+- 语音合成、音频生成 → Media Generation > Audio Generation
+
+### Agent 打标规则
+- Agent 的工作模式（Plan Mode, Fast Mode, Design Mode 等）是交互方式，不是模型更新
+- Fast Mode = 快速执行模式，跳过确认直接执行，不是模型升级
+- 自动修复错误 → Agent > Automation
+- 建议操作按钮 → Agent > Suggested Actions
+- 澄清问题功能 → Agent > Clarifying Questions
+
+### Integration 打标规则
+- 第三方服务集成使用具体服务名作为 subtag
+- 如果是新服务，可以添加新的 subtag
+
 ## 输出要求
 
 直接输出 JSON，不要其他内容：
@@ -373,7 +421,7 @@ def build_prompt(title: str, description: str, tags_data: list) -> str:
 
 1. 优先使用现有标签和子标签
 2. 可以选择多个 tag
-3. subtag 应该是功能涉及的具体主体（服务名、模型名等）
+3. 严格遵循上述打标指南
 4. 如果现有子标签没有匹配项，可以留空 subtags 数组
 5. 如果功能涉及新的具体主体（如新的第三方服务），可以添加新的 subtag
 
@@ -438,7 +486,7 @@ def process_all_features(use_llm: bool = True, limit_per_file: int = None, targe
         limit_per_file: 每个文件最多处理条数
         target_file: 只处理指定文件 (如: v0.json)
     """
-    project_root = Path(__file__).parent.parent
+    project_root = get_project_root()
     storage_dir = project_root / "storage"
     
     config = load_config()

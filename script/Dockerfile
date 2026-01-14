@@ -1,4 +1,4 @@
-# 用于运行爬虫和监控脚本的 Docker 镜像
+# 用于运行爬虫、API 服务和监控脚本的 Docker 镜像
 FROM python:3.11-slim
 
 # 安装系统依赖
@@ -7,6 +7,7 @@ RUN apt-get update && apt-get install -y \
     chromium-driver \
     fonts-wqy-zenhei \
     cron \
+    curl \
     && rm -rf /var/lib/apt/lists/*
 
 # 设置 Playwright 环境变量
@@ -22,14 +23,17 @@ RUN pip install --no-cache-dir -r requirements.txt
 # 安装 Playwright 浏览器
 RUN playwright install chromium --with-deps
 
-# 复制脚本到 /app/script/
-COPY . /app/script/
+# 复制所有脚本
+COPY . /app/
 
-# 创建日志目录
-RUN mkdir -p /app/logs
+# 创建必要目录
+RUN mkdir -p /app/logs /app/storage /app/info /app/prompts
 
-# 设置工作目录
-WORKDIR /app
+# 设置 cron 权限
+RUN chmod 644 /etc/crontab
 
-# 默认命令：运行一次监控
-CMD ["python", "/app/script/monitor.py", "--auto"]
+# 暴露 API 端口
+EXPOSE 3003
+
+# 默认命令：运行 API 服务器
+CMD ["python3", "api_server.py"]

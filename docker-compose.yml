@@ -11,19 +11,49 @@ services:
     volumes:
       - ./storage:/usr/share/nginx/html/data/storage:ro
       - ./info:/usr/share/nginx/html/data/info:ro
+      - ./logs:/usr/share/nginx/html/data/logs:ro
+    depends_on:
+      - api
     restart: unless-stopped
 
-  # 爬虫/监控服务（用于手动触发或定时任务）
-  crawler:
+  # API 服务（支持 Admin 页面、手动触发和脚本执行）
+  api:
     build: ./script
-    image: changelog-crawler:latest
-    container_name: changelog-crawler
+    image: changelog-api:latest
+    container_name: changelog-api
+    ports:
+      - "3003:3003"
     volumes:
       - ./storage:/app/storage
       - ./info:/app/info
       - ./logs:/app/logs
-    # 默认不自动启动，需要手动运行或通过 cron 触发
-    profiles:
-      - crawler
+      - ./script/prompts:/app/prompts
     environment:
       - TZ=Asia/Shanghai
+      - PYTHONUNBUFFERED=1
+    command: python3 api_server.py
+    restart: unless-stopped
+
+  # 定时监控服务（每天自动爬取更新）
+  scheduler:
+    build: ./script
+    image: changelog-scheduler:latest
+    container_name: changelog-scheduler
+    volumes:
+      - ./storage:/app/storage
+      - ./info:/app/info
+      - ./logs:/app/logs
+      - ./script/prompts:/app/prompts
+    environment:
+      - TZ=Asia/Shanghai
+      - PYTHONUNBUFFERED=1
+    entrypoint: ["/bin/sh", "-c"]
+    command:
+      - |
+        echo "Setting up cron job..."
+        mkdir -p /var/spool/cron/crontabs
+        echo "0 9 * * * cd /app && python3 monitor.py >> /app/logs/cron.log 2>&1" > /var/spool/cron/crontabs/root
+        chmod 600 /var/spool/cron/crontabs/root
+        echo "Cron scheduled: daily at 09:00 (Asia/Shanghai)"
+        crond -f -l 2
+    restart: unless-stopped

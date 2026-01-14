@@ -15,7 +15,8 @@ function ProductsPage({ products }: ProductsPageProps) {
           // Count unique tags
           const tagSet = new Set<string>()
           for (const feature of product.features) {
-            for (const tag of feature.tags) {
+            const tags = Array.isArray(feature.tags) ? feature.tags : []
+            for (const tag of tags) {
               tagSet.add(tag.name)
             }
           }

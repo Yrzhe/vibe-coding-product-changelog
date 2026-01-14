@@ -20,8 +20,11 @@ from pathlib import Path
 
 
 def get_project_root():
-    """获取项目根目录"""
-    return Path(__file__).parent.parent
+    """获取项目根目录（支持本地和 Docker 环境）"""
+    script_dir = Path(__file__).parent
+    if script_dir == Path("/app"):
+        return Path("/app")
+    return script_dir.parent
 
 
 def get_feature_key(feature: dict) -> str:
@@ -356,8 +359,21 @@ def monitor_all(force_full: bool = False):
     for competitor in competitors:
         name = competitor.get("name", "")
         url = competitor.get("url", "")
+        is_self = competitor.get("is_self", False)
 
         if not name:
+            continue
+
+        # 跳过自己的产品（通过 Admin 手动管理）
+        if is_self:
+            print(f"\n📦 {name}")
+            print(f"   ⏭️ 跳过（通过 Admin 手动管理）")
+            # 但仍然检查是否需要打标
+            _, features, _ = load_storage(name)
+            untagged = [f for f in features if not f.get("tags")]
+            if untagged:
+                print(f"   🏷️ 发现 {len(untagged)} 条未打标，正在处理...")
+                run_tagging_for_product(name)
             continue
 
         try:
@@ -383,12 +399,41 @@ def monitor_all(force_full: bool = False):
     # 保存日志
     if total_new > 0:
         save_update_log(all_updates)
+        
+        # 自动触发 AI 总结更新
+        run_ai_summary()
 
     print("\n" + "=" * 60)
     print(f"监控完成，共发现 {total_new} 条新功能")
     print("=" * 60)
 
     return all_updates
+
+
+def run_ai_summary():
+    """运行 AI 总结脚本"""
+    ai_script = get_project_root() / "script" / "ai_summary.py"
+    
+    if not ai_script.exists():
+        print("  ⚠️ AI 总结脚本不存在")
+        return
+    
+    print("\n🤖 正在更新 AI 总结...")
+    try:
+        result = subprocess.run(
+            [sys.executable, str(ai_script)],
+            capture_output=True,
+            text=True,
+            timeout=300  # AI 总结可能需要较长时间
+        )
+        if result.returncode == 0:
+            print("  ✓ AI 总结更新完成")
+        else:
+            print(f"  ⚠️ AI 总结更新失败: {result.stderr[:200]}")
+    except subprocess.TimeoutExpired:
+        print("  ⚠️ AI 总结更新超时")
+    except Exception as e:
+        print(f"  ⚠️ AI 总结执行异常: {e}")
 
 
 def check_full_sync_needed() -> bool:

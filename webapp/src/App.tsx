@@ -7,6 +7,7 @@ import ProductsPage from './pages/ProductsPage'
 import ProductDetailPage from './pages/ProductDetailPage'
 import TagDetailPage from './pages/TagDetailPage'
 import FeatureDetailPage from './pages/FeatureDetailPage'
+import AdminPage from './pages/AdminPage'
 
 function App() {
   const { tags, products, loading, error, reload } = useData()
@@ -74,6 +75,17 @@ function App() {
               >
                 Products
               </NavLink>
+              <NavLink
+                to="/admin"
+                className={({ isActive }) =>
+                  cn(
+                    'px-4 py-2 rounded text-sm',
+                    isActive ? 'bg-gray-100 text-gray-900' : 'text-gray-600 hover:bg-gray-50'
+                  )
+                }
+              >
+                Admin
+              </NavLink>
             </div>
             <button
               onClick={reload}
@@ -98,6 +110,7 @@ function App() {
             path="/feature/:productName/:primaryTag/:secondaryTag"
             element={<FeatureDetailPage products={products} />}
           />
+          <Route path="/admin" element={<AdminPage />} />
         </Routes>
       </main>
     </div>

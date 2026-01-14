@@ -12,7 +12,7 @@
                 "time": "2025-12-24",
                 "tags": [
                     {
-                        "name": "Image Generation",
+                        "name": "Media Generation",
                         "subtags": [
                             {
                                 "name": "Screenshot"
@@ -50,7 +50,11 @@
                 "tags": [
                     {
                         "name": "Agent",
-                        "subtags": []
+                        "subtags": [
+                            {
+                                "name": "Suggested Actions"
+                            }
+                        ]
                     },
                     {
                         "name": "UI/UX",
@@ -64,20 +68,16 @@
                 "time": "2025-11-12",
                 "tags": [
                     {
-                        "name": "Agent",
+                        "name": "Editor",
                         "subtags": [
                             {
-                                "name": "Automation"
+                                "name": "Keyboard Shortcuts"
                             }
                         ]
                     },
                     {
                         "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Navigation"
-                            }
-                        ]
+                        "subtags": []
                     }
                 ]
             },
@@ -93,6 +93,10 @@
                                 "name": "Flutter"
                             }
                         ]
+                    },
+                    {
+                        "name": "Bug Fixes",
+                        "subtags": []
                     }
                 ]
             },
@@ -110,7 +114,11 @@
                         ]
                     },
                     {
-                        "name": "Deployment",
+                        "name": "Integration",
+                        "subtags": []
+                    },
+                    {
+                        "name": "Database",
                         "subtags": []
                     },
                     {
@@ -118,7 +126,7 @@
                         "subtags": []
                     },
                     {
-                        "name": "Database",
+                        "name": "Deployment",
                         "subtags": []
                     },
                     {
@@ -208,13 +216,25 @@
                         "name": "Mobile",
                         "subtags": [
                             {
-                                "name": "APK"
+                                "name": "Android App"
                             }
                         ]
                     },
                     {
                         "name": "UI/UX",
-                        "subtags": []
+                        "subtags": [
+                            {
+                                "name": "Notifications"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Deployment",
+                        "subtags": [
+                            {
+                                "name": "Code Download"
+                            }
+                        ]
                     }
                 ]
             },
@@ -230,6 +250,10 @@
                                 "name": "Flutter"
                             }
                         ]
+                    },
+                    {
+                        "name": "Performance",
+                        "subtags": []
                     }
                 ]
             },
@@ -258,9 +282,6 @@
                         "subtags": [
                             {
                                 "name": "Credits"
-                            },
-                            {
-                                "name": "Subscription"
                             }
                         ]
                     }
@@ -275,7 +296,7 @@
                         "name": "Authentication",
                         "subtags": [
                             {
-                                "name": "Google Sign In"
+                                "name": "Social Login"
                             }
                         ]
                     },
@@ -295,18 +316,18 @@
                 "time": "2025-10-08",
                 "tags": [
                     {
-                        "name": "Agent",
-                        "subtags": [
-                            {
-                                "name": "Clarifying Questions"
-                            }
-                        ]
-                    },
-                    {
                         "name": "Editor",
                         "subtags": [
                             {
                                 "name": "Code Editor"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Agent",
+                        "subtags": [
+                            {
+                                "name": "Agent Mode"
                             }
                         ]
                     }
@@ -321,7 +342,7 @@
                         "name": "Mobile",
                         "subtags": [
                             {
-                                "name": "APK"
+                                "name": "Android App"
                             }
                         ]
                     },
@@ -351,6 +372,18 @@
                                 "name": "Flutter"
                             }
                         ]
+                    },
+                    {
+                        "name": "Framework",
+                        "subtags": [
+                            {
+                                "name": "Flutter"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Performance",
+                        "subtags": []
                     }
                 ]
             },
@@ -378,6 +411,12 @@
                         "name": "Integration",
                         "subtags": [
                             {
+                                "name": "OpenAI"
+                            },
+                            {
+                                "name": "Anthropic"
+                            },
+                            {
                                 "name": "Google Analytics"
                             },
                             {
@@ -389,13 +428,13 @@
                         "name": "AI Model",
                         "subtags": [
                             {
-                                "name": "Claude"
+                                "name": "Anthropic"
                             },
                             {
-                                "name": "GPT"
+                                "name": "OpenAI"
                             },
                             {
-                                "name": "Gemini"
+                                "name": "Google"
                             }
                         ]
                     }
@@ -408,11 +447,11 @@
                 "tags": [
                     {
                         "name": "AI Model",
-                        "subtags": [
-                            {
-                                "name": "Amazon Bedrock"
-                            }
-                        ]
+                        "subtags": []
+                    },
+                    {
+                        "name": "Integration",
+                        "subtags": []
                     }
                 ]
             },
@@ -423,11 +462,19 @@
                 "tags": [
                     {
                         "name": "AI Model",
-                        "subtags": []
+                        "subtags": [
+                            {
+                                "name": "Model Switching"
+                            }
+                        ]
                     },
                     {
                         "name": "Performance",
-                        "subtags": []
+                        "subtags": [
+                            {
+                                "name": "Speed"
+                            }
+                        ]
                     }
                 ]
             },
@@ -437,7 +484,7 @@
                 "time": "2025-09-10",
                 "tags": [
                     {
-                        "name": "Mobile",
+                        "name": "Framework",
                         "subtags": [
                             {
                                 "name": "Flutter"
@@ -446,7 +493,11 @@
                     },
                     {
                         "name": "Agent",
-                        "subtags": []
+                        "subtags": [
+                            {
+                                "name": "Suggested Actions"
+                            }
+                        ]
                     }
                 ]
             },
@@ -483,11 +534,15 @@
                 "time": "2025-09-03",
                 "tags": [
                     {
-                        "name": "Bug Fixes",
-                        "subtags": []
+                        "name": "Agent",
+                        "subtags": [
+                            {
+                                "name": "Automation"
+                            }
+                        ]
                     },
                     {
-                        "name": "Agent",
+                        "name": "Bug Fixes",
                         "subtags": []
                     }
                 ]
@@ -507,6 +562,14 @@
                     },
                     {
                         "name": "UI/UX",
+                        "subtags": [
+                            {
+                                "name": "Notifications"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Bug Fixes",
                         "subtags": []
                     }
                 ]
@@ -538,13 +601,9 @@
                                 "name": "Agent Mode"
                             },
                             {
-                                "name": "Clarifying Questions"
+                                "name": "Suggested Actions"
                             }
                         ]
-                    },
-                    {
-                        "name": "Integration",
-                        "subtags": []
                     }
                 ]
             },
@@ -554,6 +613,14 @@
                 "time": "2025-08-27",
                 "tags": [
                     {
+                        "name": "Integration",
+                        "subtags": [
+                            {
+                                "name": "Google Maps"
+                            }
+                        ]
+                    },
+                    {
                         "name": "Mobile",
                         "subtags": [
                             {
@@ -562,10 +629,10 @@
                         ]
                     },
                     {
-                        "name": "Integration",
+                        "name": "Framework",
                         "subtags": [
                             {
-                                "name": "Google Maps"
+                                "name": "Flutter"
                             }
                         ]
                     },
@@ -589,6 +656,14 @@
                         ]
                     },
                     {
+                        "name": "Editor",
+                        "subtags": [
+                            {
+                                "name": "Console"
+                            }
+                        ]
+                    },
+                    {
                         "name": "Bug Fixes",
                         "subtags": []
                     }
@@ -600,11 +675,15 @@
                 "time": "2025-08-20",
                 "tags": [
                     {
-                        "name": "Integration",
-                        "subtags": []
+                        "name": "UI/UX",
+                        "subtags": [
+                            {
+                                "name": "Onboarding"
+                            }
+                        ]
                     },
                     {
-                        "name": "UI/UX",
+                        "name": "Integration",
                         "subtags": []
                     }
                 ]
@@ -616,11 +695,11 @@
                 "tags": [
                     {
                         "name": "Performance",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Agent",
-                        "subtags": []
+                        "subtags": [
+                            {
+                                "name": "Speed"
+                            }
+                        ]
                     }
                 ]
             },
@@ -648,7 +727,7 @@
                         "name": "Mobile",
                         "subtags": [
                             {
-                                "name": "APK"
+                                "name": "Android App"
                             }
                         ]
                     },
@@ -656,7 +735,7 @@
                         "name": "Deployment",
                         "subtags": [
                             {
-                                "name": "Publishing"
+                                "name": "Code Download"
                             }
                         ]
                     }
@@ -690,6 +769,14 @@
                                 "name": "Speed"
                             }
                         ]
+                    },
+                    {
+                        "name": "Framework",
+                        "subtags": [
+                            {
+                                "name": "Flutter"
+                            }
+                        ]
                     }
                 ]
             },
@@ -711,6 +798,14 @@
                         "subtags": [
                             {
                                 "name": "Storage"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "File & Upload",
+                        "subtags": [
+                            {
+                                "name": "File Upload"
                             }
                         ]
                     }
@@ -746,7 +841,11 @@
                     },
                     {
                         "name": "Database",
-                        "subtags": []
+                        "subtags": [
+                            {
+                                "name": "Migrations"
+                            }
+                        ]
                     }
                 ]
             },
@@ -757,7 +856,22 @@
                 "tags": [
                     {
                         "name": "Agent",
-                        "subtags": []
+                        "subtags": [
+                            {
+                                "name": "Agent Mode"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Media Generation",
+                        "subtags": [
+                            {
+                                "name": "Image Upload"
+                            },
+                            {
+                                "name": "Screenshot"
+                            }
+                        ]
                     },
                     {
                         "name": "Performance",
@@ -767,14 +881,6 @@
                             },
                             {
                                 "name": "Loading"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Image Generation",
-                        "subtags": [
-                            {
-                                "name": "Image Upload"
                             }
                         ]
                     },
@@ -792,6 +898,14 @@
                     {
                         "name": "Performance",
                         "subtags": []
+                    },
+                    {
+                        "name": "Agent",
+                        "subtags": [
+                            {
+                                "name": "Automation"
+                            }
+                        ]
                     }
                 ]
             },
@@ -835,18 +949,11 @@
                         "subtags": [
                             {
                                 "name": "Speed"
-                            },
-                            {
-                                "name": "Loading"
                             }
                         ]
                     },
                     {
-                        "name": "UI/UX",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Image Generation",
+                        "name": "Bug Fixes",
                         "subtags": []
                     }
                 ]
@@ -869,429 +976,6 @@
                         "subtags": [
                             {
                                 "name": "Speed"
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "title": "Code Generation & Preview (2025-07-09)",
-                "description": "Improvements to code generation and preview functionality.",
-                "time": "2025-07-09",
-                "tags": [
-                    {
-                        "name": "Editor",
-                        "subtags": [
-                            {
-                                "name": "Code Editor"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Deployment",
-                        "subtags": [
-                            {
-                                "name": "Preview"
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "title": "UI & Navigation (2025-07-02)",
-                "description": "Improved user interface and navigation experience.",
-                "time": "2025-07-02",
-                "tags": [
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Navigation"
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "title": "Error Handling (2025-06-25)",
-                "description": "Better error messages and handling across the platform.",
-                "time": "2025-06-25",
-                "tags": [
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
-                    }
-                ]
-            },
-            {
-                "title": "Performance Improvements (2025-06-18)",
-                "description": "Various performance optimizations and bug fixes.",
-                "time": "2025-06-18",
-                "tags": [
-                    {
-                        "name": "Performance",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    }
-                ]
-            },
-            {
-                "title": "Supabase Integration (2025-06-11)",
-                "description": "Enhanced Supabase integration and database features.",
-                "time": "2025-06-11",
-                "tags": [
-                    {
-                        "name": "Integration",
-                        "subtags": [
-                            {
-                                "name": "Supabase"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Database",
-                        "subtags": []
-                    }
-                ]
-            },
-            {
-                "title": "Visual Editing Updates (2025-06-04)",
-                "description": "Improvements to visual editing capabilities.",
-                "time": "2025-06-04",
-                "tags": [
-                    {
-                        "name": "Editor",
-                        "subtags": [
-                            {
-                                "name": "Visual Editor"
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "title": "Code Generation",
-                "description": "Fixed Supabase credential issues. React: Fixed import issues and ensured correct code block order.",
-                "time": "2025-05-28",
-                "tags": [
-                    {
-                        "name": "Integration",
-                        "subtags": [
-                            {
-                                "name": "Supabase"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Framework",
-                        "subtags": [
-                            {
-                                "name": "React"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    }
-                ]
-            },
-            {
-                "title": "Figma to Code",
-                "description": "Screen status is now displayed in screen details for React, Next.js, HTML, and Flutter projects.",
-                "time": "2025-05-28",
-                "tags": [
-                    {
-                        "name": "Integration",
-                        "subtags": [
-                            {
-                                "name": "Figma"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Framework",
-                        "subtags": [
-                            {
-                                "name": "React"
-                            },
-                            {
-                                "name": "Next.js"
-                            },
-                            {
-                                "name": "Flutter"
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "title": "UI & Backend",
-                "description": "Users are notified when builds complete, even on inactive tabs. Centered preview loader. Improved dropdowns and visual editing in mobile preview.",
-                "time": "2025-05-28",
-                "tags": [
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Notifications"
-                            },
-                            {
-                                "name": "Mobile"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Performance",
-                        "subtags": [
-                            {
-                                "name": "Loading"
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "title": "UI & Navigation",
-                "description": "Unified design system across React, Flutter, and HTML platforms. Streamlined app navigation for smoother user journeys.",
-                "time": "2025-05-21",
-                "tags": [
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Navigation"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Framework",
-                        "subtags": [
-                            {
-                                "name": "React"
-                            },
-                            {
-                                "name": "Flutter"
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "title": "Authentication",
-                "description": "Redesigned login/signup modals for a better user experience.",
-                "time": "2025-05-21",
-                "tags": [
-                    {
-                        "name": "Authentication",
-                        "subtags": []
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
-                    }
-                ]
-            },
-            {
-                "title": "Natural Language Editing (NLC)",
-                "description": "Natural language editing is now live. Describe your changes and Rocket will implement them.",
-                "time": "2025-05-14",
-                "tags": [
-                    {
-                        "name": "Editor",
-                        "subtags": [
-                            {
-                                "name": "Code Editor"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Agent",
-                        "subtags": []
-                    }
-                ]
-            },
-            {
-                "title": "Image Upload",
-                "description": "You can now upload images within Rocket.",
-                "time": "2025-05-14",
-                "tags": [
-                    {
-                        "name": "Image Generation",
-                        "subtags": [
-                            {
-                                "name": "Image Upload"
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "title": "Chat Improvements",
-                "description": "Time stamps now visible on user messages. Added scroll-down button. Chat now shows token balance. Preview supports fullscreen toggle.",
-                "time": "2025-05-14",
-                "tags": [
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Navigation"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Analytics",
-                        "subtags": [
-                            {
-                                "name": "Token Usage"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Deployment",
-                        "subtags": [
-                            {
-                                "name": "Preview"
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "title": "Subscription Handling",
-                "description": "End-of-cycle subscription cancellations are now handled correctly.",
-                "time": "2025-05-07",
-                "tags": [
-                    {
-                        "name": "Billing & Credits",
-                        "subtags": [
-                            {
-                                "name": "Subscription"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    }
-                ]
-            },
-            {
-                "title": "Cookie Consent",
-                "description": "Added a cookie consent banner for compliance. Updated Netlify branding within Rocket.",
-                "time": "2025-05-07",
-                "tags": [
-                    {
-                        "name": "Integration",
-                        "subtags": [
-                            {
-                                "name": "Netlify"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Security",
-                        "subtags": []
-                    }
-                ]
-            },
-            {
-                "title": "Code Generation & Preview",
-                "description": "Prevented regeneration of already-created screens (especially in React). Screen names now display in preview.",
-                "time": "2025-04-30",
-                "tags": [
-                    {
-                        "name": "Editor",
-                        "subtags": [
-                            {
-                                "name": "Code Editor"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Deployment",
-                        "subtags": [
-                            {
-                                "name": "Preview"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Performance",
-                        "subtags": []
-                    }
-                ]
-            },
-            {
-                "title": "Templates",
-                "description": "HTML preview now supports in-preview navigation. Webpage previews can now be opened in a new tab.",
-                "time": "2025-04-30",
-                "tags": [
-                    {
-                        "name": "Editor",
-                        "subtags": [
-                            {
-                                "name": "Visual Editor"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Deployment",
-                        "subtags": [
-                            {
-                                "name": "Preview"
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "title": "Flutter State Management",
-                "description": "Added support for multiple state management approaches in Flutter: Bloc (default), GetX, and Stateless. Fixed Tailwind HTML deployment issues.",
-                "time": "2025-04-30",
-                "tags": [
-                    {
-                        "name": "Mobile",
-                        "subtags": [
-                            {
-                                "name": "Flutter"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    }
-                ]
-            },
-            {
-                "title": "Code Editor",
-                "description": "CMD/CTRL + S now saves all modified code files at once. Source map upload and version tracking added for Sentry integration.",
-                "time": "2025-04-30",
-                "tags": [
-                    {
-                        "name": "Editor",
-                        "subtags": [
-                            {
-                                "name": "Code Editor"
-                            },
-                            {
-                                "name": "Keyboard Shortcuts"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Integration",
-                        "subtags": [
-                            {
-                                "name": "Sentry"
                             }
                         ]
                     }

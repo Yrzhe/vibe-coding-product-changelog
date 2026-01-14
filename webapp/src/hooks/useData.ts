@@ -2,7 +2,8 @@ import { useState, useEffect, useCallback } from 'react'
 import type { Tag, Product, ProductData, TagRow } from '../types'
 
 // Storage file names to load (without .json extension)
-const STORAGE_FILES = ['base44', 'bolt', 'lovable', 'replit', 'rocket', 'trickle', 'v0']
+// YouWare is our own product, placed first
+const STORAGE_FILES = ['youware', 'base44', 'bolt', 'lovable', 'replit', 'rocket', 'trickle', 'v0']
 
 export function useData() {
   const [tags, setTags] = useState<Tag[]>([])
