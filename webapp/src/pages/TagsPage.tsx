@@ -1,6 +1,11 @@
+import { useState, useEffect, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import type { Tag, Product } from '../types'
 import { getSubtags, getTagFeatures } from '../hooks/useData'
+
+interface AdminConfig {
+  exclude_tags?: string[]
+}
 
 interface TagsPageProps {
   tags: Tag[]
@@ -8,13 +13,34 @@ interface TagsPageProps {
 }
 
 function TagsPage({ tags, products }: TagsPageProps) {
+  const [excludeTags, setExcludeTags] = useState<string[]>([])
+
+  // 加载排除标签配置
+  useEffect(() => {
+    fetch('/data/info/admin_config.json')
+      .then(res => res.ok ? res.json() : null)
+      .then((config: AdminConfig | null) => {
+        if (config?.exclude_tags) {
+          setExcludeTags(config.exclude_tags)
+        }
+      })
+      .catch(() => {})
+  }, [])
+
+  // 过滤掉 exclude_tags 中的标签
+  const filteredTags = useMemo(() => {
+    return tags.filter(tag => !excludeTags.includes(tag.name))
+  }, [tags, excludeTags])
+
   return (
     <div className="space-y-6">
       <h1 className="text-xl font-semibold text-balance">Browse by Tag</h1>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-        {tags.map(tag => {
-          const subtags = getSubtags(tags, tag.name)
+        {filteredTags.map(tag => {
+          // 获取 subtags 并过滤掉 exclude_tags 中的
+          const allSubtags = getSubtags(tags, tag.name)
+          const subtags = allSubtags.filter(st => !excludeTags.includes(st))
           const totalFeatures = subtags.reduce((sum, st) => {
             return sum + getTagFeatures(products, tag.name, st).length
           }, 0)

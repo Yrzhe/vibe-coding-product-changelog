@@ -1,4 +1,5 @@
 {
     "password": "youware_admin_2025",
-    "session_secret": "yw_secret_key_change_me_in_production"
+    "session_secret": "yw_secret_key_change_me_in_production",
+    "exclude_tags": ["Bug Fixes", "Vulnerability Patch"]
 }

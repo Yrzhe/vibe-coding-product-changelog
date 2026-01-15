@@ -32,6 +32,12 @@ function AdminPage() {
   const [saving, setSaving] = useState(false)
   const [saveMessage, setSaveMessage] = useState('')
   
+  // 过滤标签配置
+  const [excludeTags, setExcludeTags] = useState<string[]>([])
+  const [newExcludeTag, setNewExcludeTag] = useState('')
+  const [excludeTagsSaving, setExcludeTagsSaving] = useState(false)
+  const [excludeTagsMessage, setExcludeTagsMessage] = useState('')
+  
   // 运行状态
   const [logs, setLogs] = useState<UpdateLogEntry[]>([])
   const [logsLoading, setLogsLoading] = useState(true)
@@ -53,8 +59,64 @@ function AdminPage() {
       loadChangelog()
       loadLogs()
       loadRunStatus()
+      loadExcludeTags()
     }
   }, [isAuthenticated, authToken])
+
+  const loadExcludeTags = async () => {
+    try {
+      const response = await fetch('/data/info/admin_config.json')
+      if (response.ok) {
+        const config = await response.json()
+        setExcludeTags(config.exclude_tags || [])
+      }
+    } catch {
+      console.warn('Failed to load exclude tags')
+    }
+  }
+
+  const saveExcludeTags = async () => {
+    if (!authToken) return
+    
+    setExcludeTagsSaving(true)
+    setExcludeTagsMessage('')
+    
+    try {
+      const response = await fetch('/api/admin/config', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${authToken}`
+        },
+        body: JSON.stringify({ exclude_tags: excludeTags })
+      })
+      
+      if (response.ok) {
+        setExcludeTagsMessage('已保存！刷新页面生效')
+        setTimeout(() => setExcludeTagsMessage(''), 3000)
+      } else if (response.status === 401) {
+        handleLogout()
+      } else {
+        setExcludeTagsMessage('保存失败')
+      }
+    } catch {
+      setExcludeTagsMessage('保存失败：无法连接到后端服务')
+    } finally {
+      setExcludeTagsSaving(false)
+    }
+  }
+
+  const addExcludeTag = () => {
+    const tag = newExcludeTag.trim()
+    if (tag && !excludeTags.includes(tag)) {
+      setExcludeTags([...excludeTags, tag])
+      setNewExcludeTag('')
+    }
+  }
+
+  const removeExcludeTag = (tag: string) => {
+    setExcludeTags(excludeTags.filter(t => t !== tag))
+  }
 
   const handleLogin = async () => {
     setAuthError('')
@@ -460,6 +522,82 @@ function AdminPage() {
               <li>功能标题: <code className="bg-gray-100 px-1 rounded">#### Feature Title</code></li>
               <li>列表项: <code className="bg-gray-100 px-1 rounded">- **标题:** 描述</code> 或 <code className="bg-gray-100 px-1 rounded">- 内容</code></li>
             </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* 过滤标签配置 */}
+      <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
+        <div className="flex items-center justify-between p-4 border-b border-gray-200">
+          <div>
+            <h2 className="font-medium text-gray-900">过滤标签</h2>
+            <p className="text-xs text-gray-500">这些标签将不会显示在 Matrix 和 Tags 页面</p>
+          </div>
+          <div className="flex items-center gap-3">
+            {excludeTagsMessage && (
+              <span className={cn(
+                'text-sm',
+                excludeTagsMessage.includes('失败') ? 'text-red-600' : 'text-green-600'
+              )}>
+                {excludeTagsMessage}
+              </span>
+            )}
+            <button
+              onClick={saveExcludeTags}
+              disabled={excludeTagsSaving}
+              className={cn(
+                'px-4 py-1.5 text-sm font-medium rounded transition-colors',
+                excludeTagsSaving
+                  ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
+                  : 'bg-blue-600 text-white hover:bg-blue-700'
+              )}
+            >
+              {excludeTagsSaving ? '保存中...' : '保存'}
+            </button>
+          </div>
+        </div>
+        
+        <div className="p-4">
+          {/* 当前过滤的标签 */}
+          <div className="flex flex-wrap gap-2 mb-4">
+            {excludeTags.length === 0 ? (
+              <span className="text-sm text-gray-400">暂无过滤标签</span>
+            ) : (
+              excludeTags.map(tag => (
+                <span
+                  key={tag}
+                  className="inline-flex items-center gap-1 px-3 py-1 bg-red-50 text-red-700 rounded-full text-sm"
+                >
+                  {tag}
+                  <button
+                    onClick={() => removeExcludeTag(tag)}
+                    className="ml-1 hover:text-red-900"
+                  >
+                    <svg className="size-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                </span>
+              ))
+            )}
+          </div>
+          
+          {/* 添加新标签 */}
+          <div className="flex gap-2">
+            <input
+              type="text"
+              value={newExcludeTag}
+              onChange={(e) => setNewExcludeTag(e.target.value)}
+              onKeyDown={(e) => e.key === 'Enter' && addExcludeTag()}
+              className="flex-1 px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              placeholder="输入要过滤的标签名称，如 Bug Fixes"
+            />
+            <button
+              onClick={addExcludeTag}
+              className="px-4 py-2 text-sm text-gray-600 hover:text-gray-800 border border-gray-300 rounded-md hover:bg-gray-50"
+            >
+              添加
+            </button>
           </div>
         </div>
       </div>

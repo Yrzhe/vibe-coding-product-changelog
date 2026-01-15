@@ -3,6 +3,10 @@ import { useParams, Link } from 'react-router-dom'
 import type { Tag, Product } from '../types'
 import { getSubtags, getTagFeatures } from '../hooks/useData'
 
+interface AdminConfig {
+  exclude_tags?: string[]
+}
+
 interface AISummary {
   last_updated: string
   matrix_overview: string
@@ -39,12 +43,30 @@ interface TagDetailPageProps {
 function TagDetailPage({ tags, products }: TagDetailPageProps) {
   const { primaryTag, secondaryTag } = useParams<{ primaryTag: string; secondaryTag?: string }>()
   const [aiSummary, setAiSummary] = useState<AISummary | null>(null)
+  const [excludeTags, setExcludeTags] = useState<string[]>([])
 
   const decodedPrimaryTag = primaryTag ? decodeURIComponent(primaryTag) : ''
   const decodedSecondaryTag = secondaryTag ? decodeURIComponent(secondaryTag) : ''
 
   const tagInfo = tags.find(t => t.name === decodedPrimaryTag)
-  const subtags = useMemo(() => getSubtags(tags, decodedPrimaryTag), [tags, decodedPrimaryTag])
+  const allSubtags = useMemo(() => getSubtags(tags, decodedPrimaryTag), [tags, decodedPrimaryTag])
+  
+  // 过滤掉 exclude_tags 中的 subtag
+  const subtags = useMemo(() => {
+    return allSubtags.filter(st => !excludeTags.includes(st))
+  }, [allSubtags, excludeTags])
+
+  // 加载排除标签配置
+  useEffect(() => {
+    fetch('/data/info/admin_config.json')
+      .then(res => res.ok ? res.json() : null)
+      .then((config: AdminConfig | null) => {
+        if (config?.exclude_tags) {
+          setExcludeTags(config.exclude_tags)
+        }
+      })
+      .catch(() => {})
+  }, [])
 
   useEffect(() => {
     fetch('/data/info/summary.json')

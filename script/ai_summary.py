@@ -40,11 +40,41 @@ def load_config():
     return configs[0]
 
 
+def load_exclude_tags():
+    """加载要排除的标签列表"""
+    config_path = get_project_root() / "info" / "admin_config.json"
+    try:
+        with open(config_path, "r", encoding="utf-8") as f:
+            config = json.load(f)
+        return config.get("exclude_tags", [])
+    except Exception:
+        return []
+
+
 def load_tags():
-    """加载标签体系"""
+    """加载标签体系（自动过滤 exclude_tags，包括顶级标签和 subtag）"""
     tags_path = get_project_root() / "info" / "tag.json"
     with open(tags_path, "r", encoding="utf-8") as f:
-        return json.load(f)
+        all_tags = json.load(f)
+    
+    # 过滤掉配置中指定的标签
+    exclude_tags = load_exclude_tags()
+    
+    filtered_tags = []
+    for tag in all_tags:
+        # 跳过被排除的顶级标签
+        if tag.get("name") in exclude_tags:
+            continue
+        
+        # 过滤掉 subtag 中被排除的
+        subtags = tag.get("subtags", [])
+        filtered_subtags = [st for st in subtags if st.get("name") not in exclude_tags]
+        
+        # 创建新的 tag 对象，避免修改原始数据
+        filtered_tag = {**tag, "subtags": filtered_subtags}
+        filtered_tags.append(filtered_tag)
+    
+    return filtered_tags
 
 
 def load_all_products():
@@ -81,8 +111,9 @@ def load_all_products():
 
 
 def analyze_tag_coverage(products: dict, tags: list):
-    """分析每个产品的标签覆盖情况"""
+    """分析每个产品的标签覆盖情况（自动过滤 exclude_tags）"""
     coverage = {}
+    exclude_tags = load_exclude_tags()
     
     for product_name, product_data in products.items():
         product_tags = {}
@@ -97,6 +128,10 @@ def analyze_tag_coverage(products: dict, tags: list):
                 if not tag_name:
                     continue
                 
+                # 跳过配置中排除的标签
+                if tag_name in exclude_tags:
+                    continue
+                
                 if tag_name not in product_tags:
                     product_tags[tag_name] = {
                         "count": 0,
@@ -107,7 +142,8 @@ def analyze_tag_coverage(products: dict, tags: list):
                 
                 for subtag in tag.get("subtags", []):
                     subtag_name = subtag.get("name", "")
-                    if subtag_name:
+                    # 跳过配置中排除的 subtag
+                    if subtag_name and subtag_name not in exclude_tags:
                         product_tags[tag_name]["subtags"].add(subtag_name)
         
         # 转换 set 为 list

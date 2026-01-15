@@ -7,7 +7,7 @@ services:
     image: product-changelog-viewer:latest
     container_name: changelog-viewer
     ports:
-      - "8080:80"
+      - "8999:80"
     volumes:
       - ./storage:/usr/share/nginx/html/data/storage:ro
       - ./info:/usr/share/nginx/html/data/info:ro

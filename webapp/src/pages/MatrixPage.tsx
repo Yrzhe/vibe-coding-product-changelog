@@ -108,15 +108,31 @@ function renderMarkdownText(text: string) {
   return <>{elements}</>
 }
 
+interface AdminConfig {
+  exclude_tags?: string[]
+}
+
 interface MatrixPageProps {
   tags: Tag[]
   products: Product[]
 }
 
 function MatrixPage({ tags, products }: MatrixPageProps) {
-  const tagRows = useMemo(() => flattenTags(tags), [tags])
+  const [excludeTags, setExcludeTags] = useState<string[]>([])
   const [expandedPrimaryTags, setExpandedPrimaryTags] = useState<Set<string>>(new Set())
   const [aiSummary, setAiSummary] = useState<AISummary | null>(null)
+
+  // 加载排除标签配置
+  useEffect(() => {
+    fetch('/data/info/admin_config.json')
+      .then(res => res.ok ? res.json() : null)
+      .then((config: AdminConfig | null) => {
+        if (config?.exclude_tags) {
+          setExcludeTags(config.exclude_tags)
+        }
+      })
+      .catch(() => {})
+  }, [])
 
   useEffect(() => {
     fetch('/data/info/summary.json')
@@ -124,6 +140,17 @@ function MatrixPage({ tags, products }: MatrixPageProps) {
       .then(data => setAiSummary(data))
       .catch(() => {})
   }, [])
+
+  // 过滤掉 exclude_tags 中的标签（包括顶级标签和 subtag）
+  const filteredTags = useMemo(() => {
+    return tags.filter(tag => !excludeTags.includes(tag.name))
+  }, [tags, excludeTags])
+
+  const tagRows = useMemo(() => {
+    const allRows = flattenTags(filteredTags)
+    // 同时过滤掉 exclude_tags 中的 subtag
+    return allRows.filter(row => !excludeTags.includes(row.secondaryTag))
+  }, [filteredTags, excludeTags])
 
   // Group rows by primary tag
   const groupedRows = useMemo(() => {

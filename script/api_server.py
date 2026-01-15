@@ -301,6 +301,34 @@ class APIHandler(BaseHTTPRequestHandler):
                 del sessions[token]
             self.send_json_response(200, {"status": "logged_out"})
         
+        elif path == "/api/admin/config":
+            # 更新配置（如 exclude_tags）
+            token = self.get_auth_token()
+            if not verify_session(token):
+                self.send_json_response(401, {"error": "未授权访问"})
+                return
+            
+            body = self.read_request_body()
+            try:
+                data = json.loads(body)
+            except:
+                self.send_json_response(400, {"error": "无效的 JSON"})
+                return
+            
+            # 读取现有配置
+            config_path = get_project_root() / "info" / "admin_config.json"
+            config = load_admin_config()
+            
+            # 更新 exclude_tags
+            if 'exclude_tags' in data:
+                config['exclude_tags'] = data['exclude_tags']
+            
+            # 保存配置
+            with open(config_path, 'w', encoding='utf-8') as f:
+                json.dump(config, f, ensure_ascii=False, indent=4)
+            
+            self.send_json_response(200, {"status": "saved"})
+        
         elif path == "/api/run-crawl":
             # 触发增量更新
             if running_tasks.get("crawl"):
