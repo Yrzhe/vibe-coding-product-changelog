@@ -16,10 +16,12 @@ export function useData() {
     setError(null)
 
     try {
-      // Load tags
+      // Load tags - 支持新格式 { primary_tags: [...], subtag_to_primary: {...} }
       const tagsResponse = await fetch('/data/info/tag.json')
       if (!tagsResponse.ok) throw new Error('Failed to load tags')
-      const tagsData: Tag[] = await tagsResponse.json()
+      const tagsRaw = await tagsResponse.json()
+      // 兼容新旧格式：新格式有 primary_tags 字段，旧格式直接是数组
+      const tagsData: Tag[] = Array.isArray(tagsRaw) ? tagsRaw : (tagsRaw.primary_tags || [])
       setTags(tagsData)
 
       // Load all product files
