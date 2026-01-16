@@ -14,9 +14,38 @@ interface UpdateLogEntry {
   }>
 }
 
+interface OthersFeature {
+  product: string
+  feature_index: number
+  title: string
+  description: string
+  time: string
+  current_subtags: string[]
+}
+
+interface TagsData {
+  primary_tags: Array<{
+    name: string
+    description: string
+    subtags: Array<{ name: string; description?: string }>
+  }>
+  subtag_to_primary: Record<string, string>
+}
+
 interface RunStatus {
   lastRun: string | null
   isRunning: boolean
+}
+
+interface FeatureItem {
+  index: number
+  title: string
+  description: string
+  time: string
+  tags: Array<{
+    name: string
+    subtags: Array<{ name: string }>
+  }>
 }
 
 function AdminPage() {
@@ -43,6 +72,27 @@ function AdminPage() {
   const [logsLoading, setLogsLoading] = useState(true)
   const [crawlStatus, setCrawlStatus] = useState<RunStatus>({ lastRun: null, isRunning: false })
   const [summaryStatus, setSummaryStatus] = useState<RunStatus>({ lastRun: null, isRunning: false })
+  
+  // Others 管理
+  const [othersFeatures, setOthersFeatures] = useState<OthersFeature[]>([])
+  const [othersLoading, setOthersLoading] = useState(false)
+  const [tagsData, setTagsData] = useState<TagsData | null>(null)
+  
+  // 功能标签编辑
+  const [featureProduct, setFeatureProduct] = useState('youware')
+  const [features, setFeatures] = useState<FeatureItem[]>([])
+  const [featuresLoading, setFeaturesLoading] = useState(false)
+  const [featureSearch, setFeatureSearch] = useState('')
+  const [featurePage, setFeaturePage] = useState(1)
+  const [featureTotal, setFeatureTotal] = useState(0)
+  const [editingFeature, setEditingFeature] = useState<FeatureItem | null>(null)
+  
+  // 标签重命名
+  const [renameOldName, setRenameOldName] = useState('')
+  const [renameNewName, setRenameNewName] = useState('')
+  const [renameType, setRenameType] = useState<'primary' | 'subtag'>('subtag')
+  const [renaming, setRenaming] = useState(false)
+  const [renameMessage, setRenameMessage] = useState('')
 
   // 检查已保存的 session
   useEffect(() => {
@@ -60,6 +110,8 @@ function AdminPage() {
       loadLogs()
       loadRunStatus()
       loadExcludeTags()
+      loadOthersFeatures()
+      loadTagsData()
     }
   }, [isAuthenticated, authToken])
 
@@ -74,6 +126,188 @@ function AdminPage() {
       console.warn('Failed to load exclude tags')
     }
   }
+
+  const loadOthersFeatures = async () => {
+    if (!authToken) return
+    
+    setOthersLoading(true)
+    try {
+      const response = await fetch('/api/admin/others', {
+        headers: { 'Authorization': `Bearer ${authToken}` }
+      })
+      
+      if (response.ok) {
+        const data = await response.json()
+        setOthersFeatures(data.features || [])
+      } else if (response.status === 401) {
+        handleLogout()
+      }
+    } catch {
+      console.warn('Failed to load Others features')
+    } finally {
+      setOthersLoading(false)
+    }
+  }
+
+  const loadTagsData = async () => {
+    if (!authToken) return
+    
+    try {
+      const response = await fetch('/api/admin/tags', {
+        headers: { 'Authorization': `Bearer ${authToken}` }
+      })
+      
+      if (response.ok) {
+        const data = await response.json()
+        setTagsData(data)
+      }
+    } catch {
+      console.warn('Failed to load tags data')
+    }
+  }
+
+  const updateOthersTag = async (
+    product: string,
+    featureIndex: number,
+    primaryTag: string,
+    subtag: string
+  ) => {
+    if (!authToken) return
+    
+    try {
+      const response = await fetch('/api/admin/others/update', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${authToken}`
+        },
+        body: JSON.stringify({
+          product,
+          feature_index: featureIndex,
+          primary_tag: primaryTag,
+          subtag: subtag
+        })
+      })
+      
+      if (response.ok) {
+        // 刷新 Others 列表和 Tags 数据
+        await loadOthersFeatures()
+        await loadTagsData()
+      } else if (response.status === 401) {
+        handleLogout()
+      } else {
+        alert('更新失败')
+      }
+    } catch {
+      alert('更新失败：无法连接到后端服务')
+    }
+  }
+
+  // 加载 features 列表
+  const loadFeatures = useCallback(async (product: string, page: number, search: string) => {
+    if (!authToken) return
+    
+    setFeaturesLoading(true)
+    try {
+      const response = await fetch('/api/admin/features', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${authToken}`
+        },
+        body: JSON.stringify({ product, page, page_size: 20, search })
+      })
+      
+      if (response.ok) {
+        const data = await response.json()
+        setFeatures(data.features || [])
+        setFeatureTotal(data.total || 0)
+      } else if (response.status === 401) {
+        handleLogout()
+      }
+    } catch {
+      console.warn('Failed to load features')
+    } finally {
+      setFeaturesLoading(false)
+    }
+  }, [authToken])
+
+  // 更新 feature 标签
+  const updateFeatureTags = async (product: string, featureIndex: number, newTags: FeatureItem['tags']) => {
+    if (!authToken) return false
+    
+    try {
+      const response = await fetch('/api/admin/feature/update-tags', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${authToken}`
+        },
+        body: JSON.stringify({
+          product,
+          feature_index: featureIndex,
+          tags: newTags
+        })
+      })
+      
+      if (response.ok) {
+        await loadFeatures(product, featurePage, featureSearch)
+        return true
+      } else if (response.status === 401) {
+        handleLogout()
+      }
+      return false
+    } catch {
+      return false
+    }
+  }
+
+  // 重命名标签
+  const renameTag = async () => {
+    if (!authToken || !renameOldName || !renameNewName) return
+    
+    setRenaming(true)
+    setRenameMessage('')
+    
+    try {
+      const response = await fetch('/api/admin/tag/rename', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${authToken}`
+        },
+        body: JSON.stringify({
+          old_name: renameOldName,
+          new_name: renameNewName,
+          type: renameType
+        })
+      })
+      
+      if (response.ok) {
+        const data = await response.json()
+        setRenameMessage(`已重命名！更新了 ${data.updated_products} 个产品`)
+        setRenameOldName('')
+        setRenameNewName('')
+        await loadTagsData()
+        setTimeout(() => setRenameMessage(''), 3000)
+      } else if (response.status === 401) {
+        handleLogout()
+      } else {
+        setRenameMessage('重命名失败')
+      }
+    } catch {
+      setRenameMessage('重命名失败：无法连接到后端服务')
+    } finally {
+      setRenaming(false)
+    }
+  }
+
+  // 加载 features 当产品或页码变化时
+  useEffect(() => {
+    if (isAuthenticated && authToken) {
+      loadFeatures(featureProduct, featurePage, featureSearch)
+    }
+  }, [isAuthenticated, authToken, featureProduct, featurePage, loadFeatures])
 
   const saveExcludeTags = async () => {
     if (!authToken) return
@@ -602,6 +836,237 @@ function AdminPage() {
         </div>
       </div>
 
+      {/* Others 标签管理 */}
+      <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
+        <div className="flex items-center justify-between p-4 border-b border-gray-200">
+          <div>
+            <h2 className="font-medium text-gray-900">Others 标签管理</h2>
+            <p className="text-xs text-gray-500">管理被归类为 "Others" 的功能，将其分配到正确的标签</p>
+          </div>
+          <button
+            onClick={loadOthersFeatures}
+            disabled={othersLoading}
+            className="px-3 py-1.5 text-sm text-gray-600 hover:text-gray-800 border border-gray-300 rounded hover:bg-gray-50"
+          >
+            刷新
+          </button>
+        </div>
+        
+        <div className="p-4">
+          {othersLoading ? (
+            <div className="text-center text-gray-500 py-8">加载中...</div>
+          ) : othersFeatures.length === 0 ? (
+            <div className="text-center text-gray-500 py-8">没有待处理的 Others 标签</div>
+          ) : (
+            <div className="space-y-3 max-h-96 overflow-y-auto">
+              {othersFeatures.map((feature, idx) => (
+                <OthersFeatureCard
+                  key={`${feature.product}-${feature.feature_index}-${idx}`}
+                  feature={feature}
+                  tagsData={tagsData}
+                  onUpdate={updateOthersTag}
+                />
+              ))}
+            </div>
+          )}
+        </div>
+        
+        <div className="px-4 pb-4">
+          <div className="text-xs text-gray-400">
+            共 {othersFeatures.length} 个待处理项
+          </div>
+        </div>
+      </div>
+
+      {/* 功能标签编辑 */}
+      <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
+        <div className="flex items-center justify-between p-4 border-b border-gray-200">
+          <div>
+            <h2 className="font-medium text-gray-900">功能标签编辑</h2>
+            <p className="text-xs text-gray-500">编辑单个 changelog 条目的标签</p>
+          </div>
+          <div className="flex items-center gap-2">
+            <select
+              value={featureProduct}
+              onChange={(e) => {
+                setFeatureProduct(e.target.value)
+                setFeaturePage(1)
+              }}
+              className="px-3 py-1.5 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+              {['youware', 'base44', 'bolt', 'lovable', 'replit', 'rocket', 'trickle', 'v0'].map(p => (
+                <option key={p} value={p}>{p}</option>
+              ))}
+            </select>
+            <input
+              type="text"
+              placeholder="搜索..."
+              value={featureSearch}
+              onChange={(e) => setFeatureSearch(e.target.value)}
+              onKeyDown={(e) => e.key === 'Enter' && loadFeatures(featureProduct, 1, featureSearch)}
+              className="px-3 py-1.5 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 w-48"
+            />
+            <button
+              onClick={() => {
+                setFeaturePage(1)
+                loadFeatures(featureProduct, 1, featureSearch)
+              }}
+              className="px-3 py-1.5 text-sm text-gray-600 hover:text-gray-800 border border-gray-300 rounded hover:bg-gray-50"
+            >
+              搜索
+            </button>
+          </div>
+        </div>
+        
+        <div className="p-4">
+          {featuresLoading ? (
+            <div className="text-center text-gray-500 py-8">加载中...</div>
+          ) : features.length === 0 ? (
+            <div className="text-center text-gray-500 py-8">没有找到功能</div>
+          ) : (
+            <div className="space-y-2 max-h-96 overflow-y-auto">
+              {features.map((feature) => (
+                <FeatureTagCard
+                  key={`${featureProduct}-${feature.index}`}
+                  feature={feature}
+                  product={featureProduct}
+                  tagsData={tagsData}
+                  isEditing={editingFeature?.index === feature.index}
+                  onEdit={() => setEditingFeature(editingFeature?.index === feature.index ? null : feature)}
+                  onSave={async (newTags) => {
+                    const success = await updateFeatureTags(featureProduct, feature.index, newTags)
+                    if (success) setEditingFeature(null)
+                  }}
+                />
+              ))}
+            </div>
+          )}
+        </div>
+        
+        <div className="px-4 pb-4 flex items-center justify-between">
+          <div className="text-xs text-gray-400">
+            共 {featureTotal} 条，第 {featurePage} 页
+          </div>
+          <div className="flex gap-2">
+            <button
+              onClick={() => setFeaturePage(Math.max(1, featurePage - 1))}
+              disabled={featurePage <= 1}
+              className="px-3 py-1 text-sm border border-gray-300 rounded disabled:opacity-50"
+            >
+              上一页
+            </button>
+            <button
+              onClick={() => setFeaturePage(featurePage + 1)}
+              disabled={featurePage * 20 >= featureTotal}
+              className="px-3 py-1 text-sm border border-gray-300 rounded disabled:opacity-50"
+            >
+              下一页
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* 标签重命名 */}
+      <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
+        <div className="flex items-center justify-between p-4 border-b border-gray-200">
+          <div>
+            <h2 className="font-medium text-gray-900">标签统一重命名</h2>
+            <p className="text-xs text-gray-500">批量修改标签名称，影响所有产品数据</p>
+          </div>
+        </div>
+        
+        <div className="p-4">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-3">
+            <select
+              value={renameType}
+              onChange={(e) => setRenameType(e.target.value as 'primary' | 'subtag')}
+              className="px-3 py-2 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+              <option value="subtag">二级标签</option>
+              <option value="primary">一级标签</option>
+            </select>
+            <input
+              type="text"
+              placeholder="原标签名"
+              value={renameOldName}
+              onChange={(e) => setRenameOldName(e.target.value)}
+              className="px-3 py-2 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+            <input
+              type="text"
+              placeholder="新标签名"
+              value={renameNewName}
+              onChange={(e) => setRenameNewName(e.target.value)}
+              className="px-3 py-2 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+            <button
+              onClick={renameTag}
+              disabled={renaming || !renameOldName || !renameNewName}
+              className={cn(
+                'px-4 py-2 text-sm font-medium rounded transition-colors',
+                renaming || !renameOldName || !renameNewName
+                  ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
+                  : 'bg-orange-600 text-white hover:bg-orange-700'
+              )}
+            >
+              {renaming ? '处理中...' : '重命名'}
+            </button>
+          </div>
+          
+          {renameMessage && (
+            <div className={cn(
+              'mt-3 text-sm',
+              renameMessage.includes('失败') ? 'text-red-600' : 'text-green-600'
+            )}>
+              {renameMessage}
+            </div>
+          )}
+          
+          {/* 当前标签列表 */}
+          <div className="mt-4 pt-4 border-t border-gray-200">
+            <h4 className="text-sm font-medium text-gray-700 mb-2">
+              {renameType === 'primary' ? '一级标签' : '二级标签'}列表
+            </h4>
+            <div className="flex flex-wrap gap-1.5 max-h-32 overflow-y-auto">
+              {renameType === 'primary' ? (
+                tagsData?.primary_tags.map(p => (
+                  <button
+                    key={p.name}
+                    onClick={() => setRenameOldName(p.name)}
+                    className={cn(
+                      'px-2 py-0.5 text-xs rounded transition-colors',
+                      renameOldName === p.name
+                        ? 'bg-blue-600 text-white'
+                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    )}
+                  >
+                    {p.name}
+                  </button>
+                ))
+              ) : (
+                tagsData?.primary_tags.flatMap(p => 
+                  p.subtags.map(s => (
+                    <button
+                      key={`${p.name}-${s.name}`}
+                      onClick={() => setRenameOldName(s.name)}
+                      className={cn(
+                        'px-2 py-0.5 text-xs rounded transition-colors',
+                        renameOldName === s.name
+                          ? 'bg-blue-600 text-white'
+                          : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                      )}
+                      title={`${p.name} > ${s.name}`}
+                    >
+                      {s.name}
+                    </button>
+                  ))
+                )
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* 操作按钮区域 */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {/* 增量更新按钮 */}
@@ -717,6 +1182,313 @@ function AdminPage() {
           </div>
         )}
       </div>
+    </div>
+  )
+}
+
+// Others 管理卡片组件
+interface OthersFeatureCardProps {
+  feature: OthersFeature
+  tagsData: TagsData | null
+  onUpdate: (product: string, featureIndex: number, primaryTag: string, subtag: string) => Promise<void>
+}
+
+function OthersFeatureCard({ feature, tagsData, onUpdate }: OthersFeatureCardProps) {
+  const [selectedPrimary, setSelectedPrimary] = useState('')
+  const [selectedSubtag, setSelectedSubtag] = useState('')
+  const [newSubtag, setNewSubtag] = useState('')
+  const [updating, setUpdating] = useState(false)
+  
+  // 获取可选的 subtags
+  const availableSubtags = selectedPrimary && tagsData
+    ? tagsData.primary_tags.find(p => p.name === selectedPrimary)?.subtags || []
+    : []
+  
+  const handleUpdate = async () => {
+    const subtag = selectedSubtag === '__new__' ? newSubtag.trim() : selectedSubtag
+    if (!selectedPrimary || !subtag) return
+    
+    setUpdating(true)
+    try {
+      await onUpdate(feature.product, feature.feature_index, selectedPrimary, subtag)
+      // 清空选择
+      setSelectedPrimary('')
+      setSelectedSubtag('')
+      setNewSubtag('')
+    } finally {
+      setUpdating(false)
+    }
+  }
+  
+  return (
+    <div className="border border-gray-200 rounded-lg p-3 bg-gray-50">
+      <div className="flex items-start justify-between mb-2">
+        <div className="flex-1 min-w-0">
+          <div className="flex items-center gap-2">
+            <span className="px-2 py-0.5 text-xs bg-blue-100 text-blue-700 rounded">
+              {feature.product}
+            </span>
+            <span className="text-xs text-gray-400">{feature.time}</span>
+          </div>
+          <h4 className="font-medium text-gray-900 mt-1 truncate" title={feature.title}>
+            {feature.title}
+          </h4>
+          {feature.description && (
+            <p className="text-xs text-gray-500 mt-0.5 line-clamp-2">
+              {feature.description}
+            </p>
+          )}
+          <div className="flex flex-wrap gap-1 mt-2">
+            {feature.current_subtags.map(st => (
+              <span key={st} className="px-2 py-0.5 text-xs bg-yellow-100 text-yellow-700 rounded">
+                Others &gt; {st}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+      
+      <div className="flex items-center gap-2 mt-3 pt-3 border-t border-gray-200">
+        <select
+          value={selectedPrimary}
+          onChange={(e) => {
+            setSelectedPrimary(e.target.value)
+            setSelectedSubtag('')
+          }}
+          className="flex-1 px-2 py-1 text-sm border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+        >
+          <option value="">选择一级标签</option>
+          {tagsData?.primary_tags.filter(p => p.name !== 'Others').map(p => (
+            <option key={p.name} value={p.name}>{p.name}</option>
+          ))}
+        </select>
+        
+        {selectedPrimary && (
+          <select
+            value={selectedSubtag}
+            onChange={(e) => setSelectedSubtag(e.target.value)}
+            className="flex-1 px-2 py-1 text-sm border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+          >
+            <option value="">选择二级标签</option>
+            {availableSubtags.map(s => (
+              <option key={s.name} value={s.name}>{s.name}</option>
+            ))}
+            <option value="__new__">+ 新建二级标签</option>
+          </select>
+        )}
+        
+        {selectedSubtag === '__new__' && (
+          <input
+            type="text"
+            value={newSubtag}
+            onChange={(e) => setNewSubtag(e.target.value)}
+            placeholder="输入新标签名"
+            className="flex-1 px-2 py-1 text-sm border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+        )}
+        
+        <button
+          onClick={handleUpdate}
+          disabled={updating || !selectedPrimary || (!selectedSubtag || (selectedSubtag === '__new__' && !newSubtag.trim()))}
+          className={cn(
+            'px-3 py-1 text-sm font-medium rounded transition-colors',
+            updating || !selectedPrimary || (!selectedSubtag || (selectedSubtag === '__new__' && !newSubtag.trim()))
+              ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
+              : 'bg-green-600 text-white hover:bg-green-700'
+          )}
+        >
+          {updating ? '...' : '确认'}
+        </button>
+      </div>
+    </div>
+  )
+}
+
+// 功能标签编辑卡片
+interface FeatureTagCardProps {
+  feature: FeatureItem
+  product: string
+  tagsData: TagsData | null
+  isEditing: boolean
+  onEdit: () => void
+  onSave: (newTags: FeatureItem['tags']) => Promise<void>
+}
+
+function FeatureTagCard({ feature, tagsData, isEditing, onEdit, onSave }: FeatureTagCardProps) {
+  // 确保 tags 始终是数组
+  const normalizeTags = (tags: FeatureItem['tags'] | string | null | undefined): FeatureItem['tags'] => {
+    if (!tags || tags === 'None' || typeof tags === 'string') return []
+    if (!Array.isArray(tags)) return []
+    return tags
+  }
+  
+  const [editedTags, setEditedTags] = useState<FeatureItem['tags']>(normalizeTags(feature.tags))
+  const [saving, setSaving] = useState(false)
+  const [selectedPrimary, setSelectedPrimary] = useState('')
+  const [selectedSubtag, setSelectedSubtag] = useState('')
+  
+  // 当 feature 变化时重置编辑状态
+  useEffect(() => {
+    setEditedTags(normalizeTags(feature.tags))
+  }, [feature])
+  
+  const availableSubtags = selectedPrimary && tagsData
+    ? tagsData.primary_tags.find(p => p.name === selectedPrimary)?.subtags || []
+    : []
+  
+  const addTag = () => {
+    if (!selectedPrimary || !selectedSubtag) return
+    
+    // 检查是否已存在
+    const existingPrimary = editedTags.find(t => t.name === selectedPrimary)
+    if (existingPrimary) {
+      const hasSubtag = existingPrimary.subtags.some(s => s.name === selectedSubtag)
+      if (!hasSubtag) {
+        setEditedTags(editedTags.map(t => 
+          t.name === selectedPrimary 
+            ? { ...t, subtags: [...t.subtags, { name: selectedSubtag }] }
+            : t
+        ))
+      }
+    } else {
+      setEditedTags([...editedTags, {
+        name: selectedPrimary,
+        subtags: [{ name: selectedSubtag }]
+      }])
+    }
+    
+    setSelectedPrimary('')
+    setSelectedSubtag('')
+  }
+  
+  const removeSubtag = (primaryName: string, subtagName: string) => {
+    setEditedTags(editedTags.map(t => {
+      if (t.name === primaryName) {
+        const newSubtags = t.subtags.filter(s => s.name !== subtagName)
+        return newSubtags.length > 0 ? { ...t, subtags: newSubtags } : null
+      }
+      return t
+    }).filter(Boolean) as FeatureItem['tags'])
+  }
+  
+  const handleSave = async () => {
+    setSaving(true)
+    await onSave(editedTags)
+    setSaving(false)
+  }
+  
+  return (
+    <div className={cn(
+      'border rounded-lg p-3 transition-colors',
+      isEditing ? 'border-blue-300 bg-blue-50' : 'border-gray-200 bg-gray-50'
+    )}>
+      <div className="flex items-start justify-between">
+        <div className="flex-1 min-w-0">
+          <div className="flex items-center gap-2 mb-1">
+            <span className="text-xs text-gray-400">{feature.time}</span>
+          </div>
+          <h4 className="font-medium text-gray-900 text-sm truncate" title={feature.title}>
+            {feature.title}
+          </h4>
+          
+          {/* 当前标签 */}
+          <div className="flex flex-wrap gap-1 mt-2">
+            {(isEditing ? editedTags : normalizeTags(feature.tags)).map(tag => 
+              tag.subtags.map(st => (
+                <span
+                  key={`${tag.name}-${st.name}`}
+                  className={cn(
+                    'inline-flex items-center gap-1 px-2 py-0.5 text-xs rounded',
+                    isEditing ? 'bg-blue-100 text-blue-700' : 'bg-gray-200 text-gray-700'
+                  )}
+                >
+                  {tag.name} &gt; {st.name}
+                  {isEditing && (
+                    <button
+                      onClick={() => removeSubtag(tag.name, st.name)}
+                      className="ml-0.5 hover:text-red-600"
+                    >
+                      ×
+                    </button>
+                  )}
+                </span>
+              ))
+            )}
+            {(isEditing ? editedTags : normalizeTags(feature.tags)).length === 0 && (
+              <span className="text-xs text-gray-400">无标签</span>
+            )}
+          </div>
+        </div>
+        
+        <button
+          onClick={onEdit}
+          className={cn(
+            'px-2 py-1 text-xs rounded transition-colors ml-2',
+            isEditing
+              ? 'bg-gray-200 text-gray-600 hover:bg-gray-300'
+              : 'bg-blue-100 text-blue-700 hover:bg-blue-200'
+          )}
+        >
+          {isEditing ? '取消' : '编辑'}
+        </button>
+      </div>
+      
+      {/* 编辑模式 */}
+      {isEditing && (
+        <div className="mt-3 pt-3 border-t border-blue-200">
+          <div className="flex items-center gap-2 mb-2">
+            <select
+              value={selectedPrimary}
+              onChange={(e) => {
+                setSelectedPrimary(e.target.value)
+                setSelectedSubtag('')
+              }}
+              className="flex-1 px-2 py-1 text-xs border border-gray-300 rounded"
+            >
+              <option value="">选择一级标签</option>
+              {tagsData?.primary_tags.filter(p => p.name !== 'Others').map(p => (
+                <option key={p.name} value={p.name}>{p.name}</option>
+              ))}
+            </select>
+            
+            {selectedPrimary && (
+              <select
+                value={selectedSubtag}
+                onChange={(e) => setSelectedSubtag(e.target.value)}
+                className="flex-1 px-2 py-1 text-xs border border-gray-300 rounded"
+              >
+                <option value="">选择二级标签</option>
+                {availableSubtags.map(s => (
+                  <option key={s.name} value={s.name}>{s.name}</option>
+                ))}
+              </select>
+            )}
+            
+            <button
+              onClick={addTag}
+              disabled={!selectedPrimary || !selectedSubtag}
+              className="px-2 py-1 text-xs bg-blue-600 text-white rounded disabled:opacity-50"
+            >
+              添加
+            </button>
+          </div>
+          
+          <div className="flex justify-end">
+            <button
+              onClick={handleSave}
+              disabled={saving}
+              className={cn(
+                'px-3 py-1 text-xs font-medium rounded transition-colors',
+                saving
+                  ? 'bg-gray-100 text-gray-400'
+                  : 'bg-green-600 text-white hover:bg-green-700'
+              )}
+            >
+              {saving ? '保存中...' : '保存修改'}
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   )
 }

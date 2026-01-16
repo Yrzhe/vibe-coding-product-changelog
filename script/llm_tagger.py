@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 使用 LLM 为功能更新打标
-自动更新 tag.json 中不存在的标签
+新逻辑：LLM 只识别二级标签，通过映射表自动获得一级标签
 支持网络错误和 JSON 解析错误重试
 """
 
@@ -42,13 +42,13 @@ def load_config():
 
 
 def load_tags():
-    """加载标签体系"""
+    """加载标签体系（新结构：primary_tags + subtag_to_primary）"""
     tags_path = get_project_root() / "info" / "tag.json"
     with open(tags_path, "r", encoding="utf-8") as f:
         return json.load(f)
 
 
-def save_tags(tags_data: list):
+def save_tags(tags_data: dict):
     """保存标签体系"""
     tags_path = get_project_root() / "info" / "tag.json"
     with open(tags_path, "w", encoding="utf-8") as f:
@@ -60,172 +60,107 @@ def normalize_name(name: str) -> str:
     return name.lower().strip().replace(" ", "").replace("-", "").replace("_", "")
 
 
-def get_tag_index(tags_data: list) -> dict:
+def build_subtag_index(tags_data: dict) -> dict:
     """
-    构建标签索引，用于快速查找
-    包含标准化名称用于模糊匹配
+    构建二级标签索引，用于快速查找和映射
+    返回: {
+        "subtag_norm_to_original": {"openai": "OpenAI", ...},
+        "subtag_to_primary": {"OpenAI": "AI Model", ...},
+        "all_subtags": ["OpenAI", "Anthropic", ...]
+    }
     """
-    index = {}
-    norm_to_original = {}  # 标准化名称 -> 原始名称
+    subtag_to_primary = tags_data.get("subtag_to_primary", {})
+    subtag_norm_to_original = {}
+    all_subtags = []
     
-    for i, tag in enumerate(tags_data):
-        tag_name = tag.get("name", "")
-        tag_norm = normalize_name(tag_name)
-        
-        subtags = {}
-        subtag_norm_map = {}  # 标准化名称 -> 原始名称
-        
-        for st in tag.get("subtags", []):
-            st_name = st.get("name", "")
-            st_norm = normalize_name(st_name)
-            subtags[st_name] = True
-            subtag_norm_map[st_norm] = st_name
-        
-        index[tag_name] = {
-            "index": i,
-            "subtags": set(subtags.keys()),
-            "subtag_norm_map": subtag_norm_map
-        }
-        norm_to_original[tag_norm] = tag_name
+    for subtag_name in subtag_to_primary.keys():
+        norm = normalize_name(subtag_name)
+        subtag_norm_to_original[norm] = subtag_name
+        all_subtags.append(subtag_name)
     
-    index["__norm_to_original__"] = norm_to_original
-    return index
+    return {
+        "subtag_norm_to_original": subtag_norm_to_original,
+        "subtag_to_primary": subtag_to_primary,
+        "all_subtags": all_subtags
+    }
 
 
-def normalize_llm_tags(tags: list, tag_index: dict) -> list:
+def normalize_subtag(subtag_name: str, subtag_index: dict) -> str:
     """
-    标准化 LLM 返回的标签，修正名称差异（空格、大小写等）
+    标准化二级标签名称（修正空格、大小写差异）
+    返回: 标准化后的名称，如果是新标签则返回原名称
     """
-    norm_to_original = tag_index.get("__norm_to_original__", {})
-    normalized_tags = []
+    norm = normalize_name(subtag_name)
+    norm_to_original = subtag_index.get("subtag_norm_to_original", {})
     
-    for tag_item in tags:
-        tag_name = tag_item.get("name", "")
-        if not tag_name:
+    if norm in norm_to_original:
+        return norm_to_original[norm]
+    return subtag_name
+
+
+def map_subtags_to_tags(subtags: list, tags_data: dict, subtag_index: dict) -> list:
+    """
+    将二级标签列表映射到完整的标签结构
+    输入: ["OpenAI", "Agent Mode", "Custom Domain"]
+    输出: [
+        {"name": "AI Model", "subtags": [{"name": "OpenAI"}]},
+        {"name": "Agent", "subtags": [{"name": "Agent Mode"}]},
+        {"name": "Deployment", "subtags": [{"name": "Custom Domain"}]}
+    ]
+    """
+    subtag_to_primary = tags_data.get("subtag_to_primary", {})
+    
+    # 获取所有一级标签名（用于过滤 LLM 错误返回的一级标签名）
+    primary_tag_names = {pt["name"] for pt in tags_data.get("primary_tags", [])}
+    
+    # 按一级标签分组
+    primary_to_subtags = {}
+    new_subtags = []  # 新的二级标签（需要归入 Others）
+    
+    for subtag in subtags:
+        # 标准化名称
+        normalized = normalize_subtag(subtag, subtag_index)
+        
+        # 过滤掉一级标签名（LLM 错误返回）
+        if normalized in primary_tag_names:
+            print(f"       ⚠️ 忽略一级标签名: {normalized}")
             continue
         
-        tag_norm = normalize_name(tag_name)
-        
-        # 检查是否有模糊匹配的主标签
-        if tag_name not in tag_index and tag_norm in norm_to_original:
-            original_name = norm_to_original[tag_norm]
-            print(f"       🔧 标签名称修正: \"{tag_name}\" -> \"{original_name}\"")
-            tag_name = original_name
-        
-        # 处理子标签
-        subtags = tag_item.get("subtags", [])
-        normalized_subtags = []
-        
-        if tag_name in tag_index:
-            subtag_norm_map = tag_index[tag_name].get("subtag_norm_map", {})
-            
-            for st in subtags:
-                st_name = st.get("name", "")
-                if not st_name:
-                    continue
-                
-                st_norm = normalize_name(st_name)
-                
-                # 检查是否有模糊匹配的子标签
-                if st_name not in tag_index[tag_name]["subtags"] and st_norm in subtag_norm_map:
-                    original_st_name = subtag_norm_map[st_norm]
-                    print(f"       🔧 子标签名称修正: \"{st_name}\" -> \"{original_st_name}\"")
-                    st_name = original_st_name
-                
-                normalized_subtags.append({"name": st_name})
+        if normalized in subtag_to_primary:
+            primary = subtag_to_primary[normalized]
+            if primary not in primary_to_subtags:
+                primary_to_subtags[primary] = []
+            primary_to_subtags[primary].append({"name": normalized})
         else:
-            # 新标签，保持原样
-            normalized_subtags = subtags
-        
-        normalized_tags.append({
-            "name": tag_name,
-            "subtags": normalized_subtags
+            # 新的二级标签，归入 Others
+            new_subtags.append(normalized)
+    
+    # 处理新的二级标签 - 归入 Others
+    if new_subtags:
+        if "Others" not in primary_to_subtags:
+            primary_to_subtags["Others"] = []
+        for new_subtag in new_subtags:
+            primary_to_subtags["Others"].append({"name": new_subtag})
+            # 更新映射表
+            tags_data["subtag_to_primary"][new_subtag] = "Others"
+            subtag_index["subtag_to_primary"][new_subtag] = "Others"
+            subtag_index["subtag_norm_to_original"][normalize_name(new_subtag)] = new_subtag
+            subtag_index["all_subtags"].append(new_subtag)
+            # 添加到 Others 的 subtags 列表
+            for pt in tags_data.get("primary_tags", []):
+                if pt["name"] == "Others":
+                    pt["subtags"].append({"name": new_subtag, "description": new_subtag})
+                    break
+    
+    # 转换为输出格式
+    result = []
+    for primary, subs in primary_to_subtags.items():
+        result.append({
+            "name": primary,
+            "subtags": subs
         })
     
-    return normalized_tags
-
-
-def update_tags_with_new(tags_data: list, tag_index: dict, new_tags: list) -> tuple:
-    """
-    检查并更新标签体系
-    返回: (是否有更新, 新增的标签列表, 新增的子标签列表)
-    """
-    updated = False
-    new_tag_names = []
-    new_subtag_names = []
-    norm_to_original = tag_index.get("__norm_to_original__", {})
-    
-    for tag_item in new_tags:
-        tag_name = tag_item.get("name", "")
-        subtags = tag_item.get("subtags", [])
-        
-        if not tag_name:
-            continue
-        
-        tag_norm = normalize_name(tag_name)
-        
-        # 检查主标签是否存在（包括模糊匹配）
-        if tag_name not in tag_index and tag_name != "__norm_to_original__":
-            # 检查是否有模糊匹配
-            if tag_norm in norm_to_original:
-                # 已存在的标签，跳过添加新标签
-                continue
-            
-            # 新的主标签
-            new_tag = {
-                "name": tag_name,
-                "description": f"{tag_name} 相关功能",
-                "subtags": []
-            }
-            
-            subtag_norm_map = {}
-            # 添加子标签
-            for st in subtags:
-                st_name = st.get("name", "")
-                if st_name:
-                    new_tag["subtags"].append({
-                        "name": st_name,
-                        "description": st_name
-                    })
-                    subtag_norm_map[normalize_name(st_name)] = st_name
-                    new_subtag_names.append(f"{tag_name}/{st_name}")
-            
-            tags_data.append(new_tag)
-            tag_index[tag_name] = {
-                "index": len(tags_data) - 1,
-                "subtags": {st.get("name", "") for st in subtags if st.get("name")},
-                "subtag_norm_map": subtag_norm_map
-            }
-            # 更新标准化映射
-            norm_to_original[tag_norm] = tag_name
-            new_tag_names.append(tag_name)
-            updated = True
-        elif tag_name in tag_index and tag_name != "__norm_to_original__":
-            # 主标签存在，检查子标签
-            existing_subtags = tag_index[tag_name]["subtags"]
-            subtag_norm_map = tag_index[tag_name].get("subtag_norm_map", {})
-            tag_idx = tag_index[tag_name]["index"]
-            
-            for st in subtags:
-                st_name = st.get("name", "")
-                if not st_name:
-                    continue
-                
-                st_norm = normalize_name(st_name)
-                
-                # 检查子标签是否存在（包括模糊匹配）
-                if st_name not in existing_subtags and st_norm not in subtag_norm_map:
-                    # 新的子标签
-                    tags_data[tag_idx]["subtags"].append({
-                        "name": st_name,
-                        "description": st_name
-                    })
-                    tag_index[tag_name]["subtags"].add(st_name)
-                    subtag_norm_map[st_norm] = st_name
-                    new_subtag_names.append(f"{tag_name}/{st_name}")
-                    updated = True
-    
-    return updated, new_tag_names, new_subtag_names
+    return result
 
 
 def call_llm_with_retry(prompt: str, config: dict, max_retries: int = MAX_RETRIES) -> str:
@@ -280,8 +215,8 @@ def call_llm_with_retry(prompt: str, config: dict, max_retries: int = MAX_RETRIE
 
 def parse_llm_response(response: str) -> tuple:
     """
-    解析 LLM 响应
-    返回: (tags列表, 是否解析成功, 错误信息)
+    解析 LLM 响应（新格式：只返回二级标签列表）
+    返回: (subtags列表, 是否解析成功, 错误信息)
     """
     if not response:
         return [], False, "响应为空"
@@ -289,11 +224,11 @@ def parse_llm_response(response: str) -> tuple:
     # 尝试直接解析
     try:
         data = json.loads(response)
-        tags = data.get("tags", [])
-        if validate_tags_format(tags):
-            return tags, True, None
+        subtags = data.get("subtags", [])
+        if isinstance(subtags, list):
+            return subtags, True, None
         else:
-            return [], False, "tags 格式不正确"
+            return [], False, "subtags 格式不正确"
     except json.JSONDecodeError:
         pass
     
@@ -302,61 +237,48 @@ def parse_llm_response(response: str) -> tuple:
     if json_match:
         try:
             data = json.loads(json_match.group(1))
-            tags = data.get("tags", [])
-            if validate_tags_format(tags):
-                return tags, True, None
+            subtags = data.get("subtags", [])
+            if isinstance(subtags, list):
+                return subtags, True, None
         except json.JSONDecodeError:
             pass
     
     # 尝试找到 JSON 对象 - 更宽松的匹配
-    json_match = re.search(r'\{\s*"tags"\s*:\s*\[.*?\]\s*\}', response, re.DOTALL)
+    json_match = re.search(r'\{\s*"subtags"\s*:\s*\[.*?\]\s*\}', response, re.DOTALL)
     if json_match:
         try:
             data = json.loads(json_match.group(0))
-            tags = data.get("tags", [])
-            if validate_tags_format(tags):
-                return tags, True, None
+            subtags = data.get("subtags", [])
+            if isinstance(subtags, list):
+                return subtags, True, None
         except json.JSONDecodeError:
             pass
     
     return [], False, "无法解析 JSON"
 
 
-def validate_tags_format(tags: list) -> bool:
-    """验证 tags 格式是否正确"""
-    if not isinstance(tags, list):
-        return False
+def build_prompt(title: str, description: str, tags_data: dict) -> str:
+    """构建打标提示词（新版：只识别二级标签）"""
     
-    for tag in tags:
-        if not isinstance(tag, dict):
-            return False
-        if "name" not in tag:
-            return False
-        if not isinstance(tag.get("name"), str):
-            return False
-        
-        subtags = tag.get("subtags", [])
-        if not isinstance(subtags, list):
-            return False
-        
-        for subtag in subtags:
-            if not isinstance(subtag, dict):
-                return False
-            if "name" not in subtag:
-                return False
+    # 构建二级标签列表供 LLM 参考
+    subtag_categories = []
+    all_primary_names = set()
+    for pt in tags_data.get("primary_tags", []):
+        all_primary_names.add(pt["name"])
+        if pt["name"] == "Others":
+            continue  # 不显示 Others
+        subtags = [st["name"] for st in pt.get("subtags", [])]
+        if subtags:
+            subtag_categories.append(f"【{pt['name']}】: {', '.join(subtags)}")
     
-    return True
-
-
-def build_prompt(title: str, description: str, tags_data: list) -> str:
-    """构建打标提示词"""
-    tags_json = json.dumps(tags_data, ensure_ascii=False, indent=2)
+    subtag_list = "\n".join(subtag_categories)
+    primary_names_str = ", ".join(sorted(all_primary_names - {"Others"}))
     
     prompt = f"""你是一个竞品分析专家，负责为竞品的功能更新进行分类打标。
 
-## 现有标签体系
+## 可用的二级标签（按类别分组）
 
-{tags_json}
+{subtag_list}
 
 ## 待打标的功能
 
@@ -365,85 +287,118 @@ def build_prompt(title: str, description: str, tags_data: list) -> str:
 
 ## 任务
 
-请从现有标签体系中选择最合适的标签（tag）和子标签（subtag）。
+选择 1-2 个最准确的二级标签。标签应该互斥，不要选择重叠的标签。
 
-## ⚠️ 重要打标指南
+## ⚠️ 严格规则
 
-### AI Model 打标规则
-- AI Model 的 subtag 按**厂商/品牌**分类，不是按具体版本
-- GPT-4, GPT-5, GPT-5.1, o1, o3, Codex 等 → 使用 subtag "OpenAI"
-- Claude Opus 4.5, Sonnet 4.5, Haiku 4.5 等 → 使用 subtag "Anthropic"  
-- Gemini 3, Gemini Pro, Veo, Imagen 等 → 使用 subtag "Google"
-- Grok 3 等 → 使用 subtag "xAI"
-- Kimi K2 等 → 使用 subtag "Moonshot"
-- MiniMax M2.1 等 → 使用 subtag "MiniMax"
-- GLM 4.5, GLM 4.6 等 → 使用 subtag "GLM"
-- 如果提到"自动模型选择"或"Auto mode" → 使用 subtag "Auto Mode"
-- 如果提到"模型切换" → 使用 subtag "Model Switching"
+### 1. 禁止返回一级标签名
+以下是一级标签名，绝对不能作为结果返回：{primary_names_str}
 
-### Media Generation 打标规则（多媒体生成）
-- Midjourney, DALL-E, Imagen, Doubao 等图像生成 → Media Generation > Image Generation
-- 图像编辑、AI 修图 → Media Generation > Image Edit
-- Sora, Veo 等视频生成 → Media Generation > Video Generation
-- 视频理解、视频分析 → Media Generation > Video Understanding
-- 语音合成、音频生成 → Media Generation > Audio Generation
+### 2. 严格匹配原则
 
-### Agent 打标规则
-- Agent 的工作模式（Plan Mode, Fast Mode, Design Mode 等）是交互方式，不是模型更新
-- Fast Mode = 快速执行模式，跳过确认直接执行，不是模型升级
-- 自动修复错误 → Agent > Automation
-- 建议操作按钮 → Agent > Suggested Actions
-- 澄清问题功能 → Agent > Clarifying Questions
+**Integration 必须明确提到服务名**
+- 只有明确提到 "GitHub"、"Supabase"、"Stripe" 等服务名时才能打对应标签
+- "repository push" 不等于 GitHub（可能是内置 Git 功能）→ 打性能相关标签
+- "push timing" / "performance" → "Speed"（属于 Performance）
 
-### Integration 打标规则
-- 第三方服务集成使用具体服务名作为 subtag
-- 如果是新服务，可以添加新的 subtag
+**Backend vs Agent**
+- 存储、数据库相关 → "Storage" 或 "Database"（属于 Backend）
+- 只有涉及 AI 自动化工作流才打 Agent 标签
+- "AI Integration Persistence"（存储 AI 生成内容）→ "Storage"，不是 Automation
 
-## 输出要求
+**Social Share vs Integration**
+- Twitter/LinkedIn/Telegram **分享按钮** → "Social Share"（属于 Community）
+- 只有真正调用 API 才是 Integration
 
-直接输出 JSON，不要其他内容：
+**Social Login vs Integration**  
+- Google/Apple/GitHub/Twitter **登录** → "Social Login"（属于 Auth）
+- Google Analytics → "Usage Stats"（属于 Analytics）
+
+**Backend vs Integration**
+- 产品内置后端（YouBase/Lovable Cloud/Bolt Database）→ Backend
+- 明确提到第三方服务名（Supabase/Firebase）→ Integration
+
+### 3. AI Model 打标
+- GPT-4, GPT-5, o1, o3, Codex → "OpenAI"
+- Claude Opus, Sonnet, Haiku → "Anthropic"
+- Gemini, Veo, Imagen → "Google"（模型更新，不是 Google 登录！）
+- Grok → "xAI"
+- Kimi → "Moonshot"
+- MiniMax M2 → "MiniMax"
+- GLM 4.5, 4.6, 4.7 → "GLM"
+
+### 3.5 Media 打标严格规则
+**Audio Generation 只用于 AI 生成语音/音频**
+- TTS（文字转语音）、AI 配音、ElevenLabs 等 → "Audio Generation"
+- 音频文件上传/支持 → "File Upload"（属于 File），不是 Audio Generation！
+- 视频理解（video understanding/analysis）→ "Video Understanding"，不是 Audio Generation！
+- 即使描述中提到 "audio understanding"，如果是视频分析功能 → 仍是 "Video Understanding"
+
+**Image/Video 区分**
+- 图片生成 → "Image Generation"
+- 图片编辑 → "Image Edit"  
+- 视频生成 → "Video Generation"
+- 视频分析/理解 → "Video Understanding"
+
+### 3.6 第三方服务识别
+**以下是第三方服务，应打 Integration 标签（需明确提到名称）**：
+- 代码托管: GitHub, GitLab, Bitbucket
+- 项目管理: Jira, Linear, Notion, Confluence, Todoist
+- 通讯: Slack, Discord, Twilio
+- 支付: Stripe, Plaid
+- 云服务: Snowflake, AWS, GCP, Azure, Cloudflare
+- AI 服务: ChatGPT, Perplexity, ElevenLabs, Replicate
+- 客服: Zendesk, Intercom
+- 设计: Figma
+- 开发工具: VS Code, Cursor
+
+**以下不是 Integration**：
+- 产品内置的数据库/存储 → Backend（Database/Storage）
+- 分享按钮 → Community（Social Share）
+- 登录方式 → Auth（Social Login）
+
+### 4. 标签互斥原则
+- 每个功能只选最准确的 1-2 个标签
+- 避免选择语义重叠的标签
+
+### 5. Bug 修复
+- 纯粹的 Bug 修复（无具体功能描述）→ 返回空数组
+- 如果 Bug 修复涉及具体功能，打对应功能的标签
+
+## 输出格式
 
 ```json
 {{
-    "tags": [
-        {{
-            "name": "标签名称",
-            "subtags": [
-                {{"name": "子标签1"}},
-                {{"name": "子标签2"}}
-            ]
-        }}
-    ]
+    "subtags": ["标签1", "标签2"]
 }}
 ```
 
-## 规则
-
-1. 优先使用现有标签和子标签
-2. 可以选择多个 tag
-3. 严格遵循上述打标指南
-4. 如果现有子标签没有匹配项，可以留空 subtags 数组
-5. 如果功能涉及新的具体主体（如新的第三方服务），可以添加新的 subtag
+如果是纯 Bug 修复或非功能性内容：
+```json
+{{
+    "subtags": []
+}}
+```
 
 请直接输出 JSON："""
     
     return prompt
 
 
-def tag_single_feature(title: str, description: str, config: dict, tags_data: list, tag_index: dict) -> tuple:
+def tag_single_feature(title: str, description: str, config: dict, tags_data: dict, subtag_index: dict) -> tuple:
     """
-    为单个功能打标，支持重试和标签名称标准化
+    为单个功能打标
     
-    返回: (tags, success)
-        - (tags, True): 成功打标，tags 是标签列表
-        - ([], True): LLM 判断为非功能性内容
-        - (None, False): 调用失败，需要下次重试
+    返回: (tags, success, new_subtags_added)
+        - (tags, True, [...]): 成功打标
+        - ([], True, []): LLM 判断为非功能性内容
+        - (None, False, []): 调用失败
     """
     prompt = build_prompt(title, description, tags_data)
+    new_subtags_added = []
     
     for attempt in range(MAX_RETRIES):
-        # 调用 LLM
-        response = call_llm_with_retry(prompt, config, max_retries=1)  # 网络重试在 call_llm_with_retry 中处理
+        response = call_llm_with_retry(prompt, config, max_retries=1)
         
         if not response:
             if attempt < MAX_RETRIES - 1:
@@ -451,19 +406,30 @@ def tag_single_feature(title: str, description: str, config: dict, tags_data: li
                 time.sleep(RETRY_DELAY)
                 continue
             print(f"       ❌ LLM 调用失败")
-            return (None, False)  # 调用失败
+            return (None, False, [])
         
-        # 解析响应
-        tags, success, error = parse_llm_response(response)
+        subtags, success, error = parse_llm_response(response)
         
         if success:
-            if tags:
-                # 标准化标签名称（修正空格、大小写差异）
-                normalized_tags = normalize_llm_tags(tags, tag_index)
-                return (normalized_tags, True)
+            if subtags:
+                # 获取一级标签名（用于过滤）
+                primary_tag_names = {pt["name"] for pt in tags_data.get("primary_tags", [])}
+                existing_subtags = set(subtag_index.get("all_subtags", []))
+                
+                # 记录新增的二级标签（排除一级标签名）
+                for st in subtags:
+                    normalized = normalize_subtag(st, subtag_index)
+                    # 跳过一级标签名
+                    if normalized in primary_tag_names:
+                        continue
+                    if normalized not in existing_subtags and st not in existing_subtags:
+                        new_subtags_added.append(st)
+                
+                # 映射到完整标签结构
+                tags = map_subtags_to_tags(subtags, tags_data, subtag_index)
+                return (tags, True, new_subtags_added)
             else:
-                # LLM 返回空标签，说明是非功能性内容
-                return ([], True)
+                return ([], True, [])
         
         if not success:
             if attempt < MAX_RETRIES - 1:
@@ -472,9 +438,9 @@ def tag_single_feature(title: str, description: str, config: dict, tags_data: li
                 continue
             else:
                 print(f"       ❌ JSON 解析失败: {error}")
-                return (None, False)  # 解析失败
+                return (None, False, [])
     
-    return (None, False)  # 所有重试都失败
+    return (None, False, [])
 
 
 def process_all_features(use_llm: bool = True, limit_per_file: int = None, target_file: str = None):
@@ -484,19 +450,18 @@ def process_all_features(use_llm: bool = True, limit_per_file: int = None, targe
     Args:
         use_llm: 是否使用 LLM 打标
         limit_per_file: 每个文件最多处理条数
-        target_file: 只处理指定文件 (如: v0.json)
+        target_file: 只处理指定文件 (如: youware.json)
     """
     project_root = get_project_root()
     storage_dir = project_root / "storage"
     
     config = load_config()
     tags_data = load_tags()
-    tag_index = get_tag_index(tags_data)
+    subtag_index = build_subtag_index(tags_data)
     
     total_processed = 0
     total_tagged = 0
     total_skipped = 0
-    all_new_tags = []
     all_new_subtags = []
     
     # 确定要处理的文件列表
@@ -523,9 +488,7 @@ def process_all_features(use_llm: bool = True, limit_per_file: int = None, targe
         
         features = data[1].get("features", [])
         
-        # 找出需要打标的功能（tags 字段不存在的才需要打标）
-        # tags: "None" 表示已处理过但判定为非功能性内容，不需要再处理
-        # tags: [...] 表示已打标，不需要再处理
+        # 找出需要打标的功能
         features_to_tag = []
         for i, feat in enumerate(features):
             if "tags" not in feat:
@@ -543,16 +506,19 @@ def process_all_features(use_llm: bool = True, limit_per_file: int = None, targe
             title = feat.get("title", "")
             description = feat.get("description", "")
             
-            print(f"    {total_processed + 1}. {title[:40]}...")
+            # 显示更长的标题（最多80字符）
+            display_title = title[:80] + "..." if len(title) > 80 else title
+            print(f"    {total_processed + 1}. {display_title}")
             
             if use_llm:
-                tags, success = tag_single_feature(title, description, config, tags_data, tag_index)
-                time.sleep(0.5)  # 避免请求过快
+                tags, success, new_subtags = tag_single_feature(
+                    title, description, config, tags_data, subtag_index
+                )
+                time.sleep(0.5)
             else:
-                tags, success = [], True
+                tags, success, new_subtags = [], True, []
             
             if not success:
-                # LLM 调用失败，不设置 tags，下次会重试
                 print(f"       ⏭️ 跳过，等待下次重试")
                 total_processed += 1
                 continue
@@ -560,29 +526,28 @@ def process_all_features(use_llm: bool = True, limit_per_file: int = None, targe
             if tags:
                 features[idx]["tags"] = tags
                 tagged_count += 1
-                print(f"       ✓ {len(tags)} 个标签")
+                # 显示详细的标签信息：一级 > 二级
+                tag_details = []
+                for t in tags:
+                    primary = t["name"]
+                    subtag_names = [s["name"] for s in t.get("subtags", [])]
+                    if subtag_names:
+                        tag_details.append(f"{primary} > {', '.join(subtag_names)}")
+                    else:
+                        tag_details.append(primary)
+                print(f"       ✓ {' | '.join(tag_details)}")
                 
-                # 检查并更新标签体系
-                updated, new_tags, new_subtags = update_tags_with_new(
-                    tags_data, tag_index, tags
-                )
-                if new_tags:
-                    print(f"       🆕 新增主标签: {', '.join(new_tags)}")
-                    all_new_tags.extend(new_tags)
                 if new_subtags:
-                    print(f"       🆕 新增子标签: {', '.join(new_subtags)}")
+                    print(f"       🆕 新增二级标签 (归入 Others): {', '.join(new_subtags)}")
                     all_new_subtags.extend(new_subtags)
-                
-                # 有新标签则立即保存标签体系
-                if updated:
+                    # 保存更新后的标签体系
                     save_tags(tags_data)
             else:
-                # LLM 成功返回但标签为空，说明是非功能性内容
                 features[idx]["tags"] = "None"
                 skipped_count += 1
                 print(f"       ○ 非功能性内容，跳过")
             
-            # 每处理一条就立即保存，防止中断丢失
+            # 每处理一条就立即保存
             with open(json_file, "w", encoding="utf-8") as f:
                 json.dump(data, f, ensure_ascii=False, indent=4)
             
@@ -592,14 +557,11 @@ def process_all_features(use_llm: bool = True, limit_per_file: int = None, targe
         total_tagged += tagged_count
         total_skipped += skipped_count
     
-    # 保存更新后的标签体系
-    if all_new_tags or all_new_subtags:
+    # 最终保存标签体系
+    if all_new_subtags:
         save_tags(tags_data)
         print(f"\n📝 标签体系已更新:")
-        if all_new_tags:
-            print(f"   新增主标签 ({len(all_new_tags)}): {', '.join(all_new_tags)}")
-        if all_new_subtags:
-            print(f"   新增子标签 ({len(all_new_subtags)}): {', '.join(all_new_subtags)}")
+        print(f"   新增二级标签 (归入 Others): {', '.join(all_new_subtags)}")
     
     print(f"\n{'='*50}")
     print(f"总计处理 {total_processed} 条功能更新")
@@ -611,15 +573,15 @@ def process_all_features(use_llm: bool = True, limit_per_file: int = None, targe
 def main():
     import argparse
     
-    parser = argparse.ArgumentParser(description="LLM 打标脚本")
+    parser = argparse.ArgumentParser(description="LLM 打标脚本（二级标签自动映射一级）")
     parser.add_argument("--limit", type=int, default=None, help="每个文件最多处理多少条")
     parser.add_argument("--dry-run", action="store_true", help="只显示需要打标的条目，不实际调用 LLM")
-    parser.add_argument("--file", type=str, default=None, help="只处理指定文件 (如: v0.json)")
+    parser.add_argument("--file", type=str, default=None, help="只处理指定文件 (如: youware.json)")
     
     args = parser.parse_args()
     
     print("=" * 50)
-    print("LLM 功能更新打标")
+    print("LLM 功能更新打标（二级标签 → 自动映射一级）")
     print(f"重试配置: 最多 {MAX_RETRIES} 次, 间隔 {RETRY_DELAY}s")
     if args.file:
         print(f"处理文件: {args.file}")

@@ -11,31 +11,13 @@
                 "title": "Fixed YouBase delete timestamp bug",
                 "description": "",
                 "time": "2026-01-12",
-                "tags": [
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Integration",
-                        "subtags": [
-                            {
-                                "name": "YouBase"
-                            }
-                        ]
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "Resolved subdomain handling in batch API requests",
                 "description": "",
                 "time": "2026-01-12",
-                "tags": [
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "AI Integration Persistence",
@@ -43,19 +25,7 @@
                 "time": "2026-01-05",
                 "tags": [
                     {
-                        "name": "Integration",
-                        "subtags": []
-                    },
-                    {
-                        "name": "File & Upload",
-                        "subtags": [
-                            {
-                                "name": "File Upload"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Database",
+                        "name": "Backend",
                         "subtags": [
                             {
                                 "name": "Storage"
@@ -68,12 +38,7 @@
                 "title": "Fixed an issue with project handoff causing unexpected compacting.",
                 "description": "",
                 "time": "2026-01-05",
-                "tags": [
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "Improved repository push timing for better performance.",
@@ -85,14 +50,6 @@
                         "subtags": [
                             {
                                 "name": "Speed"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Integration",
-                        "subtags": [
-                            {
-                                "name": "GitHub"
                             }
                         ]
                     }
@@ -118,10 +75,6 @@
                                 "name": "Usage Stats"
                             }
                         ]
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
                     }
                 ]
             },
@@ -131,7 +84,7 @@
                 "time": "2025-12-29",
                 "tags": [
                     {
-                        "name": "Authentication",
+                        "name": "Auth",
                         "subtags": [
                             {
                                 "name": "Social Login"
@@ -146,7 +99,7 @@
                 "time": "2025-12-29",
                 "tags": [
                     {
-                        "name": "Media Generation",
+                        "name": "Media",
                         "subtags": [
                             {
                                 "name": "Video Understanding"
@@ -204,47 +157,13 @@
                 "title": "Fixed URL style issues when navigating between multiple editor pages",
                 "description": "",
                 "time": "2025-12-29",
-                "tags": [
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Editor",
-                        "subtags": [
-                            {
-                                "name": "Code Editor"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Navigation"
-                            }
-                        ]
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "Resolved YouBase reporting issues",
                 "description": "",
                 "time": "2025-12-29",
-                "tags": [
-                    {
-                        "name": "Integration",
-                        "subtags": [
-                            {
-                                "name": "YouBase"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "Fixed password project filtering in personal pages",
@@ -252,24 +171,15 @@
                 "time": "2025-12-29",
                 "tags": [
                     {
-                        "name": "Authentication",
+                        "name": "Auth",
                         "subtags": [
+                            {
+                                "name": "Access Control"
+                            },
                             {
                                 "name": "Passcode"
                             }
                         ]
-                    },
-                    {
-                        "name": "Community",
-                        "subtags": [
-                            {
-                                "name": "Search"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
                     }
                 ]
             },
@@ -277,12 +187,7 @@
                 "title": "Optimized options popup logic",
                 "description": "",
                 "time": "2025-12-29",
-                "tags": [
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "YouBase Beta is Now Open",
@@ -290,45 +195,13 @@
                 "time": "2025-12-22",
                 "tags": [
                     {
-                        "name": "Integration",
+                        "name": "Backend",
                         "subtags": [
                             {
-                                "name": "YouBase"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Authentication",
-                        "subtags": [
-                            {
-                                "name": "OAuth"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Database",
-                        "subtags": [
-                            {
-                                "name": "Database Editor"
+                                "name": "Database"
                             },
                             {
                                 "name": "Storage"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "File & Upload",
-                        "subtags": [
-                            {
-                                "name": "File Upload"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Analytics",
-                        "subtags": [
-                            {
-                                "name": "Usage Stats"
                             }
                         ]
                     }
@@ -338,12 +211,7 @@
                 "title": "Fixed streaming conversation issues where tables weren't properly recording user interaction states",
                 "description": "",
                 "time": "2025-12-22",
-                "tags": [
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "Resolved subdomain generation failures",
@@ -357,10 +225,6 @@
                                 "name": "Custom Domain"
                             }
                         ]
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
                     }
                 ]
             },
@@ -368,20 +232,7 @@
                 "title": "Fixed occasional YouBase initialization errors",
                 "description": "",
                 "time": "2025-12-22",
-                "tags": [
-                    {
-                        "name": "Integration",
-                        "subtags": [
-                            {
-                                "name": "YouBase"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "Upgraded Next.js to version 15.4.10",
@@ -402,16 +253,7 @@
                 "title": "Fixed Google Translate errors on the YouWare website",
                 "description": "",
                 "time": "2025-12-22",
-                "tags": [
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "Custom Domain",
@@ -434,7 +276,7 @@
                 "time": "2025-12-15",
                 "tags": [
                     {
-                        "name": "Media Generation",
+                        "name": "Media",
                         "subtags": [
                             {
                                 "name": "Video Understanding"
@@ -448,14 +290,6 @@
                 "description": "See your project's publishing status directly in the editor, making it easier to track what's live and what's in draft.",
                 "time": "2025-12-15",
                 "tags": [
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Dashboard"
-                            }
-                        ]
-                    },
                     {
                         "name": "Deployment",
                         "subtags": [
@@ -485,16 +319,7 @@
                 "title": "Fixed issues with large user input content handling",
                 "description": "",
                 "time": "2025-12-15",
-                "tags": [
-                    {
-                        "name": "Performance",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "Optimized error messaging when switching gateways",
@@ -502,10 +327,10 @@
                 "time": "2025-12-15",
                 "tags": [
                     {
-                        "name": "UI/UX",
+                        "name": "AI Model",
                         "subtags": [
                             {
-                                "name": "Notifications"
+                                "name": "Model Switching"
                             }
                         ]
                     }
@@ -523,10 +348,6 @@
                                 "name": "Console"
                             }
                         ]
-                    },
-                    {
-                        "name": "Performance",
-                        "subtags": []
                     }
                 ]
             },
@@ -536,24 +357,11 @@
                 "time": "2025-12-08",
                 "tags": [
                     {
-                        "name": "Mobile",
-                        "subtags": [
-                            {
-                                "name": "Mobile Editor"
-                            }
-                        ]
-                    },
-                    {
                         "name": "Editor",
                         "subtags": [
                             {
-                                "name": "Code Editor"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Deployment",
-                        "subtags": [
+                                "name": "Mobile Editor"
+                            },
                             {
                                 "name": "Preview"
                             }
@@ -575,13 +383,10 @@
                         ]
                     },
                     {
-                        "name": "Mobile",
+                        "name": "UI/UX",
                         "subtags": [
                             {
-                                "name": "iOS App"
-                            },
-                            {
-                                "name": "Android App"
+                                "name": "Mobile UI"
                             }
                         ]
                     }
@@ -593,18 +398,18 @@
                 "time": "2025-12-08",
                 "tags": [
                     {
-                        "name": "Security",
-                        "subtags": [
-                            {
-                                "name": "Vulnerability Patch"
-                            }
-                        ]
-                    },
-                    {
                         "name": "Framework",
                         "subtags": [
                             {
                                 "name": "Next.js"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Security",
+                        "subtags": [
+                            {
+                                "name": "Security Scan"
                             }
                         ]
                     }
@@ -631,11 +436,7 @@
                 "time": "2025-12-08",
                 "tags": [
                     {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Billing & Credits",
+                        "name": "Billing",
                         "subtags": [
                             {
                                 "name": "Subscription"
@@ -648,12 +449,7 @@
                 "title": "Fixed errors that could occur during fullscreen translation",
                 "description": "",
                 "time": "2025-12-08",
-                "tags": [
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "Black Friday Annual Plan Offer",
@@ -661,11 +457,8 @@
                 "time": "2025-12-01",
                 "tags": [
                     {
-                        "name": "Billing & Credits",
+                        "name": "Billing",
                         "subtags": [
-                            {
-                                "name": "Pricing"
-                            },
                             {
                                 "name": "Subscription"
                             }
@@ -678,25 +471,6 @@
                 "description": "On mobile, you can now send a message and leave immediately while processing continues in the background, making quick check-ins and replies more convenient.",
                 "time": "2025-12-01",
                 "tags": [
-                    {
-                        "name": "Mobile",
-                        "subtags": [
-                            {
-                                "name": "iOS App"
-                            },
-                            {
-                                "name": "Android App"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Performance",
-                        "subtags": [
-                            {
-                                "name": "Speed"
-                            }
-                        ]
-                    },
                     {
                         "name": "UI/UX",
                         "subtags": [
@@ -713,7 +487,7 @@
                 "time": "2025-12-01",
                 "tags": [
                     {
-                        "name": "File & Upload",
+                        "name": "File",
                         "subtags": [
                             {
                                 "name": "PDF Processing"
@@ -726,16 +500,7 @@
                 "title": "Fixed layout and style issues on the create page to ensure a more consistent editing experience.",
                 "description": "",
                 "time": "2025-12-01",
-                "tags": [
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "Fixed broken or missing images in the conversation list so uploaded pictures now display correctly.",
@@ -743,20 +508,12 @@
                 "time": "2025-12-01",
                 "tags": [
                     {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Media Generation",
+                        "name": "Media",
                         "subtags": [
                             {
                                 "name": "Image Upload"
                             }
                         ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
                     }
                 ]
             },
@@ -764,24 +521,7 @@
                 "title": "Help Center",
                 "description": "You can now visit the new Help Center to read documentation such as quick guides, feature introductions, and integration descriptions. If you have further questions, you can ask the community. For VIP members, dedicated support is also available.",
                 "time": "2025-11-21",
-                "tags": [
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Dashboard"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Community",
-                        "subtags": [
-                            {
-                                "name": "Search"
-                            }
-                        ]
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "MCP status cloud synchronization",
@@ -797,13 +537,10 @@
                         ]
                     },
                     {
-                        "name": "Mobile",
+                        "name": "UI/UX",
                         "subtags": [
                             {
-                                "name": "iOS App"
-                            },
-                            {
-                                "name": "Android App"
+                                "name": "Mobile UI"
                             }
                         ]
                     }
@@ -815,37 +552,18 @@
                 "time": "2025-11-21",
                 "tags": [
                     {
-                        "name": "Mobile",
+                        "name": "Agent",
                         "subtags": [
-                            {
-                                "name": "Mobile Editor"
-                            },
                             {
                                 "name": "Voice Input"
                             }
                         ]
                     },
                     {
-                        "name": "Agent",
+                        "name": "Editor",
                         "subtags": [
                             {
-                                "name": "Agent Mode"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Mobile UI"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Community",
-                        "subtags": [
-                            {
-                                "name": "Search"
+                                "name": "Mobile Editor"
                             }
                         ]
                     }
@@ -863,10 +581,22 @@
                                 "name": "Speed"
                             },
                             {
-                                "name": "Loading"
-                            },
-                            {
                                 "name": "Caching"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Work sharing settings update",
+                "description": "The project page now displays in full screen by default. When sharing a work, it will automatically be presented in its best form, providing the recipient with an immersive experience as soon as they open it, making your work more impactful.",
+                "time": "2025-11-21",
+                "tags": [
+                    {
+                        "name": "Team",
+                        "subtags": [
+                            {
+                                "name": "Project Sharing"
                             }
                         ]
                     },
@@ -877,29 +607,6 @@
                                 "name": "Mobile UI"
                             }
                         ]
-                    },
-                    {
-                        "name": "Authentication",
-                        "subtags": []
-                    }
-                ]
-            },
-            {
-                "title": "Work sharing settings update",
-                "description": "The project page now displays in full screen by default. When sharing a work, it will automatically be presented in its best form, providing the recipient with an immersive experience as soon as they open it, making your work more impactful.",
-                "time": "2025-11-21",
-                "tags": [
-                    {
-                        "name": "Team & Enterprise",
-                        "subtags": [
-                            {
-                                "name": "Project Sharing"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
                     }
                 ]
             },
@@ -909,13 +616,10 @@
                 "time": "2025-11-21",
                 "tags": [
                     {
-                        "name": "Billing & Credits",
+                        "name": "Billing",
                         "subtags": [
                             {
                                 "name": "Subscription"
-                            },
-                            {
-                                "name": "Pricing"
                             }
                         ]
                     }
@@ -967,9 +671,6 @@
                             },
                             {
                                 "name": "MiniMax"
-                            },
-                            {
-                                "name": "Model Switching"
                             }
                         ]
                     }
@@ -981,7 +682,7 @@
                 "time": "2025-11-21",
                 "tags": [
                     {
-                        "name": "Authentication",
+                        "name": "Auth",
                         "subtags": [
                             {
                                 "name": "SSO"
@@ -989,12 +690,12 @@
                         ]
                     },
                     {
-                        "name": "Mobile",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
+                        "name": "UI/UX",
+                        "subtags": [
+                            {
+                                "name": "Mobile UI"
+                            }
+                        ]
                     }
                 ]
             },
@@ -1004,22 +705,10 @@
                 "time": "2025-11-21",
                 "tags": [
                     {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    },
-                    {
                         "name": "AI Model",
                         "subtags": [
                             {
                                 "name": "Google"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Notifications"
                             }
                         ]
                     }
@@ -1031,10 +720,18 @@
                 "time": "2025-11-07",
                 "tags": [
                     {
-                        "name": "Billing & Credits",
+                        "name": "Billing",
                         "subtags": [
                             {
-                                "name": "Credits"
+                                "name": "Usage Quota"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Agent",
+                        "subtags": [
+                            {
+                                "name": "Agent Mode"
                             }
                         ]
                     }
@@ -1046,13 +743,13 @@
                 "time": "2025-11-07",
                 "tags": [
                     {
-                        "name": "Billing & Credits",
+                        "name": "Billing",
                         "subtags": [
                             {
                                 "name": "Subscription"
                             },
                             {
-                                "name": "Credits"
+                                "name": "Usage Quota"
                             }
                         ]
                     }
@@ -1067,6 +764,9 @@
                         "name": "Agent",
                         "subtags": [
                             {
+                                "name": "Agent Mode"
+                            },
+                            {
                                 "name": "Automation"
                             }
                         ]
@@ -1077,20 +777,7 @@
                 "title": "Fixed the React project compilation exception and the Remix project revert failure issue.",
                 "description": "",
                 "time": "2025-11-07",
-                "tags": [
-                    {
-                        "name": "Framework",
-                        "subtags": [
-                            {
-                                "name": "React"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "Landing Page",
@@ -1142,10 +829,6 @@
                                 "name": "MCP"
                             }
                         ]
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
                     }
                 ]
             },
@@ -1163,8 +846,12 @@
                         ]
                     },
                     {
-                        "name": "UI/UX",
-                        "subtags": []
+                        "name": "Agent",
+                        "subtags": [
+                            {
+                                "name": "Clarifying Questions"
+                            }
+                        ]
                     }
                 ]
             },
@@ -1174,18 +861,7 @@
                 "time": "2025-10-17",
                 "tags": [
                     {
-                        "name": "Mobile",
-                        "subtags": [
-                            {
-                                "name": "iOS App"
-                            },
-                            {
-                                "name": "Android App"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Team & Enterprise",
+                        "name": "Team",
                         "subtags": [
                             {
                                 "name": "Project Sharing"
@@ -1194,7 +870,11 @@
                     },
                     {
                         "name": "UI/UX",
-                        "subtags": []
+                        "subtags": [
+                            {
+                                "name": "Mobile UI"
+                            }
+                        ]
                     }
                 ]
             },
@@ -1212,7 +892,7 @@
                         ]
                     },
                     {
-                        "name": "Media Generation",
+                        "name": "Media",
                         "subtags": [
                             {
                                 "name": "Video Generation"
@@ -1235,7 +915,7 @@
                         ]
                     },
                     {
-                        "name": "Media Generation",
+                        "name": "Media",
                         "subtags": [
                             {
                                 "name": "Video Generation"
@@ -1286,10 +966,6 @@
                                 "name": "Agent Mode"
                             }
                         ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
                     }
                 ]
             },
@@ -1305,10 +981,6 @@
                                 "name": "Search"
                             }
                         ]
-                    },
-                    {
-                        "name": "Performance",
-                        "subtags": []
                     }
                 ]
             },
@@ -1324,10 +996,6 @@
                                 "name": "Remix"
                             }
                         ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
                     }
                 ]
             },
@@ -1343,10 +1011,6 @@
                                 "name": "Search"
                             }
                         ]
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
                     }
                 ]
             },
@@ -1362,10 +1026,6 @@
                                 "name": "Content Moderation"
                             }
                         ]
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
                     }
                 ]
             },
@@ -1375,14 +1035,6 @@
                 "time": "2025-10-11",
                 "tags": [
                     {
-                        "name": "Mobile",
-                        "subtags": [
-                            {
-                                "name": "iOS App"
-                            }
-                        ]
-                    },
-                    {
                         "name": "UI/UX",
                         "subtags": [
                             {
@@ -1391,18 +1043,10 @@
                         ]
                     },
                     {
-                        "name": "Agent",
+                        "name": "Deployment",
                         "subtags": [
                             {
-                                "name": "Tasks"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Community",
-                        "subtags": [
-                            {
-                                "name": "Search"
+                                "name": "iOS App"
                             }
                         ]
                     }
@@ -1423,10 +1067,6 @@
                                 "name": "Explore"
                             }
                         ]
-                    },
-                    {
-                        "name": "Performance",
-                        "subtags": []
                     }
                 ]
             },
@@ -1451,19 +1091,20 @@
                 "time": "2025-10-11",
                 "tags": [
                     {
-                        "name": "AI Model",
+                        "name": "Agent",
                         "subtags": [
                             {
-                                "name": "GLM"
-                            },
-                            {
-                                "name": "OpenAI"
+                                "name": "Agent Mode"
                             }
                         ]
                     },
                     {
-                        "name": "Agent",
-                        "subtags": []
+                        "name": "AI Model",
+                        "subtags": [
+                            {
+                                "name": "GLM"
+                            }
+                        ]
                     }
                 ]
             },
@@ -1476,15 +1117,7 @@
                         "name": "Agent",
                         "subtags": [
                             {
-                                "name": "Automation"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Performance",
-                        "subtags": [
-                            {
-                                "name": "Speed"
+                                "name": "Agent Mode"
                             }
                         ]
                     }
@@ -1502,10 +1135,6 @@
                                 "name": "Agent Mode"
                             }
                         ]
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
                     }
                 ]
             },
@@ -1516,15 +1145,14 @@
                 "tags": [
                     {
                         "name": "Editor",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Mobile",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
+                        "subtags": [
+                            {
+                                "name": "Mobile Editor"
+                            },
+                            {
+                                "name": "Preview"
+                            }
+                        ]
                     }
                 ]
             },
@@ -1540,10 +1168,6 @@
                                 "name": "Visual Editor"
                             }
                         ]
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
                     }
                 ]
             },
@@ -1559,18 +1183,6 @@
                                 "name": "Google"
                             }
                         ]
-                    },
-                    {
-                        "name": "Media Generation",
-                        "subtags": [
-                            {
-                                "name": "Image Upload"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
                     }
                 ]
             },
@@ -1580,68 +1192,13 @@
                 "time": "2025-09-26",
                 "tags": [
                     {
-                        "name": "Mobile",
+                        "name": "Deployment",
                         "subtags": [
                             {
                                 "name": "iOS App"
                             },
                             {
                                 "name": "Android App"
-                            },
-                            {
-                                "name": "Voice Input"
-                            },
-                            {
-                                "name": "Mobile Editor"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "File & Upload",
-                        "subtags": [
-                            {
-                                "name": "File Upload"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Editor",
-                        "subtags": [
-                            {
-                                "name": "Code Editor"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Agent",
-                        "subtags": [
-                            {
-                                "name": "Tasks"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Notifications"
-                            },
-                            {
-                                "name": "Navigation"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Community",
-                        "subtags": [
-                            {
-                                "name": "Remix"
-                            },
-                            {
-                                "name": "Search"
-                            },
-                            {
-                                "name": "Explore"
                             }
                         ]
                     }
@@ -1659,15 +1216,7 @@
                                 "name": "Code Editor"
                             },
                             {
-                                "name": "Split View"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Dashboard"
+                                "name": "Preview"
                             }
                         ]
                     }
@@ -1682,21 +1231,10 @@
                         "name": "AI Model",
                         "subtags": [
                             {
-                                "name": "OpenAI"
-                            },
-                            {
-                                "name": "GLM"
-                            },
-                            {
                                 "name": "Model Switching"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Agent",
-                        "subtags": [
+                            },
                             {
-                                "name": "Agent Mode"
+                                "name": "OpenAI"
                             }
                         ]
                     }
@@ -1708,18 +1246,18 @@
                 "time": "2025-09-26",
                 "tags": [
                     {
-                        "name": "Community",
-                        "subtags": [
-                            {
-                                "name": "Creator Profile"
-                            }
-                        ]
-                    },
-                    {
                         "name": "Security",
                         "subtags": [
                             {
                                 "name": "Content Moderation"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Team",
+                        "subtags": [
+                            {
+                                "name": "Project Sharing"
                             }
                         ]
                     }
@@ -1732,34 +1270,19 @@
                 "tags": [
                     {
                         "name": "Agent",
-                        "subtags": []
+                        "subtags": [
+                            {
+                                "name": "Agent Mode"
+                            }
+                        ]
                     },
                     {
                         "name": "Performance",
                         "subtags": [
                             {
                                 "name": "Speed"
-                            },
-                            {
-                                "name": "Loading"
                             }
                         ]
-                    },
-                    {
-                        "name": "AI Model",
-                        "subtags": [
-                            {
-                                "name": "OpenAI"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Deployment",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
                     }
                 ]
             },
@@ -1773,9 +1296,6 @@
                         "subtags": [
                             {
                                 "name": "Console"
-                            },
-                            {
-                                "name": "Split View"
                             }
                         ]
                     },
@@ -1784,17 +1304,6 @@
                         "subtags": [
                             {
                                 "name": "Navigation"
-                            },
-                            {
-                                "name": "Notifications"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Billing & Credits",
-                        "subtags": [
-                            {
-                                "name": "Credits"
                             }
                         ]
                     }
@@ -1806,12 +1315,20 @@
                 "time": "2025-09-26",
                 "tags": [
                     {
-                        "name": "Authentication",
-                        "subtags": []
+                        "name": "Auth",
+                        "subtags": [
+                            {
+                                "name": "Access Control"
+                            }
+                        ]
                     },
                     {
-                        "name": "UI/UX",
-                        "subtags": []
+                        "name": "Editor",
+                        "subtags": [
+                            {
+                                "name": "Preview"
+                            }
+                        ]
                     }
                 ]
             },
@@ -1821,19 +1338,20 @@
                 "time": "2025-09-26",
                 "tags": [
                     {
-                        "name": "Mobile",
+                        "name": "Agent",
                         "subtags": [
-                            {
-                                "name": "Android App"
-                            },
                             {
                                 "name": "Voice Input"
                             }
                         ]
                     },
                     {
-                        "name": "Bug Fixes",
-                        "subtags": []
+                        "name": "Deployment",
+                        "subtags": [
+                            {
+                                "name": "Android App"
+                            }
+                        ]
                     }
                 ]
             },
@@ -1843,22 +1361,10 @@
                 "time": "2025-09-26",
                 "tags": [
                     {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    },
-                    {
                         "name": "Community",
                         "subtags": [
                             {
                                 "name": "Explore"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Media Generation",
-                        "subtags": [
-                            {
-                                "name": "Video Understanding"
                             }
                         ]
                     }
@@ -1868,20 +1374,7 @@
                 "title": "Fixed IME and tab-state conflict.",
                 "description": "",
                 "time": "2025-09-26",
-                "tags": [
-                    {
-                        "name": "Editor",
-                        "subtags": [
-                            {
-                                "name": "Code Editor"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "Creator Studio",
@@ -1903,18 +1396,6 @@
                                 "name": "Creator Profile"
                             }
                         ]
-                    },
-                    {
-                        "name": "Billing & Credits",
-                        "subtags": []
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Dashboard"
-                            }
-                        ]
                     }
                 ]
             },
@@ -1928,22 +1409,6 @@
                         "subtags": [
                             {
                                 "name": "Templates"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Onboarding"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Deployment",
-                        "subtags": [
-                            {
-                                "name": "Code Download"
                             }
                         ]
                     }
@@ -1963,14 +1428,10 @@
                         ]
                     },
                     {
-                        "name": "Team & Enterprise",
-                        "subtags": []
-                    },
-                    {
-                        "name": "UI/UX",
+                        "name": "Security",
                         "subtags": [
                             {
-                                "name": "Sidebar"
+                                "name": "Content Moderation"
                             }
                         ]
                     }
@@ -1990,7 +1451,7 @@
                         ]
                     },
                     {
-                        "name": "Media Generation",
+                        "name": "Media",
                         "subtags": [
                             {
                                 "name": "Video Generation"
@@ -2005,18 +1466,18 @@
                 "time": "2025-09-12",
                 "tags": [
                     {
-                        "name": "Media Generation",
-                        "subtags": [
-                            {
-                                "name": "Image Generation"
-                            }
-                        ]
-                    },
-                    {
                         "name": "AI Model",
                         "subtags": [
                             {
                                 "name": "Seedream"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Media",
+                        "subtags": [
+                            {
+                                "name": "Image Generation"
                             }
                         ]
                     }
@@ -2036,13 +1497,10 @@
                         ]
                     },
                     {
-                        "name": "Billing & Credits",
+                        "name": "Billing",
                         "subtags": [
                             {
-                                "name": "Credits"
-                            },
-                            {
-                                "name": "Pricing"
+                                "name": "Usage Quota"
                             }
                         ]
                     }
@@ -2068,14 +1526,6 @@
                                 "name": "Speed"
                             }
                         ]
-                    },
-                    {
-                        "name": "Media Generation",
-                        "subtags": [
-                            {
-                                "name": "Image Upload"
-                            }
-                        ]
                     }
                 ]
             },
@@ -2085,7 +1535,7 @@
                 "time": "2025-09-12",
                 "tags": [
                     {
-                        "name": "Database",
+                        "name": "Backend",
                         "subtags": [
                             {
                                 "name": "Storage"
@@ -2093,10 +1543,10 @@
                         ]
                     },
                     {
-                        "name": "File & Upload",
+                        "name": "Billing",
                         "subtags": [
                             {
-                                "name": "File Upload"
+                                "name": "Usage Quota"
                             }
                         ]
                     }
@@ -2108,16 +1558,15 @@
                 "time": "2025-09-12",
                 "tags": [
                     {
-                        "name": "Security",
+                        "name": "Auth",
                         "subtags": [
+                            {
+                                "name": "SSO"
+                            },
                             {
                                 "name": "Access Control"
                             }
                         ]
-                    },
-                    {
-                        "name": "Authentication",
-                        "subtags": []
                     }
                 ]
             },
@@ -2156,14 +1605,6 @@
                                 "name": "MCP"
                             }
                         ]
-                    },
-                    {
-                        "name": "Security",
-                        "subtags": [
-                            {
-                                "name": "Access Control"
-                            }
-                        ]
                     }
                 ]
             },
@@ -2171,39 +1612,13 @@
                 "title": "Fixed screen editing interaction issues.",
                 "description": "",
                 "time": "2025-09-12",
-                "tags": [
-                    {
-                        "name": "Editor",
-                        "subtags": [
-                            {
-                                "name": "Code Editor"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "Fixed Markdown rendering errors.",
                 "description": "",
                 "time": "2025-09-12",
-                "tags": [
-                    {
-                        "name": "Editor",
-                        "subtags": [
-                            {
-                                "name": "Markdown Preview"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "Fixed incomplete screenshots in shared project previews.",
@@ -2211,7 +1626,7 @@
                 "time": "2025-09-12",
                 "tags": [
                     {
-                        "name": "Media Generation",
+                        "name": "Media",
                         "subtags": [
                             {
                                 "name": "Screenshot"
@@ -2219,16 +1634,12 @@
                         ]
                     },
                     {
-                        "name": "Community",
+                        "name": "Team",
                         "subtags": [
                             {
-                                "name": "Templates"
+                                "name": "Project Sharing"
                             }
                         ]
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
                     }
                 ]
             },
@@ -2237,10 +1648,6 @@
                 "description": "",
                 "time": "2025-09-12",
                 "tags": [
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    },
                     {
                         "name": "Community",
                         "subtags": [
@@ -2261,16 +1668,11 @@
                         "subtags": [
                             {
                                 "name": "Visual Editor"
+                            },
+                            {
+                                "name": "Preview"
                             }
                         ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Performance",
-                        "subtags": []
                     }
                 ]
             },
@@ -2280,24 +1682,11 @@
                 "time": "2025-08-29",
                 "tags": [
                     {
-                        "name": "Billing & Credits",
-                        "subtags": [
-                            {
-                                "name": "Credits"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Dashboard"
-                            }
-                        ]
-                    },
-                    {
                         "name": "Analytics",
                         "subtags": [
+                            {
+                                "name": "Usage Stats"
+                            },
                             {
                                 "name": "Token Usage"
                             }
@@ -2311,11 +1700,7 @@
                 "time": "2025-08-29",
                 "tags": [
                     {
-                        "name": "AI Model",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Media Generation",
+                        "name": "Media",
                         "subtags": [
                             {
                                 "name": "Image Generation"
@@ -2336,14 +1721,6 @@
                                 "name": "Search"
                             }
                         ]
-                    },
-                    {
-                        "name": "Performance",
-                        "subtags": [
-                            {
-                                "name": "Speed"
-                            }
-                        ]
                     }
                 ]
             },
@@ -2353,16 +1730,12 @@
                 "time": "2025-08-29",
                 "tags": [
                     {
-                        "name": "Editor",
+                        "name": "Agent",
                         "subtags": [
                             {
-                                "name": "Code Editor"
+                                "name": "Suggested Actions"
                             }
                         ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
                     }
                 ]
             },
@@ -2372,10 +1745,10 @@
                 "time": "2025-08-29",
                 "tags": [
                     {
-                        "name": "Billing & Credits",
+                        "name": "Billing",
                         "subtags": [
                             {
-                                "name": "Credits"
+                                "name": "Usage Quota"
                             }
                         ]
                     }
@@ -2391,20 +1764,11 @@
                         "subtags": [
                             {
                                 "name": "Design Mode"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Community",
-                        "subtags": [
+                            },
                             {
-                                "name": "Templates"
+                                "name": "Agent Mode"
                             }
                         ]
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
                     }
                 ]
             },
@@ -2429,24 +1793,12 @@
                 "time": "2025-08-29",
                 "tags": [
                     {
-                        "name": "Media Generation",
+                        "name": "Media",
                         "subtags": [
                             {
                                 "name": "Video Generation"
                             }
                         ]
-                    },
-                    {
-                        "name": "Performance",
-                        "subtags": [
-                            {
-                                "name": "Speed"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
                     }
                 ]
             },
@@ -2457,11 +1809,11 @@
                 "tags": [
                     {
                         "name": "Agent",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
+                        "subtags": [
+                            {
+                                "name": "Agent Mode"
+                            }
+                        ]
                     }
                 ]
             },
@@ -2473,6 +1825,9 @@
                     {
                         "name": "Agent",
                         "subtags": [
+                            {
+                                "name": "Agent Mode"
+                            },
                             {
                                 "name": "Suggested Actions"
                             }
@@ -2488,6 +1843,9 @@
                     {
                         "name": "Agent",
                         "subtags": [
+                            {
+                                "name": "Agent Mode"
+                            },
                             {
                                 "name": "Clarifying Questions"
                             }
@@ -2509,7 +1867,7 @@
                         ]
                     },
                     {
-                        "name": "Media Generation",
+                        "name": "Media",
                         "subtags": [
                             {
                                 "name": "Video Generation"
@@ -2568,10 +1926,6 @@
                                 "name": "Search"
                             }
                         ]
-                    },
-                    {
-                        "name": "Performance",
-                        "subtags": []
                     }
                 ]
             },
@@ -2589,8 +1943,12 @@
                         ]
                     },
                     {
-                        "name": "Database",
-                        "subtags": []
+                        "name": "Backend",
+                        "subtags": [
+                            {
+                                "name": "Database"
+                            }
+                        ]
                     }
                 ]
             },
@@ -2600,7 +1958,7 @@
                 "time": "2025-08-22",
                 "tags": [
                     {
-                        "name": "File & Upload",
+                        "name": "File",
                         "subtags": [
                             {
                                 "name": "File Upload"
@@ -2615,10 +1973,10 @@
                 "time": "2025-08-22",
                 "tags": [
                     {
-                        "name": "Media Generation",
+                        "name": "Integration",
                         "subtags": [
                             {
-                                "name": "Image Generation"
+                                "name": "Midjourney"
                             }
                         ]
                     },
@@ -2638,12 +1996,20 @@
                 "time": "2025-08-22",
                 "tags": [
                     {
-                        "name": "Billing & Credits",
-                        "subtags": []
+                        "name": "Billing",
+                        "subtags": [
+                            {
+                                "name": "Usage Quota"
+                            }
+                        ]
                     },
                     {
-                        "name": "Bug Fixes",
-                        "subtags": []
+                        "name": "UI/UX",
+                        "subtags": [
+                            {
+                                "name": "Notifications"
+                            }
+                        ]
                     }
                 ]
             },
@@ -2653,31 +2019,11 @@
                 "time": "2025-08-15",
                 "tags": [
                     {
-                        "name": "Integration",
+                        "name": "Backend",
                         "subtags": [
                             {
-                                "name": "MCP"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Database",
-                        "subtags": [
-                            {
-                                "name": "Database Editor"
+                                "name": "Database"
                             },
-                            {
-                                "name": "Storage"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Authentication",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Deployment",
-                        "subtags": [
                             {
                                 "name": "Edge Functions"
                             }
@@ -2695,6 +2041,9 @@
                         "subtags": [
                             {
                                 "name": "Search"
+                            },
+                            {
+                                "name": "Creator Profile"
                             }
                         ]
                     }
@@ -2704,12 +2053,7 @@
                 "title": "User Agreement",
                 "description": "A dedicated user agreement page is now available in the site footer, providing clear access to YouWare’s terms and compliance details.",
                 "time": "2025-08-15",
-                "tags": [
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "Agent Enhancements",
@@ -2725,7 +2069,7 @@
                         ]
                     },
                     {
-                        "name": "File & Upload",
+                        "name": "File",
                         "subtags": [
                             {
                                 "name": "File Upload"
@@ -2740,26 +2084,18 @@
                 "time": "2025-08-15",
                 "tags": [
                     {
-                        "name": "Team & Enterprise",
+                        "name": "Backend",
                         "subtags": [
                             {
-                                "name": "Workspace"
+                                "name": "Storage"
                             }
                         ]
                     },
                     {
-                        "name": "Billing & Credits",
+                        "name": "Billing",
                         "subtags": [
                             {
                                 "name": "Subscription"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Notifications"
                             }
                         ]
                     }
@@ -2771,18 +2107,18 @@
                 "time": "2025-08-15",
                 "tags": [
                     {
-                        "name": "Performance",
+                        "name": "Media",
                         "subtags": [
                             {
-                                "name": "Speed"
+                                "name": "Video Generation"
                             }
                         ]
                     },
                     {
-                        "name": "Media Generation",
+                        "name": "Performance",
                         "subtags": [
                             {
-                                "name": "Video Generation"
+                                "name": "Speed"
                             }
                         ]
                     }
@@ -2795,7 +2131,11 @@
                 "tags": [
                     {
                         "name": "UI/UX",
-                        "subtags": []
+                        "subtags": [
+                            {
+                                "name": "Themes"
+                            }
+                        ]
                     }
                 ]
             },
@@ -2803,41 +2143,19 @@
                 "title": "Adjusted log levels and corrected error codes.",
                 "description": "",
                 "time": "2025-08-15",
-                "tags": [
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "Fixed login issues on some mobile devices.",
                 "description": "",
                 "time": "2025-08-15",
-                "tags": [
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Authentication",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Mobile",
-                        "subtags": []
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "Fixed duplicate entries in search results.",
                 "description": "",
                 "time": "2025-08-15",
                 "tags": [
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    },
                     {
                         "name": "Community",
                         "subtags": [
@@ -2852,20 +2170,7 @@
                 "title": "Fixed tooltips not disappearing after exiting fullscreen mode.",
                 "description": "",
                 "time": "2025-08-15",
-                "tags": [
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Notifications"
-                            }
-                        ]
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "React Support",
@@ -2879,14 +2184,6 @@
                                 "name": "React"
                             }
                         ]
-                    },
-                    {
-                        "name": "Editor",
-                        "subtags": [
-                            {
-                                "name": "Code Editor"
-                            }
-                        ]
                     }
                 ]
             },
@@ -2896,18 +2193,18 @@
                 "time": "2025-08-08",
                 "tags": [
                     {
-                        "name": "Media Generation",
-                        "subtags": [
-                            {
-                                "name": "Image Generation"
-                            }
-                        ]
-                    },
-                    {
                         "name": "Integration",
                         "subtags": [
                             {
                                 "name": "Midjourney"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Media",
+                        "subtags": [
+                            {
+                                "name": "Image Generation"
                             }
                         ]
                     }
@@ -2972,18 +2269,10 @@
                 "time": "2025-08-08",
                 "tags": [
                     {
-                        "name": "Media Generation",
+                        "name": "Media",
                         "subtags": [
                             {
-                                "name": "Image Upload"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "File & Upload",
-                        "subtags": [
-                            {
-                                "name": "File Upload"
+                                "name": "Image Understanding"
                             }
                         ]
                     }
@@ -2995,16 +2284,20 @@
                 "time": "2025-08-08",
                 "tags": [
                     {
-                        "name": "Billing & Credits",
+                        "name": "Community",
                         "subtags": [
                             {
-                                "name": "Credits"
+                                "name": "Creator Profile"
                             }
                         ]
                     },
                     {
-                        "name": "UI/UX",
-                        "subtags": []
+                        "name": "Billing",
+                        "subtags": [
+                            {
+                                "name": "Usage Quota"
+                            }
+                        ]
                     }
                 ]
             },
@@ -3014,7 +2307,7 @@
                 "time": "2025-08-08",
                 "tags": [
                     {
-                        "name": "File & Upload",
+                        "name": "File",
                         "subtags": [
                             {
                                 "name": "File Upload"
@@ -3035,10 +2328,6 @@
                                 "name": "MCP"
                             }
                         ]
-                    },
-                    {
-                        "name": "Agent",
-                        "subtags": []
                     }
                 ]
             },
@@ -3054,10 +2343,6 @@
                                 "name": "Remix"
                             }
                         ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
                     }
                 ]
             },
@@ -3065,16 +2350,7 @@
                 "title": "Fixed message continuity issue after login on the Create page.",
                 "description": "",
                 "time": "2025-08-08",
-                "tags": [
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Authentication",
-                        "subtags": []
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "Fixed migration problems with legacy blog posts.",
@@ -3082,8 +2358,12 @@
                 "time": "2025-08-08",
                 "tags": [
                     {
-                        "name": "Bug Fixes",
-                        "subtags": []
+                        "name": "Backend",
+                        "subtags": [
+                            {
+                                "name": "Migrations"
+                            }
+                        ]
                     }
                 ]
             },
@@ -3091,20 +2371,7 @@
                 "title": "Fixed incorrect link rewrites causing page redirection.",
                 "description": "",
                 "time": "2025-08-08",
-                "tags": [
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Deployment",
-                        "subtags": [
-                            {
-                                "name": "Hosting"
-                            }
-                        ]
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "Plan Mode",
@@ -3130,16 +2397,13 @@
                         "name": "UI/UX",
                         "subtags": [
                             {
-                                "name": "Navigation"
+                                "name": "Onboarding"
                             }
                         ]
                     },
                     {
                         "name": "Community",
                         "subtags": [
-                            {
-                                "name": "Explore"
-                            },
                             {
                                 "name": "Templates"
                             }
@@ -3153,21 +2417,13 @@
                 "time": "2025-07-31",
                 "tags": [
                     {
-                        "name": "Billing & Credits",
+                        "name": "Billing",
                         "subtags": [
-                            {
-                                "name": "Credits"
-                            },
                             {
                                 "name": "Referral"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Community",
-                        "subtags": [
+                            },
                             {
-                                "name": "Explore"
+                                "name": "Usage Quota"
                             }
                         ]
                     }
@@ -3183,22 +2439,9 @@
                         "subtags": [
                             {
                                 "name": "Agent Mode"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Performance",
-                        "subtags": [
+                            },
                             {
-                                "name": "Speed"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Notifications"
+                                "name": "Automation"
                             }
                         ]
                     }
@@ -3210,7 +2453,7 @@
                 "time": "2025-07-31",
                 "tags": [
                     {
-                        "name": "File & Upload",
+                        "name": "File",
                         "subtags": [
                             {
                                 "name": "File Upload"
@@ -3228,7 +2471,10 @@
                         "name": "Security",
                         "subtags": [
                             {
-                                "name": "Access Control"
+                                "name": "Security Scan"
+                            },
+                            {
+                                "name": "Content Moderation"
                             }
                         ]
                     }
@@ -3263,7 +2509,7 @@
                 "time": "2025-07-31",
                 "tags": [
                     {
-                        "name": "Media Generation",
+                        "name": "Media",
                         "subtags": [
                             {
                                 "name": "Image Generation"
@@ -3271,8 +2517,12 @@
                         ]
                     },
                     {
-                        "name": "Bug Fixes",
-                        "subtags": []
+                        "name": "Billing",
+                        "subtags": [
+                            {
+                                "name": "Usage Quota"
+                            }
+                        ]
                     }
                 ]
             },
@@ -3282,16 +2532,12 @@
                 "time": "2025-07-31",
                 "tags": [
                     {
-                        "name": "UI/UX",
+                        "name": "Editor",
                         "subtags": [
                             {
-                                "name": "Navigation"
+                                "name": "Keyboard Shortcuts"
                             }
                         ]
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
                     }
                 ]
             },
@@ -3299,35 +2545,13 @@
                 "title": "Fixed missing recommendation feed on project detail pages.",
                 "description": "",
                 "time": "2025-07-31",
-                "tags": [
-                    {
-                        "name": "Community",
-                        "subtags": [
-                            {
-                                "name": "Explore"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "Fixed re-login requirement after refreshing the Create page.",
                 "description": "",
                 "time": "2025-07-31",
-                "tags": [
-                    {
-                        "name": "Authentication",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "Fixed Chrome translation conflict with Google sign-in.",
@@ -3335,11 +2559,7 @@
                 "time": "2025-07-31",
                 "tags": [
                     {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Authentication",
+                        "name": "Auth",
                         "subtags": [
                             {
                                 "name": "Social Login"
@@ -3354,22 +2574,10 @@
                 "time": "2025-07-31",
                 "tags": [
                     {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Billing & Credits",
+                        "name": "Billing",
                         "subtags": [
                             {
                                 "name": "Subscription"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Mobile",
-                        "subtags": [
-                            {
-                                "name": "iOS App"
                             }
                         ]
                     }
@@ -3387,10 +2595,6 @@
                                 "name": "Creator Profile"
                             }
                         ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
                     }
                 ]
             },
@@ -3400,15 +2604,7 @@
                 "time": "2025-07-21",
                 "tags": [
                     {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Dashboard"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Deployment",
+                        "name": "Editor",
                         "subtags": [
                             {
                                 "name": "Preview"
@@ -3416,10 +2612,10 @@
                         ]
                     },
                     {
-                        "name": "Team & Enterprise",
+                        "name": "Team",
                         "subtags": [
                             {
-                                "name": "Business Plan"
+                                "name": "Project Sharing"
                             }
                         ]
                     }
@@ -3429,24 +2625,7 @@
                 "title": "Plugin Page",
                 "description": "A new Plugin Page introduces official YouWare extensions you can browse and install directly within the platform. You can explore available tools in one place without manual setup, expanding your creative capabilities effortlessly.",
                 "time": "2025-07-21",
-                "tags": [
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Dashboard"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Integration",
-                        "subtags": [
-                            {
-                                "name": "YouBase"
-                            }
-                        ]
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "Personalized Recommendations",
@@ -3454,18 +2633,18 @@
                 "time": "2025-07-21",
                 "tags": [
                     {
-                        "name": "Community",
-                        "subtags": [
-                            {
-                                "name": "Explore"
-                            }
-                        ]
-                    },
-                    {
                         "name": "UI/UX",
                         "subtags": [
                             {
                                 "name": "Dashboard"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Community",
+                        "subtags": [
+                            {
+                                "name": "Explore"
                             }
                         ]
                     }
@@ -3485,7 +2664,7 @@
                         ]
                     },
                     {
-                        "name": "Media Generation",
+                        "name": "Media",
                         "subtags": [
                             {
                                 "name": "Image Generation"
@@ -3523,18 +2702,18 @@
                 "time": "2025-07-21",
                 "tags": [
                     {
-                        "name": "Community",
-                        "subtags": [
-                            {
-                                "name": "Explore"
-                            }
-                        ]
-                    },
-                    {
                         "name": "Performance",
                         "subtags": [
                             {
                                 "name": "Loading"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Community",
+                        "subtags": [
+                            {
+                                "name": "Explore"
                             }
                         ]
                     }
@@ -3546,7 +2725,7 @@
                 "time": "2025-07-21",
                 "tags": [
                     {
-                        "name": "Media Generation",
+                        "name": "Media",
                         "subtags": [
                             {
                                 "name": "Image Generation"
@@ -3564,18 +2743,10 @@
                 "time": "2025-07-21",
                 "tags": [
                     {
-                        "name": "File & Upload",
+                        "name": "File",
                         "subtags": [
                             {
                                 "name": "File Upload"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Editor",
-                        "subtags": [
-                            {
-                                "name": "Code Editor"
                             }
                         ]
                     }
@@ -3585,27 +2756,13 @@
                 "title": "Fixed duplicate content appearing in Prompt Prediction suggestions.",
                 "description": "",
                 "time": "2025-07-21",
-                "tags": [
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "Fixed excessive memory usage under specific conditions.",
                 "description": "",
                 "time": "2025-07-21",
-                "tags": [
-                    {
-                        "name": "Performance",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "AI App",
@@ -3613,34 +2770,10 @@
                 "time": "2025-07-14",
                 "tags": [
                     {
-                        "name": "Agent",
+                        "name": "Team",
                         "subtags": [
                             {
-                                "name": "Agent Mode"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Editor",
-                        "subtags": [
-                            {
-                                "name": "Visual Editor"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Deployment",
-                        "subtags": [
-                            {
-                                "name": "Publishing"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Dashboard"
+                                "name": "Workspace"
                             }
                         ]
                     }
@@ -3659,21 +2792,6 @@
                             },
                             {
                                 "name": "Remix"
-                            },
-                            {
-                                "name": "Comments"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
-                    },
-                    {
-                        "name": "File & Upload",
-                        "subtags": [
-                            {
-                                "name": "File Upload"
                             }
                         ]
                     }
@@ -3694,14 +2812,6 @@
                                 "name": "Cursor"
                             }
                         ]
-                    },
-                    {
-                        "name": "Deployment",
-                        "subtags": [
-                            {
-                                "name": "Publishing"
-                            }
-                        ]
                     }
                 ]
             },
@@ -3709,16 +2819,7 @@
                 "title": "Prompt Prediction",
                 "description": "Adjusted detection timing to reduce false triggers; fixed IME cursor jitter.",
                 "time": "2025-07-14",
-                "tags": [
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "Supabase MCP",
@@ -3729,18 +2830,10 @@
                         "name": "Integration",
                         "subtags": [
                             {
-                                "name": "MCP"
+                                "name": "Supabase"
                             },
                             {
-                                "name": "Supabase"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Performance",
-                        "subtags": [
-                            {
-                                "name": "Speed"
+                                "name": "MCP"
                             }
                         ]
                     }
@@ -3758,10 +2851,6 @@
                                 "name": "Console"
                             }
                         ]
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
                     }
                 ]
             },
@@ -3777,10 +2866,6 @@
                                 "name": "Explore"
                             }
                         ]
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
                     }
                 ]
             },
@@ -3790,16 +2875,12 @@
                 "time": "2025-07-14",
                 "tags": [
                     {
-                        "name": "Billing & Credits",
+                        "name": "Billing",
                         "subtags": [
                             {
-                                "name": "Credits"
+                                "name": "Usage Quota"
                             }
                         ]
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
                     }
                 ]
             },
@@ -3810,11 +2891,11 @@
                 "tags": [
                     {
                         "name": "Agent",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
+                        "subtags": [
+                            {
+                                "name": "Agent Mode"
+                            }
+                        ]
                     }
                 ]
             },
@@ -3824,24 +2905,13 @@
                 "time": "2025-07-04",
                 "tags": [
                     {
-                        "name": "Billing & Credits",
+                        "name": "Billing",
                         "subtags": [
                             {
                                 "name": "Subscription"
                             },
                             {
-                                "name": "Credits"
-                            },
-                            {
-                                "name": "Pricing"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Deployment",
-                        "subtags": [
-                            {
-                                "name": "Code Download"
+                                "name": "Usage Quota"
                             }
                         ]
                     }
@@ -3856,13 +2926,9 @@
                         "name": "Agent",
                         "subtags": [
                             {
-                                "name": "Automation"
+                                "name": "Agent Mode"
                             }
                         ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
                     }
                 ]
             },
@@ -3878,7 +2944,7 @@
                                 "name": "Tasks"
                             },
                             {
-                                "name": "Plan Mode"
+                                "name": "Clarifying Questions"
                             }
                         ]
                     }
@@ -3897,17 +2963,6 @@
                             },
                             {
                                 "name": "Flux"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Media Generation",
-                        "subtags": [
-                            {
-                                "name": "Image Generation"
-                            },
-                            {
-                                "name": "Image Edit"
                             }
                         ]
                     }
@@ -3938,17 +2993,6 @@
                         "subtags": [
                             {
                                 "name": "Agent Mode"
-                            },
-                            {
-                                "name": "Automation"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Performance",
-                        "subtags": [
-                            {
-                                "name": "Speed"
                             }
                         ]
                     }
@@ -3960,16 +3004,12 @@
                 "time": "2025-07-04",
                 "tags": [
                     {
-                        "name": "Performance",
+                        "name": "Agent",
                         "subtags": [
                             {
-                                "name": "Speed"
+                                "name": "Agent Mode"
                             }
                         ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
                     }
                 ]
             },
@@ -3979,16 +3019,15 @@
                 "time": "2025-07-04",
                 "tags": [
                     {
-                        "name": "Billing & Credits",
+                        "name": "Billing",
                         "subtags": [
+                            {
+                                "name": "Payment"
+                            },
                             {
                                 "name": "Subscription"
                             }
                         ]
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
                     }
                 ]
             },
@@ -3996,16 +3035,7 @@
                 "title": "Fixed text overflow in Thinking outputs.",
                 "description": "",
                 "time": "2025-07-04",
-                "tags": [
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "Tab Tab Prompt Completion",
@@ -4013,16 +3043,12 @@
                 "time": "2025-06-27",
                 "tags": [
                     {
-                        "name": "Editor",
+                        "name": "Agent",
                         "subtags": [
                             {
-                                "name": "Code Editor"
+                                "name": "Suggested Actions"
                             }
                         ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
                     }
                 ]
             },
@@ -4032,18 +3058,10 @@
                 "time": "2025-06-27",
                 "tags": [
                     {
-                        "name": "Integration",
-                        "subtags": [
-                            {
-                                "name": "LinkedIn"
-                            }
-                        ]
-                    },
-                    {
                         "name": "Community",
                         "subtags": [
                             {
-                                "name": "Search"
+                                "name": "Social Share"
                             }
                         ]
                     }
@@ -4059,25 +3077,6 @@
                         "subtags": [
                             {
                                 "name": "Agent Mode"
-                            },
-                            {
-                                "name": "Automation"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Performance",
-                        "subtags": [
-                            {
-                                "name": "Speed"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Community",
-                        "subtags": [
-                            {
-                                "name": "Search"
                             }
                         ]
                     }
@@ -4104,24 +3103,12 @@
                 "time": "2025-06-27",
                 "tags": [
                     {
-                        "name": "Deployment",
+                        "name": "Team",
                         "subtags": [
                             {
-                                "name": "Publishing"
+                                "name": "Project Sharing"
                             }
                         ]
-                    },
-                    {
-                        "name": "Community",
-                        "subtags": [
-                            {
-                                "name": "Templates"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
                     }
                 ]
             },
@@ -4131,8 +3118,12 @@
                 "time": "2025-06-27",
                 "tags": [
                     {
-                        "name": "Performance",
-                        "subtags": []
+                        "name": "Billing",
+                        "subtags": [
+                            {
+                                "name": "Usage Quota"
+                            }
+                        ]
                     }
                 ]
             },
@@ -4140,28 +3131,7 @@
                 "title": "Fixed unclickable “Upgrade” button on the homepage.",
                 "description": "",
                 "time": "2025-06-27",
-                "tags": [
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Navigation"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Billing & Credits",
-                        "subtags": [
-                            {
-                                "name": "Subscription"
-                            }
-                        ]
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "To-Do and Image Search",
@@ -4177,7 +3147,7 @@
                         ]
                     },
                     {
-                        "name": "Media Generation",
+                        "name": "Media",
                         "subtags": [
                             {
                                 "name": "Image Understanding"
@@ -4211,12 +3181,11 @@
                         "subtags": [
                             {
                                 "name": "Creator Profile"
+                            },
+                            {
+                                "name": "Comments"
                             }
                         ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
                     }
                 ]
             },
@@ -4226,18 +3195,13 @@
                 "time": "2025-06-20",
                 "tags": [
                     {
-                        "name": "File & Upload",
+                        "name": "File",
                         "subtags": [
                             {
-                                "name": "File Conversion"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Media Generation",
-                        "subtags": [
+                                "name": "PDF Processing"
+                            },
                             {
-                                "name": "Image Understanding"
+                                "name": "File Upload"
                             }
                         ]
                     }
@@ -4249,7 +3213,7 @@
                 "time": "2025-06-20",
                 "tags": [
                     {
-                        "name": "File & Upload",
+                        "name": "File",
                         "subtags": [
                             {
                                 "name": "File Upload"
@@ -4270,10 +3234,6 @@
                                 "name": "Agent Mode"
                             }
                         ]
-                    },
-                    {
-                        "name": "Performance",
-                        "subtags": []
                     }
                 ]
             },
@@ -4283,12 +3243,12 @@
                 "time": "2025-06-20",
                 "tags": [
                     {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
+                        "name": "Community",
+                        "subtags": [
+                            {
+                                "name": "Comments"
+                            }
+                        ]
                     }
                 ]
             },
@@ -4319,39 +3279,13 @@
                 "title": "Fixed Chrome push tooltip display when content is empty.",
                 "description": "",
                 "time": "2025-06-20",
-                "tags": [
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Notifications"
-                            }
-                        ]
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "Fixed URL concatenation errors causing missing images.",
                 "description": "",
                 "time": "2025-06-20",
-                "tags": [
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Media Generation",
-                        "subtags": [
-                            {
-                                "name": "Image Upload"
-                            }
-                        ]
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "Improved settings dialog responsiveness.",
@@ -4360,7 +3294,11 @@
                 "tags": [
                     {
                         "name": "UI/UX",
-                        "subtags": []
+                        "subtags": [
+                            {
+                                "name": "Mobile UI"
+                            }
+                        ]
                     }
                 ]
             },
@@ -4374,9 +3312,6 @@
                         "subtags": [
                             {
                                 "name": "Comments"
-                            },
-                            {
-                                "name": "Explore"
                             }
                         ]
                     },
@@ -4400,26 +3335,9 @@
                         "subtags": [
                             {
                                 "name": "Supabase"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Database",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Authentication",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Analytics",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Community",
-                        "subtags": [
+                            },
                             {
-                                "name": "Comments"
+                                "name": "MCP"
                             }
                         ]
                     }
@@ -4449,10 +3367,10 @@
                 "time": "2025-06-13",
                 "tags": [
                     {
-                        "name": "Billing & Credits",
+                        "name": "Billing",
                         "subtags": [
                             {
-                                "name": "Subscription"
+                                "name": "Usage Quota"
                             }
                         ]
                     }
@@ -4462,12 +3380,7 @@
                 "title": "Fixed delayed System Prompt updates.",
                 "description": "",
                 "time": "2025-06-13",
-                "tags": [
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "Google One Tap Login",
@@ -4475,18 +3388,10 @@
                 "time": "2025-06-06",
                 "tags": [
                     {
-                        "name": "Authentication",
+                        "name": "Auth",
                         "subtags": [
                             {
                                 "name": "Social Login"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Integration",
-                        "subtags": [
-                            {
-                                "name": "Google Analytics"
                             }
                         ]
                     }
@@ -4504,10 +3409,6 @@
                                 "name": "Content Moderation"
                             }
                         ]
-                    },
-                    {
-                        "name": "Community",
-                        "subtags": []
                     }
                 ]
             },
@@ -4515,16 +3416,7 @@
                 "title": "Prompt Cache",
                 "description": "Prompt caching has been introduced. Repeated requests now use cached results, reducing generation time and saving Credits.",
                 "time": "2025-06-06",
-                "tags": [
-                    {
-                        "name": "Performance",
-                        "subtags": [
-                            {
-                                "name": "Caching"
-                            }
-                        ]
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "File Uploads",
@@ -4532,15 +3424,7 @@
                 "time": "2025-06-06",
                 "tags": [
                     {
-                        "name": "Media Generation",
-                        "subtags": [
-                            {
-                                "name": "Image Upload"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "File & Upload",
+                        "name": "File",
                         "subtags": [
                             {
                                 "name": "File Upload"
@@ -4548,16 +3432,12 @@
                         ]
                     },
                     {
-                        "name": "Community",
+                        "name": "Media",
                         "subtags": [
                             {
-                                "name": "Explore"
+                                "name": "Image Upload"
                             }
                         ]
-                    },
-                    {
-                        "name": "Editor",
-                        "subtags": []
                     }
                 ]
             },
@@ -4571,12 +3451,11 @@
                         "subtags": [
                             {
                                 "name": "Agent Mode"
+                            },
+                            {
+                                "name": "Automation"
                             }
                         ]
-                    },
-                    {
-                        "name": "Performance",
-                        "subtags": []
                     }
                 ]
             },
@@ -4590,6 +3469,9 @@
                         "subtags": [
                             {
                                 "name": "Agent Mode"
+                            },
+                            {
+                                "name": "Automation"
                             }
                         ]
                     }
@@ -4604,6 +3486,9 @@
                         "name": "Agent",
                         "subtags": [
                             {
+                                "name": "Tasks"
+                            },
+                            {
                                 "name": "Automation"
                             }
                         ]
@@ -4616,12 +3501,12 @@
                 "time": "2025-06-06",
                 "tags": [
                     {
-                        "name": "AI Model",
-                        "subtags": []
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
+                        "name": "Agent",
+                        "subtags": [
+                            {
+                                "name": "Agent Mode"
+                            }
+                        ]
                     }
                 ]
             },
@@ -4631,14 +3516,10 @@
                 "time": "2025-06-06",
                 "tags": [
                     {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    },
-                    {
-                        "name": "File & Upload",
+                        "name": "Backend",
                         "subtags": [
                             {
-                                "name": "File Upload"
+                                "name": "Storage"
                             }
                         ]
                     }
@@ -4650,16 +3531,12 @@
                 "time": "2025-06-06",
                 "tags": [
                     {
-                        "name": "Media Generation",
+                        "name": "Media",
                         "subtags": [
                             {
                                 "name": "Image Understanding"
                             }
                         ]
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
                     }
                 ]
             },
@@ -4668,10 +3545,6 @@
                 "description": "",
                 "time": "2025-06-06",
                 "tags": [
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    },
                     {
                         "name": "Agent",
                         "subtags": [
@@ -4699,23 +3572,10 @@
                         "name": "Editor",
                         "subtags": [
                             {
-                                "name": "Split View"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Deployment",
-                        "subtags": [
-                            {
                                 "name": "Preview"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
+                            },
                             {
-                                "name": "Mobile UI"
+                                "name": "Mobile Editor"
                             }
                         ]
                     }
@@ -4727,16 +3587,20 @@
                 "time": "2025-05-31",
                 "tags": [
                     {
+                        "name": "Team",
+                        "subtags": [
+                            {
+                                "name": "Project Sharing"
+                            }
+                        ]
+                    },
+                    {
                         "name": "Deployment",
                         "subtags": [
                             {
                                 "name": "Custom Domain"
                             }
                         ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
                     }
                 ]
             },
@@ -4746,7 +3610,7 @@
                 "time": "2025-05-31",
                 "tags": [
                     {
-                        "name": "Team & Enterprise",
+                        "name": "Team",
                         "subtags": [
                             {
                                 "name": "Project Sharing"
@@ -4757,13 +3621,9 @@
                         "name": "Community",
                         "subtags": [
                             {
-                                "name": "Remix"
+                                "name": "Social Share"
                             }
                         ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
                     }
                 ]
             },
@@ -4776,23 +3636,15 @@
                         "name": "Agent",
                         "subtags": [
                             {
-                                "name": "Automation"
+                                "name": "Agent Mode"
                             }
                         ]
                     },
                     {
-                        "name": "Media Generation",
+                        "name": "Media",
                         "subtags": [
                             {
                                 "name": "Image Understanding"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Performance",
-                        "subtags": [
-                            {
-                                "name": "Speed"
                             }
                         ]
                     }
@@ -4806,9 +3658,6 @@
                     {
                         "name": "Performance",
                         "subtags": [
-                            {
-                                "name": "Loading"
-                            },
                             {
                                 "name": "Speed"
                             }
@@ -4830,12 +3679,20 @@
                 "time": "2025-05-31",
                 "tags": [
                     {
-                        "name": "UI/UX",
-                        "subtags": []
+                        "name": "Editor",
+                        "subtags": [
+                            {
+                                "name": "Code Editor"
+                            }
+                        ]
                     },
                     {
-                        "name": "Editor",
-                        "subtags": []
+                        "name": "Deployment",
+                        "subtags": [
+                            {
+                                "name": "Publishing"
+                            }
+                        ]
                     }
                 ]
             },
@@ -4845,22 +3702,10 @@
                 "time": "2025-05-31",
                 "tags": [
                     {
-                        "name": "File & Upload",
+                        "name": "File",
                         "subtags": [
                             {
                                 "name": "File Upload"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Deployment",
-                        "subtags": []
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Notifications"
                             }
                         ]
                     }
@@ -4885,36 +3730,7 @@
                 "title": "Fixed avatar display issue for email-login users on the Explore page.",
                 "description": "",
                 "time": "2025-05-31",
-                "tags": [
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Dashboard"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Community",
-                        "subtags": [
-                            {
-                                "name": "Explore"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Authentication",
-                        "subtags": [
-                            {
-                                "name": "Email Auth"
-                            }
-                        ]
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "Fixed unavailable downloads after project publication.",
@@ -4926,12 +3742,11 @@
                         "subtags": [
                             {
                                 "name": "Code Download"
+                            },
+                            {
+                                "name": "Publishing"
                             }
                         ]
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
                     }
                 ]
             },
@@ -4939,12 +3754,7 @@
                 "title": "Fixed incorrect language recognition in some Japanese projects.",
                 "description": "",
                 "time": "2025-05-31",
-                "tags": [
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "Fixed multi-character password input bug on Windows.",
@@ -4952,12 +3762,12 @@
                 "time": "2025-05-31",
                 "tags": [
                     {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
+                        "name": "Auth",
+                        "subtags": [
+                            {
+                                "name": "Passcode"
+                            }
+                        ]
                     }
                 ]
             },
@@ -4971,14 +3781,9 @@
                         "subtags": [
                             {
                                 "name": "Code Editor"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Agent",
-                        "subtags": [
+                            },
                             {
-                                "name": "Automation"
+                                "name": "Preview"
                             }
                         ]
                     }
@@ -4990,7 +3795,7 @@
                 "time": "2025-05-23",
                 "tags": [
                     {
-                        "name": "Billing & Credits",
+                        "name": "Billing",
                         "subtags": [
                             {
                                 "name": "Referral"
@@ -5005,24 +3810,20 @@
                 "time": "2025-05-23",
                 "tags": [
                     {
-                        "name": "Integration",
-                        "subtags": [
-                            {
-                                "name": "Telegram"
-                            }
-                        ]
-                    },
-                    {
                         "name": "Community",
                         "subtags": [
                             {
-                                "name": "Search"
+                                "name": "Social Share"
                             }
                         ]
                     },
                     {
-                        "name": "UI/UX",
-                        "subtags": []
+                        "name": "Team",
+                        "subtags": [
+                            {
+                                "name": "Project Sharing"
+                            }
+                        ]
                     }
                 ]
             },
@@ -5035,7 +3836,7 @@
                         "name": "Performance",
                         "subtags": [
                             {
-                                "name": "Loading"
+                                "name": "Speed"
                             }
                         ]
                     }
@@ -5050,6 +3851,9 @@
                         "name": "Agent",
                         "subtags": [
                             {
+                                "name": "Agent Mode"
+                            },
+                            {
                                 "name": "Automation"
                             }
                         ]
@@ -5060,38 +3864,13 @@
                 "title": "Fixed homepage “Load More” issue for new users.",
                 "description": "",
                 "time": "2025-05-23",
-                "tags": [
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Navigation"
-                            }
-                        ]
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "Fixed abnormal token usage caused by unspecified parameters during generation.",
                 "description": "",
                 "time": "2025-05-23",
                 "tags": [
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Performance",
-                        "subtags": [
-                            {
-                                "name": "Speed"
-                            }
-                        ]
-                    },
                     {
                         "name": "Analytics",
                         "subtags": [
@@ -5112,12 +3891,11 @@
                         "subtags": [
                             {
                                 "name": "Code Download"
+                            },
+                            {
+                                "name": "Publishing"
                             }
                         ]
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
                     }
                 ]
             },
@@ -5125,20 +3903,7 @@
                 "title": "Fixed double-tab opening issue on profile page.",
                 "description": "",
                 "time": "2025-05-23",
-                "tags": [
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Navigation"
-                            }
-                        ]
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "Fixed repeated passcode prompts on www.youware.com domain.",
@@ -5146,16 +3911,12 @@
                 "time": "2025-05-23",
                 "tags": [
                     {
-                        "name": "Authentication",
+                        "name": "Auth",
                         "subtags": [
                             {
                                 "name": "Passcode"
                             }
                         ]
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
                     }
                 ]
             },
@@ -5174,14 +3935,6 @@
                                 "name": "Search"
                             }
                         ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Navigation"
-                            }
-                        ]
                     }
                 ]
             },
@@ -5195,6 +3948,9 @@
                         "subtags": [
                             {
                                 "name": "Explore"
+                            },
+                            {
+                                "name": "Search"
                             }
                         ]
                     }
@@ -5209,13 +3965,12 @@
                         "name": "Agent",
                         "subtags": [
                             {
+                                "name": "Agent Mode"
+                            },
+                            {
                                 "name": "Automation"
                             }
                         ]
-                    },
-                    {
-                        "name": "Performance",
-                        "subtags": []
                     }
                 ]
             },
@@ -5224,10 +3979,6 @@
                 "description": "",
                 "time": "2025-05-16",
                 "tags": [
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    },
                     {
                         "name": "Deployment",
                         "subtags": [
@@ -5242,22 +3993,13 @@
                 "title": "Fixed History page failing to load additional records.",
                 "description": "",
                 "time": "2025-05-16",
-                "tags": [
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "Fixed duplicate project listings on the Explore page.",
                 "description": "",
                 "time": "2025-05-16",
                 "tags": [
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    },
                     {
                         "name": "Community",
                         "subtags": [
@@ -5286,9 +4028,6 @@
                         "subtags": [
                             {
                                 "name": "Agent Mode"
-                            },
-                            {
-                                "name": "Automation"
                             }
                         ]
                     }
@@ -5300,7 +4039,7 @@
                 "time": "2025-05-09",
                 "tags": [
                     {
-                        "name": "File & Upload",
+                        "name": "File",
                         "subtags": [
                             {
                                 "name": "File Upload"
@@ -5315,14 +4054,18 @@
                 "time": "2025-05-09",
                 "tags": [
                     {
-                        "name": "UI/UX",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Media Generation",
+                        "name": "Media",
                         "subtags": [
                             {
                                 "name": "Image Upload"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": [
+                            {
+                                "name": "Mobile UI"
                             }
                         ]
                     }
@@ -5332,24 +4075,7 @@
                 "title": "UI Behavior",
                 "description": "Disabled background scrolling when pop-ups are open and refined scrollbar visuals in the editor.",
                 "time": "2025-05-09",
-                "tags": [
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Navigation"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Editor",
-                        "subtags": [
-                            {
-                                "name": "Code Editor"
-                            }
-                        ]
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "Project Preview",
@@ -5357,16 +4083,12 @@
                 "time": "2025-05-09",
                 "tags": [
                     {
-                        "name": "Deployment",
+                        "name": "Editor",
                         "subtags": [
                             {
                                 "name": "Preview"
                             }
                         ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
                     },
                     {
                         "name": "Community",
@@ -5388,6 +4110,9 @@
                         "subtags": [
                             {
                                 "name": "Content Moderation"
+                            },
+                            {
+                                "name": "Security Scan"
                             }
                         ]
                     }
@@ -5437,13 +4162,13 @@
                 "time": "2025-04-30",
                 "tags": [
                     {
-                        "name": "Billing & Credits",
+                        "name": "Billing",
                         "subtags": [
                             {
                                 "name": "Subscription"
                             },
                             {
-                                "name": "Pricing"
+                                "name": "Usage Quota"
                             }
                         ]
                     }
@@ -5455,18 +4180,10 @@
                 "time": "2025-04-30",
                 "tags": [
                     {
-                        "name": "Performance",
-                        "subtags": [
-                            {
-                                "name": "Speed"
-                            }
-                        ]
-                    },
-                    {
                         "name": "Agent",
                         "subtags": [
                             {
-                                "name": "Automation"
+                                "name": "Tasks"
                             }
                         ]
                     },
@@ -5490,6 +4207,9 @@
                         "subtags": [
                             {
                                 "name": "Navigation"
+                            },
+                            {
+                                "name": "Notifications"
                             }
                         ]
                     }
@@ -5507,10 +4227,6 @@
                                 "name": "Dashboard"
                             }
                         ]
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
                     }
                 ]
             },
@@ -5520,15 +4236,7 @@
                 "time": "2025-04-30",
                 "tags": [
                     {
-                        "name": "Editor",
-                        "subtags": [
-                            {
-                                "name": "Code Editor"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "File & Upload",
+                        "name": "File",
                         "subtags": [
                             {
                                 "name": "File Upload"
@@ -5536,8 +4244,12 @@
                         ]
                     },
                     {
-                        "name": "Bug Fixes",
-                        "subtags": []
+                        "name": "Editor",
+                        "subtags": [
+                            {
+                                "name": "Code Editor"
+                            }
+                        ]
                     }
                 ]
             },
@@ -5551,12 +4263,11 @@
                         "subtags": [
                             {
                                 "name": "Automation"
+                            },
+                            {
+                                "name": "Design Mode"
                             }
                         ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
                     }
                 ]
             },
@@ -5566,7 +4277,7 @@
                 "time": "2025-04-25",
                 "tags": [
                     {
-                        "name": "Authentication",
+                        "name": "Auth",
                         "subtags": [
                             {
                                 "name": "Email Auth"
@@ -5581,18 +4292,10 @@
                 "time": "2025-04-25",
                 "tags": [
                     {
-                        "name": "File & Upload",
+                        "name": "File",
                         "subtags": [
                             {
                                 "name": "File Upload"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Media Generation",
-                        "subtags": [
-                            {
-                                "name": "Audio Generation"
                             }
                         ]
                     }
@@ -5602,16 +4305,7 @@
                 "title": "Stability",
                 "description": "Improved system stability and error recovery to ensure long-running tasks complete smoothly without interruption.",
                 "time": "2025-04-25",
-                "tags": [
-                    {
-                        "name": "Performance",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "Session Experience",
@@ -5619,16 +4313,12 @@
                 "time": "2025-04-25",
                 "tags": [
                     {
-                        "name": "Performance",
+                        "name": "Agent",
                         "subtags": [
                             {
-                                "name": "Loading"
+                                "name": "Agent Mode"
                             }
                         ]
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
                     }
                 ]
             },
@@ -5638,18 +4328,18 @@
                 "time": "2025-04-25",
                 "tags": [
                     {
-                        "name": "Performance",
-                        "subtags": [
-                            {
-                                "name": "Speed"
-                            }
-                        ]
-                    },
-                    {
                         "name": "Editor",
                         "subtags": [
                             {
                                 "name": "Code Editor"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Performance",
+                        "subtags": [
+                            {
+                                "name": "Speed"
                             }
                         ]
                     }
@@ -5659,72 +4349,31 @@
                 "title": "Localization",
                 "description": "Improved multilingual adaptation with automatic browser language detection for a more localized interface.",
                 "time": "2025-04-25",
-                "tags": [
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "Fixed truncated output in long generations.",
                 "description": "",
                 "time": "2025-04-25",
-                "tags": [
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "Fixed parameter extraction errors in Think tool",
                 "description": "",
                 "time": "2025-04-25",
-                "tags": [
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "Fixed session leakage.",
                 "description": "",
                 "time": "2025-04-25",
-                "tags": [
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Security",
-                        "subtags": [
-                            {
-                                "name": "Access Control"
-                            }
-                        ]
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "Fixed duplicate rendering of chat attachments.",
                 "description": "",
                 "time": "2025-04-25",
-                "tags": [
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    },
-                    {
-                        "name": "File & Upload",
-                        "subtags": [
-                            {
-                                "name": "File Upload"
-                            }
-                        ]
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "Reactions on Project",
@@ -5738,6 +4387,14 @@
                                 "name": "Reactions"
                             }
                         ]
+                    },
+                    {
+                        "name": "Team",
+                        "subtags": [
+                            {
+                                "name": "Project Sharing"
+                            }
+                        ]
                     }
                 ]
             },
@@ -5747,7 +4404,7 @@
                 "time": "2025-04-18",
                 "tags": [
                     {
-                        "name": "File & Upload",
+                        "name": "File",
                         "subtags": [
                             {
                                 "name": "File Upload"
@@ -5756,10 +4413,6 @@
                                 "name": "Drag Drop"
                             }
                         ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
                     }
                 ]
             },
@@ -5773,6 +4426,9 @@
                         "subtags": [
                             {
                                 "name": "Dashboard"
+                            },
+                            {
+                                "name": "Themes"
                             }
                         ]
                     }
@@ -5788,14 +4444,6 @@
                         "subtags": [
                             {
                                 "name": "Agent Mode"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Performance",
-                        "subtags": [
-                            {
-                                "name": "Speed"
                             }
                         ]
                     }
@@ -5815,8 +4463,12 @@
                         ]
                     },
                     {
-                        "name": "UI/UX",
-                        "subtags": []
+                        "name": "Security",
+                        "subtags": [
+                            {
+                                "name": "Content Moderation"
+                            }
+                        ]
                     }
                 ]
             },
@@ -5828,6 +4480,9 @@
                     {
                         "name": "UI/UX",
                         "subtags": [
+                            {
+                                "name": "Themes"
+                            },
                             {
                                 "name": "Navigation"
                             }
@@ -5845,14 +4500,9 @@
                         "subtags": [
                             {
                                 "name": "Explore"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Analytics",
-                        "subtags": [
+                            },
                             {
-                                "name": "Project Analytics"
+                                "name": "Search"
                             }
                         ]
                     }
@@ -5863,10 +4513,6 @@
                 "description": "",
                 "time": "2025-04-18",
                 "tags": [
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    },
                     {
                         "name": "Community",
                         "subtags": [
@@ -5881,16 +4527,7 @@
                 "title": "Fixed logout issues.",
                 "description": "",
                 "time": "2025-04-18",
-                "tags": [
-                    {
-                        "name": "Authentication",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "Fixed permission errors on Safari preview pages.",
@@ -5898,11 +4535,7 @@
                 "time": "2025-04-18",
                 "tags": [
                     {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Deployment",
+                        "name": "Editor",
                         "subtags": [
                             {
                                 "name": "Preview"
@@ -5915,39 +4548,13 @@
                 "title": "Fixed avatar and username update failures.",
                 "description": "",
                 "time": "2025-04-18",
-                "tags": [
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Dashboard"
-                            }
-                        ]
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "Fixed layout issues caused by overly long messages or email addresses.",
                 "description": "",
                 "time": "2025-04-18",
-                "tags": [
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Navigation"
-                            }
-                        ]
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "Text to Website",
@@ -5966,23 +4573,7 @@
                         "name": "Editor",
                         "subtags": [
                             {
-                                "name": "Visual Editor"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Deployment",
-                        "subtags": [
-                            {
                                 "name": "Preview"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Dashboard"
                             }
                         ]
                     }
@@ -5994,7 +4585,7 @@
                 "time": "2025-03-03",
                 "tags": [
                     {
-                        "name": "File & Upload",
+                        "name": "File",
                         "subtags": [
                             {
                                 "name": "File Upload"
@@ -6006,17 +4597,6 @@
                         "subtags": [
                             {
                                 "name": "Hosting"
-                            },
-                            {
-                                "name": "Publishing"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Agent",
-                        "subtags": [
-                            {
-                                "name": "Agent Mode"
                             }
                         ]
                     }
@@ -6046,26 +4626,13 @@
                 "time": "2025-03-03",
                 "tags": [
                     {
-                        "name": "Authentication",
-                        "subtags": [
-                            {
-                                "name": "Email Auth"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Team & Enterprise",
+                        "name": "Team",
                         "subtags": [
                             {
                                 "name": "Workspace"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
+                            },
                             {
-                                "name": "Dashboard"
+                                "name": "Team Management"
                             }
                         ]
                     }
@@ -6077,26 +4644,13 @@
                 "time": "2025-03-03",
                 "tags": [
                     {
-                        "name": "Authentication",
+                        "name": "Auth",
                         "subtags": [
                             {
                                 "name": "Passcode"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Security",
-                        "subtags": [
+                            },
                             {
                                 "name": "Access Control"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Team & Enterprise",
-                        "subtags": [
-                            {
-                                "name": "Project Sharing"
                             }
                         ]
                     }
@@ -6112,6 +4666,9 @@
                         "subtags": [
                             {
                                 "name": "Dashboard"
+                            },
+                            {
+                                "name": "Onboarding"
                             }
                         ]
                     }
@@ -6127,9 +4684,6 @@
                         "subtags": [
                             {
                                 "name": "Speed"
-                            },
-                            {
-                                "name": "Loading"
                             }
                         ]
                     }
@@ -6140,10 +4694,6 @@
                 "description": "",
                 "time": "2025-03-03",
                 "tags": [
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    },
                     {
                         "name": "UI/UX",
                         "subtags": [

@@ -10,7 +10,24 @@
                 "title": "Bug fixes and improvements for Jan 13th",
                 "description": "• Added credits display in the user menu\n• Fixed Git sync error notifications\n• Fixed opening templates that aren't connected to Git\n• Fixed agent-installed dependencies not being properly tracked\n• Fixed docs footer URL redirect on certain pages\n• Fixed all errors related to 'fork keys'\n• Fixed an issue with images not being compacted during long chats",
                 "time": "2026-01-13",
-                "tags": []
+                "tags": [
+                    {
+                        "name": "Billing",
+                        "subtags": [
+                            {
+                                "name": "Usage Quota"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Agent",
+                        "subtags": [
+                            {
+                                "name": "Agent Mode"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "title": "Bug fixes and improvements for Jan 12th",
@@ -22,35 +39,8 @@
                         "subtags": [
                             {
                                 "name": "Templates"
-                            },
-                            {
-                                "name": "Search"
                             }
                         ]
-                    },
-                    {
-                        "name": "Framework",
-                        "subtags": [
-                            {
-                                "name": "Next.js"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Deployment",
-                        "subtags": [
-                            {
-                                "name": "Publishing"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
                     }
                 ]
             },
@@ -63,15 +53,7 @@
                         "name": "Agent",
                         "subtags": [
                             {
-                                "name": "Automation"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Editor",
-                        "subtags": [
-                            {
-                                "name": "Code Editor"
+                                "name": "Agent Mode"
                             }
                         ]
                     },
@@ -82,38 +64,6 @@
                                 "name": "VS Code"
                             }
                         ]
-                    },
-                    {
-                        "name": "Performance",
-                        "subtags": [
-                            {
-                                "name": "Speed"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Team & Enterprise",
-                        "subtags": [
-                            {
-                                "name": "Enterprise Plan"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Framework",
-                        "subtags": [
-                            {
-                                "name": "TailwindCSS"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
                     }
                 ]
             },
@@ -126,18 +76,10 @@
                         "name": "Integration",
                         "subtags": [
                             {
-                                "name": "MCP"
+                                "name": "Glean"
                             },
                             {
-                                "name": "Glean"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Agent",
-                        "subtags": [
-                            {
-                                "name": "Agent Mode"
+                                "name": "MCP"
                             }
                         ]
                     }
@@ -163,10 +105,6 @@
                                 "name": "Keyboard Shortcuts"
                             }
                         ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
                     }
                 ]
             },
@@ -195,14 +133,9 @@
                         "subtags": [
                             {
                                 "name": "Linear"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Agent",
-                        "subtags": [
+                            },
                             {
-                                "name": "Tasks"
+                                "name": "MCP"
                             }
                         ]
                     }
@@ -221,14 +154,6 @@
                             },
                             {
                                 "name": "MCP"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Agent",
-                        "subtags": [
-                            {
-                                "name": "Agent Mode"
                             }
                         ]
                     }
@@ -258,21 +183,9 @@
                         "name": "Security",
                         "subtags": [
                             {
-                                "name": "Vulnerability Patch"
+                                "name": "Security Scan"
                             }
                         ]
-                    },
-                    {
-                        "name": "Framework",
-                        "subtags": [
-                            {
-                                "name": "React"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
                     }
                 ]
             },
@@ -282,7 +195,7 @@
                 "time": "2025-12-11",
                 "tags": [
                     {
-                        "name": "Team & Enterprise",
+                        "name": "Team",
                         "subtags": [
                             {
                                 "name": "Workspace"
@@ -296,14 +209,6 @@
                                 "name": "Search"
                             }
                         ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Navigation"
-                            }
-                        ]
                     }
                 ]
             },
@@ -313,41 +218,10 @@
                 "time": "2025-12-10",
                 "tags": [
                     {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Deployment",
-                        "subtags": [
-                            {
-                                "name": "Preview"
-                            }
-                        ]
-                    },
-                    {
                         "name": "Editor",
                         "subtags": [
                             {
-                                "name": "Markdown Preview"
-                            },
-                            {
-                                "name": "SVG Preview"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Team & Enterprise",
-                        "subtags": [
-                            {
-                                "name": "Workspace"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Integration",
-                        "subtags": [
-                            {
-                                "name": "MCP"
+                                "name": "Code Editor"
                             }
                         ]
                     },
@@ -356,14 +230,6 @@
                         "subtags": [
                             {
                                 "name": "Usage Stats"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Agent",
-                        "subtags": [
-                            {
-                                "name": "Automation"
                             }
                         ]
                     }
@@ -381,12 +247,6 @@
                                 "name": "Code Editor"
                             },
                             {
-                                "name": "Diff View"
-                            },
-                            {
-                                "name": "Split View"
-                            },
-                            {
                                 "name": "Search Replace"
                             }
                         ]
@@ -399,20 +259,6 @@
                 "time": "2025-12-09",
                 "tags": [
                     {
-                        "name": "Integration",
-                        "subtags": [
-                            {
-                                "name": "Linear"
-                            },
-                            {
-                                "name": "MCP"
-                            },
-                            {
-                                "name": "NPM"
-                            }
-                        ]
-                    },
-                    {
                         "name": "Agent",
                         "subtags": [
                             {
@@ -422,35 +268,11 @@
                     },
                     {
                         "name": "Editor",
-                        "subtags": []
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Performance",
                         "subtags": [
                             {
-                                "name": "Loading"
+                                "name": "Preview"
                             }
                         ]
-                    },
-                    {
-                        "name": "Database",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Framework",
-                        "subtags": [
-                            {
-                                "name": "Next.js"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
                     }
                 ]
             },
@@ -463,7 +285,7 @@
                         "name": "Security",
                         "subtags": [
                             {
-                                "name": "Vulnerability Patch"
+                                "name": "Security Scan"
                             }
                         ]
                     },
@@ -472,17 +294,6 @@
                         "subtags": [
                             {
                                 "name": "Automation"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Framework",
-                        "subtags": [
-                            {
-                                "name": "React"
-                            },
-                            {
-                                "name": "Next.js"
                             }
                         ]
                     }
@@ -498,12 +309,11 @@
                         "subtags": [
                             {
                                 "name": "Custom Domain"
+                            },
+                            {
+                                "name": "Hosting"
                             }
                         ]
-                    },
-                    {
-                        "name": "Billing & Credits",
-                        "subtags": []
                     }
                 ]
             },
@@ -536,25 +346,6 @@
                         ]
                     },
                     {
-                        "name": "Deployment",
-                        "subtags": [
-                            {
-                                "name": "Custom Domain"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Integration",
-                        "subtags": [
-                            {
-                                "name": "Vercel"
-                            },
-                            {
-                                "name": "GitHub"
-                            }
-                        ]
-                    },
-                    {
                         "name": "Analytics",
                         "subtags": [
                             {
@@ -570,16 +361,12 @@
                 "time": "2025-11-26",
                 "tags": [
                     {
-                        "name": "Billing & Credits",
+                        "name": "Billing",
                         "subtags": [
                             {
-                                "name": "Pricing"
+                                "name": "Subscription"
                             }
                         ]
-                    },
-                    {
-                        "name": "Community",
-                        "subtags": []
                     }
                 ]
             },
@@ -595,10 +382,6 @@
                                 "name": "Snowflake"
                             }
                         ]
-                    },
-                    {
-                        "name": "Database",
-                        "subtags": []
                     }
                 ]
             },
@@ -622,14 +405,6 @@
                 "description": "Nano Banana Pro is now available in v0 via Vercel's AI Gateway.",
                 "time": "2025-11-20",
                 "tags": [
-                    {
-                        "name": "AI Model",
-                        "subtags": [
-                            {
-                                "name": "MiniMax"
-                            }
-                        ]
-                    },
                     {
                         "name": "Integration",
                         "subtags": [
@@ -661,7 +436,7 @@
                 "time": "2025-11-18",
                 "tags": [
                     {
-                        "name": "Authentication",
+                        "name": "Auth",
                         "subtags": [
                             {
                                 "name": "Social Login"
@@ -669,7 +444,7 @@
                         ]
                     },
                     {
-                        "name": "Mobile",
+                        "name": "Deployment",
                         "subtags": [
                             {
                                 "name": "iOS App"
@@ -684,10 +459,10 @@
                 "time": "2025-11-17",
                 "tags": [
                     {
-                        "name": "Team & Enterprise",
+                        "name": "Team",
                         "subtags": [
                             {
-                                "name": "Enterprise Plan"
+                                "name": "Enterprise"
                             }
                         ]
                     }
@@ -705,22 +480,9 @@
                                 "name": "MCP"
                             },
                             {
-                                "name": "Stripe"
-                            },
-                            {
                                 "name": "Supabase"
-                            },
-                            {
-                                "name": "Neon"
-                            },
-                            {
-                                "name": "Upstash"
                             }
                         ]
-                    },
-                    {
-                        "name": "Database",
-                        "subtags": []
                     }
                 ]
             },
@@ -745,10 +507,13 @@
                 "time": "2025-11-05",
                 "tags": [
                     {
-                        "name": "Billing & Credits",
+                        "name": "Billing",
                         "subtags": [
                             {
-                                "name": "Credits"
+                                "name": "Usage Quota"
+                            },
+                            {
+                                "name": "Subscription"
                             }
                         ]
                     }
@@ -760,24 +525,18 @@
                 "time": "2025-10-31",
                 "tags": [
                     {
-                        "name": "Team & Enterprise",
+                        "name": "Billing",
                         "subtags": [
                             {
-                                "name": "Business Plan"
+                                "name": "Subscription"
                             }
                         ]
                     },
                     {
-                        "name": "Billing & Credits",
+                        "name": "Team",
                         "subtags": [
                             {
-                                "name": "Pricing"
-                            },
-                            {
-                                "name": "Subscription"
-                            },
-                            {
-                                "name": "Credits"
+                                "name": "Team Management"
                             }
                         ]
                     }
@@ -812,10 +571,10 @@
                         ]
                     },
                     {
-                        "name": "UI/UX",
+                        "name": "Agent",
                         "subtags": [
                             {
-                                "name": "Onboarding"
+                                "name": "Automation"
                             }
                         ]
                     }
@@ -834,14 +593,6 @@
                             },
                             {
                                 "name": "Token Usage"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Dashboard"
                             }
                         ]
                     }
@@ -871,7 +622,7 @@
                 "time": "2025-10-30",
                 "tags": [
                     {
-                        "name": "Media Generation",
+                        "name": "Media",
                         "subtags": [
                             {
                                 "name": "Image Edit"
@@ -897,6 +648,9 @@
                         "name": "Performance",
                         "subtags": [
                             {
+                                "name": "Speed"
+                            },
+                            {
                                 "name": "Loading"
                             }
                         ]
@@ -909,18 +663,10 @@
                 "time": "2025-10-28",
                 "tags": [
                     {
-                        "name": "Community",
+                        "name": "Billing",
                         "subtags": [
                             {
-                                "name": "Explore"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Billing & Credits",
-                        "subtags": [
-                            {
-                                "name": "Credits"
+                                "name": "Referral"
                             }
                         ]
                     }
@@ -932,13 +678,13 @@
                 "time": "2025-10-27",
                 "tags": [
                     {
-                        "name": "Billing & Credits",
+                        "name": "Billing",
                         "subtags": [
                             {
                                 "name": "Referral"
                             },
                             {
-                                "name": "Credits"
+                                "name": "Usage Quota"
                             }
                         ]
                     }
@@ -950,16 +696,12 @@
                 "time": "2025-10-24",
                 "tags": [
                     {
-                        "name": "Billing & Credits",
+                        "name": "Billing",
                         "subtags": [
                             {
-                                "name": "Pricing"
+                                "name": "Subscription"
                             }
                         ]
-                    },
-                    {
-                        "name": "Team & Enterprise",
-                        "subtags": []
                     }
                 ]
             },
@@ -969,7 +711,7 @@
                 "time": "2025-10-23",
                 "tags": [
                     {
-                        "name": "Mobile",
+                        "name": "Deployment",
                         "subtags": [
                             {
                                 "name": "iOS App"
@@ -1002,10 +744,10 @@
                         "name": "Editor",
                         "subtags": [
                             {
-                                "name": "Markdown Preview"
+                                "name": "Preview"
                             },
                             {
-                                "name": "SVG Preview"
+                                "name": "Code Editor"
                             }
                         ]
                     }
@@ -1021,12 +763,11 @@
                         "subtags": [
                             {
                                 "name": "Plan Mode"
+                            },
+                            {
+                                "name": "Automation"
                             }
                         ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
                     }
                 ]
             },
@@ -1042,10 +783,6 @@
                                 "name": "shadcn"
                             }
                         ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
                     }
                 ]
             },
@@ -1055,18 +792,10 @@
                 "time": "2025-10-01",
                 "tags": [
                     {
-                        "name": "Billing & Credits",
+                        "name": "Billing",
                         "subtags": [
                             {
-                                "name": "Credits"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Agent",
-                        "subtags": [
-                            {
-                                "name": "Automation"
+                                "name": "Usage Quota"
                             }
                         ]
                     }

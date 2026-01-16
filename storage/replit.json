@@ -10,7 +10,7 @@
                 "title": "Matt Palmer",
                 "description": "Head of Developer Relations",
                 "time": "2026-01-09",
-                "tags": []
+                "tags": "None"
             },
             {
                 "title": "Automation preview for Agent users",
@@ -22,12 +22,11 @@
                         "subtags": [
                             {
                                 "name": "Automation"
+                            },
+                            {
+                                "name": "Agent Mode"
                             }
                         ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
                     }
                 ]
             },
@@ -37,18 +36,18 @@
                 "time": "2026-01-09",
                 "tags": [
                     {
-                        "name": "Team & Enterprise",
+                        "name": "Auth",
                         "subtags": [
                             {
-                                "name": "Permissions"
+                                "name": "Access Control"
                             }
                         ]
                     },
                     {
-                        "name": "Billing & Credits",
+                        "name": "Billing",
                         "subtags": [
                             {
-                                "name": "Pricing"
+                                "name": "Usage Quota"
                             }
                         ]
                     }
@@ -60,14 +59,6 @@
                 "time": "2026-01-09",
                 "tags": [
                     {
-                        "name": "Billing & Credits",
-                        "subtags": [
-                            {
-                                "name": "Subscription"
-                            }
-                        ]
-                    },
-                    {
                         "name": "Deployment",
                         "subtags": [
                             {
@@ -76,8 +67,12 @@
                         ]
                     },
                     {
-                        "name": "UI/UX",
-                        "subtags": []
+                        "name": "Billing",
+                        "subtags": [
+                            {
+                                "name": "Subscription"
+                            }
+                        ]
                     }
                 ]
             },
@@ -91,12 +86,11 @@
                         "subtags": [
                             {
                                 "name": "Agent Mode"
+                            },
+                            {
+                                "name": "Voice Input"
                             }
                         ]
-                    },
-                    {
-                        "name": "AI Model",
-                        "subtags": []
                     }
                 ]
             },
@@ -118,25 +112,6 @@
                                 "name": "Google"
                             }
                         ]
-                    },
-                    {
-                        "name": "Integration",
-                        "subtags": [
-                            {
-                                "name": "OpenAI"
-                            },
-                            {
-                                "name": "Anthropic"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Media Generation",
-                        "subtags": [
-                            {
-                                "name": "Image Generation"
-                            }
-                        ]
                     }
                 ]
             },
@@ -144,13 +119,13 @@
                 "title": "Matt Palmer",
                 "description": "Head of Developer Relations",
                 "time": "2026-01-02",
-                "tags": []
+                "tags": "None"
             },
             {
                 "title": "Matt Palmer",
                 "description": "Head of Developer Relations",
                 "time": "2025-12-26",
-                "tags": []
+                "tags": "None"
             },
             {
                 "title": "Gift cards",
@@ -158,7 +133,7 @@
                 "time": "2025-12-26",
                 "tags": [
                     {
-                        "name": "Billing & Credits",
+                        "name": "Billing",
                         "subtags": [
                             {
                                 "name": "Gift Cards"
@@ -180,25 +155,6 @@
                             },
                             {
                                 "name": "Project Analytics"
-                            },
-                            {
-                                "name": "Creator Analytics"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Community",
-                        "subtags": [
-                            {
-                                "name": "Creator Profile"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Dashboard"
                             }
                         ]
                     }
@@ -210,18 +166,10 @@
                 "time": "2025-12-26",
                 "tags": [
                     {
-                        "name": "Integration",
+                        "name": "AI Model",
                         "subtags": [
                             {
                                 "name": "OpenAI"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Agent",
-                        "subtags": [
-                            {
-                                "name": "Agent Mode"
                             }
                         ]
                     }
@@ -233,13 +181,10 @@
                 "time": "2025-12-26",
                 "tags": [
                     {
-                        "name": "Billing & Credits",
+                        "name": "Billing",
                         "subtags": [
                             {
-                                "name": "Credits"
-                            },
-                            {
-                                "name": "Pricing"
+                                "name": "Usage Quota"
                             }
                         ]
                     }
@@ -254,7 +199,7 @@
                         "name": "Agent",
                         "subtags": [
                             {
-                                "name": "Fast Mode"
+                                "name": "Agent Mode"
                             }
                         ]
                     },
@@ -293,17 +238,14 @@
                         "subtags": [
                             {
                                 "name": "Security Scan"
-                            },
-                            {
-                                "name": "Vulnerability Patch"
                             }
                         ]
                     },
                     {
-                        "name": "Team & Enterprise",
+                        "name": "Team",
                         "subtags": [
                             {
-                                "name": "Enterprise Plan"
+                                "name": "Enterprise"
                             }
                         ]
                     }
@@ -313,7 +255,7 @@
                 "title": "Matt Palmer",
                 "description": "Head of Developer Relations",
                 "time": "2025-12-19",
-                "tags": []
+                "tags": "None"
             },
             {
                 "title": "Documentation UI Refresh",
@@ -336,10 +278,10 @@
                 "time": "2025-12-19",
                 "tags": [
                     {
-                        "name": "UI/UX",
+                        "name": "Editor",
                         "subtags": [
                             {
-                                "name": "Navigation"
+                                "name": "Console"
                             }
                         ]
                     }
@@ -357,10 +299,6 @@
                                 "name": "MCP"
                             }
                         ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
                     }
                 ]
             },
@@ -371,7 +309,11 @@
                 "tags": [
                     {
                         "name": "UI/UX",
-                        "subtags": []
+                        "subtags": [
+                            {
+                                "name": "Themes"
+                            }
+                        ]
                     }
                 ]
             },
@@ -379,7 +321,7 @@
                 "title": "Matt Palmer",
                 "description": "Head of Developer Relations",
                 "time": "2025-12-12",
-                "tags": []
+                "tags": "None"
             },
             {
                 "title": "Agent now supports custom MCP servers",
@@ -387,18 +329,18 @@
                 "time": "2025-12-12",
                 "tags": [
                     {
-                        "name": "Integration",
-                        "subtags": [
-                            {
-                                "name": "MCP"
-                            }
-                        ]
-                    },
-                    {
                         "name": "Agent",
                         "subtags": [
                             {
                                 "name": "Agent Mode"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Integration",
+                        "subtags": [
+                            {
+                                "name": "MCP"
                             }
                         ]
                     }
@@ -410,24 +352,20 @@
                 "time": "2025-12-12",
                 "tags": [
                     {
+                        "name": "Team",
+                        "subtags": [
+                            {
+                                "name": "Enterprise"
+                            }
+                        ]
+                    },
+                    {
                         "name": "Integration",
                         "subtags": [
                             {
                                 "name": "Plaid"
                             }
                         ]
-                    },
-                    {
-                        "name": "Team & Enterprise",
-                        "subtags": [
-                            {
-                                "name": "Enterprise Plan"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Agent",
-                        "subtags": []
                     }
                 ]
             },
@@ -435,7 +373,7 @@
                 "title": "Matt Palmer",
                 "description": "Head of Developer Relations",
                 "time": "2025-12-05",
-                "tags": []
+                "tags": "None"
             },
             {
                 "title": "Build full-stack mobile apps with Agent",
@@ -451,36 +389,10 @@
                         ]
                     },
                     {
-                        "name": "Mobile",
+                        "name": "Backend",
                         "subtags": [
                             {
-                                "name": "iOS App"
-                            },
-                            {
-                                "name": "Android App"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Database",
-                        "subtags": [
-                            {
-                                "name": "Database Editor"
-                            },
-                            {
-                                "name": "Storage"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Integration",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Deployment",
-                        "subtags": [
-                            {
-                                "name": "Hosting"
+                                "name": "Database"
                             }
                         ]
                     }
@@ -492,12 +404,12 @@
                 "time": "2025-12-05",
                 "tags": [
                     {
-                        "name": "Database",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Performance",
-                        "subtags": []
+                        "name": "Backend",
+                        "subtags": [
+                            {
+                                "name": "Database"
+                            }
+                        ]
                     }
                 ]
             },
@@ -514,9 +426,6 @@
                             },
                             {
                                 "name": "Agent Mode"
-                            },
-                            {
-                                "name": "Automation"
                             }
                         ]
                     }
@@ -529,7 +438,11 @@
                 "tags": [
                     {
                         "name": "Integration",
-                        "subtags": []
+                        "subtags": [
+                            {
+                                "name": "MCP"
+                            }
+                        ]
                     }
                 ]
             },
@@ -537,7 +450,7 @@
                 "title": "Matt Palmer",
                 "description": "Head of Developer Relations",
                 "time": "2025-11-26",
-                "tags": []
+                "tags": "None"
             },
             {
                 "title": "Stripe Integrated Payments for Core Users",
@@ -556,19 +469,7 @@
                         "name": "Agent",
                         "subtags": [
                             {
-                                "name": "Automation"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Database",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Billing & Credits",
-                        "subtags": [
-                            {
-                                "name": "Subscription"
+                                "name": "Agent Mode"
                             }
                         ]
                     }
@@ -601,7 +502,7 @@
                 "title": "Matt Palmer",
                 "description": "Head of Developer Relations",
                 "time": "2025-11-21",
-                "tags": []
+                "tags": "None"
             },
             {
                 "title": "Design Mode: Create stunning websites in under 2 minutes",
@@ -623,25 +524,6 @@
                                 "name": "Google"
                             }
                         ]
-                    },
-                    {
-                        "name": "Editor",
-                        "subtags": [
-                            {
-                                "name": "Visual Editor"
-                            },
-                            {
-                                "name": "Design View"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Performance",
-                        "subtags": [
-                            {
-                                "name": "Speed"
-                            }
-                        ]
                     }
                 ]
             },
@@ -657,14 +539,6 @@
                                 "name": "Fast Mode"
                             }
                         ]
-                    },
-                    {
-                        "name": "Performance",
-                        "subtags": [
-                            {
-                                "name": "Speed"
-                            }
-                        ]
                     }
                 ]
             },
@@ -674,18 +548,10 @@
                 "time": "2025-11-21",
                 "tags": [
                     {
-                        "name": "File & Upload",
+                        "name": "File",
                         "subtags": [
                             {
                                 "name": "File Upload"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Editor",
-                        "subtags": [
-                            {
-                                "name": "Code Editor"
                             }
                         ]
                     }
@@ -700,7 +566,10 @@
                         "name": "Integration",
                         "subtags": [
                             {
-                                "name": "Atlassian"
+                                "name": "Jira"
+                            },
+                            {
+                                "name": "Confluence"
                             }
                         ]
                     }
@@ -712,18 +581,13 @@
                 "time": "2025-11-21",
                 "tags": [
                     {
-                        "name": "Integration",
-                        "subtags": [
-                            {
-                                "name": "HoundDog"
-                            }
-                        ]
-                    },
-                    {
                         "name": "Security",
                         "subtags": [
                             {
                                 "name": "Security Scan"
+                            },
+                            {
+                                "name": "Content Moderation"
                             }
                         ]
                     }
@@ -735,18 +599,18 @@
                 "time": "2025-11-21",
                 "tags": [
                     {
-                        "name": "Integration",
-                        "subtags": [
-                            {
-                                "name": "Todoist"
-                            }
-                        ]
-                    },
-                    {
                         "name": "Agent",
                         "subtags": [
                             {
                                 "name": "Automation"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Integration",
+                        "subtags": [
+                            {
+                                "name": "Todoist"
                             }
                         ]
                     }
@@ -758,12 +622,12 @@
                 "time": "2025-11-21",
                 "tags": [
                     {
-                        "name": "Authentication",
-                        "subtags": []
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
+                        "name": "Auth",
+                        "subtags": [
+                            {
+                                "name": "Social Login"
+                            }
+                        ]
                     }
                 ]
             },
@@ -773,16 +637,12 @@
                 "time": "2025-11-21",
                 "tags": [
                     {
-                        "name": "Billing & Credits",
+                        "name": "Billing",
                         "subtags": [
                             {
                                 "name": "Subscription"
                             }
                         ]
-                    },
-                    {
-                        "name": "Integration",
-                        "subtags": []
                     }
                 ]
             },
@@ -792,28 +652,18 @@
                 "time": "2025-11-21",
                 "tags": [
                     {
-                        "name": "Integration",
+                        "name": "Backend",
                         "subtags": [
                             {
-                                "name": "BigQuery"
-                            },
-                            {
-                                "name": "Databricks"
-                            },
-                            {
-                                "name": "Snowflake"
+                                "name": "Database"
                             }
                         ]
                     },
                     {
-                        "name": "Database",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Team & Enterprise",
+                        "name": "Team",
                         "subtags": [
                             {
-                                "name": "Enterprise Plan"
+                                "name": "Enterprise"
                             }
                         ]
                     }
@@ -823,38 +673,13 @@
                 "title": "Matt Palmer",
                 "description": "Head of Developer Relations",
                 "time": "2025-11-16",
-                "tags": []
+                "tags": "None"
             },
             {
                 "title": "Azure Marketplace integration",
                 "description": "Replit is now live on Azure Marketplace! Many organizations already have dedicated budgets for Azure, and this integration allows them to use those funds directly toward Replit subscriptions and usage.\nFollowing our GCP Marketplace integration from September, this addition makes it even easier for enterprise teams to adopt Replit using their existing cloud procurement processes and budgets.\nView on Azure Marketplace",
                 "time": "2025-11-16",
-                "tags": [
-                    {
-                        "name": "Integration",
-                        "subtags": [
-                            {
-                                "name": "Azure Marketplace"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Billing & Credits",
-                        "subtags": [
-                            {
-                                "name": "Subscription"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Team & Enterprise",
-                        "subtags": [
-                            {
-                                "name": "Enterprise Plan"
-                            }
-                        ]
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "GitLab and Bitbucket support",
@@ -865,21 +690,15 @@
                         "name": "Integration",
                         "subtags": [
                             {
-                                "name": "GitLab"
-                            },
-                            {
-                                "name": "Bitbucket"
-                            },
-                            {
                                 "name": "GitHub"
                             }
                         ]
                     },
                     {
-                        "name": "Editor",
+                        "name": "Integration",
                         "subtags": [
                             {
-                                "name": "Code Editor"
+                                "name": "GitLab"
                             }
                         ]
                     }
@@ -889,7 +708,7 @@
                 "title": "Matt Palmer",
                 "description": "Head of Developer Relations",
                 "time": "2025-11-07",
-                "tags": []
+                "tags": "None"
             },
             {
                 "title": "Animated agent icon",
@@ -901,14 +720,6 @@
                         "subtags": [
                             {
                                 "name": "Agent Mode"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Notifications"
                             }
                         ]
                     }
@@ -923,18 +734,10 @@
                         "name": "Agent",
                         "subtags": [
                             {
-                                "name": "Agent Mode"
+                                "name": "Plan Mode"
                             },
                             {
-                                "name": "Plan Mode"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Dashboard"
+                                "name": "Automation"
                             }
                         ]
                     }
@@ -954,10 +757,10 @@
                         ]
                     },
                     {
-                        "name": "Editor",
+                        "name": "File",
                         "subtags": [
                             {
-                                "name": "Code Editor"
+                                "name": "File Upload"
                             }
                         ]
                     }
@@ -978,11 +781,11 @@
                     },
                     {
                         "name": "Integration",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Agent",
-                        "subtags": []
+                        "subtags": [
+                            {
+                                "name": "MCP"
+                            }
+                        ]
                     }
                 ]
             },
@@ -996,25 +799,14 @@
                         "subtags": [
                             {
                                 "name": "Usage Stats"
-                            },
-                            {
-                                "name": "Token Usage"
                             }
                         ]
                     },
                     {
-                        "name": "Team & Enterprise",
+                        "name": "Team",
                         "subtags": [
                             {
-                                "name": "Enterprise Plan"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Dashboard"
+                                "name": "Enterprise"
                             }
                         ]
                     }
@@ -1024,7 +816,7 @@
                 "title": "Matt Palmer",
                 "description": "Head of Developer Relations",
                 "time": "2025-10-31",
-                "tags": []
+                "tags": "None"
             },
             {
                 "title": "Custom domain verification improvements",
@@ -1041,22 +833,6 @@
                                 "name": "DNS"
                             }
                         ]
-                    },
-                    {
-                        "name": "Performance",
-                        "subtags": [
-                            {
-                                "name": "Speed"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Notifications"
-                            }
-                        ]
                     }
                 ]
             },
@@ -1066,10 +842,18 @@
                 "time": "2025-10-31",
                 "tags": [
                     {
-                        "name": "Database",
+                        "name": "Backend",
                         "subtags": [
                             {
-                                "name": "Soft Delete"
+                                "name": "Database"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Integration",
+                        "subtags": [
+                            {
+                                "name": "Neon"
                             }
                         ]
                     }
@@ -1081,22 +865,10 @@
                 "time": "2025-10-31",
                 "tags": [
                     {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Navigation"
-                            }
-                        ]
-                    },
-                    {
                         "name": "Integration",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Agent",
                         "subtags": [
                             {
-                                "name": "Agent Mode"
+                                "name": "MCP"
                             }
                         ]
                     }
@@ -1107,14 +879,6 @@
                 "description": "Build email workflows with the new Agentmail connector. Agent gets a dedicated inbox to track state and automate responses—perfect for support ticket systems, capturing sales inquiries, or any workflow that reacts to incoming email.",
                 "time": "2025-10-31",
                 "tags": [
-                    {
-                        "name": "Integration",
-                        "subtags": [
-                            {
-                                "name": "Agentmail"
-                            }
-                        ]
-                    },
                     {
                         "name": "Agent",
                         "subtags": [
@@ -1137,14 +901,6 @@
                                 "name": "Custom Domain"
                             }
                         ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Dashboard"
-                            }
-                        ]
                     }
                 ]
             },
@@ -1158,12 +914,6 @@
                         "subtags": [
                             {
                                 "name": "Zendesk"
-                            },
-                            {
-                                "name": "Slack"
-                            },
-                            {
-                                "name": "Linear"
                             }
                         ]
                     }
@@ -1175,16 +925,15 @@
                 "time": "2025-10-31",
                 "tags": [
                     {
-                        "name": "Team & Enterprise",
+                        "name": "Team",
                         "subtags": [
+                            {
+                                "name": "Team Management"
+                            },
                             {
                                 "name": "Workspace"
                             }
                         ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
                     }
                 ]
             },
@@ -1198,15 +947,8 @@
                         "subtags": [
                             {
                                 "name": "Salesforce"
-                            },
-                            {
-                                "name": "ClickUp"
                             }
                         ]
-                    },
-                    {
-                        "name": "Team & Enterprise",
-                        "subtags": []
                     }
                 ]
             },
@@ -1214,7 +956,7 @@
                 "title": "Matt Palmer",
                 "description": "Head of Developer Relations",
                 "time": "2025-10-24",
-                "tags": []
+                "tags": "None"
             },
             {
                 "title": "Build Score rating system",
@@ -1222,26 +964,18 @@
                 "time": "2025-10-24",
                 "tags": [
                     {
+                        "name": "Agent",
+                        "subtags": [
+                            {
+                                "name": "Agent Mode"
+                            }
+                        ]
+                    },
+                    {
                         "name": "Analytics",
                         "subtags": [
                             {
                                 "name": "Usage Stats"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Community",
-                        "subtags": [
-                            {
-                                "name": "Reactions"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Notifications"
                             }
                         ]
                     }
@@ -1271,7 +1005,7 @@
                 "time": "2025-10-24",
                 "tags": [
                     {
-                        "name": "Authentication",
+                        "name": "Auth",
                         "subtags": [
                             {
                                 "name": "SSO"
@@ -1279,10 +1013,10 @@
                         ]
                     },
                     {
-                        "name": "Team & Enterprise",
+                        "name": "Team",
                         "subtags": [
                             {
-                                "name": "Enterprise Plan"
+                                "name": "Enterprise"
                             }
                         ]
                     }
@@ -1292,7 +1026,7 @@
                 "title": "Matt Palmer",
                 "description": "Head of Developer Relations",
                 "time": "2025-10-17",
-                "tags": []
+                "tags": "None"
             },
             {
                 "title": "Build mode redesign for React apps",
@@ -1300,43 +1034,20 @@
                 "time": "2025-10-17",
                 "tags": [
                     {
-                        "name": "Agent",
-                        "subtags": [
-                            {
-                                "name": "Design Mode"
-                            }
-                        ]
-                    },
-                    {
                         "name": "Editor",
                         "subtags": [
                             {
                                 "name": "Visual Editor"
-                            },
-                            {
-                                "name": "Design View"
                             }
                         ]
                     },
                     {
-                        "name": "Media Generation",
+                        "name": "Media",
                         "subtags": [
                             {
-                                "name": "Image Generation"
+                                "name": "Image Upload"
                             }
                         ]
-                    },
-                    {
-                        "name": "Framework",
-                        "subtags": [
-                            {
-                                "name": "React"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
                     }
                 ]
             },
@@ -1346,26 +1057,10 @@
                 "time": "2025-10-17",
                 "tags": [
                     {
-                        "name": "Integration",
-                        "subtags": [
-                            {
-                                "name": "ClickUp"
-                            }
-                        ]
-                    },
-                    {
                         "name": "Agent",
                         "subtags": [
                             {
                                 "name": "Automation"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Team & Enterprise",
-                        "subtags": [
-                            {
-                                "name": "Enterprise Plan"
                             }
                         ]
                     }
@@ -1375,7 +1070,7 @@
                 "title": "Matt Palmer",
                 "description": "Head of Developer Relations",
                 "time": "2025-10-10",
-                "tags": []
+                "tags": "None"
             },
             {
                 "title": "Agent usage cost visibility",
@@ -1394,15 +1089,7 @@
                         "name": "Analytics",
                         "subtags": [
                             {
-                                "name": "Token Usage"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Billing & Credits",
-                        "subtags": [
-                            {
-                                "name": "Credits"
+                                "name": "Usage Stats"
                             }
                         ]
                     }
@@ -1417,13 +1104,12 @@
                         "name": "Editor",
                         "subtags": [
                             {
+                                "name": "Visual Editor"
+                            },
+                            {
                                 "name": "Keyboard Shortcuts"
                             }
                         ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
                     }
                 ]
             },
@@ -1437,14 +1123,6 @@
                         "subtags": [
                             {
                                 "name": "Agent Mode"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Performance",
-                        "subtags": [
-                            {
-                                "name": "Speed"
                             }
                         ]
                     }
@@ -1470,14 +1148,6 @@
                                 "name": "Speed"
                             }
                         ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Notifications"
-                            }
-                        ]
                     }
                 ]
             },
@@ -1491,9 +1161,6 @@
                         "subtags": [
                             {
                                 "name": "Security Scan"
-                            },
-                            {
-                                "name": "Vulnerability Patch"
                             }
                         ]
                     }
@@ -1505,18 +1172,18 @@
                 "time": "2025-10-10",
                 "tags": [
                     {
-                        "name": "Agent",
-                        "subtags": [
-                            {
-                                "name": "Agent Mode"
-                            }
-                        ]
-                    },
-                    {
                         "name": "Editor",
                         "subtags": [
                             {
                                 "name": "Console"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Agent",
+                        "subtags": [
+                            {
+                                "name": "Agent Mode"
                             }
                         ]
                     }
@@ -1528,24 +1195,18 @@
                 "time": "2025-10-10",
                 "tags": [
                     {
-                        "name": "Team & Enterprise",
+                        "name": "Team",
                         "subtags": [
                             {
                                 "name": "Team Management"
-                            },
-                            {
-                                "name": "Permissions"
-                            },
-                            {
-                                "name": "Roles"
                             }
                         ]
                     },
                     {
-                        "name": "Billing & Credits",
+                        "name": "Auth",
                         "subtags": [
                             {
-                                "name": "Subscription"
+                                "name": "Access Control"
                             }
                         ]
                     }
@@ -1555,7 +1216,7 @@
                 "title": "Matt Palmer",
                 "description": "Head of Developer Relations",
                 "time": "2025-10-03",
-                "tags": []
+                "tags": "None"
             },
             {
                 "title": "Vercel import integration",
@@ -1567,14 +1228,9 @@
                         "subtags": [
                             {
                                 "name": "Vercel"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Deployment",
-                        "subtags": [
+                            },
                             {
-                                "name": "Code Download"
+                                "name": "Netlify"
                             }
                         ]
                     }
@@ -1586,40 +1242,10 @@
                 "time": "2025-10-03",
                 "tags": [
                     {
-                        "name": "Integration",
-                        "subtags": [
-                            {
-                                "name": "GitHub"
-                            },
-                            {
-                                "name": "GitLab"
-                            },
-                            {
-                                "name": "Bitbucket"
-                            }
-                        ]
-                    },
-                    {
                         "name": "Editor",
                         "subtags": [
                             {
                                 "name": "Code Editor"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Deployment",
-                        "subtags": [
-                            {
-                                "name": "Publishing"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Team & Enterprise",
-                        "subtags": [
-                            {
-                                "name": "Workspace"
                             }
                         ]
                     }
@@ -1638,15 +1264,8 @@
                             },
                             {
                                 "name": "Stripe"
-                            },
-                            {
-                                "name": "Figma"
                             }
                         ]
-                    },
-                    {
-                        "name": "Agent",
-                        "subtags": []
                     }
                 ]
             },
@@ -1671,28 +1290,10 @@
                 "time": "2025-10-03",
                 "tags": [
                     {
-                        "name": "Team & Enterprise",
+                        "name": "Auth",
                         "subtags": [
                             {
-                                "name": "Enterprise Plan"
-                            },
-                            {
-                                "name": "Permissions"
-                            },
-                            {
-                                "name": "Roles"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Integration",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Authentication",
-                        "subtags": [
-                            {
-                                "name": "OAuth"
+                                "name": "Access Control"
                             }
                         ]
                     }
@@ -1702,7 +1303,7 @@
                 "title": "Matt Palmer",
                 "description": "Head of Developer Relations",
                 "time": "2025-09-26",
-                "tags": []
+                "tags": "None"
             },
             {
                 "title": "Security scan in deployment",
@@ -1714,9 +1315,6 @@
                         "subtags": [
                             {
                                 "name": "Security Scan"
-                            },
-                            {
-                                "name": "Vulnerability Patch"
                             }
                         ]
                     },
@@ -1745,17 +1343,6 @@
                                 "name": "Automation"
                             }
                         ]
-                    },
-                    {
-                        "name": "Integration",
-                        "subtags": [
-                            {
-                                "name": "Slack"
-                            },
-                            {
-                                "name": "Telegram"
-                            }
-                        ]
                     }
                 ]
             },
@@ -1773,19 +1360,12 @@
                         ]
                     },
                     {
-                        "name": "Team & Enterprise",
+                        "name": "Team",
                         "subtags": [
                             {
-                                "name": "Enterprise Plan"
-                            },
-                            {
-                                "name": "Permissions"
+                                "name": "Enterprise"
                             }
                         ]
-                    },
-                    {
-                        "name": "Deployment",
-                        "subtags": []
                     }
                 ]
             },
@@ -1793,7 +1373,7 @@
                 "title": "Matt Palmer",
                 "description": "Head of Developer Relations",
                 "time": "2025-09-19",
-                "tags": []
+                "tags": "None"
             },
             {
                 "title": "Autonomy level control for Agent",
@@ -1805,6 +1385,9 @@
                         "subtags": [
                             {
                                 "name": "Agent Mode"
+                            },
+                            {
+                                "name": "Automation"
                             }
                         ]
                     }
@@ -1820,22 +1403,9 @@
                         "subtags": [
                             {
                                 "name": "Security Scan"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "File & Upload",
-                        "subtags": [
+                            },
                             {
-                                "name": "File Upload"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Integration",
-                        "subtags": [
-                            {
-                                "name": "NPM"
+                                "name": "Content Moderation"
                             }
                         ]
                     }
@@ -1851,14 +1421,9 @@
                         "subtags": [
                             {
                                 "name": "Security Scan"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Integration",
-                        "subtags": [
+                            },
                             {
-                                "name": "NPM"
+                                "name": "Content Moderation"
                             }
                         ]
                     }
@@ -1870,16 +1435,12 @@
                 "time": "2025-09-19",
                 "tags": [
                     {
-                        "name": "Team & Enterprise",
+                        "name": "Team",
                         "subtags": [
                             {
                                 "name": "Team Management"
                             }
                         ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
                     }
                 ]
             },
@@ -1890,15 +1451,19 @@
                 "tags": [
                     {
                         "name": "Agent",
-                        "subtags": []
+                        "subtags": [
+                            {
+                                "name": "Agent Mode"
+                            }
+                        ]
                     },
                     {
-                        "name": "Integration",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Mobile",
-                        "subtags": []
+                        "name": "UI/UX",
+                        "subtags": [
+                            {
+                                "name": "Mobile UI"
+                            }
+                        ]
                     }
                 ]
             },
@@ -1908,11 +1473,8 @@
                 "time": "2025-09-19",
                 "tags": [
                     {
-                        "name": "Billing & Credits",
+                        "name": "Billing",
                         "subtags": [
-                            {
-                                "name": "Pricing"
-                            },
                             {
                                 "name": "Subscription"
                             }
@@ -1932,10 +1494,6 @@
                                 "name": "Publishing"
                             }
                         ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
                     }
                 ]
             },
@@ -1960,18 +1518,18 @@
                 "time": "2025-09-19",
                 "tags": [
                     {
-                        "name": "Team & Enterprise",
+                        "name": "Auth",
                         "subtags": [
                             {
-                                "name": "Team Management"
+                                "name": "Access Control"
                             }
                         ]
                     },
                     {
-                        "name": "Security",
+                        "name": "Team",
                         "subtags": [
                             {
-                                "name": "Access Control"
+                                "name": "Team Management"
                             }
                         ]
                     }
@@ -1981,13 +1539,13 @@
                 "title": "Matt Palmer",
                 "description": "Head of Developer Relations",
                 "time": "2025-09-12",
-                "tags": []
+                "tags": "None"
             },
             {
                 "title": "Matt Palmer",
                 "description": "Head of Developer Relations",
                 "time": "2025-09-05",
-                "tags": []
+                "tags": "None"
             },
             {
                 "title": "General Agent",
@@ -1999,18 +1557,9 @@
                         "subtags": [
                             {
                                 "name": "Agent Mode"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Framework",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Integration",
-                        "subtags": [
+                            },
                             {
-                                "name": "GitHub"
+                                "name": "Automation"
                             }
                         ]
                     }
@@ -2037,26 +1586,10 @@
                 "time": "2025-09-05",
                 "tags": [
                     {
-                        "name": "Integration",
+                        "name": "Billing",
                         "subtags": [
                             {
-                                "name": "GCP Marketplace"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Team & Enterprise",
-                        "subtags": [
-                            {
-                                "name": "Enterprise Plan"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Billing & Credits",
-                        "subtags": [
-                            {
-                                "name": "Pricing"
+                                "name": "Subscription"
                             }
                         ]
                     }
@@ -2066,7 +1599,7 @@
                 "title": "Matt Palmer",
                 "description": "Head of Developer Relations",
                 "time": "2025-08-29",
-                "tags": []
+                "tags": "None"
             },
             {
                 "title": "App themes",
@@ -2080,14 +1613,6 @@
                                 "name": "Themes"
                             }
                         ]
-                    },
-                    {
-                        "name": "Team & Enterprise",
-                        "subtags": [
-                            {
-                                "name": "Project Sharing"
-                            }
-                        ]
                     }
                 ]
             },
@@ -2097,18 +1622,18 @@
                 "time": "2025-08-29",
                 "tags": [
                     {
-                        "name": "Community",
+                        "name": "Team",
                         "subtags": [
                             {
-                                "name": "Templates"
+                                "name": "Project Sharing"
                             }
                         ]
                     },
                     {
-                        "name": "Team & Enterprise",
+                        "name": "Community",
                         "subtags": [
                             {
-                                "name": "Project Sharing"
+                                "name": "Social Share"
                             }
                         ]
                     }
@@ -2124,14 +1649,9 @@
                         "subtags": [
                             {
                                 "name": "Agent Mode"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Performance",
-                        "subtags": [
+                            },
                             {
-                                "name": "Speed"
+                                "name": "Tasks"
                             }
                         ]
                     }
@@ -2149,14 +1669,6 @@
                                 "name": "Security Scan"
                             }
                         ]
-                    },
-                    {
-                        "name": "Team & Enterprise",
-                        "subtags": [
-                            {
-                                "name": "Enterprise Plan"
-                            }
-                        ]
                     }
                 ]
             },
@@ -2166,18 +1678,10 @@
                 "time": "2025-08-29",
                 "tags": [
                     {
-                        "name": "Billing & Credits",
+                        "name": "Billing",
                         "subtags": [
                             {
                                 "name": "Subscription"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Team & Enterprise",
-                        "subtags": [
-                            {
-                                "name": "Workspace"
                             }
                         ]
                     }
@@ -2187,7 +1691,7 @@
                 "title": "Matt Palmer",
                 "description": "Head of Developer Relations",
                 "time": "2025-08-22",
-                "tags": []
+                "tags": "None"
             },
             {
                 "title": "SOC 2 Type II certification",
@@ -2201,14 +1705,6 @@
                                 "name": "Security Scan"
                             }
                         ]
-                    },
-                    {
-                        "name": "Team & Enterprise",
-                        "subtags": [
-                            {
-                                "name": "Enterprise Plan"
-                            }
-                        ]
                     }
                 ]
             },
@@ -2218,7 +1714,7 @@
                 "time": "2025-08-22",
                 "tags": [
                     {
-                        "name": "Authentication",
+                        "name": "Auth",
                         "subtags": [
                             {
                                 "name": "SSO"
@@ -2226,13 +1722,10 @@
                         ]
                     },
                     {
-                        "name": "Team & Enterprise",
+                        "name": "Team",
                         "subtags": [
                             {
-                                "name": "Enterprise Plan"
-                            },
-                            {
-                                "name": "Permissions"
+                                "name": "Enterprise"
                             }
                         ]
                     }
@@ -2242,13 +1735,13 @@
                 "title": "Matt Palmer",
                 "description": "Head of Developer Relations",
                 "time": "2025-08-15",
-                "tags": []
+                "tags": "None"
             },
             {
                 "title": "Matt Palmer",
                 "description": "Head of Developer Relations",
                 "time": "2025-08-08",
-                "tags": []
+                "tags": "None"
             },
             {
                 "title": "Improved filesystem search",
@@ -2267,15 +1760,7 @@
                         "name": "Editor",
                         "subtags": [
                             {
-                                "name": "Code Editor"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Community",
-                        "subtags": [
-                            {
-                                "name": "Search"
+                                "name": "Search Replace"
                             }
                         ]
                     }
@@ -2287,34 +1772,18 @@
                 "time": "2025-08-08",
                 "tags": [
                     {
+                        "name": "Backend",
+                        "subtags": [
+                            {
+                                "name": "Storage"
+                            }
+                        ]
+                    },
+                    {
                         "name": "Agent",
                         "subtags": [
                             {
-                                "name": "Agent Mode"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Integration",
-                        "subtags": [
-                            {
-                                "name": "Object Storage"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "File & Upload",
-                        "subtags": [
-                            {
-                                "name": "File Upload"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Authentication",
-                        "subtags": [
-                            {
-                                "name": "Access Control"
+                                "name": "Automation"
                             }
                         ]
                     }
@@ -2332,10 +1801,6 @@
                                 "name": "Visual Editor"
                             }
                         ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
                     }
                 ]
             },
@@ -2345,16 +1810,12 @@
                 "time": "2025-08-08",
                 "tags": [
                     {
-                        "name": "Editor",
+                        "name": "Agent",
                         "subtags": [
                             {
-                                "name": "Code Editor"
+                                "name": "Suggested Actions"
                             }
                         ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
                     }
                 ]
             },
@@ -2364,7 +1825,7 @@
                 "time": "2025-08-08",
                 "tags": [
                     {
-                        "name": "Media Generation",
+                        "name": "Media",
                         "subtags": [
                             {
                                 "name": "Image Generation"
@@ -2379,7 +1840,7 @@
                 "time": "2025-08-08",
                 "tags": [
                     {
-                        "name": "Mobile",
+                        "name": "Deployment",
                         "subtags": [
                             {
                                 "name": "iOS App"
@@ -2402,7 +1863,7 @@
                 "time": "2025-08-08",
                 "tags": [
                     {
-                        "name": "Team & Enterprise",
+                        "name": "Team",
                         "subtags": [
                             {
                                 "name": "Workspace"
@@ -2420,16 +1881,12 @@
                 "time": "2025-08-08",
                 "tags": [
                     {
-                        "name": "File & Upload",
+                        "name": "Deployment",
                         "subtags": [
                             {
-                                "name": "File Upload"
+                                "name": "Code Download"
                             }
                         ]
-                    },
-                    {
-                        "name": "Team & Enterprise",
-                        "subtags": []
                     }
                 ]
             },
@@ -2448,17 +1905,6 @@
                                 "name": "DNS"
                             }
                         ]
-                    },
-                    {
-                        "name": "Integration",
-                        "subtags": [
-                            {
-                                "name": "SendGrid"
-                            },
-                            {
-                                "name": "Resend"
-                            }
-                        ]
                     }
                 ]
             },
@@ -2468,7 +1914,7 @@
                 "time": "2025-08-08",
                 "tags": [
                     {
-                        "name": "Authentication",
+                        "name": "Auth",
                         "subtags": [
                             {
                                 "name": "SCIM"
@@ -2476,16 +1922,10 @@
                         ]
                     },
                     {
-                        "name": "Team & Enterprise",
+                        "name": "Team",
                         "subtags": [
                             {
-                                "name": "Team Management"
-                            },
-                            {
-                                "name": "Roles"
-                            },
-                            {
-                                "name": "Enterprise Plan"
+                                "name": "Enterprise"
                             }
                         ]
                     }
@@ -2495,7 +1935,7 @@
                 "title": "Matt Palmer",
                 "description": "Head of Developer Relations",
                 "time": "2025-08-01",
-                "tags": []
+                "tags": "None"
             },
             {
                 "title": "Agent now has access to Replit Docs",
@@ -2509,10 +1949,6 @@
                                 "name": "Agent Mode"
                             }
                         ]
-                    },
-                    {
-                        "name": "Integration",
-                        "subtags": []
                     }
                 ]
             },
@@ -2522,18 +1958,10 @@
                 "time": "2025-08-01",
                 "tags": [
                     {
-                        "name": "Database",
+                        "name": "Backend",
                         "subtags": [
                             {
-                                "name": "Database Editor"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Dashboard"
+                                "name": "Database"
                             }
                         ]
                     }
@@ -2549,9 +1977,6 @@
                         "subtags": [
                             {
                                 "name": "Themes"
-                            },
-                            {
-                                "name": "Dark Mode"
                             }
                         ]
                     }
@@ -2563,24 +1988,12 @@
                 "time": "2025-08-01",
                 "tags": [
                     {
-                        "name": "Agent",
-                        "subtags": [
-                            {
-                                "name": "Design Mode"
-                            }
-                        ]
-                    },
-                    {
                         "name": "Editor",
                         "subtags": [
                             {
                                 "name": "Visual Editor"
                             }
                         ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
                     }
                 ]
             },
@@ -2588,7 +2001,7 @@
                 "title": "Matt Palmer",
                 "description": "Head of Developer Relations",
                 "time": "2025-07-25",
-                "tags": []
+                "tags": "None"
             },
             {
                 "title": "Queue",
@@ -2630,22 +2043,13 @@
                 "title": "Improved proof of work UI",
                 "description": "We’ve refreshed our proof of work interface with an intuitive design and helpful tooltips. This update makes it easier to understand how proof of work affects your experience and provides clearer guidance on what’s happening behind the scenes.",
                 "time": "2025-07-25",
-                "tags": [
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Dashboard"
-                            }
-                        ]
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "Matt Palmer",
                 "description": "Head of Developer Relations",
                 "time": "2025-07-18",
-                "tags": []
+                "tags": "None"
             },
             {
                 "title": "Domain purchasing",
@@ -2668,18 +2072,18 @@
                 "time": "2025-07-18",
                 "tags": [
                     {
-                        "name": "Performance",
-                        "subtags": [
-                            {
-                                "name": "Speed"
-                            }
-                        ]
-                    },
-                    {
                         "name": "AI Model",
                         "subtags": [
                             {
                                 "name": "Model Switching"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Performance",
+                        "subtags": [
+                            {
+                                "name": "Speed"
                             }
                         ]
                     }
@@ -2691,10 +2095,6 @@
                 "time": "2025-07-18",
                 "tags": [
                     {
-                        "name": "Mobile",
-                        "subtags": []
-                    },
-                    {
                         "name": "UI/UX",
                         "subtags": [
                             {
@@ -2703,10 +2103,10 @@
                         ]
                     },
                     {
-                        "name": "Analytics",
+                        "name": "Billing",
                         "subtags": [
                             {
-                                "name": "Usage Stats"
+                                "name": "Usage Quota"
                             }
                         ]
                     }
@@ -2716,7 +2116,7 @@
                 "title": "Matt Palmer",
                 "description": "Head of Developer Relations",
                 "time": "2025-07-11",
-                "tags": []
+                "tags": "None"
             },
             {
                 "title": "replit.md documentation",
@@ -2728,6 +2128,9 @@
                         "subtags": [
                             {
                                 "name": "Agent Mode"
+                            },
+                            {
+                                "name": "Automation"
                             }
                         ]
                     }
@@ -2742,16 +2145,12 @@
                         "name": "Deployment",
                         "subtags": [
                             {
-                                "name": "Preview"
+                                "name": "Hosting"
                             }
                         ]
                     },
                     {
-                        "name": "UI/UX",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Security",
+                        "name": "Auth",
                         "subtags": [
                             {
                                 "name": "Access Control"
@@ -2772,22 +2171,6 @@
                                 "name": "Agent Mode"
                             }
                         ]
-                    },
-                    {
-                        "name": "Performance",
-                        "subtags": [
-                            {
-                                "name": "Speed"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Billing & Credits",
-                        "subtags": [
-                            {
-                                "name": "Credits"
-                            }
-                        ]
                     }
                 ]
             },
@@ -2795,7 +2178,7 @@
                 "title": "Matt Palmer",
                 "description": "Head of Developer Relations",
                 "time": "2025-07-04",
-                "tags": []
+                "tags": "None"
             },
             {
                 "title": "Web Search for Agent",
@@ -2812,7 +2195,11 @@
                     },
                     {
                         "name": "Integration",
-                        "subtags": []
+                        "subtags": [
+                            {
+                                "name": "Perplexity"
+                            }
+                        ]
                     }
                 ]
             },
@@ -2826,6 +2213,9 @@
                         "subtags": [
                             {
                                 "name": "Agent Mode"
+                            },
+                            {
+                                "name": "Automation"
                             }
                         ]
                     }
@@ -2837,10 +2227,18 @@
                 "time": "2025-07-04",
                 "tags": [
                     {
-                        "name": "Billing & Credits",
+                        "name": "Billing",
                         "subtags": [
                             {
-                                "name": "Pricing"
+                                "name": "Usage Quota"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Agent",
+                        "subtags": [
+                            {
+                                "name": "Automation"
                             }
                         ]
                     }
@@ -2850,12 +2248,7 @@
                 "title": "Improved icons",
                 "description": "Enjoy faster, more beautiful App icons. We’ve upgraded to a curated selection of pre-generated icons with smart semantic matching and colorful designs that load instantly.",
                 "time": "2025-07-04",
-                "tags": [
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "Gallery",
@@ -2881,36 +2274,10 @@
                 "time": "2025-07-04",
                 "tags": [
                     {
-                        "name": "Team & Enterprise",
+                        "name": "Team",
                         "subtags": [
                             {
                                 "name": "Team Management"
-                            },
-                            {
-                                "name": "Workspace"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Dashboard"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Deployment",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Community",
-                        "subtags": [
-                            {
-                                "name": "Search"
-                            },
-                            {
-                                "name": "Explore"
                             }
                         ]
                     }
@@ -2920,7 +2287,7 @@
                 "title": "Matt Palmer",
                 "description": "Head of Developer Relations",
                 "time": "2025-06-27",
-                "tags": []
+                "tags": "None"
             },
             {
                 "title": "Security scanner updates",
@@ -2932,17 +2299,6 @@
                         "subtags": [
                             {
                                 "name": "Security Scan"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Performance",
-                        "subtags": [
-                            {
-                                "name": "Caching"
-                            },
-                            {
-                                "name": "Speed"
                             }
                         ]
                     }
@@ -3000,21 +2356,13 @@
                 "time": "2025-06-27",
                 "tags": [
                     {
-                        "name": "Mobile",
+                        "name": "Deployment",
                         "subtags": [
                             {
                                 "name": "iOS App"
                             },
                             {
                                 "name": "Android App"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Mobile UI"
                             }
                         ]
                     }
@@ -3026,17 +2374,6 @@
                 "time": "2025-06-27",
                 "tags": [
                     {
-                        "name": "Team & Enterprise",
-                        "subtags": [
-                            {
-                                "name": "Workspace"
-                            },
-                            {
-                                "name": "Permissions"
-                            }
-                        ]
-                    },
-                    {
                         "name": "UI/UX",
                         "subtags": [
                             {
@@ -3045,13 +2382,10 @@
                         ]
                     },
                     {
-                        "name": "Community",
+                        "name": "Auth",
                         "subtags": [
                             {
-                                "name": "Search"
-                            },
-                            {
-                                "name": "Explore"
+                                "name": "Access Control"
                             }
                         ]
                     }
@@ -3063,15 +2397,7 @@
                 "time": "2025-06-27",
                 "tags": [
                     {
-                        "name": "Team & Enterprise",
-                        "subtags": [
-                            {
-                                "name": "Enterprise Plan"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Billing & Credits",
+                        "name": "Billing",
                         "subtags": [
                             {
                                 "name": "Subscription"
@@ -3079,10 +2405,10 @@
                         ]
                     },
                     {
-                        "name": "Security",
+                        "name": "Team",
                         "subtags": [
                             {
-                                "name": "Access Control"
+                                "name": "Enterprise"
                             }
                         ]
                     }
@@ -3092,7 +2418,7 @@
                 "title": "Matt Palmer",
                 "description": "Head of Developer Relations",
                 "time": "2025-06-20",
-                "tags": []
+                "tags": "None"
             },
             {
                 "title": "New prompt examples",
@@ -3106,10 +2432,6 @@
                                 "name": "Templates"
                             }
                         ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
                     }
                 ]
             },
@@ -3119,18 +2441,10 @@
                 "time": "2025-06-20",
                 "tags": [
                     {
-                        "name": "Deployment",
+                        "name": "Editor",
                         "subtags": [
                             {
                                 "name": "Preview"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Navigation"
                             }
                         ]
                     }
@@ -3142,17 +2456,10 @@
                 "time": "2025-06-20",
                 "tags": [
                     {
-                        "name": "Deployment",
-                        "subtags": []
-                    },
-                    {
                         "name": "Security",
                         "subtags": [
                             {
-                                "name": "Vulnerability Patch"
-                            },
-                            {
-                                "name": "Access Control"
+                                "name": "Security Scan"
                             }
                         ]
                     }
@@ -3170,13 +2477,9 @@
                                 "name": "Security Scan"
                             },
                             {
-                                "name": "Vulnerability Patch"
+                                "name": "Content Moderation"
                             }
                         ]
-                    },
-                    {
-                        "name": "Deployment",
-                        "subtags": []
                     }
                 ]
             },
@@ -3199,7 +2502,7 @@
                 "title": "Matt Palmer",
                 "description": "Head of Developer Relations",
                 "time": "2025-06-13",
-                "tags": []
+                "tags": "None"
             },
             {
                 "title": "Figma import",
@@ -3213,14 +2516,6 @@
                                 "name": "Figma"
                             }
                         ]
-                    },
-                    {
-                        "name": "Editor",
-                        "subtags": [
-                            {
-                                "name": "Design View"
-                            }
-                        ]
                     }
                 ]
             },
@@ -3230,29 +2525,13 @@
                 "time": "2025-06-13",
                 "tags": [
                     {
-                        "name": "Mobile",
+                        "name": "Deployment",
                         "subtags": [
                             {
                                 "name": "iOS App"
                             },
                             {
                                 "name": "Android App"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Mobile UI"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Billing & Credits",
-                        "subtags": [
-                            {
-                                "name": "Credits"
                             }
                         ]
                     }
@@ -3264,28 +2543,20 @@
                 "time": "2025-06-13",
                 "tags": [
                     {
+                        "name": "Editor",
+                        "subtags": [
+                            {
+                                "name": "Preview"
+                            }
+                        ]
+                    },
+                    {
                         "name": "UI/UX",
                         "subtags": [
                             {
-                                "name": "Dashboard"
+                                "name": "Mobile UI"
                             }
                         ]
-                    },
-                    {
-                        "name": "Mobile",
-                        "subtags": [
-                            {
-                                "name": "Mobile Editor"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Editor",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
                     }
                 ]
             },
@@ -3310,19 +2581,13 @@
                 "time": "2025-06-13",
                 "tags": [
                     {
-                        "name": "Team & Enterprise",
+                        "name": "Team",
                         "subtags": [
-                            {
-                                "name": "Workspace"
-                            },
-                            {
-                                "name": "Team Management"
-                            },
                             {
                                 "name": "Project Sharing"
                             },
                             {
-                                "name": "Permissions"
+                                "name": "Team Management"
                             }
                         ]
                     }
@@ -3334,21 +2599,13 @@
                 "time": "2025-06-13",
                 "tags": [
                     {
-                        "name": "Team & Enterprise",
+                        "name": "Team",
                         "subtags": [
                             {
                                 "name": "Team Management"
                             },
                             {
-                                "name": "Enterprise Plan"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Dashboard"
+                                "name": "Permissions"
                             }
                         ]
                     }
@@ -3358,7 +2615,7 @@
                 "title": "Matt Palmer",
                 "description": "Head of Developer Relations",
                 "time": "2025-06-06",
-                "tags": []
+                "tags": "None"
             },
             {
                 "title": "Visual Editor image management",
@@ -3374,19 +2631,12 @@
                         ]
                     },
                     {
-                        "name": "Media Generation",
+                        "name": "Media",
                         "subtags": [
                             {
                                 "name": "Image Upload"
-                            },
-                            {
-                                "name": "Image Edit"
                             }
                         ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
                     }
                 ]
             },
@@ -3402,14 +2652,6 @@
                                 "name": "Agent Mode"
                             }
                         ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Dashboard"
-                            }
-                        ]
                     }
                 ]
             },
@@ -3419,7 +2661,7 @@
                 "time": "2025-06-06",
                 "tags": [
                     {
-                        "name": "Team & Enterprise",
+                        "name": "Team",
                         "subtags": [
                             {
                                 "name": "Team Management"
@@ -3427,18 +2669,10 @@
                         ]
                     },
                     {
-                        "name": "Analytics",
+                        "name": "Backend",
                         "subtags": [
                             {
-                                "name": "Usage Stats"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "File & Upload",
-                        "subtags": [
-                            {
-                                "name": "File Upload"
+                                "name": "Data Export"
                             }
                         ]
                     }
@@ -3450,24 +2684,13 @@
                 "time": "2025-06-06",
                 "tags": [
                     {
-                        "name": "Team & Enterprise",
+                        "name": "Team",
                         "subtags": [
-                            {
-                                "name": "Team Management"
-                            },
                             {
                                 "name": "Roles"
                             },
                             {
-                                "name": "Permissions"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Dashboard"
+                                "name": "Team Management"
                             }
                         ]
                     }
@@ -3477,7 +2700,7 @@
                 "title": "Matt Palmer",
                 "description": "Head of Developer Relations",
                 "time": "2025-05-30",
-                "tags": []
+                "tags": "None"
             },
             {
                 "title": "Preview empty state improvements",
@@ -3485,22 +2708,18 @@
                 "time": "2025-05-30",
                 "tags": [
                     {
-                        "name": "Agent",
+                        "name": "Editor",
                         "subtags": [
                             {
-                                "name": "Agent Mode"
+                                "name": "Preview"
                             }
                         ]
                     },
                     {
-                        "name": "UI/UX",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Deployment",
+                        "name": "Agent",
                         "subtags": [
                             {
-                                "name": "Preview"
+                                "name": "Agent Mode"
                             }
                         ]
                     }
@@ -3518,14 +2737,6 @@
                                 "name": "Speed"
                             }
                         ]
-                    },
-                    {
-                        "name": "Agent",
-                        "subtags": [
-                            {
-                                "name": "Agent Mode"
-                            }
-                        ]
                     }
                 ]
             },
@@ -3541,22 +2752,6 @@
                                 "name": "GitHub"
                             }
                         ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Dashboard"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Team & Enterprise",
-                        "subtags": [
-                            {
-                                "name": "Workspace"
-                            }
-                        ]
                     }
                 ]
             },
@@ -3566,7 +2761,7 @@
                 "time": "2025-05-30",
                 "tags": [
                     {
-                        "name": "Mobile",
+                        "name": "Deployment",
                         "subtags": [
                             {
                                 "name": "iOS App"
@@ -3574,7 +2769,7 @@
                         ]
                     },
                     {
-                        "name": "Billing & Credits",
+                        "name": "Billing",
                         "subtags": [
                             {
                                 "name": "Subscription"
@@ -3597,7 +2792,7 @@
                         ]
                     },
                     {
-                        "name": "Billing & Credits",
+                        "name": "Billing",
                         "subtags": [
                             {
                                 "name": "Subscription"
@@ -3612,7 +2807,7 @@
                 "time": "2025-05-30",
                 "tags": [
                     {
-                        "name": "Authentication",
+                        "name": "Auth",
                         "subtags": [
                             {
                                 "name": "SCIM"
@@ -3620,13 +2815,10 @@
                         ]
                     },
                     {
-                        "name": "Team & Enterprise",
+                        "name": "Team",
                         "subtags": [
                             {
-                                "name": "Enterprise Plan"
-                            },
-                            {
-                                "name": "Team Management"
+                                "name": "Enterprise"
                             }
                         ]
                     }
@@ -3636,7 +2828,7 @@
                 "title": "Matt Palmer",
                 "description": "Head of Developer Relations",
                 "time": "2025-05-23",
-                "tags": []
+                "tags": "None"
             },
             {
                 "title": "Sonnet 4 in Agent",
@@ -3696,10 +2888,6 @@
                                 "name": "Visual Editor"
                             }
                         ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
                     }
                 ]
             },
@@ -3709,7 +2897,7 @@
                 "time": "2025-05-23",
                 "tags": [
                     {
-                        "name": "Deployment",
+                        "name": "Editor",
                         "subtags": [
                             {
                                 "name": "Preview"
@@ -3717,13 +2905,10 @@
                         ]
                     },
                     {
-                        "name": "Mobile",
+                        "name": "UI/UX",
                         "subtags": [
                             {
-                                "name": "iOS App"
-                            },
-                            {
-                                "name": "Android App"
+                                "name": "Mobile UI"
                             }
                         ]
                     }
@@ -3735,7 +2920,7 @@
                 "time": "2025-05-23",
                 "tags": [
                     {
-                        "name": "Team & Enterprise",
+                        "name": "Team",
                         "subtags": [
                             {
                                 "name": "Team Management"
@@ -3753,10 +2938,10 @@
                 "time": "2025-05-23",
                 "tags": [
                     {
-                        "name": "Team & Enterprise",
+                        "name": "Team",
                         "subtags": [
                             {
-                                "name": "Enterprise Plan"
+                                "name": "Enterprise"
                             }
                         ]
                     },
@@ -3764,15 +2949,7 @@
                         "name": "Deployment",
                         "subtags": [
                             {
-                                "name": "Preview"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Security",
-                        "subtags": [
-                            {
-                                "name": "Access Control"
+                                "name": "Custom Domain"
                             }
                         ]
                     }
@@ -3782,7 +2959,7 @@
                 "title": "Matt Palmer",
                 "description": "Head of Developer Relations",
                 "time": "2025-05-16",
-                "tags": []
+                "tags": "None"
             },
             {
                 "title": "Security scans",
@@ -3808,15 +2985,10 @@
                         "name": "Editor",
                         "subtags": [
                             {
-                                "name": "Code Editor"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Deployment",
-                        "subtags": [
-                            {
                                 "name": "Preview"
+                            },
+                            {
+                                "name": "Code Editor"
                             }
                         ]
                     }
@@ -3832,14 +3004,6 @@
                         "subtags": [
                             {
                                 "name": "Code Editor"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Deployment",
-                        "subtags": [
-                            {
-                                "name": "Code Download"
                             }
                         ]
                     }
@@ -3859,10 +3023,10 @@
                         ]
                     },
                     {
-                        "name": "Database",
+                        "name": "Backend",
                         "subtags": [
                             {
-                                "name": "Database Editor"
+                                "name": "Database"
                             }
                         ]
                     }
@@ -3874,10 +3038,10 @@
                 "time": "2025-05-16",
                 "tags": [
                     {
-                        "name": "Authentication",
+                        "name": "Auth",
                         "subtags": [
                             {
-                                "name": "OAuth"
+                                "name": "Email Auth"
                             }
                         ]
                     }
@@ -3889,7 +3053,7 @@
                 "time": "2025-05-16",
                 "tags": [
                     {
-                        "name": "Authentication",
+                        "name": "Auth",
                         "subtags": [
                             {
                                 "name": "Email Auth"
@@ -3900,13 +3064,9 @@
                         "name": "Security",
                         "subtags": [
                             {
-                                "name": "Access Control"
+                                "name": "Security Scan"
                             }
                         ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
                     }
                 ]
             },
@@ -3916,10 +3076,10 @@
                 "time": "2025-05-16",
                 "tags": [
                     {
-                        "name": "Integration",
+                        "name": "Analytics",
                         "subtags": [
                             {
-                                "name": "Google Analytics"
+                                "name": "Usage Stats"
                             }
                         ]
                     },
@@ -3927,18 +3087,7 @@
                         "name": "Agent",
                         "subtags": [
                             {
-                                "name": "Agent Mode"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Analytics",
-                        "subtags": [
-                            {
-                                "name": "Usage Stats"
-                            },
-                            {
-                                "name": "Project Analytics"
+                                "name": "Automation"
                             }
                         ]
                     }
@@ -3950,7 +3099,7 @@
                 "time": "2025-05-16",
                 "tags": [
                     {
-                        "name": "Authentication",
+                        "name": "Auth",
                         "subtags": [
                             {
                                 "name": "SCIM"
@@ -3958,27 +3107,10 @@
                         ]
                     },
                     {
-                        "name": "Integration",
+                        "name": "Team",
                         "subtags": [
                             {
-                                "name": "Okta"
-                            },
-                            {
-                                "name": "Active Directory"
-                            },
-                            {
-                                "name": "Rippling"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Team & Enterprise",
-                        "subtags": [
-                            {
-                                "name": "Enterprise Plan"
-                            },
-                            {
-                                "name": "Team Management"
+                                "name": "Enterprise"
                             }
                         ]
                     }
@@ -3990,21 +3122,15 @@
                 "time": "2025-05-16",
                 "tags": [
                     {
-                        "name": "Team & Enterprise",
+                        "name": "Team",
                         "subtags": [
-                            {
-                                "name": "Team Management"
-                            },
-                            {
-                                "name": "Permissions"
-                            },
                             {
                                 "name": "Roles"
                             }
                         ]
                     },
                     {
-                        "name": "Authentication",
+                        "name": "Auth",
                         "subtags": [
                             {
                                 "name": "Access Control"
@@ -4017,7 +3143,7 @@
                 "title": "Matt Palmer",
                 "description": "Head of Developer Relations",
                 "time": "2025-05-09",
-                "tags": []
+                "tags": "None"
             },
             {
                 "title": "Notion integration",
@@ -4046,20 +3172,7 @@
                 "title": "PayPal checkout integration",
                 "description": "Enable PayPal payments in your applications with our new PayPal checkout integration.\nNow available to all users, this integration makes it easy to add a trusted payment option to your applications, expanding your ability to monetize your projects.",
                 "time": "2025-05-09",
-                "tags": [
-                    {
-                        "name": "Integration",
-                        "subtags": [
-                            {
-                                "name": "PayPal"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Billing & Credits",
-                        "subtags": []
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "Improved image handling for broken Unsplash URLs",
@@ -4070,25 +3183,17 @@
                         "name": "Agent",
                         "subtags": [
                             {
-                                "name": "Automation"
+                                "name": "Agent Mode"
                             }
                         ]
                     },
                     {
-                        "name": "Media Generation",
+                        "name": "Media",
                         "subtags": [
                             {
                                 "name": "Image Upload"
                             }
                         ]
-                    },
-                    {
-                        "name": "Integration",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
                     }
                 ]
             },
@@ -4098,26 +3203,7 @@
                 "time": "2025-05-09",
                 "tags": [
                     {
-                        "name": "Deployment",
-                        "subtags": [
-                            {
-                                "name": "Hosting"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Team & Enterprise",
-                        "subtags": [
-                            {
-                                "name": "Enterprise Plan"
-                            },
-                            {
-                                "name": "Permissions"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Security",
+                        "name": "Auth",
                         "subtags": [
                             {
                                 "name": "Access Control"
@@ -4125,10 +3211,10 @@
                         ]
                     },
                     {
-                        "name": "Authentication",
+                        "name": "Team",
                         "subtags": [
                             {
-                                "name": "Access Control"
+                                "name": "Enterprise"
                             }
                         ]
                     }
@@ -4138,7 +3224,7 @@
                 "title": "Matt Palmer",
                 "description": "Head of Developer Relations",
                 "time": "2025-05-02",
-                "tags": []
+                "tags": "None"
             },
             {
                 "title": "Replit Auth",
@@ -4146,13 +3232,10 @@
                 "time": "2025-05-02",
                 "tags": [
                     {
-                        "name": "Authentication",
+                        "name": "Auth",
                         "subtags": [
                             {
                                 "name": "Email Auth"
-                            },
-                            {
-                                "name": "Access Control"
                             }
                         ]
                     },
@@ -4163,10 +3246,6 @@
                                 "name": "Agent Mode"
                             }
                         ]
-                    },
-                    {
-                        "name": "Database",
-                        "subtags": []
                     }
                 ]
             },
@@ -4176,18 +3255,13 @@
                 "time": "2025-05-02",
                 "tags": [
                     {
-                        "name": "Billing & Credits",
+                        "name": "Billing",
                         "subtags": [
                             {
                                 "name": "Subscription"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Deployment",
-                        "subtags": [
+                            },
                             {
-                                "name": "Hosting"
+                                "name": "Payment"
                             }
                         ]
                     }
@@ -4199,18 +3273,18 @@
                 "time": "2025-05-02",
                 "tags": [
                     {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Onboarding"
-                            }
-                        ]
-                    },
-                    {
                         "name": "Community",
                         "subtags": [
                             {
                                 "name": "Templates"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": [
+                            {
+                                "name": "Onboarding"
                             }
                         ]
                     }
@@ -4222,7 +3296,7 @@
                 "time": "2025-05-02",
                 "tags": [
                     {
-                        "name": "Team & Enterprise",
+                        "name": "Team",
                         "subtags": [
                             {
                                 "name": "Workspace"
@@ -4245,21 +3319,10 @@
                 "time": "2025-05-02",
                 "tags": [
                     {
-                        "name": "Team & Enterprise",
-                        "subtags": [
-                            {
-                                "name": "Enterprise Plan"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Billing & Credits",
+                        "name": "Billing",
                         "subtags": [
                             {
                                 "name": "Subscription"
-                            },
-                            {
-                                "name": "Pricing"
                             }
                         ]
                     }
@@ -4269,32 +3332,13 @@
                 "title": "Matt Palmer",
                 "description": "Head of Developer Relations",
                 "time": "2025-04-25",
-                "tags": []
+                "tags": "None"
             },
             {
                 "title": "Mobile app Agent tour and deployments in dock",
                 "description": "The mobile app now features a guided Agent onboarding tour to help new users get started quickly. Plus, we’ve added Deployments to the dock by default, making it easier to manage your deployed applications right from your mobile device.",
                 "time": "2025-04-25",
                 "tags": [
-                    {
-                        "name": "Mobile",
-                        "subtags": [
-                            {
-                                "name": "iOS App"
-                            },
-                            {
-                                "name": "Android App"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Agent",
-                        "subtags": [
-                            {
-                                "name": "Agent Mode"
-                            }
-                        ]
-                    },
                     {
                         "name": "UI/UX",
                         "subtags": [
@@ -4305,7 +3349,11 @@
                     },
                     {
                         "name": "Deployment",
-                        "subtags": []
+                        "subtags": [
+                            {
+                                "name": "Android App"
+                            }
+                        ]
                     }
                 ]
             },
@@ -4323,7 +3371,7 @@
                         ]
                     },
                     {
-                        "name": "Team & Enterprise",
+                        "name": "Team",
                         "subtags": [
                             {
                                 "name": "Workspace"
@@ -4336,24 +3384,7 @@
                 "title": "Enhanced checkpoint event UI",
                 "description": "We’ve revamped the checkpoint event interface with an improved design and more intuitive controls. Plus, staff now have access to cross-session rollbacks, allowing for more powerful version management.",
                 "time": "2025-04-25",
-                "tags": [
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Dashboard"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Team & Enterprise",
-                        "subtags": [
-                            {
-                                "name": "Permissions"
-                            }
-                        ]
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "Team invitation improvements",
@@ -4361,21 +3392,13 @@
                 "time": "2025-04-25",
                 "tags": [
                     {
-                        "name": "Team & Enterprise",
+                        "name": "Team",
                         "subtags": [
                             {
                                 "name": "Team Management"
                             },
                             {
                                 "name": "Invite"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Dashboard"
                             }
                         ]
                     }
@@ -4387,21 +3410,18 @@
                 "time": "2025-04-25",
                 "tags": [
                     {
-                        "name": "Team & Enterprise",
+                        "name": "Auth",
                         "subtags": [
                             {
-                                "name": "Enterprise Plan"
-                            },
-                            {
-                                "name": "Permissions"
+                                "name": "Access Control"
                             }
                         ]
                     },
                     {
-                        "name": "Security",
+                        "name": "Team",
                         "subtags": [
                             {
-                                "name": "Access Control"
+                                "name": "Enterprise"
                             }
                         ]
                     }
@@ -4411,7 +3431,7 @@
                 "title": "Matt Palmer",
                 "description": "Head of Developer Relations",
                 "time": "2025-04-18",
-                "tags": []
+                "tags": "None"
             },
             {
                 "title": "Smarter integrations matching",
@@ -4423,14 +3443,6 @@
                         "subtags": [
                             {
                                 "name": "Agent Mode"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Integration",
-                        "subtags": [
-                            {
-                                "name": "Anthropic"
                             }
                         ]
                     }
@@ -4448,14 +3460,6 @@
                                 "name": "Speed"
                             }
                         ]
-                    },
-                    {
-                        "name": "Agent",
-                        "subtags": [
-                            {
-                                "name": "Agent Mode"
-                            }
-                        ]
                     }
                 ]
             },
@@ -4465,26 +3469,18 @@
                 "time": "2025-04-18",
                 "tags": [
                     {
+                        "name": "Editor",
+                        "subtags": [
+                            {
+                                "name": "Preview"
+                            }
+                        ]
+                    },
+                    {
                         "name": "Agent",
                         "subtags": [
                             {
                                 "name": "Agent Mode"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Notifications"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Deployment",
-                        "subtags": [
-                            {
-                                "name": "Preview"
                             }
                         ]
                     }
@@ -4494,16 +3490,7 @@
                 "title": "Clearer checkpoint titles",
                 "description": "Checkpoints are now more accessible with concise titles, while preserving detailed technical information in commit descriptions. This makes your project history easier to understand without sacrificing the technical details you need.",
                 "time": "2025-04-18",
-                "tags": [
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Navigation"
-                            }
-                        ]
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "Dev preview URL education",
@@ -4511,18 +3498,18 @@
                 "time": "2025-04-18",
                 "tags": [
                     {
-                        "name": "UI/UX",
+                        "name": "Deployment",
                         "subtags": [
                             {
-                                "name": "Onboarding"
+                                "name": "Hosting"
                             }
                         ]
                     },
                     {
-                        "name": "Deployment",
+                        "name": "UI/UX",
                         "subtags": [
                             {
-                                "name": "Preview"
+                                "name": "Onboarding"
                             }
                         ]
                     }
@@ -4534,7 +3521,7 @@
                 "time": "2025-04-18",
                 "tags": [
                     {
-                        "name": "File & Upload",
+                        "name": "File",
                         "subtags": [
                             {
                                 "name": "File Upload"
@@ -4543,10 +3530,6 @@
                                 "name": "Drag Drop"
                             }
                         ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
                     }
                 ]
             },
@@ -4556,7 +3539,7 @@
                 "time": "2025-04-18",
                 "tags": [
                     {
-                        "name": "Team & Enterprise",
+                        "name": "Team",
                         "subtags": [
                             {
                                 "name": "Team Management"
@@ -4574,7 +3557,7 @@
                 "time": "2025-04-18",
                 "tags": [
                     {
-                        "name": "Team & Enterprise",
+                        "name": "Team",
                         "subtags": [
                             {
                                 "name": "Workspace"
@@ -4582,8 +3565,12 @@
                         ]
                     },
                     {
-                        "name": "UI/UX",
-                        "subtags": []
+                        "name": "Auth",
+                        "subtags": [
+                            {
+                                "name": "Access Control"
+                            }
+                        ]
                     }
                 ]
             },
@@ -4591,7 +3578,7 @@
                 "title": "Matt Palmer",
                 "description": "Head of Developer Relations",
                 "time": "2025-04-11",
-                "tags": []
+                "tags": "None"
             },
             {
                 "title": "Referral program launch",
@@ -4599,13 +3586,13 @@
                 "time": "2025-04-11",
                 "tags": [
                     {
-                        "name": "Billing & Credits",
+                        "name": "Billing",
                         "subtags": [
                             {
                                 "name": "Referral"
                             },
                             {
-                                "name": "Credits"
+                                "name": "Usage Quota"
                             }
                         ]
                     }
@@ -4628,7 +3615,7 @@
                         "name": "Community",
                         "subtags": [
                             {
-                                "name": "Explore"
+                                "name": "Templates"
                             }
                         ]
                     }
@@ -4638,7 +3625,7 @@
                 "title": "Matt Palmer",
                 "description": "Head of Developer Relations",
                 "time": "2025-04-04",
-                "tags": []
+                "tags": "None"
             },
             {
                 "title": "Better icons",
@@ -4652,10 +3639,6 @@
                                 "name": "Agent Mode"
                             }
                         ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
                     }
                 ]
             },
@@ -4671,10 +3654,6 @@
                                 "name": "Speed"
                             }
                         ]
-                    },
-                    {
-                        "name": "Agent",
-                        "subtags": []
                     }
                 ]
             },
@@ -4690,10 +3669,6 @@
                                 "name": "Agent Mode"
                             }
                         ]
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
                     }
                 ]
             },
@@ -4703,18 +3678,18 @@
                 "time": "2025-04-04",
                 "tags": [
                     {
-                        "name": "Media Generation",
-                        "subtags": [
-                            {
-                                "name": "Image Generation"
-                            }
-                        ]
-                    },
-                    {
                         "name": "Agent",
                         "subtags": [
                             {
                                 "name": "Agent Mode"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Analytics",
+                        "subtags": [
+                            {
+                                "name": "Usage Stats"
                             }
                         ]
                     }
@@ -4724,7 +3699,7 @@
                 "title": "Matt Palmer",
                 "description": "Head of Developer Relations",
                 "time": "2025-03-28",
-                "tags": []
+                "tags": "None"
             },
             {
                 "title": "Agent v2 is now available",
@@ -4738,14 +3713,6 @@
                                 "name": "Agent Mode"
                             }
                         ]
-                    },
-                    {
-                        "name": "Performance",
-                        "subtags": [
-                            {
-                                "name": "Speed"
-                            }
-                        ]
                     }
                 ]
             },
@@ -4753,16 +3720,7 @@
                 "title": "DeepLearningAI course launch",
                 "description": "Replit’s latest free course, Vibe Coding 101 with Replit, is now live on DeepLearningAI. This course takes you from idea to app in minutes, making software development more accessible. Register for the course and start your development journey today.",
                 "time": "2025-03-28",
-                "tags": [
-                    {
-                        "name": "Community",
-                        "subtags": [
-                            {
-                                "name": "Templates"
-                            }
-                        ]
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "Invoice threshold update",
@@ -4770,8 +3728,11 @@
                 "time": "2025-03-28",
                 "tags": [
                     {
-                        "name": "Billing & Credits",
+                        "name": "Billing",
                         "subtags": [
+                            {
+                                "name": "Payment"
+                            },
                             {
                                 "name": "Subscription"
                             }
@@ -4783,7 +3744,7 @@
                 "title": "Matt Palmer",
                 "description": "Head of Developer Relations",
                 "time": "2025-03-21",
-                "tags": []
+                "tags": "None"
             },
             {
                 "title": "Visual Editor",
@@ -4805,10 +3766,6 @@
                                 "name": "Agent Mode"
                             }
                         ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
                     }
                 ]
             },
@@ -4826,14 +3783,6 @@
                         ]
                     },
                     {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Notifications"
-                            }
-                        ]
-                    },
-                    {
                         "name": "Analytics",
                         "subtags": [
                             {
@@ -4847,7 +3796,7 @@
                 "title": "Matt Palmer",
                 "description": "Head of Developer Relations",
                 "time": "2025-03-14",
-                "tags": []
+                "tags": "None"
             },
             {
                 "title": "Neon DB history retention",
@@ -4855,20 +3804,15 @@
                 "time": "2025-03-14",
                 "tags": [
                     {
-                        "name": "Integration",
+                        "name": "Backend",
                         "subtags": [
                             {
-                                "name": "Neon"
+                                "name": "Database"
+                            },
+                            {
+                                "name": "Storage"
                             }
                         ]
-                    },
-                    {
-                        "name": "Database",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Billing & Credits",
-                        "subtags": []
                     }
                 ]
             },
@@ -4878,17 +3822,18 @@
                 "time": "2025-03-14",
                 "tags": [
                     {
-                        "name": "UI/UX",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Mobile",
+                        "name": "Agent",
                         "subtags": [
                             {
-                                "name": "iOS App"
-                            },
+                                "name": "Agent Mode"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": [
                             {
-                                "name": "Android App"
+                                "name": "Mobile UI"
                             }
                         ]
                     }
@@ -4918,15 +3863,7 @@
                 "time": "2025-03-14",
                 "tags": [
                     {
-                        "name": "Performance",
-                        "subtags": [
-                            {
-                                "name": "Speed"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Deployment",
+                        "name": "Editor",
                         "subtags": [
                             {
                                 "name": "Preview"
@@ -4934,10 +3871,10 @@
                         ]
                     },
                     {
-                        "name": "Security",
+                        "name": "Performance",
                         "subtags": [
                             {
-                                "name": "Security Scan"
+                                "name": "Speed"
                             }
                         ]
                     }
@@ -4947,7 +3884,7 @@
                 "title": "Matt Palmer",
                 "description": "Head of Developer Relations",
                 "time": "2025-03-07",
-                "tags": []
+                "tags": "None"
             },
             {
                 "title": "Mobile App Webview improvements",
@@ -4955,15 +3892,30 @@
                 "time": "2025-03-07",
                 "tags": [
                     {
-                        "name": "Mobile",
+                        "name": "UI/UX",
                         "subtags": [
                             {
-                                "name": "iOS App"
+                                "name": "Mobile UI"
                             }
                         ]
                     },
                     {
                         "name": "Deployment",
+                        "subtags": [
+                            {
+                                "name": "iOS App"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Additional Webview improvements",
+                "description": "Improvements have been made for a more consistent Webview experience across all devices.\nAdded warning banner in Webview for blocked third-party cookies\nIncludes call-to-action button to test web app in new tab\nHelps developers identify issues caused by strict browser settings",
+                "time": "2025-03-07",
+                "tags": [
+                    {
+                        "name": "Editor",
                         "subtags": [
                             {
                                 "name": "Preview"
@@ -4981,45 +3933,23 @@
                 ]
             },
             {
-                "title": "Additional Webview improvements",
-                "description": "Improvements have been made for a more consistent Webview experience across all devices.\nAdded warning banner in Webview for blocked third-party cookies\nIncludes call-to-action button to test web app in new tab\nHelps developers identify issues caused by strict browser settings",
-                "time": "2025-03-07",
-                "tags": [
-                    {
-                        "name": "Deployment",
-                        "subtags": [
-                            {
-                                "name": "Preview"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Notifications"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    }
-                ]
-            },
-            {
                 "title": "First look at the new mobile app",
                 "description": "Haven’t tried the Mobile App yet? Check out our latest video for a first look.",
                 "time": "2025-03-07",
                 "tags": [
                     {
-                        "name": "Mobile",
+                        "name": "UI/UX",
+                        "subtags": [
+                            {
+                                "name": "Mobile UI"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Deployment",
                         "subtags": [
                             {
                                 "name": "iOS App"
-                            },
-                            {
-                                "name": "Android App"
                             }
                         ]
                     }
@@ -5029,7 +3959,7 @@
                 "title": "Matt Palmer",
                 "description": "Head of Developer Relations",
                 "time": "2025-02-28",
-                "tags": []
+                "tags": "None"
             },
             {
                 "title": "Agent v2",
@@ -5051,14 +3981,6 @@
                                 "name": "Anthropic"
                             }
                         ]
-                    },
-                    {
-                        "name": "Performance",
-                        "subtags": [
-                            {
-                                "name": "Speed"
-                            }
-                        ]
                     }
                 ]
             },
@@ -5068,18 +3990,18 @@
                 "time": "2025-02-28",
                 "tags": [
                     {
-                        "name": "Deployment",
+                        "name": "Agent",
                         "subtags": [
                             {
-                                "name": "Hosting"
+                                "name": "Agent Mode"
                             }
                         ]
                     },
                     {
-                        "name": "Agent",
+                        "name": "Deployment",
                         "subtags": [
                             {
-                                "name": "Suggested Actions"
+                                "name": "Hosting"
                             }
                         ]
                     }
@@ -5114,16 +4036,20 @@
                 "time": "2025-02-28",
                 "tags": [
                     {
+                        "name": "Backend",
+                        "subtags": [
+                            {
+                                "name": "Database"
+                            }
+                        ]
+                    },
+                    {
                         "name": "Performance",
                         "subtags": [
                             {
                                 "name": "Speed"
                             }
                         ]
-                    },
-                    {
-                        "name": "Database",
-                        "subtags": []
                     }
                 ]
             },
@@ -5131,18 +4057,13 @@
                 "title": "Better documentation",
                 "description": "We’ve redesigned our documentation to be easier to understand and use, making it completely LLM-friendly.\nThe documentation now features a “Copy Page” button, which allows you to copy the entire page as markdown. You can also index our documentation with llms.txt and llms-full.txt to use with your own LLMs.\nhttps://docs.replit.com/llms.txt\nhttps://docs.replit.com/llms-full.txt",
                 "time": "2025-02-28",
-                "tags": [
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "Matt Palmer",
                 "description": "Head of Developer Relations",
                 "time": "2025-02-21",
-                "tags": []
+                "tags": "None"
             },
             {
                 "title": "Replit 🤝 Grok",
@@ -5156,22 +4077,6 @@
                                 "name": "xAI"
                             }
                         ]
-                    },
-                    {
-                        "name": "Agent",
-                        "subtags": [
-                            {
-                                "name": "Agent Mode"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Deployment",
-                        "subtags": [
-                            {
-                                "name": "Publishing"
-                            }
-                        ]
                     }
                 ]
             },
@@ -5181,18 +4086,18 @@
                 "time": "2025-02-21",
                 "tags": [
                     {
-                        "name": "Agent",
+                        "name": "Deployment",
                         "subtags": [
                             {
-                                "name": "Agent Mode"
+                                "name": "Hosting"
                             }
                         ]
                     },
                     {
-                        "name": "Deployment",
+                        "name": "Agent",
                         "subtags": [
                             {
-                                "name": "Publishing"
+                                "name": "Fast Mode"
                             }
                         ]
                     }
@@ -5204,21 +4109,18 @@
                 "time": "2025-02-21",
                 "tags": [
                     {
-                        "name": "Integration",
+                        "name": "Deployment",
                         "subtags": [
                             {
-                                "name": "Expo"
+                                "name": "iOS App"
                             }
                         ]
                     },
                     {
-                        "name": "Mobile",
+                        "name": "Framework",
                         "subtags": [
                             {
-                                "name": "iOS App"
-                            },
-                            {
-                                "name": "Android App"
+                                "name": "Expo"
                             }
                         ]
                     }
@@ -5230,18 +4132,18 @@
                 "time": "2025-02-21",
                 "tags": [
                     {
-                        "name": "Agent",
+                        "name": "Media",
                         "subtags": [
                             {
-                                "name": "Agent Mode"
+                                "name": "Screenshot"
                             }
                         ]
                     },
                     {
-                        "name": "Media Generation",
+                        "name": "Agent",
                         "subtags": [
                             {
-                                "name": "Screenshot"
+                                "name": "Agent Mode"
                             }
                         ]
                     }
@@ -5251,7 +4153,7 @@
                 "title": "Matt Palmer",
                 "description": "Head of Developer Relations",
                 "time": "2025-02-14",
-                "tags": []
+                "tags": "None"
             },
             {
                 "title": "Mobile development",
@@ -5259,32 +4161,10 @@
                 "time": "2025-02-14",
                 "tags": [
                     {
-                        "name": "Mobile",
-                        "subtags": [
-                            {
-                                "name": "React Native"
-                            },
-                            {
-                                "name": "iOS App"
-                            },
-                            {
-                                "name": "Android App"
-                            }
-                        ]
-                    },
-                    {
                         "name": "Framework",
                         "subtags": [
                             {
-                                "name": "React Native"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Integration",
-                        "subtags": [
-                            {
-                                "name": "Expo"
+                                "name": "React"
                             }
                         ]
                     },
@@ -5292,7 +4172,10 @@
                         "name": "Deployment",
                         "subtags": [
                             {
-                                "name": "Publishing"
+                                "name": "iOS App"
+                            },
+                            {
+                                "name": "Android App"
                             }
                         ]
                     }
@@ -5307,16 +4190,12 @@
                         "name": "Community",
                         "subtags": [
                             {
-                                "name": "Explore"
+                                "name": "Templates"
                             },
                             {
-                                "name": "Templates"
+                                "name": "Social Share"
                             }
                         ]
-                    },
-                    {
-                        "name": "Billing & Credits",
-                        "subtags": []
                     }
                 ]
             },
@@ -5330,9 +4209,6 @@
                         "subtags": [
                             {
                                 "name": "Agent Mode"
-                            },
-                            {
-                                "name": "Automation"
                             }
                         ]
                     },
@@ -5341,14 +4217,6 @@
                         "subtags": [
                             {
                                 "name": "OpenAI"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Performance",
-                        "subtags": [
-                            {
-                                "name": "Speed"
                             }
                         ]
                     }
@@ -5360,26 +4228,10 @@
                 "time": "2025-02-14",
                 "tags": [
                     {
-                        "name": "Integration",
+                        "name": "Backend",
                         "subtags": [
                             {
-                                "name": "Object Storage"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Performance",
-                        "subtags": [
-                            {
-                                "name": "Loading"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "File & Upload",
-                        "subtags": [
-                            {
-                                "name": "File Upload"
+                                "name": "Storage"
                             }
                         ]
                     }
@@ -5404,7 +4256,7 @@
                 "title": "Matt Palmer",
                 "description": "Head of Developer Relations",
                 "time": "2025-02-07",
-                "tags": []
+                "tags": "None"
             },
             {
                 "title": "Agent is now free to try",
@@ -5420,13 +4272,10 @@
                         ]
                     },
                     {
-                        "name": "Billing & Credits",
+                        "name": "Billing",
                         "subtags": [
                             {
-                                "name": "Pricing"
-                            },
-                            {
-                                "name": "Credits"
+                                "name": "Usage Quota"
                             }
                         ]
                     }
@@ -5438,32 +4287,18 @@
                 "time": "2025-02-07",
                 "tags": [
                     {
-                        "name": "Mobile",
+                        "name": "Editor",
                         "subtags": [
-                            {
-                                "name": "iOS App"
-                            },
-                            {
-                                "name": "Android App"
-                            },
                             {
                                 "name": "Mobile Editor"
                             }
                         ]
                     },
                     {
-                        "name": "Performance",
+                        "name": "Deployment",
                         "subtags": [
                             {
-                                "name": "Speed"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Mobile UI"
+                                "name": "iOS App"
                             }
                         ]
                     }
@@ -5474,14 +4309,6 @@
                 "description": "Your cover pages got a major upgrade. They’re now more developer-friendly and feature the starting prompt for any app built with Agent.",
                 "time": "2025-02-07",
                 "tags": [
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Dashboard"
-                            }
-                        ]
-                    },
                     {
                         "name": "Agent",
                         "subtags": [
@@ -5496,16 +4323,7 @@
                 "title": "Documentation migration",
                 "description": "We’ve upgraded our documentation platform to Mintlify, making it easier than ever to navigate and access information.\nA huge thank you to the Mintlify team for their help in migrating our documentation.",
                 "time": "2025-02-07",
-                "tags": [
-                    {
-                        "name": "Integration",
-                        "subtags": [
-                            {
-                                "name": "Mintlify"
-                            }
-                        ]
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "Improved database viewer",
@@ -5513,16 +4331,12 @@
                 "time": "2025-02-07",
                 "tags": [
                     {
-                        "name": "Database",
+                        "name": "Backend",
                         "subtags": [
                             {
-                                "name": "Database Editor"
+                                "name": "Database"
                             }
                         ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
                     }
                 ]
             },
@@ -5545,22 +4359,13 @@
                 "title": "Matt Palmer",
                 "description": "Head of Developer Relations",
                 "time": "2025-01-31",
-                "tags": []
+                "tags": "None"
             },
             {
                 "title": "Repl -> App",
                 "description": "Repls are now “Apps.” We like simplicity around here.",
                 "time": "2025-01-31",
-                "tags": [
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Navigation"
-                            }
-                        ]
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "Enhanced notifications",
@@ -5568,18 +4373,18 @@
                 "time": "2025-01-31",
                 "tags": [
                     {
-                        "name": "Billing & Credits",
-                        "subtags": [
-                            {
-                                "name": "Subscription"
-                            }
-                        ]
-                    },
-                    {
                         "name": "UI/UX",
                         "subtags": [
                             {
                                 "name": "Notifications"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Billing",
+                        "subtags": [
+                            {
+                                "name": "Payment"
                             }
                         ]
                     }
@@ -5591,20 +4396,20 @@
                 "time": "2025-01-31",
                 "tags": [
                     {
-                        "name": "Integration",
+                        "name": "Backend",
                         "subtags": [
                             {
-                                "name": "Object Storage"
+                                "name": "Storage"
                             }
                         ]
                     },
                     {
-                        "name": "File & Upload",
-                        "subtags": []
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
+                        "name": "Community",
+                        "subtags": [
+                            {
+                                "name": "Search"
+                            }
+                        ]
                     }
                 ]
             },
@@ -5620,10 +4425,6 @@
                                 "name": "Diff View"
                             }
                         ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
                     }
                 ]
             },
@@ -5633,18 +4434,18 @@
                 "time": "2025-01-31",
                 "tags": [
                     {
-                        "name": "Performance",
-                        "subtags": [
-                            {
-                                "name": "Speed"
-                            }
-                        ]
-                    },
-                    {
                         "name": "Agent",
                         "subtags": [
                             {
                                 "name": "Agent Mode"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Performance",
+                        "subtags": [
+                            {
+                                "name": "Speed"
                             }
                         ]
                     }
@@ -5656,7 +4457,7 @@
                 "time": "2025-01-31",
                 "tags": [
                     {
-                        "name": "Authentication",
+                        "name": "Auth",
                         "subtags": [
                             {
                                 "name": "Social Login"
@@ -5677,14 +4478,6 @@
                                 "name": "GitHub"
                             }
                         ]
-                    },
-                    {
-                        "name": "Performance",
-                        "subtags": [
-                            {
-                                "name": "Speed"
-                            }
-                        ]
                     }
                 ]
             },
@@ -5692,7 +4485,7 @@
                 "title": "Matt Palmer",
                 "description": "Head of Developer Relations",
                 "time": "2025-01-24",
-                "tags": []
+                "tags": "None"
             },
             {
                 "title": "Assistant + Workflows",
@@ -5704,12 +4497,11 @@
                         "subtags": [
                             {
                                 "name": "Agent Mode"
+                            },
+                            {
+                                "name": "Automation"
                             }
                         ]
-                    },
-                    {
-                        "name": "Deployment",
-                        "subtags": []
                     }
                 ]
             },
@@ -5754,9 +4546,6 @@
                         "subtags": [
                             {
                                 "name": "Speed"
-                            },
-                            {
-                                "name": "Loading"
                             }
                         ]
                     }
@@ -5766,21 +4555,13 @@
                 "title": "Matt Palmer",
                 "description": "Head of Developer Relations",
                 "time": "2025-01-17",
-                "tags": []
+                "tags": "None"
             },
             {
                 "title": "SendGrid integration",
                 "description": "You can now build email integrations with Agent. This allows you to send emails from your new Agent projects using the SendGrid API.",
                 "time": "2025-01-17",
                 "tags": [
-                    {
-                        "name": "Integration",
-                        "subtags": [
-                            {
-                                "name": "SendGrid"
-                            }
-                        ]
-                    },
                     {
                         "name": "Agent",
                         "subtags": [
@@ -5797,14 +4578,6 @@
                 "time": "2025-01-17",
                 "tags": [
                     {
-                        "name": "Deployment",
-                        "subtags": [
-                            {
-                                "name": "Preview"
-                            }
-                        ]
-                    },
-                    {
                         "name": "UI/UX",
                         "subtags": [
                             {
@@ -5813,8 +4586,12 @@
                         ]
                     },
                     {
-                        "name": "Mobile",
-                        "subtags": []
+                        "name": "Editor",
+                        "subtags": [
+                            {
+                                "name": "Preview"
+                            }
+                        ]
                     }
                 ]
             },
@@ -5851,11 +4628,11 @@
                     },
                     {
                         "name": "Deployment",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Framework",
-                        "subtags": []
+                        "subtags": [
+                            {
+                                "name": "Hosting"
+                            }
+                        ]
                     }
                 ]
             },
@@ -5868,7 +4645,7 @@
                         "name": "Agent",
                         "subtags": [
                             {
-                                "name": "Automation"
+                                "name": "Agent Mode"
                             }
                         ]
                     },
@@ -5886,7 +4663,7 @@
                 "title": "Matt Palmer",
                 "description": "Head of Developer Relations",
                 "time": "2025-01-10",
-                "tags": []
+                "tags": "None"
             },
             {
                 "title": "Slack integration",
@@ -5923,19 +4700,14 @@
                                 "name": "Agent Mode"
                             }
                         ]
-                    },
-                    {
-                        "name": "Performance",
-                        "subtags": [
-                            {
-                                "name": "Loading"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
-                    },
+                    }
+                ]
+            },
+            {
+                "title": "Shell bash completion",
+                "description": "Shell now has autocomplete! Hit tab twice to autocomplete a command.",
+                "time": "2025-01-10",
+                "tags": [
                     {
                         "name": "Editor",
                         "subtags": [
@@ -5947,26 +4719,10 @@
                 ]
             },
             {
-                "title": "Shell bash completion",
-                "description": "Shell now has autocomplete! Hit tab twice to autocomplete a command.",
-                "time": "2025-01-10",
-                "tags": [
-                    {
-                        "name": "Editor",
-                        "subtags": []
-                    }
-                ]
-            },
-            {
                 "title": "Elixir ecosystem fix",
                 "description": "Resolved issues with Elixir’s mix tooling, the language now works as expected.",
                 "time": "2025-01-10",
-                "tags": [
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "Custom domain UX improvement",
@@ -5980,10 +4736,6 @@
                                 "name": "Custom Domain"
                             }
                         ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
                     }
                 ]
             },
@@ -5993,29 +4745,13 @@
                 "time": "2025-01-10",
                 "tags": [
                     {
-                        "name": "Team & Enterprise",
+                        "name": "Team",
                         "subtags": [
-                            {
-                                "name": "Workspace"
-                            },
                             {
                                 "name": "Project Sharing"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
+                            },
                             {
-                                "name": "Dashboard"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Community",
-                        "subtags": [
-                            {
-                                "name": "Creator Profile"
+                                "name": "Workspace"
                             }
                         ]
                     }
@@ -6027,8 +4763,12 @@
                 "time": "2025-01-10",
                 "tags": [
                     {
-                        "name": "Mobile",
-                        "subtags": []
+                        "name": "UI/UX",
+                        "subtags": [
+                            {
+                                "name": "Mobile UI"
+                            }
+                        ]
                     },
                     {
                         "name": "Community",
@@ -6037,10 +4777,6 @@
                                 "name": "Search"
                             }
                         ]
-                    },
-                    {
-                        "name": "Team & Enterprise",
-                        "subtags": []
                     }
                 ]
             },
@@ -6048,21 +4784,13 @@
                 "title": "Matt Palmer",
                 "description": "Head of Developer Relations",
                 "time": "2025-01-03",
-                "tags": []
+                "tags": "None"
             },
             {
                 "title": "xAI integration",
                 "description": "Agent can now add xAI directly to your apps.\nAdd Grok to your projects and deploy them in seconds. Just mention “add AI features with xAI” in your prompts or select xAI from integrations—we’ll build with the API.\nWe’re hard at work bringing your favorite integrations to Agent & Assistant.",
                 "time": "2025-01-03",
                 "tags": [
-                    {
-                        "name": "Integration",
-                        "subtags": [
-                            {
-                                "name": "xAI"
-                            }
-                        ]
-                    },
                     {
                         "name": "AI Model",
                         "subtags": [
@@ -6093,10 +4821,6 @@
                                 "name": "Custom Domain"
                             }
                         ]
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
                     }
                 ]
             },
@@ -6106,21 +4830,18 @@
                 "time": "2025-01-03",
                 "tags": [
                     {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Sidebar"
-                            },
-                            {
-                                "name": "Navigation"
-                            }
-                        ]
-                    },
-                    {
                         "name": "Community",
                         "subtags": [
                             {
                                 "name": "Search"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": [
+                            {
+                                "name": "Sidebar"
                             }
                         ]
                     }
@@ -6140,16 +4861,12 @@
                         ]
                     },
                     {
-                        "name": "Database",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Performance",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Billing & Credits",
-                        "subtags": []
+                        "name": "Backend",
+                        "subtags": [
+                            {
+                                "name": "Database"
+                            }
+                        ]
                     }
                 ]
             },
@@ -6165,10 +4882,6 @@
                                 "name": "React"
                             }
                         ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
                     }
                 ]
             },
@@ -6178,29 +4891,18 @@
                 "time": "2025-01-03",
                 "tags": [
                     {
-                        "name": "Authentication",
+                        "name": "Team",
                         "subtags": [
-                            {
-                                "name": "SSO"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Team & Enterprise",
-                        "subtags": [
-                            {
-                                "name": "Workspace"
-                            },
                             {
                                 "name": "Team Management"
                             }
                         ]
                     },
                     {
-                        "name": "UI/UX",
+                        "name": "Auth",
                         "subtags": [
                             {
-                                "name": "Onboarding"
+                                "name": "SSO"
                             }
                         ]
                     }
@@ -6210,30 +4912,13 @@
                 "title": "Matt Palmer",
                 "description": "Head of Developer Relations",
                 "time": "2024-12-27",
-                "tags": []
+                "tags": "None"
             },
             {
                 "title": "Integrations",
                 "description": "Integrations are now front and center in the Agent UI. You can easily add your favorite services to your Agent apps. We’ve also launched and polished quite a few new integrations, so you should check them out. Some of our favorites:\nPerplexity\nFirebase\nOpenAI\nAnthropic\nGoogle Services",
                 "time": "2024-12-27",
                 "tags": [
-                    {
-                        "name": "Integration",
-                        "subtags": [
-                            {
-                                "name": "Perplexity"
-                            },
-                            {
-                                "name": "Firebase"
-                            },
-                            {
-                                "name": "OpenAI"
-                            },
-                            {
-                                "name": "Anthropic"
-                            }
-                        ]
-                    },
                     {
                         "name": "Agent",
                         "subtags": [
@@ -6243,8 +4928,12 @@
                         ]
                     },
                     {
-                        "name": "UI/UX",
-                        "subtags": []
+                        "name": "Integration",
+                        "subtags": [
+                            {
+                                "name": "Perplexity"
+                            }
+                        ]
                     }
                 ]
             },
@@ -6277,10 +4966,10 @@
                 "time": "2024-12-27",
                 "tags": [
                     {
-                        "name": "Database",
+                        "name": "Backend",
                         "subtags": [
                             {
-                                "name": "Database Editor"
+                                "name": "Database"
                             }
                         ]
                     },
@@ -6288,18 +4977,7 @@
                         "name": "UI/UX",
                         "subtags": [
                             {
-                                "name": "Navigation"
-                            },
-                            {
                                 "name": "Notifications"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Agent",
-                        "subtags": [
-                            {
-                                "name": "Agent Mode"
                             }
                         ]
                     }
@@ -6317,10 +4995,6 @@
                                 "name": "Agent Mode"
                             }
                         ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
                     }
                 ]
             },
@@ -6330,20 +5004,20 @@
                 "time": "2024-12-27",
                 "tags": [
                     {
-                        "name": "Team & Enterprise",
+                        "name": "UI/UX",
                         "subtags": [
                             {
-                                "name": "Workspace"
+                                "name": "Mobile UI"
                             }
                         ]
                     },
                     {
-                        "name": "UI/UX",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Mobile",
-                        "subtags": []
+                        "name": "Team",
+                        "subtags": [
+                            {
+                                "name": "Project Sharing"
+                            }
+                        ]
                     }
                 ]
             },
@@ -6351,7 +5025,7 @@
                 "title": "Matt Palmer",
                 "description": "Head of Developer Relations",
                 "time": "2024-12-20",
-                "tags": []
+                "tags": "None"
             },
             {
                 "title": "Snow Mode",
@@ -6392,16 +5066,11 @@
                 "time": "2024-12-20",
                 "tags": [
                     {
-                        "name": "Framework",
-                        "subtags": [
-                            {
-                                "name": "NPM"
-                            }
-                        ]
-                    },
-                    {
                         "name": "Agent",
                         "subtags": [
+                            {
+                                "name": "Agent Mode"
+                            },
                             {
                                 "name": "Automation"
                             }
@@ -6415,37 +5084,18 @@
                 "time": "2024-12-20",
                 "tags": [
                     {
-                        "name": "Agent",
-                        "subtags": [
-                            {
-                                "name": "Design Mode"
-                            }
-                        ]
-                    },
-                    {
                         "name": "UI/UX",
                         "subtags": [
                             {
                                 "name": "Themes"
-                            },
-                            {
-                                "name": "Dark Mode"
                             }
                         ]
                     },
                     {
-                        "name": "Editor",
+                        "name": "Agent",
                         "subtags": [
                             {
-                                "name": "Visual Editor"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Framework",
-                        "subtags": [
-                            {
-                                "name": "React"
+                                "name": "Agent Mode"
                             }
                         ]
                     }
@@ -6457,12 +5107,12 @@
                 "time": "2024-12-20",
                 "tags": [
                     {
-                        "name": "Database",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Agent",
-                        "subtags": []
+                        "name": "Backend",
+                        "subtags": [
+                            {
+                                "name": "Database"
+                            }
+                        ]
                     },
                     {
                         "name": "UI/UX",
@@ -6484,6 +5134,9 @@
                         "subtags": [
                             {
                                 "name": "Suggested Actions"
+                            },
+                            {
+                                "name": "Agent Mode"
                             }
                         ]
                     }
@@ -6494,20 +5147,6 @@
                 "description": "Agent now features enhanced integration visibility, allowing you to better use integrations during your usage. This includes improved tracking for both users and internal teams.\nSupported integrations include OpenAI, Stripe, Firebase, and more!",
                 "time": "2024-12-20",
                 "tags": [
-                    {
-                        "name": "Integration",
-                        "subtags": [
-                            {
-                                "name": "OpenAI"
-                            },
-                            {
-                                "name": "Stripe"
-                            },
-                            {
-                                "name": "Firebase"
-                            }
-                        ]
-                    },
                     {
                         "name": "Agent",
                         "subtags": [
@@ -6528,14 +5167,9 @@
                         "subtags": [
                             {
                                 "name": "Automation"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Editor",
-                        "subtags": [
+                            },
                             {
-                                "name": "Console"
+                                "name": "Tasks"
                             }
                         ]
                     }
@@ -6547,16 +5181,12 @@
                 "time": "2024-12-20",
                 "tags": [
                     {
-                        "name": "Team & Enterprise",
+                        "name": "Team",
                         "subtags": [
                             {
                                 "name": "Team Management"
                             }
                         ]
-                    },
-                    {
-                        "name": "Community",
-                        "subtags": []
                     }
                 ]
             },
@@ -6564,7 +5194,7 @@
                 "title": "Matt Palmer",
                 "description": "Head of Developer Relations",
                 "time": "2024-12-13",
-                "tags": []
+                "tags": "None"
             },
             {
                 "title": "Assistant Features",
@@ -6584,14 +5214,6 @@
                         "subtags": [
                             {
                                 "name": "Code Editor"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Billing & Credits",
-                        "subtags": [
-                            {
-                                "name": "Credits"
                             }
                         ]
                     }
@@ -6614,7 +5236,7 @@
                         "name": "Agent",
                         "subtags": [
                             {
-                                "name": "Automation"
+                                "name": "Agent Mode"
                             }
                         ]
                     }
@@ -6635,11 +5257,11 @@
                     },
                     {
                         "name": "UI/UX",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Performance",
-                        "subtags": []
+                        "subtags": [
+                            {
+                                "name": "Mobile UI"
+                            }
+                        ]
                     }
                 ]
             },
@@ -6649,29 +5271,18 @@
                 "time": "2024-12-13",
                 "tags": [
                     {
-                        "name": "Media Generation",
+                        "name": "Media",
                         "subtags": [
                             {
                                 "name": "Screenshot"
-                            },
-                            {
-                                "name": "Image Upload"
                             }
                         ]
                     },
                     {
-                        "name": "File & Upload",
+                        "name": "File",
                         "subtags": [
                             {
                                 "name": "File Upload"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Agent",
-                        "subtags": [
-                            {
-                                "name": "Agent Mode"
                             }
                         ]
                     }
@@ -6683,28 +5294,13 @@
                 "time": "2024-12-13",
                 "tags": [
                     {
-                        "name": "Billing & Credits",
+                        "name": "Billing",
                         "subtags": [
                             {
-                                "name": "Credits"
+                                "name": "Usage Quota"
                             },
                             {
                                 "name": "Subscription"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Agent",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Analytics",
-                        "subtags": [
-                            {
-                                "name": "Usage Stats"
-                            },
-                            {
-                                "name": "Token Usage"
                             }
                         ]
                     }

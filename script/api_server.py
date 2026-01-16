@@ -239,6 +239,60 @@ class APIHandler(BaseHTTPRequestHandler):
             
             self.send_json_response(200, status)
         
+        elif path == "/api/admin/others":
+            # 获取所有标记为 Others 的 features
+            token = self.get_auth_token()
+            if not verify_session(token):
+                self.send_json_response(401, {"error": "未授权访问"})
+                return
+            
+            others_features = []
+            storage_dir = get_project_root() / "storage"
+            products = ['youware', 'base44', 'bolt', 'lovable', 'replit', 'rocket', 'trickle', 'v0']
+            
+            for product in products:
+                product_file = storage_dir / f"{product}.json"
+                if not product_file.exists():
+                    continue
+                
+                with open(product_file, 'r', encoding='utf-8') as f:
+                    data = json.load(f)
+                
+                feature_data = next((item for item in data if item.get('name') == 'feature'), None)
+                if not feature_data:
+                    continue
+                
+                for idx, feature in enumerate(feature_data.get('features', [])):
+                    tags = feature.get('tags', [])
+                    for tag in tags:
+                        if tag.get('name') == 'Others':
+                            others_features.append({
+                                'product': product,
+                                'feature_index': idx,
+                                'title': feature.get('title', ''),
+                                'description': feature.get('description', ''),
+                                'time': feature.get('time', ''),
+                                'current_subtags': [st.get('name') for st in tag.get('subtags', [])]
+                            })
+                            break
+            
+            self.send_json_response(200, {"features": others_features})
+        
+        elif path == "/api/admin/tags":
+            # 获取标签结构
+            token = self.get_auth_token()
+            if not verify_session(token):
+                self.send_json_response(401, {"error": "未授权访问"})
+                return
+            
+            tag_file = get_project_root() / "info" / "tag.json"
+            if tag_file.exists():
+                with open(tag_file, 'r', encoding='utf-8') as f:
+                    tags_data = json.load(f)
+                self.send_json_response(200, tags_data)
+            else:
+                self.send_json_response(404, {"error": "标签文件不存在"})
+        
         else:
             self.send_response(404)
             self.end_headers()
@@ -356,6 +410,332 @@ class APIHandler(BaseHTTPRequestHandler):
             run_script_async("ai_summary.py", task_type="summary")
             
             self.send_json_response(200, {"status": "started"})
+        
+        elif path == "/api/admin/others/update":
+            # 更新 feature 的标签
+            token = self.get_auth_token()
+            if not verify_session(token):
+                self.send_json_response(401, {"error": "未授权访问"})
+                return
+            
+            body = self.read_request_body()
+            try:
+                data = json.loads(body)
+            except:
+                self.send_json_response(400, {"error": "无效的 JSON"})
+                return
+            
+            product = data.get('product')
+            feature_index = data.get('feature_index')
+            new_primary_tag = data.get('primary_tag')
+            new_subtag = data.get('subtag')
+            
+            if not all([product, new_primary_tag, new_subtag]) or feature_index is None:
+                self.send_json_response(400, {"error": "缺少必要参数"})
+                return
+            
+            # 1. 更新 tag.json（如果是新的 subtag）
+            tag_file = get_project_root() / "info" / "tag.json"
+            with open(tag_file, 'r', encoding='utf-8') as f:
+                tags_data = json.load(f)
+            
+            # 检查 subtag 是否已存在于映射中
+            subtag_to_primary = tags_data.get('subtag_to_primary', {})
+            if new_subtag not in subtag_to_primary:
+                # 新的 subtag，需要添加到 tag.json
+                subtag_to_primary[new_subtag] = new_primary_tag
+                
+                # 找到对应的 primary tag 并添加 subtag
+                for p_tag in tags_data.get('primary_tags', []):
+                    if p_tag.get('name') == new_primary_tag:
+                        if 'subtags' not in p_tag:
+                            p_tag['subtags'] = []
+                        # 检查是否已存在
+                        existing = [s for s in p_tag['subtags'] if s.get('name') == new_subtag]
+                        if not existing:
+                            p_tag['subtags'].append({
+                                'name': new_subtag,
+                                'description': new_subtag
+                            })
+                        break
+                else:
+                    # primary tag 不存在，创建新的
+                    tags_data['primary_tags'].append({
+                        'name': new_primary_tag,
+                        'description': new_primary_tag,
+                        'subtags': [{
+                            'name': new_subtag,
+                            'description': new_subtag
+                        }]
+                    })
+                
+                tags_data['subtag_to_primary'] = subtag_to_primary
+                
+                with open(tag_file, 'w', encoding='utf-8') as f:
+                    json.dump(tags_data, f, ensure_ascii=False, indent=4)
+            
+            # 2. 更新产品的 feature tags
+            product_file = get_project_root() / "storage" / f"{product}.json"
+            if not product_file.exists():
+                self.send_json_response(404, {"error": f"产品文件不存在: {product}"})
+                return
+            
+            with open(product_file, 'r', encoding='utf-8') as f:
+                product_data = json.load(f)
+            
+            feature_data = next((item for item in product_data if item.get('name') == 'feature'), None)
+            if not feature_data or feature_index >= len(feature_data.get('features', [])):
+                self.send_json_response(404, {"error": "找不到指定的 feature"})
+                return
+            
+            feature = feature_data['features'][feature_index]
+            current_tags = feature.get('tags', [])
+            
+            # 移除 Others 标签中该 subtag，添加到正确的 primary tag
+            new_tags = []
+            for tag in current_tags:
+                if tag.get('name') == 'Others':
+                    # 从 Others 中移除这个 subtag
+                    remaining_subtags = [s for s in tag.get('subtags', []) if s.get('name') != new_subtag]
+                    if remaining_subtags:
+                        tag['subtags'] = remaining_subtags
+                        new_tags.append(tag)
+                    # 如果 Others 没有 subtag 了，就不添加了
+                elif tag.get('name') == new_primary_tag:
+                    # 已有这个 primary tag，添加 subtag
+                    existing_subtags = [s.get('name') for s in tag.get('subtags', [])]
+                    if new_subtag not in existing_subtags:
+                        tag['subtags'].append({'name': new_subtag})
+                    new_tags.append(tag)
+                else:
+                    new_tags.append(tag)
+            
+            # 检查是否需要新增 primary tag
+            has_primary = any(t.get('name') == new_primary_tag for t in new_tags)
+            if not has_primary:
+                new_tags.append({
+                    'name': new_primary_tag,
+                    'subtags': [{'name': new_subtag}]
+                })
+            
+            feature['tags'] = new_tags
+            
+            with open(product_file, 'w', encoding='utf-8') as f:
+                json.dump(product_data, f, ensure_ascii=False, indent=4)
+            
+            self.send_json_response(200, {"status": "updated"})
+        
+        elif path == "/api/admin/feature/update-tags":
+            # 更新单个 feature 的标签
+            token = self.get_auth_token()
+            if not verify_session(token):
+                self.send_json_response(401, {"error": "未授权访问"})
+                return
+            
+            body = self.read_request_body()
+            try:
+                data = json.loads(body)
+            except:
+                self.send_json_response(400, {"error": "无效的 JSON"})
+                return
+            
+            product = data.get('product')
+            feature_index = data.get('feature_index')
+            new_tags = data.get('tags', [])  # [{name: 'Primary', subtags: [{name: 'Subtag'}]}]
+            
+            if not product or feature_index is None:
+                self.send_json_response(400, {"error": "缺少必要参数"})
+                return
+            
+            # 更新产品的 feature tags
+            product_file = get_project_root() / "storage" / f"{product}.json"
+            if not product_file.exists():
+                self.send_json_response(404, {"error": f"产品文件不存在: {product}"})
+                return
+            
+            with open(product_file, 'r', encoding='utf-8') as f:
+                product_data = json.load(f)
+            
+            feature_data = next((item for item in product_data if item.get('name') == 'feature'), None)
+            if not feature_data or feature_index >= len(feature_data.get('features', [])):
+                self.send_json_response(404, {"error": "找不到指定的 feature"})
+                return
+            
+            feature = feature_data['features'][feature_index]
+            feature['tags'] = new_tags
+            
+            with open(product_file, 'w', encoding='utf-8') as f:
+                json.dump(product_data, f, ensure_ascii=False, indent=4)
+            
+            self.send_json_response(200, {"status": "updated"})
+        
+        elif path == "/api/admin/tag/rename":
+            # 统一重命名标签
+            token = self.get_auth_token()
+            if not verify_session(token):
+                self.send_json_response(401, {"error": "未授权访问"})
+                return
+            
+            body = self.read_request_body()
+            try:
+                data = json.loads(body)
+            except:
+                self.send_json_response(400, {"error": "无效的 JSON"})
+                return
+            
+            old_name = data.get('old_name')
+            new_name = data.get('new_name')
+            tag_type = data.get('type', 'subtag')  # 'primary' or 'subtag'
+            
+            if not old_name or not new_name:
+                self.send_json_response(400, {"error": "缺少 old_name 或 new_name"})
+                return
+            
+            # 1. 更新 tag.json
+            tag_file = get_project_root() / "info" / "tag.json"
+            with open(tag_file, 'r', encoding='utf-8') as f:
+                tags_data = json.load(f)
+            
+            if tag_type == 'primary':
+                # 重命名一级标签
+                for p_tag in tags_data.get('primary_tags', []):
+                    if p_tag.get('name') == old_name:
+                        p_tag['name'] = new_name
+                        break
+                
+                # 更新 subtag_to_primary 中的值
+                for subtag, primary in list(tags_data.get('subtag_to_primary', {}).items()):
+                    if primary == old_name:
+                        tags_data['subtag_to_primary'][subtag] = new_name
+            else:
+                # 重命名二级标签
+                # 更新 primary_tags 中的 subtags
+                for p_tag in tags_data.get('primary_tags', []):
+                    for subtag in p_tag.get('subtags', []):
+                        if subtag.get('name') == old_name:
+                            subtag['name'] = new_name
+                            break
+                
+                # 更新 subtag_to_primary 映射
+                if old_name in tags_data.get('subtag_to_primary', {}):
+                    primary = tags_data['subtag_to_primary'].pop(old_name)
+                    tags_data['subtag_to_primary'][new_name] = primary
+            
+            with open(tag_file, 'w', encoding='utf-8') as f:
+                json.dump(tags_data, f, ensure_ascii=False, indent=4)
+            
+            # 2. 更新所有产品文件中的标签
+            storage_dir = get_project_root() / "storage"
+            products = ['youware', 'base44', 'bolt', 'lovable', 'replit', 'rocket', 'trickle', 'v0']
+            updated_count = 0
+            
+            for product in products:
+                product_file = storage_dir / f"{product}.json"
+                if not product_file.exists():
+                    continue
+                
+                with open(product_file, 'r', encoding='utf-8') as f:
+                    product_data = json.load(f)
+                
+                modified = False
+                feature_data = next((item for item in product_data if item.get('name') == 'feature'), None)
+                if not feature_data:
+                    continue
+                
+                for feature in feature_data.get('features', []):
+                    tags = feature.get('tags', [])
+                    if not isinstance(tags, list):
+                        continue
+                    
+                    for tag in tags:
+                        if tag_type == 'primary' and tag.get('name') == old_name:
+                            tag['name'] = new_name
+                            modified = True
+                        
+                        for subtag in tag.get('subtags', []):
+                            if tag_type == 'subtag' and subtag.get('name') == old_name:
+                                subtag['name'] = new_name
+                                modified = True
+                
+                if modified:
+                    with open(product_file, 'w', encoding='utf-8') as f:
+                        json.dump(product_data, f, ensure_ascii=False, indent=4)
+                    updated_count += 1
+            
+            self.send_json_response(200, {
+                "status": "renamed",
+                "updated_products": updated_count
+            })
+        
+        elif path == "/api/admin/features":
+            # 获取产品的 features 列表
+            token = self.get_auth_token()
+            if not verify_session(token):
+                self.send_json_response(401, {"error": "未授权访问"})
+                return
+            
+            body = self.read_request_body()
+            try:
+                data = json.loads(body)
+            except:
+                self.send_json_response(400, {"error": "无效的 JSON"})
+                return
+            
+            product = data.get('product', 'youware')
+            page = data.get('page', 1)
+            page_size = data.get('page_size', 20)
+            search = data.get('search', '')
+            
+            product_file = get_project_root() / "storage" / f"{product}.json"
+            if not product_file.exists():
+                self.send_json_response(404, {"error": f"产品文件不存在: {product}"})
+                return
+            
+            with open(product_file, 'r', encoding='utf-8') as f:
+                product_data = json.load(f)
+            
+            feature_data = next((item for item in product_data if item.get('name') == 'feature'), None)
+            if not feature_data:
+                self.send_json_response(200, {"features": [], "total": 0, "page": page})
+                return
+            
+            all_features = feature_data.get('features', [])
+            
+            # 搜索过滤
+            if search:
+                search_lower = search.lower()
+                all_features = [
+                    (idx, f) for idx, f in enumerate(all_features)
+                    if search_lower in f.get('title', '').lower() or 
+                       search_lower in f.get('description', '').lower()
+                ]
+            else:
+                all_features = [(idx, f) for idx, f in enumerate(all_features)]
+            
+            total = len(all_features)
+            
+            # 分页
+            start = (page - 1) * page_size
+            end = start + page_size
+            page_features = all_features[start:end]
+            
+            # 构建返回数据
+            result_features = []
+            for idx, f in page_features:
+                result_features.append({
+                    'index': idx,
+                    'title': f.get('title', ''),
+                    'description': f.get('description', ''),
+                    'time': f.get('time', ''),
+                    'tags': f.get('tags', [])
+                })
+            
+            self.send_json_response(200, {
+                "features": result_features,
+                "total": total,
+                "page": page,
+                "page_size": page_size
+            })
             
         else:
             self.send_response(404)

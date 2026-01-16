@@ -20,39 +20,12 @@
                         ]
                     },
                     {
-                        "name": "Database",
+                        "name": "Media",
                         "subtags": [
-                            {
-                                "name": "Database Editor"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Media Generation",
-                        "subtags": [
-                            {
-                                "name": "Image Understanding"
-                            },
                             {
                                 "name": "Image Upload"
                             }
                         ]
-                    },
-                    {
-                        "name": "Editor",
-                        "subtags": [
-                            {
-                                "name": "Code Editor"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
                     }
                 ]
             },
@@ -62,21 +35,10 @@
                 "time": "2025-12-23",
                 "tags": [
                     {
-                        "name": "Media Generation",
+                        "name": "Media",
                         "subtags": [
                             {
                                 "name": "Image Edit"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Editor",
-                        "subtags": [
-                            {
-                                "name": "Visual Editor"
-                            },
-                            {
-                                "name": "Design View"
                             }
                         ]
                     },
@@ -87,34 +49,6 @@
                                 "name": "Agent Mode"
                             }
                         ]
-                    },
-                    {
-                        "name": "Database",
-                        "subtags": [
-                            {
-                                "name": "Database Editor"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Community",
-                        "subtags": [
-                            {
-                                "name": "Remix"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Navigation"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
                     }
                 ]
             },
@@ -128,30 +62,6 @@
                         "subtags": [
                             {
                                 "name": "Google"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Performance",
-                        "subtags": [
-                            {
-                                "name": "Speed"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Media Generation",
-                        "subtags": [
-                            {
-                                "name": "Image Understanding"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Agent",
-                        "subtags": [
-                            {
-                                "name": "Agent Mode"
                             }
                         ]
                     }
@@ -169,29 +79,6 @@
                                 "name": "Seedream"
                             }
                         ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Sidebar"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Media Generation",
-                        "subtags": [
-                            {
-                                "name": "Image Upload"
-                            },
-                            {
-                                "name": "Video Generation"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
                     }
                 ]
             },
@@ -201,29 +88,13 @@
                 "time": "2025-12-05",
                 "tags": [
                     {
-                        "name": "AI Model",
-                        "subtags": [
-                            {
-                                "name": "MiniMax"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Media Generation",
+                        "name": "Media",
                         "subtags": [
                             {
                                 "name": "Image Generation"
                             },
                             {
                                 "name": "Image Edit"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Agent",
-                        "subtags": [
-                            {
-                                "name": "Automation"
                             }
                         ]
                     }
@@ -241,37 +112,6 @@
                                 "name": "Google"
                             }
                         ]
-                    },
-                    {
-                        "name": "Media Generation",
-                        "subtags": [
-                            {
-                                "name": "Image Generation"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Editor",
-                        "subtags": [
-                            {
-                                "name": "Visual Editor"
-                            },
-                            {
-                                "name": "SVG Preview"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Agent",
-                        "subtags": [
-                            {
-                                "name": "Automation"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
                     }
                 ]
             },
@@ -285,12 +125,6 @@
                         "subtags": [
                             {
                                 "name": "Templates"
-                            },
-                            {
-                                "name": "Comments"
-                            },
-                            {
-                                "name": "Search"
                             }
                         ]
                     },
@@ -301,10 +135,6 @@
                                 "name": "SEO"
                             }
                         ]
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
                     }
                 ]
             },
@@ -346,42 +176,6 @@
                                 "name": "Model Switching"
                             }
                         ]
-                    },
-                    {
-                        "name": "Security",
-                        "subtags": [
-                            {
-                                "name": "Security Scan"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Authentication",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Performance",
-                        "subtags": [
-                            {
-                                "name": "SEO"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Community",
-                        "subtags": [
-                            {
-                                "name": "Templates"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Mobile",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
                     }
                 ]
             },
@@ -397,15 +191,7 @@
                                 "name": "SEO"
                             },
                             {
-                                "name": "Loading"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Navigation"
+                                "name": "Speed"
                             }
                         ]
                     }
@@ -421,35 +207,11 @@
                         "subtags": [
                             {
                                 "name": "Templates"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Media Generation",
-                        "subtags": [
-                            {
-                                "name": "Image Generation"
                             },
                             {
-                                "name": "Video Generation"
+                                "name": "Remix"
                             }
                         ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Navigation"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Deployment",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
                     }
                 ]
             },
@@ -459,46 +221,15 @@
                 "time": "2025-09-25",
                 "tags": [
                     {
-                        "name": "Media Generation",
+                        "name": "Media",
                         "subtags": [
                             {
                                 "name": "Image Generation"
                             },
                             {
                                 "name": "Video Generation"
-                            },
-                            {
-                                "name": "Image Upload"
                             }
                         ]
-                    },
-                    {
-                        "name": "AI Model",
-                        "subtags": [
-                            {
-                                "name": "Seedream"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "File & Upload",
-                        "subtags": [
-                            {
-                                "name": "File Upload"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Community",
-                        "subtags": [
-                            {
-                                "name": "Remix"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
                     }
                 ]
             },
@@ -508,15 +239,7 @@
                 "time": "2025-09-23",
                 "tags": [
                     {
-                        "name": "Community",
-                        "subtags": [
-                            {
-                                "name": "Templates"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Media Generation",
+                        "name": "Media",
                         "subtags": [
                             {
                                 "name": "Image Upload"
@@ -524,22 +247,10 @@
                         ]
                     },
                     {
-                        "name": "File & Upload",
+                        "name": "UI/UX",
                         "subtags": [
                             {
-                                "name": "Drag Drop"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Billing & Credits",
-                        "subtags": [
-                            {
-                                "name": "Credits"
+                                "name": "Notifications"
                             }
                         ]
                     }
@@ -551,54 +262,15 @@
                 "time": "2025-09-09",
                 "tags": [
                     {
-                        "name": "Media Generation",
+                        "name": "Media",
                         "subtags": [
                             {
                                 "name": "Image Generation"
                             },
                             {
-                                "name": "Image Understanding"
+                                "name": "Image Upload"
                             }
                         ]
-                    },
-                    {
-                        "name": "Editor",
-                        "subtags": [
-                            {
-                                "name": "Visual Editor"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Integration",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Database",
-                        "subtags": [
-                            {
-                                "name": "Data Export"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Onboarding"
-                            },
-                            {
-                                "name": "Navigation"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "File & Upload",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Analytics",
-                        "subtags": []
                     }
                 ]
             },
@@ -616,19 +288,12 @@
                         ]
                     },
                     {
-                        "name": "Billing & Credits",
+                        "name": "Billing",
                         "subtags": [
                             {
-                                "name": "Credits"
-                            },
-                            {
-                                "name": "Subscription"
+                                "name": "Usage Quota"
                             }
                         ]
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
                     }
                 ]
             },
@@ -638,7 +303,7 @@
                 "time": "2025-08-29",
                 "tags": [
                     {
-                        "name": "Media Generation",
+                        "name": "Media",
                         "subtags": [
                             {
                                 "name": "Image Generation"
@@ -652,29 +317,6 @@
                                 "name": "Visual Editor"
                             }
                         ]
-                    },
-                    {
-                        "name": "Deployment",
-                        "subtags": [
-                            {
-                                "name": "Custom Domain"
-                            },
-                            {
-                                "name": "Publishing"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Billing & Credits",
-                        "subtags": [
-                            {
-                                "name": "Subscription"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
                     }
                 ]
             },
@@ -684,23 +326,12 @@
                 "time": "2025-08-26",
                 "tags": [
                     {
-                        "name": "Billing & Credits",
+                        "name": "Billing",
                         "subtags": [
                             {
                                 "name": "Referral"
-                            },
-                            {
-                                "name": "Credits"
                             }
                         ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
                     }
                 ]
             },
@@ -713,21 +344,12 @@
                         "name": "Editor",
                         "subtags": [
                             {
-                                "name": "Code Editor"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
+                                "name": "Visual Editor"
+                            },
                             {
-                                "name": "Navigation"
+                                "name": "Preview"
                             }
                         ]
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
                     }
                 ]
             },
@@ -746,22 +368,6 @@
                                 "name": "OpenAI"
                             }
                         ]
-                    },
-                    {
-                        "name": "Integration",
-                        "subtags": [
-                            {
-                                "name": "OpenAI"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Editor",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
                     }
                 ]
             },
@@ -771,35 +377,12 @@
                 "time": "2025-08-18",
                 "tags": [
                     {
-                        "name": "Media Generation",
+                        "name": "Media",
                         "subtags": [
                             {
                                 "name": "Image Edit"
-                            },
-                            {
-                                "name": "Image Upload"
                             }
                         ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Onboarding"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Deployment",
-                        "subtags": [
-                            {
-                                "name": "Preview"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
                     }
                 ]
             },
@@ -818,10 +401,6 @@
                                 "name": "Custom Domain"
                             }
                         ]
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
                     }
                 ]
             },
@@ -834,38 +413,17 @@
                         "name": "AI Model",
                         "subtags": [
                             {
-                                "name": "Google"
-                            },
-                            {
-                                "name": "xAI"
-                            },
-                            {
-                                "name": "OpenAI"
-                            },
-                            {
                                 "name": "Model Switching"
                             }
                         ]
                     },
                     {
-                        "name": "Editor",
+                        "name": "Integration",
                         "subtags": [
                             {
-                                "name": "Visual Editor"
+                                "name": "Perplexity"
                             }
                         ]
-                    },
-                    {
-                        "name": "Agent",
-                        "subtags": [
-                            {
-                                "name": "Agent Mode"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
                     }
                 ]
             },
@@ -875,22 +433,6 @@
                 "time": "2025-08-01",
                 "tags": [
                     {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Navigation"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "File & Upload",
-                        "subtags": [
-                            {
-                                "name": "File Upload"
-                            }
-                        ]
-                    },
-                    {
                         "name": "Analytics",
                         "subtags": [
                             {
@@ -899,12 +441,12 @@
                         ]
                     },
                     {
-                        "name": "Database",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
+                        "name": "Media",
+                        "subtags": [
+                            {
+                                "name": "Image Upload"
+                            }
+                        ]
                     }
                 ]
             },
@@ -928,14 +470,6 @@
                                 "name": "SEO"
                             }
                         ]
-                    },
-                    {
-                        "name": "Editor",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
                     }
                 ]
             },
@@ -943,47 +477,7 @@
                 "title": "Smarter Chat, Cleaner UI, and a More Helpful Pricing Page",
                 "description": "New\n\nBlog section’s been updated to new URL https://trickle.so/blog\n\nImprovements\n\nAdded FAQs and updated metadata on the pricing page\n\nEnabled streaming preview for pure HTML pages\n\nYou can now load more chat history.\n\nBug Fixes\n\nUser email is now hidden in community projects\n\nUpdated Twitter and OG image URLs\n\nFixed table styling issues for sites, rules, and knowledge views\n\nResolved socket reconnection errors that caused unexpected behavior",
                 "time": "2025-07-30",
-                "tags": [
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Dashboard"
-                            },
-                            {
-                                "name": "Navigation"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Billing & Credits",
-                        "subtags": [
-                            {
-                                "name": "Pricing"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Deployment",
-                        "subtags": [
-                            {
-                                "name": "Preview"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Community",
-                        "subtags": [
-                            {
-                                "name": "Search"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "Introducing Magic Canvas: A Visual, Agentic Way to Build with AI",
@@ -991,51 +485,18 @@
                 "time": "2025-07-22",
                 "tags": [
                     {
-                        "name": "Agent",
-                        "subtags": [
-                            {
-                                "name": "Agent Mode"
-                            },
-                            {
-                                "name": "Design Mode"
-                            }
-                        ]
-                    },
-                    {
                         "name": "Editor",
                         "subtags": [
                             {
                                 "name": "Visual Editor"
-                            },
-                            {
-                                "name": "Design View"
                             }
                         ]
                     },
                     {
-                        "name": "UI/UX",
+                        "name": "Agent",
                         "subtags": [
                             {
-                                "name": "Dashboard"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Deployment",
-                        "subtags": [
-                            {
-                                "name": "Publishing"
-                            },
-                            {
-                                "name": "Preview"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "File & Upload",
-                        "subtags": [
-                            {
-                                "name": "Drag Drop"
+                                "name": "Agent Mode"
                             }
                         ]
                     }
@@ -1050,18 +511,7 @@
                         "name": "Editor",
                         "subtags": [
                             {
-                                "name": "Code Editor"
-                            },
-                            {
                                 "name": "Visual Editor"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Agent",
-                        "subtags": [
-                            {
-                                "name": "Automation"
                             }
                         ]
                     },
@@ -1069,19 +519,9 @@
                         "name": "UI/UX",
                         "subtags": [
                             {
-                                "name": "Dashboard"
-                            },
-                            {
-                                "name": "Dark Mode"
-                            },
-                            {
                                 "name": "Themes"
                             }
                         ]
-                    },
-                    {
-                        "name": "Performance",
-                        "subtags": []
                     }
                 ]
             }

@@ -18,22 +18,6 @@
                                 "name": "GitHub"
                             }
                         ]
-                    },
-                    {
-                        "name": "Deployment",
-                        "subtags": [
-                            {
-                                "name": "Code Download"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Team & Enterprise",
-                        "subtags": [
-                            {
-                                "name": "Project Sharing"
-                            }
-                        ]
                     }
                 ]
             },
@@ -41,24 +25,7 @@
                 "title": "NPM packages",
                 "description": "December 4, 2025\nYou can now bring any web library from NPM into your Base44 apps, including GSAP, Radix UI, anime.js, and many more.\n\nThese packages cover animation, 3D, UI components, charts, forms, and media, all accessible directly from the builder. Just tell the builder which package you want to use and it will be added automatically.\n\nThis unlocks a new level of creativity and functionality. You can build apps with premium motion, advanced 3D scenes, smarter interactions, richer dashboards, file uploads, image editing, and video players, all with more polish and capability.\nBase44 is the AI-powered platform that lets users build fully functioning apps in minutes. Using nothing but natural language, Base44 enables anyone to turn their words into personal productivity apps, back-office tools, customer portals, or complete enterprise products that are ready to use, no integrations required.\n© 2026 Base44 Inc. All rights reserved.\nWe use cookies and similar technologies. You can opt-out by clicking 'Do Not Sell or Share My Personal Information' at the bottom of the page.",
                 "time": "2026-01-01",
-                "tags": [
-                    {
-                        "name": "Integration",
-                        "subtags": [
-                            {
-                                "name": "NPM"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Framework",
-                        "subtags": [
-                            {
-                                "name": "NPM"
-                            }
-                        ]
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "Act as a user",
@@ -66,18 +33,7 @@
                 "time": "2026-01-01",
                 "tags": [
                     {
-                        "name": "Team & Enterprise",
-                        "subtags": [
-                            {
-                                "name": "Permissions"
-                            },
-                            {
-                                "name": "Roles"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Authentication",
+                        "name": "Auth",
                         "subtags": [
                             {
                                 "name": "Access Control"
@@ -85,10 +41,10 @@
                         ]
                     },
                     {
-                        "name": "UI/UX",
+                        "name": "Team",
                         "subtags": [
                             {
-                                "name": "Dashboard"
+                                "name": "Team Management"
                             }
                         ]
                     }
@@ -103,24 +59,10 @@
                         "name": "Integration",
                         "subtags": [
                             {
-                                "name": "Google Analytics"
-                            },
-                            {
                                 "name": "Notion"
                             },
                             {
                                 "name": "Slack"
-                            },
-                            {
-                                "name": "Salesforce"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Onboarding"
                             }
                         ]
                     }
@@ -135,32 +77,12 @@
                         "name": "Agent",
                         "subtags": [
                             {
-                                "name": "Agent Mode"
+                                "name": "Automation"
                             },
                             {
-                                "name": "Automation"
+                                "name": "Agent Mode"
                             }
                         ]
-                    },
-                    {
-                        "name": "Database",
-                        "subtags": [
-                            {
-                                "name": "Database Editor"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "File & Upload",
-                        "subtags": [
-                            {
-                                "name": "File Upload"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Integration",
-                        "subtags": []
                     }
                 ]
             },
@@ -170,14 +92,6 @@
                 "time": "2026-01-01",
                 "tags": [
                     {
-                        "name": "Integration",
-                        "subtags": [
-                            {
-                                "name": "WhatsApp"
-                            }
-                        ]
-                    },
-                    {
                         "name": "Agent",
                         "subtags": [
                             {
@@ -186,18 +100,10 @@
                         ]
                     },
                     {
-                        "name": "Media Generation",
+                        "name": "Integration",
                         "subtags": [
                             {
-                                "name": "Image Understanding"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Mobile",
-                        "subtags": [
-                            {
-                                "name": "Voice Input"
+                                "name": "Slack"
                             }
                         ]
                     }
@@ -213,23 +119,16 @@
                         "subtags": [
                             {
                                 "name": "Agent Mode"
-                            },
-                            {
-                                "name": "Automation"
                             }
                         ]
                     },
                     {
-                        "name": "Database",
+                        "name": "Backend",
                         "subtags": [
                             {
-                                "name": "Database Editor"
+                                "name": "Database"
                             }
                         ]
-                    },
-                    {
-                        "name": "Integration",
-                        "subtags": []
                     }
                 ]
             },
@@ -239,18 +138,13 @@
                 "time": "2026-01-01",
                 "tags": [
                     {
-                        "name": "Community",
-                        "subtags": [
-                            {
-                                "name": "Explore"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Team & Enterprise",
+                        "name": "Team",
                         "subtags": [
                             {
                                 "name": "Team Management"
+                            },
+                            {
+                                "name": "Workspace"
                             }
                         ]
                     }
@@ -262,13 +156,13 @@
                 "time": "2026-01-01",
                 "tags": [
                     {
-                        "name": "Billing & Credits",
+                        "name": "Billing",
                         "subtags": [
                             {
                                 "name": "Referral"
                             },
                             {
-                                "name": "Credits"
+                                "name": "Usage Quota"
                             }
                         ]
                     }
@@ -286,18 +180,7 @@
                                 "name": "Templates"
                             },
                             {
-                                "name": "Explore"
-                            },
-                            {
-                                "name": "Creator Profile"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Billing & Credits",
-                        "subtags": [
-                            {
-                                "name": "Credits"
+                                "name": "Remix"
                             }
                         ]
                     }
@@ -309,7 +192,7 @@
                 "time": "2026-01-01",
                 "tags": [
                     {
-                        "name": "Authentication",
+                        "name": "Auth",
                         "subtags": [
                             {
                                 "name": "Social Login"
@@ -324,18 +207,15 @@
                 "time": "2026-01-01",
                 "tags": [
                     {
-                        "name": "Authentication",
+                        "name": "Auth",
                         "subtags": [
                             {
                                 "name": "SSO"
-                            },
-                            {
-                                "name": "OAuth"
                             }
                         ]
                     },
                     {
-                        "name": "Team & Enterprise",
+                        "name": "Team",
                         "subtags": [
                             {
                                 "name": "Permissions"
@@ -350,7 +230,7 @@
                 "time": "2026-01-01",
                 "tags": [
                     {
-                        "name": "Billing & Credits",
+                        "name": "Billing",
                         "subtags": [
                             {
                                 "name": "Subscription"
@@ -365,19 +245,13 @@
                 "time": "2026-01-01",
                 "tags": [
                     {
-                        "name": "Team & Enterprise",
+                        "name": "Team",
                         "subtags": [
                             {
                                 "name": "Workspace"
                             },
                             {
-                                "name": "Team Management"
-                            },
-                            {
                                 "name": "Roles"
-                            },
-                            {
-                                "name": "Invite"
                             }
                         ]
                     }
@@ -393,15 +267,8 @@
                         "subtags": [
                             {
                                 "name": "Visual Editor"
-                            },
-                            {
-                                "name": "Design View"
                             }
                         ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
                     }
                 ]
             },
@@ -411,10 +278,13 @@
                 "time": "2026-01-01",
                 "tags": [
                     {
-                        "name": "Authentication",
+                        "name": "Auth",
                         "subtags": [
                             {
                                 "name": "Email Auth"
+                            },
+                            {
+                                "name": "Social Login"
                             }
                         ]
                     }
@@ -429,13 +299,9 @@
                         "name": "Agent",
                         "subtags": [
                             {
-                                "name": "Automation"
+                                "name": "Agent Mode"
                             }
                         ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
                     }
                 ]
             },
@@ -445,16 +311,12 @@
                 "time": "2026-01-01",
                 "tags": [
                     {
-                        "name": "Deployment",
+                        "name": "Editor",
                         "subtags": [
                             {
-                                "name": "Preview"
+                                "name": "Code Editor"
                             }
                         ]
-                    },
-                    {
-                        "name": "Editor",
-                        "subtags": []
                     }
                 ]
             },
@@ -485,16 +347,7 @@
                 "title": "Prompt caching optimization",
                 "description": "June 6, 2025\nYou can now reuse prompts for up to 1 hour, thanks to an extended caching window (up from 5 minutes). This significantly reduces token usage and speeds up your workflow, ideal for refining prompts during development sessions.\nBase44 is the AI-powered platform that lets users build fully functioning apps in minutes. Using nothing but natural language, Base44 enables anyone to turn their words into personal productivity apps, back-office tools, customer portals, or complete enterprise products that are ready to use, no integrations required.\n© 2026 Base44 Inc. All rights reserved.\nWe use cookies and similar technologies. You can opt-out by clicking 'Do Not Sell or Share My Personal Information' at the bottom of the page.",
                 "time": "2026-01-01",
-                "tags": [
-                    {
-                        "name": "Performance",
-                        "subtags": [
-                            {
-                                "name": "Caching"
-                            }
-                        ]
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "Backend function & image upload bugs",
@@ -502,30 +355,18 @@
                 "time": "2026-01-01",
                 "tags": [
                     {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Deployment",
-                        "subtags": [
-                            {
-                                "name": "Environment Variables"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "File & Upload",
-                        "subtags": [
-                            {
-                                "name": "File Upload"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Database",
+                        "name": "Backend",
                         "subtags": [
                             {
                                 "name": "Edge Functions"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Media",
+                        "subtags": [
+                            {
+                                "name": "Image Upload"
                             }
                         ]
                     }
@@ -537,18 +378,10 @@
                 "time": "2026-01-01",
                 "tags": [
                     {
-                        "name": "Billing & Credits",
-                        "subtags": [
-                            {
-                                "name": "Credits"
-                            }
-                        ]
-                    },
-                    {
                         "name": "Agent",
                         "subtags": [
                             {
-                                "name": "Automation"
+                                "name": "Agent Mode"
                             }
                         ]
                     }
@@ -566,7 +399,7 @@
                                 "name": "Custom Domain"
                             },
                             {
-                                "name": "DNS"
+                                "name": "Hosting"
                             }
                         ]
                     }
@@ -578,40 +411,18 @@
                 "time": "2026-01-01",
                 "tags": [
                     {
-                        "name": "Deployment",
-                        "subtags": [
-                            {
-                                "name": "Custom Domain"
-                            },
-                            {
-                                "name": "Hosting"
-                            },
-                            {
-                                "name": "Publishing"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Database",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Authentication",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Integration",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Analytics",
-                        "subtags": []
-                    },
-                    {
                         "name": "Agent",
                         "subtags": [
                             {
                                 "name": "Automation"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Deployment",
+                        "subtags": [
+                            {
+                                "name": "Custom Domain"
                             }
                         ]
                     }
@@ -623,24 +434,15 @@
                 "time": "2026-01-01",
                 "tags": [
                     {
-                        "name": "Database",
+                        "name": "Backend",
                         "subtags": [
                             {
                                 "name": "Edge Functions"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Agent",
-                        "subtags": [
+                            },
                             {
-                                "name": "Automation"
+                                "name": "Database"
                             }
                         ]
-                    },
-                    {
-                        "name": "Team & Enterprise",
-                        "subtags": []
                     }
                 ]
             },
@@ -648,27 +450,7 @@
                 "title": "B2B data integration",
                 "description": "May 16, 2025\nIntroduced direct access to B2B data (CRM enrichments, business directories, AI-powered prospecting) with integration available via the new catalog.\nBase44 is the AI-powered platform that lets users build fully functioning apps in minutes. Using nothing but natural language, Base44 enables anyone to turn their words into personal productivity apps, back-office tools, customer portals, or complete enterprise products that are ready to use, no integrations required.\n© 2026 Base44 Inc. All rights reserved.\nWe use cookies and similar technologies. You can opt-out by clicking 'Do Not Sell or Share My Personal Information' at the bottom of the page.",
                 "time": "2026-01-01",
-                "tags": [
-                    {
-                        "name": "Integration",
-                        "subtags": [
-                            {
-                                "name": "CRM"
-                            },
-                            {
-                                "name": "Business Directory"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Database",
-                        "subtags": [
-                            {
-                                "name": "Data Export"
-                            }
-                        ]
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "Integration catalog",
@@ -677,13 +459,17 @@
                 "tags": [
                     {
                         "name": "Integration",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Community",
                         "subtags": [
                             {
-                                "name": "Templates"
+                                "name": "MCP"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Agent",
+                        "subtags": [
+                            {
+                                "name": "Automation"
                             }
                         ]
                     }
@@ -716,9 +502,6 @@
                                 "name": "Publishing"
                             },
                             {
-                                "name": "Preview"
-                            },
-                            {
                                 "name": "Environment Variables"
                             }
                         ]
@@ -735,25 +518,6 @@
                         "subtags": [
                             {
                                 "name": "Visual Editor"
-                            },
-                            {
-                                "name": "Design View"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Dashboard"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Performance",
-                        "subtags": [
-                            {
-                                "name": "Speed"
                             }
                         ]
                     }
@@ -772,17 +536,6 @@
                             },
                             {
                                 "name": "Search Replace"
-                            },
-                            {
-                                "name": "Split View"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": [
-                            {
-                                "name": "Sidebar"
                             }
                         ]
                     }
@@ -800,10 +553,6 @@
                                 "name": "Console"
                             }
                         ]
-                    },
-                    {
-                        "name": "Integration",
-                        "subtags": []
                     }
                 ]
             },
@@ -826,20 +575,7 @@
                 "title": "Expanded context windows",
                 "description": "May 5, 2025\nImproved the platform’s handling of larger projects to reduce AI confusion.\nBase44 is the AI-powered platform that lets users build fully functioning apps in minutes. Using nothing but natural language, Base44 enables anyone to turn their words into personal productivity apps, back-office tools, customer portals, or complete enterprise products that are ready to use, no integrations required.\n© 2026 Base44 Inc. All rights reserved.\nWe use cookies and similar technologies. You can opt-out by clicking 'Do Not Sell or Share My Personal Information' at the bottom of the page.",
                 "time": "2026-01-01",
-                "tags": [
-                    {
-                        "name": "Performance",
-                        "subtags": [
-                            {
-                                "name": "Speed"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "AI Model",
-                        "subtags": []
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "Styling instructions templates",
@@ -847,10 +583,10 @@
                 "time": "2026-01-01",
                 "tags": [
                     {
-                        "name": "Editor",
+                        "name": "Community",
                         "subtags": [
                             {
-                                "name": "Visual Editor"
+                                "name": "Templates"
                             }
                         ]
                     },
@@ -859,14 +595,6 @@
                         "subtags": [
                             {
                                 "name": "Themes"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Community",
-                        "subtags": [
-                            {
-                                "name": "Templates"
                             }
                         ]
                     }
@@ -878,27 +606,20 @@
                 "time": "2026-01-01",
                 "tags": [
                     {
-                        "name": "Security",
+                        "name": "Auth",
                         "subtags": [
-                            {
-                                "name": "Security Scan"
-                            },
                             {
                                 "name": "Access Control"
                             }
                         ]
                     },
                     {
-                        "name": "UI/UX",
+                        "name": "Backend",
                         "subtags": [
                             {
-                                "name": "Dashboard"
+                                "name": "Database"
                             }
                         ]
-                    },
-                    {
-                        "name": "Database",
-                        "subtags": []
                     }
                 ]
             },
@@ -934,10 +655,10 @@
                         ]
                     },
                     {
-                        "name": "Editor",
+                        "name": "Auth",
                         "subtags": [
                             {
-                                "name": "Code Editor"
+                                "name": "Access Control"
                             }
                         ]
                     }
@@ -953,12 +674,11 @@
                         "subtags": [
                             {
                                 "name": "Diff View"
+                            },
+                            {
+                                "name": "Code Editor"
                             }
                         ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
                     }
                 ]
             },
@@ -968,16 +688,12 @@
                 "time": "2026-01-01",
                 "tags": [
                     {
-                        "name": "Performance",
+                        "name": "Backend",
                         "subtags": [
                             {
-                                "name": "Speed"
+                                "name": "Database"
                             }
                         ]
-                    },
-                    {
-                        "name": "Database",
-                        "subtags": []
                     }
                 ]
             },
@@ -1033,18 +749,18 @@
                 "time": "2026-01-01",
                 "tags": [
                     {
-                        "name": "Mobile",
+                        "name": "Editor",
                         "subtags": [
                             {
-                                "name": "Mobile Editor"
+                                "name": "Preview"
                             }
                         ]
                     },
                     {
-                        "name": "Deployment",
+                        "name": "UI/UX",
                         "subtags": [
                             {
-                                "name": "Preview"
+                                "name": "Mobile UI"
                             }
                         ]
                     }
@@ -1060,15 +776,8 @@
                         "subtags": [
                             {
                                 "name": "Speed"
-                            },
-                            {
-                                "name": "Loading"
                             }
                         ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
                     }
                 ]
             },
@@ -1091,34 +800,13 @@
                 "title": "Improved context & rate limiting",
                 "description": "March 12, 2025\nEnhanced context management and API rate limit handling (especially for external AI APIs).\nBase44 is the AI-powered platform that lets users build fully functioning apps in minutes. Using nothing but natural language, Base44 enables anyone to turn their words into personal productivity apps, back-office tools, customer portals, or complete enterprise products that are ready to use, no integrations required.\n© 2026 Base44 Inc. All rights reserved.\nWe use cookies and similar technologies. You can opt-out by clicking 'Do Not Sell or Share My Personal Information' at the bottom of the page.",
                 "time": "2026-01-01",
-                "tags": [
-                    {
-                        "name": "Performance",
-                        "subtags": [
-                            {
-                                "name": "Speed"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Bug Fixes",
-                        "subtags": []
-                    }
-                ]
+                "tags": "None"
             },
             {
                 "title": "Custom email domains",
                 "description": "December 11, 2025\nYou can now send emails from your own domain, instead of a base44-apps.com sender address. Your app emails will appear fully branded and professional, coming directly from yourcompany.com.\n\nThis highly requested feature enables a complete white-label email experience for your apps.\n\nDetails\n\nCosts 2 integration credits\n\nAvailable on Builder+ plans\n\nRequires custom domain setup\nBase44 is the AI-powered platform that lets users build fully functioning apps in minutes. Using nothing but natural language, Base44 enables anyone to turn their words into personal productivity apps, back-office tools, customer portals, or complete enterprise products that are ready to use, no integrations required.\n© 2026 Base44 Inc. All rights reserved.\nWe use cookies and similar technologies. You can opt-out by clicking 'Do Not Sell or Share My Personal Information' at the bottom of the page.",
                 "time": "2025-12-01",
                 "tags": [
-                    {
-                        "name": "Integration",
-                        "subtags": [
-                            {
-                                "name": "SendGrid"
-                            }
-                        ]
-                    },
                     {
                         "name": "Deployment",
                         "subtags": [
@@ -1128,10 +816,10 @@
                         ]
                     },
                     {
-                        "name": "Billing & Credits",
+                        "name": "Auth",
                         "subtags": [
                             {
-                                "name": "Credits"
+                                "name": "Email Auth"
                             }
                         ]
                     }
@@ -1149,15 +837,7 @@
                                 "name": "Templates"
                             },
                             {
-                                "name": "Explore"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Billing & Credits",
-                        "subtags": [
-                            {
-                                "name": "Pricing"
+                                "name": "Remix"
                             }
                         ]
                     }
@@ -1169,7 +849,7 @@
                 "time": "2025-10-01",
                 "tags": [
                     {
-                        "name": "Authentication",
+                        "name": "Auth",
                         "subtags": [
                             {
                                 "name": "SSO"
@@ -1177,13 +857,10 @@
                         ]
                     },
                     {
-                        "name": "Team & Enterprise",
+                        "name": "Team",
                         "subtags": [
                             {
                                 "name": "Workspace"
-                            },
-                            {
-                                "name": "Enterprise Plan"
                             }
                         ]
                     }
@@ -1225,21 +902,18 @@
                 "time": "2025-07-01",
                 "tags": [
                     {
-                        "name": "Team & Enterprise",
+                        "name": "Auth",
                         "subtags": [
                             {
-                                "name": "Workspace"
-                            },
-                            {
-                                "name": "Permissions"
+                                "name": "Access Control"
                             }
                         ]
                     },
                     {
-                        "name": "Security",
+                        "name": "Team",
                         "subtags": [
                             {
-                                "name": "Access Control"
+                                "name": "Workspace"
                             }
                         ]
                     }
@@ -1257,9 +931,6 @@
                                 "name": "Google"
                             },
                             {
-                                "name": "Anthropic"
-                            },
-                            {
                                 "name": "Model Switching"
                             }
                         ]
@@ -1275,13 +946,9 @@
                         "name": "Agent",
                         "subtags": [
                             {
-                                "name": "Agent Mode"
+                                "name": "Plan Mode"
                             }
                         ]
-                    },
-                    {
-                        "name": "UI/UX",
-                        "subtags": []
                     }
                 ]
             },
@@ -1291,22 +958,10 @@
                 "time": "2025-04-01",
                 "tags": [
                     {
-                        "name": "Integration",
+                        "name": "Backend",
                         "subtags": [
                             {
-                                "name": "API"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Database",
-                        "subtags": []
-                    },
-                    {
-                        "name": "Agent",
-                        "subtags": [
-                            {
-                                "name": "Automation"
+                                "name": "Edge Functions"
                             }
                         ]
                     }

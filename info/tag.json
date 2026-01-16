@@ -1,855 +1,823 @@
-[
-    {
-        "name": "Integration",
-        "description": "第三方服务集成、API 对接、外部平台连接",
-        "subtags": [
-            {
-                "name": "MCP",
-                "description": "Model Context Protocol 集成"
-            },
-            {
-                "name": "Supabase",
-                "description": "Supabase 数据库集成"
-            },
-            {
-                "name": "Stripe",
-                "description": "Stripe 支付集成"
-            },
-            {
-                "name": "GitHub",
-                "description": "GitHub 代码同步集成"
-            },
-            {
-                "name": "Notion",
-                "description": "Notion 工作空间集成"
-            },
-            {
-                "name": "Linear",
-                "description": "Linear 项目管理集成"
-            },
-            {
-                "name": "Glean",
-                "description": "Glean 知识库集成"
-            },
-            {
-                "name": "Snowflake",
-                "description": "Snowflake 数据仓库集成"
-            },
-            {
-                "name": "Shopify",
-                "description": "Shopify 电商平台集成"
-            },
-            {
-                "name": "Figma",
-                "description": "Figma 设计工具集成"
-            },
-            {
-                "name": "Slack",
-                "description": "Slack 通讯集成"
-            },
-            {
-                "name": "Salesforce",
-                "description": "Salesforce CRM 集成"
-            },
-            {
-                "name": "Zendesk",
-                "description": "Zendesk 客服集成"
-            },
-            {
-                "name": "Twilio",
-                "description": "Twilio 通讯 API 集成"
-            },
-            {
-                "name": "ElevenLabs",
-                "description": "ElevenLabs 语音合成集成"
-            },
-            {
-                "name": "Perplexity",
-                "description": "Perplexity AI 搜索集成"
-            },
-            {
-                "name": "Firecrawl",
-                "description": "Firecrawl 网页抓取集成"
-            },
-            {
-                "name": "Netlify",
-                "description": "Netlify 部署集成"
-            },
-            {
-                "name": "Vercel",
-                "description": "Vercel 部署集成"
-            },
-            {
-                "name": "Google Analytics",
-                "description": "Google Analytics 分析集成"
-            },
-            {
-                "name": "WhatsApp",
-                "description": "WhatsApp 消息集成"
-            },
-            {
-                "name": "Todoist",
-                "description": "Todoist 任务管理集成"
-            },
-            {
-                "name": "ClickUp",
-                "description": "ClickUp 项目管理集成"
-            },
-            {
-                "name": "Atlassian",
-                "description": "Atlassian 产品集成"
-            },
-            {
-                "name": "GitLab",
-                "description": "GitLab 代码托管集成"
-            },
-            {
-                "name": "Bitbucket",
-                "description": "Bitbucket 代码托管集成"
-            },
-            {
-                "name": "Plaid",
-                "description": "Plaid 金融数据集成"
-            },
-            {
-                "name": "Neon",
-                "description": "Neon 数据库集成"
-            },
-            {
-                "name": "NPM",
-                "description": "NPM 包管理集成"
-            },
-            {
-                "name": "Sentry",
-                "description": "Sentry 错误监控集成"
-            },
-            {
-                "name": "Google Maps",
-                "description": "Google Maps 地图集成"
-            },
-            {
-                "name": "Upstash",
-                "description": "Upstash Redis 集成"
-            },
-            {
-                "name": "HoundDog",
-                "description": "HoundDog 安全检测集成"
-            },
-            {
-                "name": "BigQuery",
-                "description": "BigQuery 数据分析集成"
-            },
-            {
-                "name": "Databricks",
-                "description": "Databricks 数据平台集成"
-            },
-            {
-                "name": "Azure Marketplace",
-                "description": "Azure 市场集成"
-            },
-            {
-                "name": "Agentmail",
-                "description": "Agentmail 邮件集成"
-            },
-            {
-                "name": "GCP Marketplace",
-                "description": "GCP 市场集成"
-            },
-            {
-                "name": "Okta",
-                "description": "Okta 身份认证集成"
-            },
-            {
-                "name": "Active Directory",
-                "description": "Active Directory 集成"
-            },
-            {
-                "name": "Rippling",
-                "description": "Rippling HR 集成"
-            },
-            {
-                "name": "PayPal",
-                "description": "PayPal 支付集成"
-            },
-            {
-                "name": "Expo",
-                "description": "Expo 移动开发集成"
-            },
-            {
-                "name": "Mintlify",
-                "description": "Mintlify 文档集成"
-            },
-            {
-                "name": "SendGrid",
-                "description": "SendGrid 邮件集成"
-            },
-            {
-                "name": "Firebase",
-                "description": "Firebase 后端集成"
-            },
-            {
-                "name": "VS Code",
-                "description": "VS Code 插件集成"
-            },
-            {
-                "name": "Cursor",
-                "description": "Cursor 编辑器集成"
-            },
-            {
-                "name": "LinkedIn",
-                "description": "LinkedIn 社交集成"
-            },
-            {
-                "name": "Telegram",
-                "description": "Telegram 消息集成"
-            },
-            {
-                "name": "YouBase",
-                "description": "YouBase"
-            },
-            {
-                "name": "Midjourney",
-                "description": "Midjourney"
-            },
-            {
-                "name": "OpenAI",
-                "description": "OpenAI"
-            },
-            {
-                "name": "Anthropic",
-                "description": "Anthropic"
-            },
-            {
-                "name": "Miro",
-                "description": "Miro"
-            },
-            {
-                "name": "n8n",
-                "description": "n8n"
-            },
-            {
-                "name": "Cloudflare",
-                "description": "Cloudflare"
-            },
-            {
-                "name": "Builder.io",
-                "description": "Builder.io"
-            },
-            {
-                "name": "Replicate",
-                "description": "Replicate"
-            },
-            {
-                "name": "Resend",
-                "description": "Resend"
-            },
-            {
-                "name": "Object Storage",
-                "description": "Object Storage"
-            },
-            {
-                "name": "xAI",
-                "description": "xAI"
-            },
-            {
-                "name": "CRM",
-                "description": "CRM"
-            },
-            {
-                "name": "Business Directory",
-                "description": "Business Directory"
-            },
-            {
-                "name": "API",
-                "description": "API"
-            }
-        ]
-    },
-    {
-        "name": "AI Model",
-        "description": "AI 模型集成与切换，按厂商/品牌分类",
-        "subtags": [
-            {
-                "name": "OpenAI",
-                "description": "OpenAI 模型系列 (GPT-4, GPT-5, Codex, o1, o3 等)"
-            },
-            {
-                "name": "Anthropic",
-                "description": "Anthropic 模型系列 (Claude Opus, Sonnet, Haiku 等)"
-            },
-            {
-                "name": "Google",
-                "description": "Google 模型系列 (Gemini, Veo, Imagen 等)"
-            },
-            {
-                "name": "xAI",
-                "description": "xAI 模型系列 (Grok 等)"
-            },
-            {
-                "name": "Moonshot",
-                "description": "Moonshot 模型系列 (Kimi 等)"
-            },
-            {
-                "name": "MiniMax",
-                "description": "MiniMax 模型系列"
-            },
-            {
-                "name": "Doubao",
-                "description": "字节豆包模型系列"
-            },
-            {
-                "name": "GLM",
-                "description": "智谱 GLM 模型系列"
-            },
-            {
-                "name": "Flux",
-                "description": "Flux 图像模型"
-            },
-            {
-                "name": "Seedream",
-                "description": "Seedream 图像模型"
-            },
-            {
-                "name": "Model Switching",
-                "description": "模型切换功能"
-            },
-            {
-                "name": "Auto Mode",
-                "description": "自动模型选择"
-            }
-        ]
-    },
-    {
-        "name": "Media Generation",
-        "description": "多媒体内容生成，包括图像、视频、音频",
-        "subtags": [
-            {
-                "name": "Image Generation",
-                "description": "AI 图像生成 (Midjourney, DALL-E, Imagen 等)"
-            },
-            {
-                "name": "Image Edit",
-                "description": "AI 图像编辑"
-            },
-            {
-                "name": "Image Upload",
-                "description": "图像上传与处理"
-            },
-            {
-                "name": "Screenshot",
-                "description": "截图功能"
-            },
-            {
-                "name": "Video Generation",
-                "description": "AI 视频生成 (Sora, Veo 等)"
-            },
-            {
-                "name": "Audio Generation",
-                "description": "AI 音频/语音生成"
-            },
-            {
-                "name": "Video Understanding",
-                "description": "视频内容理解分析"
-            },
-            {
-                "name": "Image Understanding",
-                "description": "Image Understanding"
-            }
-        ]
-    },
-    {
-        "name": "Agent",
-        "description": "AI Agent 智能助手、自动化工作流、交互模式",
-        "subtags": [
-            {
-                "name": "Agent Mode",
-                "description": "Agent 智能工作模式"
-            },
-            {
-                "name": "Plan Mode",
-                "description": "规划模式，先计划后执行"
-            },
-            {
-                "name": "Fast Mode",
-                "description": "快速模式，跳过确认直接执行"
-            },
-            {
-                "name": "Design Mode",
-                "description": "设计模式"
-            },
-            {
-                "name": "Automation",
-                "description": "自动化功能 (Auto Fix, Auto Continue 等)"
-            },
-            {
-                "name": "Tasks",
-                "description": "任务管理 (To-Do, Task List 等)"
-            },
-            {
-                "name": "Clarifying Questions",
-                "description": "澄清问题，理解用户意图"
-            },
-            {
-                "name": "Suggested Actions",
-                "description": "建议操作按钮"
-            }
-        ]
-    },
-    {
-        "name": "Editor",
-        "description": "代码编辑器、编辑功能、IDE 相关",
-        "subtags": [
-            {
-                "name": "Code Editor",
-                "description": "代码编辑器功能"
-            },
-            {
-                "name": "Visual Editor",
-                "description": "可视化编辑器"
-            },
-            {
-                "name": "Design View",
-                "description": "设计视图"
-            },
-            {
-                "name": "Diff View",
-                "description": "差异对比视图"
-            },
-            {
-                "name": "Split View",
-                "description": "分屏视图"
-            },
-            {
-                "name": "Search Replace",
-                "description": "搜索替换"
-            },
-            {
-                "name": "Keyboard Shortcuts",
-                "description": "键盘快捷键"
-            },
-            {
-                "name": "Markdown Preview",
-                "description": "Markdown 预览"
-            },
-            {
-                "name": "SVG Preview",
-                "description": "SVG 预览"
-            },
-            {
-                "name": "Console",
-                "description": "控制台/调试面板"
-            }
-        ]
-    },
-    {
-        "name": "Deployment",
-        "description": "部署、发布、托管相关功能",
-        "subtags": [
-            {
-                "name": "Custom Domain",
-                "description": "自定义域名"
-            },
-            {
-                "name": "SSL",
-                "description": "SSL 证书"
-            },
-            {
-                "name": "Hosting",
-                "description": "托管服务"
-            },
-            {
-                "name": "Publishing",
-                "description": "发布功能"
-            },
-            {
-                "name": "Preview",
-                "description": "预览功能"
-            },
-            {
-                "name": "Environment Variables",
-                "description": "环境变量"
-            },
-            {
-                "name": "DNS",
-                "description": "DNS 管理"
-            },
-            {
-                "name": "Code Download",
-                "description": "代码下载/导出"
-            },
-            {
-                "name": "Edge Functions",
-                "description": "Edge Functions"
-            }
-        ]
-    },
-    {
-        "name": "Database",
-        "description": "数据库相关功能、数据管理",
-        "subtags": [
-            {
-                "name": "Database Editor",
-                "description": "数据库编辑器"
-            },
-            {
-                "name": "Migrations",
-                "description": "数据库迁移"
-            },
-            {
-                "name": "Data Export",
-                "description": "数据导出"
-            },
-            {
-                "name": "Soft Delete",
-                "description": "软删除"
-            },
-            {
-                "name": "Storage",
-                "description": "文件存储"
-            },
-            {
-                "name": "Edge Functions",
-                "description": "边缘函数"
-            }
-        ]
-    },
-    {
-        "name": "Authentication",
-        "description": "用户认证、登录、SSO 相关",
-        "subtags": [
-            {
-                "name": "SSO",
-                "description": "单点登录"
-            },
-            {
-                "name": "SAML",
-                "description": "SAML 认证"
-            },
-            {
-                "name": "OAuth",
-                "description": "OAuth 认证"
-            },
-            {
-                "name": "Social Login",
-                "description": "社交登录 (Google, Apple, GitHub, X 等)"
-            },
-            {
-                "name": "Email Auth",
-                "description": "邮箱认证"
-            },
-            {
-                "name": "SCIM",
-                "description": "SCIM 用户管理"
-            },
-            {
-                "name": "Passcode",
-                "description": "密码/访问码保护"
-            },
-            {
-                "name": "Access Control",
-                "description": "Access Control"
-            }
-        ]
-    },
-    {
-        "name": "Team & Enterprise",
-        "description": "团队协作、企业功能、工作空间管理",
-        "subtags": [
-            {
-                "name": "Workspace",
-                "description": "工作空间管理"
-            },
-            {
-                "name": "Team Management",
-                "description": "团队管理"
-            },
-            {
-                "name": "Permissions",
-                "description": "权限控制"
-            },
-            {
-                "name": "Roles",
-                "description": "角色管理"
-            },
-            {
-                "name": "Enterprise Plan",
-                "description": "企业版功能"
-            },
-            {
-                "name": "Business Plan",
-                "description": "商业版功能"
-            },
-            {
-                "name": "Project Sharing",
-                "description": "项目共享"
-            },
-            {
-                "name": "Invite",
-                "description": "邀请功能"
-            }
-        ]
-    },
-    {
-        "name": "UI/UX",
-        "description": "界面优化、用户体验改进",
-        "subtags": [
-            {
-                "name": "Dashboard",
-                "description": "仪表盘"
-            },
-            {
-                "name": "Sidebar",
-                "description": "侧边栏"
-            },
-            {
-                "name": "Navigation",
-                "description": "导航"
-            },
-            {
-                "name": "Themes",
-                "description": "主题"
-            },
-            {
-                "name": "Dark Mode",
-                "description": "深色模式"
-            },
-            {
-                "name": "Mobile UI",
-                "description": "移动端界面"
-            },
-            {
-                "name": "Notifications",
-                "description": "通知"
-            },
-            {
-                "name": "Onboarding",
-                "description": "新手引导"
-            }
-        ]
-    },
-    {
-        "name": "Performance",
-        "description": "性能优化、速度提升",
-        "subtags": [
-            {
-                "name": "Speed",
-                "description": "速度优化"
-            },
-            {
-                "name": "Loading",
-                "description": "加载优化"
-            },
-            {
-                "name": "Caching",
-                "description": "缓存优化"
-            },
-            {
-                "name": "SEO",
-                "description": "SEO 优化"
-            }
-        ]
-    },
-    {
-        "name": "Security",
-        "description": "安全相关功能、漏洞修复",
-        "subtags": [
-            {
-                "name": "Vulnerability Patch",
-                "description": "漏洞修补"
-            },
-            {
-                "name": "Security Scan",
-                "description": "安全扫描"
-            },
-            {
-                "name": "Access Control",
-                "description": "访问控制"
-            },
-            {
-                "name": "Content Moderation",
-                "description": "内容审核"
-            }
-        ]
-    },
-    {
-        "name": "Billing & Credits",
-        "description": "计费、信用额度、订阅相关",
-        "subtags": [
-            {
-                "name": "Pricing",
-                "description": "定价"
-            },
-            {
-                "name": "Credits",
-                "description": "信用额度/积分"
-            },
-            {
-                "name": "Subscription",
-                "description": "订阅管理"
-            },
-            {
-                "name": "Referral",
-                "description": "推荐奖励"
-            },
-            {
-                "name": "Gift Cards",
-                "description": "礼品卡"
-            }
-        ]
-    },
-    {
-        "name": "Mobile",
-        "description": "移动应用开发、移动端功能",
-        "subtags": [
-            {
-                "name": "iOS App",
-                "description": "iOS 应用"
-            },
-            {
-                "name": "Android App",
-                "description": "Android 应用"
-            },
-            {
-                "name": "Flutter",
-                "description": "Flutter 开发"
-            },
-            {
-                "name": "React Native",
-                "description": "React Native 开发"
-            },
-            {
-                "name": "Mobile Editor",
-                "description": "移动端编辑器"
-            },
-            {
-                "name": "Voice Input",
-                "description": "语音输入"
-            }
-        ]
-    },
-    {
-        "name": "Framework",
-        "description": "框架支持、技术栈相关",
-        "subtags": [
-            {
-                "name": "Next.js",
-                "description": "Next.js 框架"
-            },
-            {
-                "name": "React",
-                "description": "React 框架"
-            },
-            {
-                "name": "TailwindCSS",
-                "description": "TailwindCSS 样式"
-            },
-            {
-                "name": "shadcn",
-                "description": "shadcn UI 组件"
-            },
-            {
-                "name": "React Flow",
-                "description": "React Flow 流程图"
-            },
-            {
-                "name": "Three.js",
-                "description": "Three.js 3D 渲染"
-            },
-            {
-                "name": "Flutter",
-                "description": "Flutter"
-            },
-            {
-                "name": "NPM",
-                "description": "NPM"
-            },
-            {
-                "name": "React Native",
-                "description": "React Native"
-            }
-        ]
-    },
-    {
-        "name": "Analytics",
-        "description": "数据分析、使用统计",
-        "subtags": [
-            {
-                "name": "Usage Stats",
-                "description": "使用统计"
-            },
-            {
-                "name": "Project Analytics",
-                "description": "项目分析"
-            },
-            {
-                "name": "Token Usage",
-                "description": "Token 用量"
-            },
-            {
-                "name": "Creator Analytics",
-                "description": "创作者数据分析"
-            }
-        ]
-    },
-    {
-        "name": "Community",
-        "description": "社区功能、用户互动",
-        "subtags": [
-            {
-                "name": "Comments",
-                "description": "评论功能"
-            },
-            {
-                "name": "Reactions",
-                "description": "点赞/表情反馈"
-            },
-            {
-                "name": "Explore",
-                "description": "探索/发现"
-            },
-            {
-                "name": "Templates",
-                "description": "模板库"
-            },
-            {
-                "name": "Remix",
-                "description": "Remix/二次创作"
-            },
-            {
-                "name": "Search",
-                "description": "搜索功能"
-            },
-            {
-                "name": "Creator Profile",
-                "description": "创作者主页"
-            }
-        ]
-    },
-    {
-        "name": "File & Upload",
-        "description": "文件处理、上传功能",
-        "subtags": [
-            {
-                "name": "File Upload",
-                "description": "文件上传"
-            },
-            {
-                "name": "PDF Processing",
-                "description": "PDF 处理"
-            },
-            {
-                "name": "File Conversion",
-                "description": "文件格式转换"
-            },
-            {
-                "name": "Drag Drop",
-                "description": "拖拽上传"
-            }
-        ]
-    },
-    {
-        "name": "Bug Fixes",
-        "description": "错误修复、问题解决",
-        "subtags": []
+{
+    "primary_tags": [
+        {
+            "name": "AI Model",
+            "description": "AI 模型更新、新增模型支持（按厂商分类）",
+            "subtags": [
+                {
+                    "name": "OpenAI",
+                    "description": "GPT-4, GPT-5, o1, o3, Codex 等"
+                },
+                {
+                    "name": "Anthropic",
+                    "description": "Claude Opus, Sonnet, Haiku 等"
+                },
+                {
+                    "name": "Google",
+                    "description": "Gemini, Veo, Imagen 等"
+                },
+                {
+                    "name": "xAI",
+                    "description": "Grok 系列"
+                },
+                {
+                    "name": "Moonshot",
+                    "description": "Kimi 系列"
+                },
+                {
+                    "name": "MiniMax",
+                    "description": "MiniMax 系列"
+                },
+                {
+                    "name": "Doubao",
+                    "description": "字节豆包系列"
+                },
+                {
+                    "name": "GLM",
+                    "description": "智谱 GLM 系列"
+                },
+                {
+                    "name": "Flux",
+                    "description": "Flux 图像模型"
+                },
+                {
+                    "name": "Seedream",
+                    "description": "Seedream 图像模型"
+                },
+                {
+                    "name": "Model Switching",
+                    "description": "用户手动切换模型"
+                },
+                {
+                    "name": "Auto Mode",
+                    "description": "自动选择最优模型"
+                }
+            ]
+        },
+        {
+            "name": "Agent",
+            "description": "AI Agent 工作模式、自动化流程",
+            "subtags": [
+                {
+                    "name": "Agent Mode",
+                    "description": "Agent 智能工作模式"
+                },
+                {
+                    "name": "Plan Mode",
+                    "description": "先规划后执行"
+                },
+                {
+                    "name": "Fast Mode",
+                    "description": "跳过确认直接执行"
+                },
+                {
+                    "name": "Design Mode",
+                    "description": "可视化设计模式"
+                },
+                {
+                    "name": "Automation",
+                    "description": "自动修复、自动继续等"
+                },
+                {
+                    "name": "Tasks",
+                    "description": "任务列表、待办管理"
+                },
+                {
+                    "name": "Clarifying Questions",
+                    "description": "询问澄清问题"
+                },
+                {
+                    "name": "Suggested Actions",
+                    "description": "建议操作按钮"
+                },
+                {
+                    "name": "Voice Input",
+                    "description": "语音输入交互"
+                }
+            ]
+        },
+        {
+            "name": "Media",
+            "description": "多媒体生成与理解（图像/视频/音频）",
+            "subtags": [
+                {
+                    "name": "Image Generation",
+                    "description": "AI 生成图像"
+                },
+                {
+                    "name": "Image Edit",
+                    "description": "AI 编辑图像"
+                },
+                {
+                    "name": "Image Upload",
+                    "description": "上传图片作为输入"
+                },
+                {
+                    "name": "Image Understanding",
+                    "description": "AI 分析图像内容"
+                },
+                {
+                    "name": "Screenshot",
+                    "description": "截图功能"
+                },
+                {
+                    "name": "Video Generation",
+                    "description": "AI 生成视频"
+                },
+                {
+                    "name": "Video Understanding",
+                    "description": "AI 分析视频内容"
+                },
+                {
+                    "name": "Audio Generation",
+                    "description": "AI 生成音频/语音"
+                }
+            ]
+        },
+        {
+            "name": "Editor",
+            "description": "代码编辑器功能",
+            "subtags": [
+                {
+                    "name": "Code Editor",
+                    "description": "代码编辑核心功能"
+                },
+                {
+                    "name": "Visual Editor",
+                    "description": "可视化拖拽编辑"
+                },
+                {
+                    "name": "Diff View",
+                    "description": "代码差异对比"
+                },
+                {
+                    "name": "Split View",
+                    "description": "分屏视图"
+                },
+                {
+                    "name": "Search Replace",
+                    "description": "搜索替换"
+                },
+                {
+                    "name": "Keyboard Shortcuts",
+                    "description": "快捷键支持"
+                },
+                {
+                    "name": "Preview",
+                    "description": "实时预览"
+                },
+                {
+                    "name": "Console",
+                    "description": "控制台/日志面板"
+                },
+                {
+                    "name": "Mobile Editor",
+                    "description": "移动端编辑体验"
+                }
+            ]
+        },
+        {
+            "name": "Backend",
+            "description": "后端服务（内置后端如 YouBase/Lovable Cloud/Bolt Database）",
+            "subtags": [
+                {
+                    "name": "Database",
+                    "description": "数据库功能"
+                },
+                {
+                    "name": "Storage",
+                    "description": "文件/对象存储"
+                },
+                {
+                    "name": "Edge Functions",
+                    "description": "边缘函数/Serverless"
+                },
+                {
+                    "name": "Migrations",
+                    "description": "数据库迁移"
+                },
+                {
+                    "name": "Data Export",
+                    "description": "数据导出"
+                }
+            ]
+        },
+        {
+            "name": "Integration",
+            "description": "真正的第三方服务 API 集成（不包括分享、登录）",
+            "subtags": [
+                {
+                    "name": "MCP",
+                    "description": "Model Context Protocol"
+                },
+                {
+                    "name": "Supabase",
+                    "description": "Supabase 后端服务"
+                },
+                {
+                    "name": "Stripe",
+                    "description": "Stripe 支付"
+                },
+                {
+                    "name": "GitHub",
+                    "description": "GitHub 代码同步"
+                },
+                {
+                    "name": "Notion",
+                    "description": "Notion 文档"
+                },
+                {
+                    "name": "Linear",
+                    "description": "Linear 项目管理"
+                },
+                {
+                    "name": "Glean",
+                    "description": "Glean 企业搜索"
+                },
+                {
+                    "name": "Shopify",
+                    "description": "Shopify 电商"
+                },
+                {
+                    "name": "Figma",
+                    "description": "Figma 设计"
+                },
+                {
+                    "name": "Slack",
+                    "description": "Slack 消息"
+                },
+                {
+                    "name": "Salesforce",
+                    "description": "Salesforce CRM"
+                },
+                {
+                    "name": "Twilio",
+                    "description": "Twilio 通讯"
+                },
+                {
+                    "name": "ElevenLabs",
+                    "description": "ElevenLabs 语音"
+                },
+                {
+                    "name": "Perplexity",
+                    "description": "Perplexity 搜索"
+                },
+                {
+                    "name": "Firecrawl",
+                    "description": "Firecrawl 爬虫"
+                },
+                {
+                    "name": "Netlify",
+                    "description": "Netlify 部署"
+                },
+                {
+                    "name": "Vercel",
+                    "description": "Vercel 部署"
+                },
+                {
+                    "name": "Sentry",
+                    "description": "Sentry 错误监控"
+                },
+                {
+                    "name": "Firebase",
+                    "description": "Firebase 后端"
+                },
+                {
+                    "name": "Neon",
+                    "description": "Neon 数据库"
+                },
+                {
+                    "name": "Upstash",
+                    "description": "Upstash Redis"
+                },
+                {
+                    "name": "Cloudflare",
+                    "description": "Cloudflare CDN"
+                },
+                {
+                    "name": "n8n",
+                    "description": "n8n 自动化"
+                },
+                {
+                    "name": "Midjourney",
+                    "description": "Midjourney 图像"
+                },
+                {
+                    "name": "Replicate",
+                    "description": "Replicate AI"
+                },
+                {
+                    "name": "VS Code",
+                    "description": "VS Code 插件"
+                },
+                {
+                    "name": "Cursor",
+                    "description": "Cursor 编辑器"
+                },
+                {
+                    "name": "Snowflake",
+                    "description": "Snowflake 云数据仓库"
+                },
+                {
+                    "name": "ChatGPT",
+                    "description": "ChatGPT 服务"
+                },
+                {
+                    "name": "Plaid",
+                    "description": "Plaid 金融 API"
+                },
+                {
+                    "name": "Jira",
+                    "description": "Jira 项目管理"
+                },
+                {
+                    "name": "Confluence",
+                    "description": "Confluence 文档"
+                },
+                {
+                    "name": "Todoist",
+                    "description": "Todoist 任务管理"
+                },
+                {
+                    "name": "GitLab",
+                    "description": "GitLab 代码托管"
+                },
+                {
+                    "name": "Zendesk",
+                    "description": "Zendesk 客服"
+                }
+            ]
+        },
+        {
+            "name": "Deployment",
+            "description": "部署、发布、域名",
+            "subtags": [
+                {
+                    "name": "Custom Domain",
+                    "description": "自定义域名"
+                },
+                {
+                    "name": "SSL",
+                    "description": "SSL 证书"
+                },
+                {
+                    "name": "Hosting",
+                    "description": "托管服务"
+                },
+                {
+                    "name": "Publishing",
+                    "description": "发布上线"
+                },
+                {
+                    "name": "DNS",
+                    "description": "DNS 管理"
+                },
+                {
+                    "name": "Environment Variables",
+                    "description": "环境变量"
+                },
+                {
+                    "name": "Code Download",
+                    "description": "下载源码"
+                },
+                {
+                    "name": "iOS App",
+                    "description": "iOS 客户端发布"
+                },
+                {
+                    "name": "Android App",
+                    "description": "Android 客户端发布"
+                }
+            ]
+        },
+        {
+            "name": "Auth",
+            "description": "用户认证（登录方式、权限）",
+            "subtags": [
+                {
+                    "name": "SSO",
+                    "description": "企业单点登录"
+                },
+                {
+                    "name": "SAML",
+                    "description": "SAML 协议"
+                },
+                {
+                    "name": "OAuth",
+                    "description": "OAuth 协议"
+                },
+                {
+                    "name": "Social Login",
+                    "description": "社交账号登录（Google/Apple/GitHub/Twitter 登录）"
+                },
+                {
+                    "name": "Email Auth",
+                    "description": "邮箱密码登录"
+                },
+                {
+                    "name": "SCIM",
+                    "description": "SCIM 用户同步"
+                },
+                {
+                    "name": "Passcode",
+                    "description": "访问码保护"
+                },
+                {
+                    "name": "Access Control",
+                    "description": "访问权限控制"
+                }
+            ]
+        },
+        {
+            "name": "Team",
+            "description": "团队协作、企业功能",
+            "subtags": [
+                {
+                    "name": "Workspace",
+                    "description": "工作空间"
+                },
+                {
+                    "name": "Team Management",
+                    "description": "成员管理"
+                },
+                {
+                    "name": "Permissions",
+                    "description": "权限设置"
+                },
+                {
+                    "name": "Roles",
+                    "description": "角色管理"
+                },
+                {
+                    "name": "Enterprise",
+                    "description": "企业版功能"
+                },
+                {
+                    "name": "Project Sharing",
+                    "description": "项目共享协作"
+                },
+                {
+                    "name": "Invite",
+                    "description": "邀请成员"
+                }
+            ]
+        },
+        {
+            "name": "UI/UX",
+            "description": "界面优化、用户体验",
+            "subtags": [
+                {
+                    "name": "Dashboard",
+                    "description": "仪表盘/首页"
+                },
+                {
+                    "name": "Navigation",
+                    "description": "导航菜单"
+                },
+                {
+                    "name": "Sidebar",
+                    "description": "侧边栏"
+                },
+                {
+                    "name": "Themes",
+                    "description": "主题/深色模式"
+                },
+                {
+                    "name": "Mobile UI",
+                    "description": "移动端适配"
+                },
+                {
+                    "name": "Notifications",
+                    "description": "通知提醒"
+                },
+                {
+                    "name": "Onboarding",
+                    "description": "新手引导"
+                }
+            ]
+        },
+        {
+            "name": "Performance",
+            "description": "性能优化",
+            "subtags": [
+                {
+                    "name": "Speed",
+                    "description": "速度提升"
+                },
+                {
+                    "name": "Loading",
+                    "description": "加载优化"
+                },
+                {
+                    "name": "Caching",
+                    "description": "缓存优化"
+                },
+                {
+                    "name": "SEO",
+                    "description": "SEO 优化"
+                }
+            ]
+        },
+        {
+            "name": "Billing",
+            "description": "付费、订阅、额度",
+            "subtags": [
+                {
+                    "name": "Subscription",
+                    "description": "订阅套餐（免费/Pro/Team/Enterprise）"
+                },
+                {
+                    "name": "Usage Quota",
+                    "description": "用量额度/限制"
+                },
+                {
+                    "name": "Payment",
+                    "description": "支付方式"
+                },
+                {
+                    "name": "Referral",
+                    "description": "推荐奖励"
+                },
+                {
+                    "name": "Gift Cards",
+                    "description": "礼品卡"
+                }
+            ]
+        },
+        {
+            "name": "Framework",
+            "description": "前端框架/技术栈支持",
+            "subtags": [
+                {
+                    "name": "Next.js",
+                    "description": "Next.js 框架"
+                },
+                {
+                    "name": "React",
+                    "description": "React 框架"
+                },
+                {
+                    "name": "TailwindCSS",
+                    "description": "TailwindCSS"
+                },
+                {
+                    "name": "shadcn",
+                    "description": "shadcn UI"
+                },
+                {
+                    "name": "Three.js",
+                    "description": "Three.js 3D"
+                },
+                {
+                    "name": "Flutter",
+                    "description": "Flutter 跨平台框架"
+                },
+                {
+                    "name": "Expo",
+                    "description": "Expo React Native"
+                }
+            ]
+        },
+        {
+            "name": "Analytics",
+            "description": "数据统计、用量分析",
+            "subtags": [
+                {
+                    "name": "Usage Stats",
+                    "description": "使用统计"
+                },
+                {
+                    "name": "Project Analytics",
+                    "description": "项目数据"
+                },
+                {
+                    "name": "Token Usage",
+                    "description": "Token 用量"
+                },
+                {
+                    "name": "Creator Analytics",
+                    "description": "创作者数据"
+                }
+            ]
+        },
+        {
+            "name": "Community",
+            "description": "社区功能",
+            "subtags": [
+                {
+                    "name": "Templates",
+                    "description": "模板市场"
+                },
+                {
+                    "name": "Remix",
+                    "description": "二次创作"
+                },
+                {
+                    "name": "Explore",
+                    "description": "发现/探索"
+                },
+                {
+                    "name": "Comments",
+                    "description": "评论"
+                },
+                {
+                    "name": "Reactions",
+                    "description": "点赞/表情"
+                },
+                {
+                    "name": "Search",
+                    "description": "搜索功能"
+                },
+                {
+                    "name": "Creator Profile",
+                    "description": "创作者主页"
+                },
+                {
+                    "name": "Social Share",
+                    "description": "社交分享（Twitter/LinkedIn/Telegram 分享按钮）"
+                }
+            ]
+        },
+        {
+            "name": "File",
+            "description": "文件操作",
+            "subtags": [
+                {
+                    "name": "File Upload",
+                    "description": "文件上传"
+                },
+                {
+                    "name": "PDF Processing",
+                    "description": "PDF 处理"
+                },
+                {
+                    "name": "Drag Drop",
+                    "description": "拖拽操作"
+                }
+            ]
+        },
+        {
+            "name": "Security",
+            "description": "安全功能",
+            "subtags": [
+                {
+                    "name": "Security Scan",
+                    "description": "安全扫描"
+                },
+                {
+                    "name": "Content Moderation",
+                    "description": "内容审核"
+                }
+            ]
+        },
+        {
+            "name": "Others",
+            "description": "未分类（待手动归类）",
+            "subtags": []
+        }
+    ],
+    "subtag_to_primary": {
+        "OpenAI": "AI Model",
+        "Anthropic": "AI Model",
+        "Google": "AI Model",
+        "xAI": "AI Model",
+        "Moonshot": "AI Model",
+        "MiniMax": "AI Model",
+        "Doubao": "AI Model",
+        "GLM": "AI Model",
+        "Flux": "AI Model",
+        "Seedream": "AI Model",
+        "Model Switching": "AI Model",
+        "Auto Mode": "AI Model",
+        "Agent Mode": "Agent",
+        "Plan Mode": "Agent",
+        "Fast Mode": "Agent",
+        "Design Mode": "Agent",
+        "Automation": "Agent",
+        "Tasks": "Agent",
+        "Clarifying Questions": "Agent",
+        "Suggested Actions": "Agent",
+        "Image Generation": "Media",
+        "Image Edit": "Media",
+        "Image Upload": "Media",
+        "Image Understanding": "Media",
+        "Screenshot": "Media",
+        "Video Generation": "Media",
+        "Video Understanding": "Media",
+        "Audio Generation": "Media",
+        "Code Editor": "Editor",
+        "Visual Editor": "Editor",
+        "Diff View": "Editor",
+        "Split View": "Editor",
+        "Search Replace": "Editor",
+        "Keyboard Shortcuts": "Editor",
+        "Preview": "Editor",
+        "Console": "Editor",
+        "Database": "Backend",
+        "Storage": "Backend",
+        "Edge Functions": "Backend",
+        "Migrations": "Backend",
+        "Data Export": "Backend",
+        "MCP": "Integration",
+        "Supabase": "Integration",
+        "Stripe": "Integration",
+        "GitHub": "Integration",
+        "Notion": "Integration",
+        "Linear": "Integration",
+        "Glean": "Integration",
+        "Shopify": "Integration",
+        "Figma": "Integration",
+        "Slack": "Integration",
+        "Salesforce": "Integration",
+        "Twilio": "Integration",
+        "ElevenLabs": "Integration",
+        "Perplexity": "Integration",
+        "Firecrawl": "Integration",
+        "Netlify": "Integration",
+        "Vercel": "Integration",
+        "Sentry": "Integration",
+        "Firebase": "Integration",
+        "Neon": "Integration",
+        "Upstash": "Integration",
+        "Cloudflare": "Integration",
+        "n8n": "Integration",
+        "Midjourney": "Integration",
+        "Replicate": "Integration",
+        "VS Code": "Integration",
+        "Cursor": "Integration",
+        "Custom Domain": "Deployment",
+        "SSL": "Deployment",
+        "Hosting": "Deployment",
+        "Publishing": "Deployment",
+        "DNS": "Deployment",
+        "Environment Variables": "Deployment",
+        "Code Download": "Deployment",
+        "SSO": "Auth",
+        "SAML": "Auth",
+        "OAuth": "Auth",
+        "Social Login": "Auth",
+        "Email Auth": "Auth",
+        "SCIM": "Auth",
+        "Passcode": "Auth",
+        "Access Control": "Auth",
+        "Workspace": "Team",
+        "Team Management": "Team",
+        "Permissions": "Team",
+        "Roles": "Team",
+        "Enterprise": "Team",
+        "Project Sharing": "Team",
+        "Invite": "Team",
+        "Dashboard": "UI/UX",
+        "Navigation": "UI/UX",
+        "Sidebar": "UI/UX",
+        "Themes": "UI/UX",
+        "Mobile UI": "UI/UX",
+        "Notifications": "UI/UX",
+        "Onboarding": "UI/UX",
+        "Speed": "Performance",
+        "Loading": "Performance",
+        "Caching": "Performance",
+        "SEO": "Performance",
+        "Subscription": "Billing",
+        "Usage Quota": "Billing",
+        "Payment": "Billing",
+        "Referral": "Billing",
+        "Gift Cards": "Billing",
+        "Next.js": "Framework",
+        "React": "Framework",
+        "TailwindCSS": "Framework",
+        "shadcn": "Framework",
+        "Three.js": "Framework",
+        "Usage Stats": "Analytics",
+        "Project Analytics": "Analytics",
+        "Token Usage": "Analytics",
+        "Creator Analytics": "Analytics",
+        "Templates": "Community",
+        "Remix": "Community",
+        "Explore": "Community",
+        "Comments": "Community",
+        "Reactions": "Community",
+        "Search": "Community",
+        "Creator Profile": "Community",
+        "Social Share": "Community",
+        "File Upload": "File",
+        "PDF Processing": "File",
+        "Drag Drop": "File",
+        "Security Scan": "Security",
+        "Content Moderation": "Security",
+        "Mobile Editor": "Editor",
+        "Voice Input": "Agent",
+        "iOS App": "Deployment",
+        "Android App": "Deployment",
+        "Flutter": "Framework",
+        "Expo": "Framework",
+        "Snowflake": "Integration",
+        "ChatGPT": "Integration",
+        "Plaid": "Integration",
+        "Jira": "Integration",
+        "Confluence": "Integration",
+        "Todoist": "Integration",
+        "GitLab": "Integration",
+        "Zendesk": "Integration"
     }
-]
+}
