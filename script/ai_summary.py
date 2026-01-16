@@ -55,7 +55,13 @@ def load_tags():
     """加载标签体系（自动过滤 exclude_tags，包括顶级标签和 subtag）"""
     tags_path = get_project_root() / "info" / "tag.json"
     with open(tags_path, "r", encoding="utf-8") as f:
-        all_tags = json.load(f)
+        tags_data = json.load(f)
+    
+    # 兼容新旧格式
+    if isinstance(tags_data, list):
+        all_tags = tags_data
+    else:
+        all_tags = tags_data.get("primary_tags", [])
     
     # 过滤掉配置中指定的标签
     exclude_tags = load_exclude_tags()
