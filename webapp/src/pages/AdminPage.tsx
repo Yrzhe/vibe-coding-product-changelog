@@ -77,12 +77,14 @@ function AdminPage() {
   // Others 管理
   const [othersFeatures, setOthersFeatures] = useState<OthersFeature[]>([])
   const [othersLoading, setOthersLoading] = useState(false)
+  const [othersError, setOthersError] = useState<string | null>(null)
   const [tagsData, setTagsData] = useState<TagsData | null>(null)
   
   // 功能标签编辑
   const [featureProduct, setFeatureProduct] = useState('youware')
   const [features, setFeatures] = useState<FeatureItem[]>([])
   const [featuresLoading, setFeaturesLoading] = useState(false)
+  const [featuresError, setFeaturesError] = useState<string | null>(null)
   const [featureSearch, setFeatureSearch] = useState('')
   const [featurePage, setFeaturePage] = useState(1)
   const [featureTotal, setFeatureTotal] = useState(0)
@@ -133,19 +135,34 @@ function AdminPage() {
     if (!authToken) return
     
     setOthersLoading(true)
+    setOthersError(null)
     try {
+      const controller = new AbortController()
+      const timeoutId = setTimeout(() => controller.abort(), 30000) // 30秒超时
+      
       const response = await fetch('/api/admin/others', {
-        headers: { 'Authorization': `Bearer ${authToken}` }
+        headers: { 'Authorization': `Bearer ${authToken}` },
+        signal: controller.signal
       })
+      
+      clearTimeout(timeoutId)
       
       if (response.ok) {
         const data = await response.json()
         setOthersFeatures(data.features || [])
       } else if (response.status === 401) {
         handleLogout()
+      } else {
+        const errorText = await response.text()
+        setOthersError(`API 错误 (${response.status}): ${errorText.slice(0, 100)}`)
       }
-    } catch {
-      console.warn('Failed to load Others features')
+    } catch (error) {
+      if (error instanceof Error && error.name === 'AbortError') {
+        setOthersError('请求超时，请检查后端服务是否正常运行')
+      } else {
+        setOthersError(`加载失败: ${error instanceof Error ? error.message : '未知错误'}`)
+      }
+      console.warn('Failed to load Others features:', error)
     } finally {
       setOthersLoading(false)
     }
@@ -210,15 +227,22 @@ function AdminPage() {
     if (!authToken) return
     
     setFeaturesLoading(true)
+    setFeaturesError(null)
     try {
+      const controller = new AbortController()
+      const timeoutId = setTimeout(() => controller.abort(), 30000) // 30秒超时
+      
       const response = await fetch('/api/admin/features', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${authToken}`
         },
-        body: JSON.stringify({ product, page, page_size: 20, search })
+        body: JSON.stringify({ product, page, page_size: 20, search }),
+        signal: controller.signal
       })
+      
+      clearTimeout(timeoutId)
       
       if (response.ok) {
         const data = await response.json()
@@ -226,9 +250,17 @@ function AdminPage() {
         setFeatureTotal(data.total || 0)
       } else if (response.status === 401) {
         handleLogout()
+      } else {
+        const errorText = await response.text()
+        setFeaturesError(`API 错误 (${response.status}): ${errorText.slice(0, 100)}`)
       }
-    } catch {
-      console.warn('Failed to load features')
+    } catch (error) {
+      if (error instanceof Error && error.name === 'AbortError') {
+        setFeaturesError('请求超时，请检查后端服务是否正常运行')
+      } else {
+        setFeaturesError(`加载失败: ${error instanceof Error ? error.message : '未知错误'}`)
+      }
+      console.warn('Failed to load features:', error)
     } finally {
       setFeaturesLoading(false)
     }
@@ -917,6 +949,16 @@ function AdminPage() {
         <div className="p-4">
           {othersLoading ? (
             <div className="text-center text-gray-500 py-8">加载中...</div>
+          ) : othersError ? (
+            <div className="text-center text-red-500 py-8">
+              <p>{othersError}</p>
+              <button 
+                onClick={loadOthersFeatures}
+                className="mt-2 text-sm text-blue-600 hover:underline"
+              >
+                重试
+              </button>
+            </div>
           ) : othersFeatures.length === 0 ? (
             <div className="text-center text-gray-500 py-8">没有待处理的 Others 标签</div>
           ) : (
@@ -983,6 +1025,16 @@ function AdminPage() {
         <div className="p-4">
           {featuresLoading ? (
             <div className="text-center text-gray-500 py-8">加载中...</div>
+          ) : featuresError ? (
+            <div className="text-center text-red-500 py-8">
+              <p>{featuresError}</p>
+              <button 
+                onClick={() => loadFeatures(featureProduct, featurePage, featureSearch)}
+                className="mt-2 text-sm text-blue-600 hover:underline"
+              >
+                重试
+              </button>
+            </div>
           ) : features.length === 0 ? (
             <div className="text-center text-gray-500 py-8">没有找到功能</div>
           ) : (
