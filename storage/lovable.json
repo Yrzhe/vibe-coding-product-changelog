@@ -243,7 +243,7 @@
                         "name": "Agent",
                         "subtags": [
                             {
-                                "name": "Agent Mode"
+                                "name": "Chat Mode"
                             }
                         ]
                     }
@@ -1916,6 +1916,9 @@
                         "name": "Agent",
                         "subtags": [
                             {
+                                "name": "Chat Mode"
+                            },
+                            {
                                 "name": "Agent Mode"
                             }
                         ]
@@ -2669,8 +2672,8 @@
                 ]
             },
             {
-                "title": "Chat mode now renders Mermaid diagrams to help visualize your app’s back-end logic and structure (as...",
-                "description": "Chat mode now renders Mermaid diagrams to help visualize your app’s back-end logic and structure (ask for it to chart things to trigger this).",
+                "title": "Chat mode now renders Mermaid diagrams to help visualize your app's back-end logic and structure (as...",
+                "description": "Chat mode now renders Mermaid diagrams to help visualize your app's back-end logic and structure (ask for it to chart things to trigger this).",
                 "time": "2025-06-04",
                 "tags": [
                     {
@@ -2684,6 +2687,9 @@
                     {
                         "name": "Agent",
                         "subtags": [
+                            {
+                                "name": "Chat Mode"
+                            },
                             {
                                 "name": "Agent Mode"
                             }
@@ -2738,7 +2744,10 @@
                         "name": "Agent",
                         "subtags": [
                             {
-                                "name": "Agent Mode"
+                                "name": "Chat Mode"
+                            },
+                            {
+                                "name": "Mode Inference"
                             }
                         ]
                     },
@@ -3522,13 +3531,16 @@
                 ]
             },
             {
-                "title": "You asked, we listened. Chat mode is now way smarter and here to stay for everyone. It doesn’t make ...",
-                "description": "You asked, we listened. Chat mode is now way smarter and here to stay for everyone. It doesn’t make edits, but it can help you reason through problems, plan features, inspect logs, query databases, and more. Think of it as your smart, hands-off pair programming buddy.",
+                "title": "You asked, we listened. Chat mode is now way smarter and here to stay for everyone. It doesn't make ...",
+                "description": "You asked, we listened. Chat mode is now way smarter and here to stay for everyone. It doesn't make edits, but it can help you reason through problems, plan features, inspect logs, query databases, and more. Think of it as your smart, hands-off pair programming buddy.",
                 "time": "2025-04-25",
                 "tags": [
                     {
                         "name": "Agent",
                         "subtags": [
+                            {
+                                "name": "Chat Mode"
+                            },
                             {
                                 "name": "Plan Mode"
                             }
@@ -4039,6 +4051,14 @@
                 "time": "2025-03-21",
                 "tags": [
                     {
+                        "name": "Agent",
+                        "subtags": [
+                            {
+                                "name": "Chat Mode"
+                            }
+                        ]
+                    },
+                    {
                         "name": "Performance",
                         "subtags": [
                             {
@@ -4239,10 +4259,19 @@
                 ]
             },
             {
-                "title": "Fixed a Chat Mode streaming bug.",
-                "description": "Fixed a Chat Mode streaming bug.",
+                "title": "Fixed a Chat Mode streaming bug.",
+                "description": "Fixed a Chat Mode streaming bug.",
                 "time": "2025-03-07",
-                "tags": "None"
+                "tags": [
+                    {
+                        "name": "Agent",
+                        "subtags": [
+                            {
+                                "name": "Chat Mode"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "title": "Resolved internal server errors in default mode.",
@@ -4638,7 +4667,7 @@
                         "name": "Agent",
                         "subtags": [
                             {
-                                "name": "Agent Mode"
+                                "name": "Chat Mode"
                             }
                         ]
                     },

@@ -93,6 +93,26 @@
                 {
                     "name": "Voice Input",
                     "description": "语音输入交互"
+                },
+                {
+                    "name": "Chat Mode",
+                    "description": "对话模式，专注轻量任务和推理"
+                },
+                {
+                    "name": "CoView",
+                    "description": "屏幕共享协作，AI 实时查看分析"
+                },
+                {
+                    "name": "Inspector",
+                    "description": "会话/录屏检查分析工具"
+                },
+                {
+                    "name": "Design Agent",
+                    "description": "设计工作流代理"
+                },
+                {
+                    "name": "Mode Inference",
+                    "description": "智能模式推断切换"
                 }
             ]
         },
@@ -199,6 +219,10 @@
                 {
                     "name": "Data Export",
                     "description": "数据导出"
+                },
+                {
+                    "name": "Assets",
+                    "description": "资产管理系统"
                 }
             ]
         },
@@ -807,6 +831,12 @@
         "Content Moderation": "Security",
         "Mobile Editor": "Editor",
         "Voice Input": "Agent",
+        "Chat Mode": "Agent",
+        "CoView": "Agent",
+        "Inspector": "Agent",
+        "Design Agent": "Agent",
+        "Mode Inference": "Agent",
+        "Assets": "Backend",
         "iOS App": "Deployment",
         "Android App": "Deployment",
         "Flutter": "Framework",

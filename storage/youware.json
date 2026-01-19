@@ -8,6 +8,158 @@
         "name": "feature",
         "features": [
             {
+                "title": "Chat Mode",
+                "description": "New Chat Mode for focused conversation and lightweight tasks. Restricts code/file writing while supporting image generation and file viewing. Includes intelligent mode routing via Mode Inference.",
+                "time": "2026-01-19",
+                "tags": [
+                    {
+                        "name": "Agent",
+                        "subtags": [
+                            {
+                                "name": "Chat Mode"
+                            },
+                            {
+                                "name": "Mode Inference"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Design Agent",
+                "description": "Three-stage workflow agent (Intent → Planning → Execution) for enhanced design capabilities, enabling more structured and intentional project creation.",
+                "time": "2026-01-19",
+                "tags": [
+                    {
+                        "name": "Agent",
+                        "subtags": [
+                            {
+                                "name": "Design Agent"
+                            },
+                            {
+                                "name": "Plan Mode"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "CoView - Share Screen & Talk to AI",
+                "description": "Share your screen with AI for real-time collaborative viewing and analysis. AI can observe your workflow and provide contextual assistance.",
+                "time": "2026-01-19",
+                "tags": [
+                    {
+                        "name": "Agent",
+                        "subtags": [
+                            {
+                                "name": "CoView"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Inspector",
+                "description": "Session recording and analysis tool for debugging and improving AI interactions. Analyze conversation patterns and optimize your workflow.",
+                "time": "2026-01-19",
+                "tags": [
+                    {
+                        "name": "Agent",
+                        "subtags": [
+                            {
+                                "name": "Inspector"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Assets Management",
+                "description": "New asset management system with upload, preview, batch download/delete capabilities. Includes video attachment support, storage capacity display, quota reminders, and thumbnail support.",
+                "time": "2026-01-19",
+                "tags": [
+                    {
+                        "name": "Backend",
+                        "subtags": [
+                            {
+                                "name": "Assets"
+                            },
+                            {
+                                "name": "Storage"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Mobile Subscription",
+                "description": "Mobile subscription support now available on iOS and Android, with web-compatible hybrid pages for FAQ, Compare Plans, Credits Usage and more.",
+                "time": "2026-01-19",
+                "tags": [
+                    {
+                        "name": "Billing",
+                        "subtags": [
+                            {
+                                "name": "Subscription"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Editor",
+                        "subtags": [
+                            {
+                                "name": "Mobile Editor"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "GPT-5.2 Codex Support",
+                "description": "Added support for GPT-5.2 Codex model with improved video understanding language support and optimized performance.",
+                "time": "2026-01-19",
+                "tags": [
+                    {
+                        "name": "AI Model",
+                        "subtags": [
+                            {
+                                "name": "OpenAI"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "7-Day Free Trial & YouBase Launch",
+                "description": "Launched 7-day free trial program and YouBase promotional event. Redesigned subscription flow with new guidance popups and promotional campaign support for eligible members.",
+                "time": "2026-01-19",
+                "tags": [
+                    {
+                        "name": "Billing",
+                        "subtags": [
+                            {
+                                "name": "Subscription"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Redemption Code System",
+                "description": "New redemption code management and usage system. Users can now redeem codes for subscription benefits.",
+                "time": "2026-01-19",
+                "tags": [
+                    {
+                        "name": "Billing",
+                        "subtags": [
+                            {
+                                "name": "Gift Cards"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
                 "title": "TailwindCSS Support",
                 "description": "YouWare now fully supports TailwindCSS for styling your projects. You can use Tailwind utility classes directly in your code for rapid, responsive design.",
                 "time": "2026-01-19",
