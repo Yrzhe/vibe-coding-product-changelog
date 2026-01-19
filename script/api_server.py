@@ -736,6 +736,179 @@ class APIHandler(BaseHTTPRequestHandler):
                 "page": page,
                 "page_size": page_size
             })
+        
+        elif path == "/api/admin/feature/add":
+            # 添加新功能条目
+            token = self.get_auth_token()
+            if not verify_session(token):
+                self.send_json_response(401, {"error": "未授权访问"})
+                return
+            
+            body = self.read_request_body()
+            try:
+                data = json.loads(body)
+            except:
+                self.send_json_response(400, {"error": "无效的 JSON"})
+                return
+            
+            product = data.get('product', 'youware')
+            title = data.get('title', '').strip()
+            description = data.get('description', '').strip()
+            time_str = data.get('time', '')
+            auto_tag = data.get('auto_tag', True)
+            
+            if not title:
+                self.send_json_response(400, {"error": "标题不能为空"})
+                return
+            
+            # 加载产品 JSON
+            product_file = get_project_root() / "storage" / f"{product}.json"
+            if not product_file.exists():
+                self.send_json_response(404, {"error": f"产品文件不存在: {product}"})
+                return
+            
+            with open(product_file, 'r', encoding='utf-8') as f:
+                product_data = json.load(f)
+            
+            feature_data = next((item for item in product_data if item.get('name') == 'feature'), None)
+            if not feature_data:
+                self.send_json_response(404, {"error": "找不到 feature 数据"})
+                return
+            
+            # 创建新功能
+            new_feature = {
+                "title": title,
+                "description": description,
+                "time": time_str or datetime.now().strftime("%Y-%m-%d")
+            }
+            
+            # 插入到最前面
+            feature_data['features'].insert(0, new_feature)
+            
+            # 保存
+            with open(product_file, 'w', encoding='utf-8') as f:
+                json.dump(product_data, f, ensure_ascii=False, indent=4)
+            
+            # 如果需要自动打标
+            if auto_tag:
+                def run_tag():
+                    root = get_project_root()
+                    if root == Path("/app"):
+                        script_path = root / "llm_tagger.py"
+                    else:
+                        script_path = root / "script" / "llm_tagger.py"
+                    try:
+                        subprocess.run(
+                            [sys.executable, str(script_path), "--file", f"{product}.json"],
+                            capture_output=True,
+                            text=True,
+                            timeout=120
+                        )
+                    except Exception as e:
+                        print(f"自动打标失败: {e}")
+                
+                thread = threading.Thread(target=run_tag)
+                thread.start()
+            
+            self.send_json_response(200, {"status": "added", "auto_tag": auto_tag})
+        
+        elif path == "/api/admin/feature/edit":
+            # 编辑功能条目（标题、描述、日期）
+            token = self.get_auth_token()
+            if not verify_session(token):
+                self.send_json_response(401, {"error": "未授权访问"})
+                return
+            
+            body = self.read_request_body()
+            try:
+                data = json.loads(body)
+            except:
+                self.send_json_response(400, {"error": "无效的 JSON"})
+                return
+            
+            product = data.get('product', 'youware')
+            feature_index = data.get('feature_index')
+            title = data.get('title')
+            description = data.get('description')
+            time_str = data.get('time')
+            
+            if feature_index is None:
+                self.send_json_response(400, {"error": "缺少 feature_index"})
+                return
+            
+            # 加载产品 JSON
+            product_file = get_project_root() / "storage" / f"{product}.json"
+            if not product_file.exists():
+                self.send_json_response(404, {"error": f"产品文件不存在: {product}"})
+                return
+            
+            with open(product_file, 'r', encoding='utf-8') as f:
+                product_data = json.load(f)
+            
+            feature_data = next((item for item in product_data if item.get('name') == 'feature'), None)
+            if not feature_data or feature_index >= len(feature_data.get('features', [])):
+                self.send_json_response(404, {"error": "找不到指定的 feature"})
+                return
+            
+            feature = feature_data['features'][feature_index]
+            
+            # 更新字段
+            if title is not None:
+                feature['title'] = title
+            if description is not None:
+                feature['description'] = description
+            if time_str is not None:
+                feature['time'] = time_str
+            
+            # 保存
+            with open(product_file, 'w', encoding='utf-8') as f:
+                json.dump(product_data, f, ensure_ascii=False, indent=4)
+            
+            self.send_json_response(200, {"status": "updated"})
+        
+        elif path == "/api/admin/feature/delete":
+            # 删除功能条目
+            token = self.get_auth_token()
+            if not verify_session(token):
+                self.send_json_response(401, {"error": "未授权访问"})
+                return
+            
+            body = self.read_request_body()
+            try:
+                data = json.loads(body)
+            except:
+                self.send_json_response(400, {"error": "无效的 JSON"})
+                return
+            
+            product = data.get('product', 'youware')
+            feature_index = data.get('feature_index')
+            
+            if feature_index is None:
+                self.send_json_response(400, {"error": "缺少 feature_index"})
+                return
+            
+            # 加载产品 JSON
+            product_file = get_project_root() / "storage" / f"{product}.json"
+            if not product_file.exists():
+                self.send_json_response(404, {"error": f"产品文件不存在: {product}"})
+                return
+            
+            with open(product_file, 'r', encoding='utf-8') as f:
+                product_data = json.load(f)
+            
+            feature_data = next((item for item in product_data if item.get('name') == 'feature'), None)
+            if not feature_data or feature_index >= len(feature_data.get('features', [])):
+                self.send_json_response(404, {"error": "找不到指定的 feature"})
+                return
+            
+            # 删除
+            deleted = feature_data['features'].pop(feature_index)
+            
+            # 保存
+            with open(product_file, 'w', encoding='utf-8') as f:
+                json.dump(product_data, f, ensure_ascii=False, indent=4)
+            
+            self.send_json_response(200, {"status": "deleted", "deleted_title": deleted.get('title', '')})
             
         else:
             self.send_response(404)

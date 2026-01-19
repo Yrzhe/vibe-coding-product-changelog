@@ -55,11 +55,12 @@ function AdminPage() {
   const [authError, setAuthError] = useState('')
   const [authToken, setAuthToken] = useState<string | null>(null)
   
-  // Changelog 编辑
-  const [changelog, setChangelog] = useState('')
-  const [changelogLoading, setChangelogLoading] = useState(false)
-  const [saving, setSaving] = useState(false)
-  const [saveMessage, setSaveMessage] = useState('')
+  // 添加新功能
+  const [newFeatureTitle, setNewFeatureTitle] = useState('')
+  const [newFeatureDescription, setNewFeatureDescription] = useState('')
+  const [newFeatureTime, setNewFeatureTime] = useState('')
+  const [addingFeature, setAddingFeature] = useState(false)
+  const [addFeatureMessage, setAddFeatureMessage] = useState('')
   
   // 过滤标签配置
   const [excludeTags, setExcludeTags] = useState<string[]>([])
@@ -106,12 +107,13 @@ function AdminPage() {
   // 登录后加载数据
   useEffect(() => {
     if (isAuthenticated && authToken) {
-      loadChangelog()
       loadLogs()
       loadRunStatus()
       loadExcludeTags()
       loadOthersFeatures()
       loadTagsData()
+      // 自动加载 YouWare 功能列表
+      loadFeatures('youware', 1, '')
     }
   }, [isAuthenticated, authToken])
 
@@ -381,60 +383,113 @@ function AdminPage() {
     localStorage.removeItem('admin_token')
     setAuthToken(null)
     setIsAuthenticated(false)
-    setChangelog('')
     setLogs([])
   }
 
-  const loadChangelog = useCallback(async () => {
-    if (!authToken) return
+  // 添加新功能
+  const addFeature = async () => {
+    if (!authToken || !newFeatureTitle.trim()) return
     
-    setChangelogLoading(true)
-    try {
-      const response = await fetch('/api/admin/changelog', {
-        headers: { 'Authorization': `Bearer ${authToken}` }
-      })
-      
-      if (response.ok) {
-        const data = await response.json()
-        setChangelog(data.content || '')
-      } else if (response.status === 401) {
-        handleLogout()
-      }
-    } catch {
-      console.warn('Failed to load changelog')
-    } finally {
-      setChangelogLoading(false)
-    }
-  }, [authToken])
-
-  const saveChangelog = async () => {
-    if (!authToken) return
-    
-    setSaving(true)
-    setSaveMessage('')
+    setAddingFeature(true)
+    setAddFeatureMessage('')
     
     try {
-      const response = await fetch('/api/admin/changelog', {
+      const response = await fetch('/api/admin/feature/add', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${authToken}`
         },
-        body: JSON.stringify({ content: changelog })
+        body: JSON.stringify({
+          product: 'youware',
+          title: newFeatureTitle.trim(),
+          description: newFeatureDescription.trim(),
+          time: newFeatureTime || new Date().toISOString().split('T')[0],
+          auto_tag: true
+        })
       })
       
       if (response.ok) {
-        setSaveMessage('已保存！正在解析和打标...')
-        setTimeout(() => setSaveMessage(''), 5000)
+        setAddFeatureMessage('已添加！正在自动打标...')
+        setNewFeatureTitle('')
+        setNewFeatureDescription('')
+        setNewFeatureTime('')
+        // 刷新功能列表
+        setTimeout(() => {
+          loadFeatures('youware', 1, '')
+          setAddFeatureMessage('')
+        }, 2000)
       } else if (response.status === 401) {
         handleLogout()
       } else {
-        setSaveMessage('保存失败')
+        const err = await response.json()
+        setAddFeatureMessage(err.error || '添加失败')
       }
     } catch {
-      setSaveMessage('保存失败：无法连接到后端服务')
+      setAddFeatureMessage('添加失败：无法连接到后端服务')
     } finally {
-      setSaving(false)
+      setAddingFeature(false)
+    }
+  }
+
+  // 编辑功能
+  const editFeature = async (featureIndex: number, updates: { title?: string; description?: string; time?: string }) => {
+    if (!authToken) return false
+    
+    try {
+      const response = await fetch('/api/admin/feature/edit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${authToken}`
+        },
+        body: JSON.stringify({
+          product: featureProduct,
+          feature_index: featureIndex,
+          ...updates
+        })
+      })
+      
+      if (response.ok) {
+        await loadFeatures(featureProduct, featurePage, featureSearch)
+        return true
+      } else if (response.status === 401) {
+        handleLogout()
+      }
+      return false
+    } catch {
+      return false
+    }
+  }
+
+  // 删除功能
+  const deleteFeature = async (featureIndex: number, title: string) => {
+    if (!authToken) return
+    
+    if (!confirm(`确定要删除 "${title}" 吗？此操作不可恢复。`)) {
+      return
+    }
+    
+    try {
+      const response = await fetch('/api/admin/feature/delete', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${authToken}`
+        },
+        body: JSON.stringify({
+          product: featureProduct,
+          feature_index: featureIndex
+        })
+      })
+      
+      if (response.ok) {
+        await loadFeatures(featureProduct, featurePage, featureSearch)
+      } else if (response.status === 401) {
+        handleLogout()
+      }
+    } catch {
+      alert('删除失败')
     }
   }
 
@@ -694,68 +749,75 @@ function AdminPage() {
         </button>
       </div>
 
-      {/* Changelog 编辑器 */}
+      {/* 添加新功能 */}
       <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
         <div className="flex items-center justify-between p-4 border-b border-gray-200">
           <div>
-            <h2 className="font-medium text-gray-900">YouWare Changelog</h2>
-            <p className="text-xs text-gray-500">使用 Markdown 格式编辑，保存后自动解析并打标</p>
+            <h2 className="font-medium text-gray-900">添加新功能</h2>
+            <p className="text-xs text-gray-500">添加后自动打标并更新到 YouWare 功能列表</p>
           </div>
           <div className="flex items-center gap-3">
-            {saveMessage && (
+            {addFeatureMessage && (
               <span className={cn(
                 'text-sm',
-                saveMessage.includes('失败') ? 'text-red-600' : 'text-green-600'
+                addFeatureMessage.includes('失败') ? 'text-red-600' : 'text-green-600'
               )}>
-                {saveMessage}
+                {addFeatureMessage}
               </span>
             )}
             <button
-              onClick={loadChangelog}
-              disabled={changelogLoading}
-              className="px-3 py-1.5 text-sm text-gray-600 hover:text-gray-800 border border-gray-300 rounded hover:bg-gray-50"
-            >
-              刷新
-            </button>
-            <button
-              onClick={saveChangelog}
-              disabled={saving}
+              onClick={addFeature}
+              disabled={addingFeature || !newFeatureTitle.trim()}
               className={cn(
                 'px-4 py-1.5 text-sm font-medium rounded transition-colors',
-                saving
+                addingFeature || !newFeatureTitle.trim()
                   ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
-                  : 'bg-blue-600 text-white hover:bg-blue-700'
+                  : 'bg-green-600 text-white hover:bg-green-700'
               )}
             >
-              {saving ? '保存中...' : '保存'}
+              {addingFeature ? '添加中...' : '添加功能'}
             </button>
           </div>
         </div>
         
-        <div className="p-4">
-          {changelogLoading ? (
-            <div className="h-96 flex items-center justify-center text-gray-500">
-              加载中...
-            </div>
-          ) : (
-            <textarea
-              value={changelog}
-              onChange={(e) => setChangelog(e.target.value)}
-              className="w-full h-96 p-3 border border-gray-200 rounded-md font-mono text-sm resize-y focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              placeholder="# YouWare Changelog&#10;&#10;## v2.7.4 – January 12, 2026&#10;&#10;### Features&#10;&#10;#### Feature Title&#10;Feature description..."
+        <div className="p-4 space-y-4">
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              功能标题 <span className="text-red-500">*</span>
+            </label>
+            <input
+              type="text"
+              value={newFeatureTitle}
+              onChange={(e) => setNewFeatureTitle(e.target.value)}
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+              placeholder="例如：TailwindCSS Support"
             />
-          )}
-        </div>
-        
-        <div className="px-4 pb-4">
-          <div className="text-xs text-gray-400 space-y-1">
-            <p>格式说明：</p>
-            <ul className="list-disc list-inside ml-2 space-y-0.5">
-              <li>版本标题: <code className="bg-gray-100 px-1 rounded">## v版本号 – 日期</code></li>
-              <li>分类: <code className="bg-gray-100 px-1 rounded">### Features / Improvements / Patches / Integrations</code></li>
-              <li>功能标题: <code className="bg-gray-100 px-1 rounded">#### Feature Title</code></li>
-              <li>列表项: <code className="bg-gray-100 px-1 rounded">- **标题:** 描述</code> 或 <code className="bg-gray-100 px-1 rounded">- 内容</code></li>
-            </ul>
+          </div>
+          
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              功能描述
+            </label>
+            <textarea
+              value={newFeatureDescription}
+              onChange={(e) => setNewFeatureDescription(e.target.value)}
+              rows={3}
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent resize-y"
+              placeholder="详细描述这个功能..."
+            />
+          </div>
+          
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              发布日期
+            </label>
+            <input
+              type="date"
+              value={newFeatureTime}
+              onChange={(e) => setNewFeatureTime(e.target.value)}
+              className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+            />
+            <span className="text-xs text-gray-400 ml-2">留空则使用今天</span>
           </div>
         </div>
       </div>
@@ -924,7 +986,7 @@ function AdminPage() {
           ) : features.length === 0 ? (
             <div className="text-center text-gray-500 py-8">没有找到功能</div>
           ) : (
-            <div className="space-y-2 max-h-96 overflow-y-auto">
+            <div className="space-y-2 max-h-[600px] overflow-y-auto">
               {features.map((feature) => (
                 <FeatureTagCard
                   key={`${featureProduct}-${feature.index}`}
@@ -937,6 +999,8 @@ function AdminPage() {
                     const success = await updateFeatureTags(featureProduct, feature.index, newTags)
                     if (success) setEditingFeature(null)
                   }}
+                  onEditContent={editFeature}
+                  onDelete={deleteFeature}
                 />
               ))}
             </div>
@@ -1312,9 +1376,11 @@ interface FeatureTagCardProps {
   isEditing: boolean
   onEdit: () => void
   onSave: (newTags: FeatureItem['tags']) => Promise<void>
+  onEditContent?: (featureIndex: number, updates: { title?: string; description?: string; time?: string }) => Promise<boolean>
+  onDelete?: (featureIndex: number, title: string) => Promise<void>
 }
 
-function FeatureTagCard({ feature, tagsData, isEditing, onEdit, onSave }: FeatureTagCardProps) {
+function FeatureTagCard({ feature, tagsData, isEditing, onEdit, onSave, onEditContent, onDelete }: FeatureTagCardProps) {
   // 确保 tags 始终是数组
   const normalizeTags = (tags: FeatureItem['tags'] | string | null | undefined): FeatureItem['tags'] => {
     if (!tags || tags === 'None' || typeof tags === 'string') return []
@@ -1326,10 +1392,17 @@ function FeatureTagCard({ feature, tagsData, isEditing, onEdit, onSave }: Featur
   const [saving, setSaving] = useState(false)
   const [selectedPrimary, setSelectedPrimary] = useState('')
   const [selectedSubtag, setSelectedSubtag] = useState('')
+  const [editingContent, setEditingContent] = useState(false)
+  const [editedTitle, setEditedTitle] = useState(feature.title)
+  const [editedDescription, setEditedDescription] = useState(feature.description)
+  const [editedTime, setEditedTime] = useState(feature.time)
   
   // 当 feature 变化时重置编辑状态
   useEffect(() => {
     setEditedTags(normalizeTags(feature.tags))
+    setEditedTitle(feature.title)
+    setEditedDescription(feature.description)
+    setEditedTime(feature.time)
   }, [feature])
   
   const availableSubtags = selectedPrimary && tagsData
@@ -1376,61 +1449,150 @@ function FeatureTagCard({ feature, tagsData, isEditing, onEdit, onSave }: Featur
     await onSave(editedTags)
     setSaving(false)
   }
+
+  const handleSaveContent = async () => {
+    if (!onEditContent) return
+    setSaving(true)
+    const success = await onEditContent(feature.index, {
+      title: editedTitle,
+      description: editedDescription,
+      time: editedTime
+    })
+    if (success) {
+      setEditingContent(false)
+    }
+    setSaving(false)
+  }
   
   return (
     <div className={cn(
       'border rounded-lg p-3 transition-colors',
-      isEditing ? 'border-blue-300 bg-blue-50' : 'border-gray-200 bg-gray-50'
+      isEditing || editingContent ? 'border-blue-300 bg-blue-50' : 'border-gray-200 bg-gray-50'
     )}>
       <div className="flex items-start justify-between">
         <div className="flex-1 min-w-0">
-          <div className="flex items-center gap-2 mb-1">
-            <span className="text-xs text-gray-400">{feature.time}</span>
-          </div>
-          <h4 className="font-medium text-gray-900 text-sm truncate" title={feature.title}>
-            {feature.title}
-          </h4>
+          {editingContent ? (
+            <div className="space-y-2">
+              <input
+                type="text"
+                value={editedTitle}
+                onChange={(e) => setEditedTitle(e.target.value)}
+                className="w-full px-2 py-1 text-sm border border-gray-300 rounded"
+                placeholder="标题"
+              />
+              <textarea
+                value={editedDescription}
+                onChange={(e) => setEditedDescription(e.target.value)}
+                rows={2}
+                className="w-full px-2 py-1 text-sm border border-gray-300 rounded resize-y"
+                placeholder="描述"
+              />
+              <input
+                type="date"
+                value={editedTime}
+                onChange={(e) => setEditedTime(e.target.value)}
+                className="px-2 py-1 text-sm border border-gray-300 rounded"
+              />
+            </div>
+          ) : (
+            <>
+              <div className="flex items-center gap-2 mb-1">
+                <span className="text-xs text-gray-400">{feature.time}</span>
+              </div>
+              <h4 className="font-medium text-gray-900 text-sm" title={feature.title}>
+                {feature.title}
+              </h4>
+              {feature.description && (
+                <p className="text-xs text-gray-500 mt-1 line-clamp-2">{feature.description}</p>
+              )}
+            </>
+          )}
           
           {/* 当前标签 */}
-          <div className="flex flex-wrap gap-1 mt-2">
-            {(isEditing ? editedTags : normalizeTags(feature.tags)).map(tag => 
-              tag.subtags.map(st => (
-                <span
-                  key={`${tag.name}-${st.name}`}
-                  className={cn(
-                    'inline-flex items-center gap-1 px-2 py-0.5 text-xs rounded',
-                    isEditing ? 'bg-blue-100 text-blue-700' : 'bg-gray-200 text-gray-700'
-                  )}
-                >
-                  {tag.name} &gt; {st.name}
-                  {isEditing && (
-                    <button
-                      onClick={() => removeSubtag(tag.name, st.name)}
-                      className="ml-0.5 hover:text-red-600"
-                    >
-                      ×
-                    </button>
-                  )}
-                </span>
-              ))
-            )}
-            {(isEditing ? editedTags : normalizeTags(feature.tags)).length === 0 && (
-              <span className="text-xs text-gray-400">无标签</span>
-            )}
-          </div>
+          {!editingContent && (
+            <div className="flex flex-wrap gap-1 mt-2">
+              {(isEditing ? editedTags : normalizeTags(feature.tags)).map(tag => 
+                tag.subtags.map(st => (
+                  <span
+                    key={`${tag.name}-${st.name}`}
+                    className={cn(
+                      'inline-flex items-center gap-1 px-2 py-0.5 text-xs rounded',
+                      isEditing ? 'bg-blue-100 text-blue-700' : 'bg-gray-200 text-gray-700'
+                    )}
+                  >
+                    {tag.name} &gt; {st.name}
+                    {isEditing && (
+                      <button
+                        onClick={() => removeSubtag(tag.name, st.name)}
+                        className="ml-0.5 hover:text-red-600"
+                      >
+                        ×
+                      </button>
+                    )}
+                  </span>
+                ))
+              )}
+              {(isEditing ? editedTags : normalizeTags(feature.tags)).length === 0 && (
+                <span className="text-xs text-gray-400">无标签</span>
+              )}
+            </div>
+          )}
         </div>
         
-        <button
-          onClick={onEdit}
-          className={cn(
-            'px-2 py-1 text-xs rounded transition-colors ml-2',
-            isEditing
-              ? 'bg-gray-200 text-gray-600 hover:bg-gray-300'
-              : 'bg-blue-100 text-blue-700 hover:bg-blue-200'
+        <div className="flex flex-col gap-1 ml-2">
+          {editingContent ? (
+            <>
+              <button
+                onClick={handleSaveContent}
+                disabled={saving}
+                className="px-2 py-1 text-xs bg-green-600 text-white rounded hover:bg-green-700"
+              >
+                {saving ? '...' : '保存'}
+              </button>
+              <button
+                onClick={() => {
+                  setEditingContent(false)
+                  setEditedTitle(feature.title)
+                  setEditedDescription(feature.description)
+                  setEditedTime(feature.time)
+                }}
+                className="px-2 py-1 text-xs bg-gray-200 text-gray-600 rounded hover:bg-gray-300"
+              >
+                取消
+              </button>
+            </>
+          ) : (
+            <>
+              <button
+                onClick={() => setEditingContent(true)}
+                className="px-2 py-1 text-xs bg-yellow-100 text-yellow-700 rounded hover:bg-yellow-200"
+                title="编辑内容"
+              >
+                内容
+              </button>
+              <button
+                onClick={onEdit}
+                className={cn(
+                  'px-2 py-1 text-xs rounded transition-colors',
+                  isEditing
+                    ? 'bg-gray-200 text-gray-600 hover:bg-gray-300'
+                    : 'bg-blue-100 text-blue-700 hover:bg-blue-200'
+                )}
+              >
+                {isEditing ? '取消' : '标签'}
+              </button>
+              {onDelete && (
+                <button
+                  onClick={() => onDelete(feature.index, feature.title)}
+                  className="px-2 py-1 text-xs bg-red-100 text-red-700 rounded hover:bg-red-200"
+                  title="删除"
+                >
+                  删除
+                </button>
+              )}
+            </>
           )}
-        >
-          {isEditing ? '取消' : '编辑'}
-        </button>
+        </div>
       </div>
       
       {/* 编辑模式 */}
