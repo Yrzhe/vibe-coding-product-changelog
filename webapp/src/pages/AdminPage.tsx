@@ -1235,6 +1235,11 @@ function AdminPage() {
                   }}
                   onEditContent={editFeature}
                   onDelete={deleteFeature}
+                  onMarkNone={async (featureIndex) => {
+                    if (!confirm('确定要将此条目标记为"无需打标"吗？')) return
+                    await markAsNoTag(featureProduct, featureIndex, true)
+                    await loadFeatures(featureProduct, featurePage, featureSearch)
+                  }}
                 />
               ))}
             </div>
@@ -1815,9 +1820,10 @@ interface FeatureTagCardProps {
   onSave: (newTags: FeatureItem['tags']) => Promise<void>
   onEditContent?: (featureIndex: number, updates: { title?: string; description?: string; time?: string }) => Promise<boolean>
   onDelete?: (featureIndex: number, title: string) => Promise<void>
+  onMarkNone?: (featureIndex: number) => Promise<void>
 }
 
-function FeatureTagCard({ feature, tagsData, isEditing, onEdit, onSave, onEditContent, onDelete }: FeatureTagCardProps) {
+function FeatureTagCard({ feature, tagsData, isEditing, onEdit, onSave, onEditContent, onDelete, onMarkNone }: FeatureTagCardProps) {
   // 确保 tags 始终是数组
   const normalizeTags = (tags: FeatureItem['tags'] | string | null | undefined): FeatureItem['tags'] => {
     if (!tags || tags === 'None' || typeof tags === 'string') return []
@@ -2018,6 +2024,15 @@ function FeatureTagCard({ feature, tagsData, isEditing, onEdit, onSave, onEditCo
               >
                 {isEditing ? '取消' : '标签'}
               </button>
+              {onMarkNone && (
+                <button
+                  onClick={() => onMarkNone(feature.index)}
+                  className="px-2 py-1 text-xs bg-gray-100 text-gray-600 rounded hover:bg-gray-200"
+                  title="标记为无需打标"
+                >
+                  无需
+                </button>
+              )}
               {onDelete && (
                 <button
                   onClick={() => onDelete(feature.index, feature.title)}
