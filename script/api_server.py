@@ -304,15 +304,22 @@ class APIHandler(BaseHTTPRequestHandler):
                 
                 for idx, feature in enumerate(feature_data.get('features', [])):
                     tags = feature.get('tags', [])
+                    # 确保 tags 是列表，不是字符串 "None"
+                    if not isinstance(tags, list):
+                        continue
                     for tag in tags:
+                        # 确保 tag 是字典
+                        if not isinstance(tag, dict):
+                            continue
                         if tag.get('name') == 'Others':
+                            subtags = tag.get('subtags', [])
                             others_features.append({
                                 'product': product,
                                 'feature_index': idx,
                                 'title': feature.get('title', ''),
                                 'description': feature.get('description', ''),
                                 'time': feature.get('time', ''),
-                                'current_subtags': [st.get('name') for st in tag.get('subtags', [])]
+                                'current_subtags': [st.get('name') for st in subtags if isinstance(st, dict)]
                             })
                             break
             
@@ -531,19 +538,35 @@ class APIHandler(BaseHTTPRequestHandler):
             feature = feature_data['features'][feature_index]
             current_tags = feature.get('tags', [])
             
+            # 确保 current_tags 是列表
+            if not isinstance(current_tags, list):
+                current_tags = []
+            
             # 移除 Others 标签中该 subtag，添加到正确的 primary tag
             new_tags = []
             for tag in current_tags:
+                # 确保 tag 是字典
+                if not isinstance(tag, dict):
+                    continue
                 if tag.get('name') == 'Others':
                     # 从 Others 中移除这个 subtag
-                    remaining_subtags = [s for s in tag.get('subtags', []) if s.get('name') != new_subtag]
+                    subtags = tag.get('subtags', [])
+                    if isinstance(subtags, list):
+                        remaining_subtags = [s for s in subtags if isinstance(s, dict) and s.get('name') != new_subtag]
+                    else:
+                        remaining_subtags = []
                     if remaining_subtags:
                         tag['subtags'] = remaining_subtags
                         new_tags.append(tag)
                     # 如果 Others 没有 subtag 了，就不添加了
                 elif tag.get('name') == new_primary_tag:
                     # 已有这个 primary tag，添加 subtag
-                    existing_subtags = [s.get('name') for s in tag.get('subtags', [])]
+                    subtags = tag.get('subtags', [])
+                    if isinstance(subtags, list):
+                        existing_subtags = [s.get('name') for s in subtags if isinstance(s, dict)]
+                    else:
+                        existing_subtags = []
+                        tag['subtags'] = []
                     if new_subtag not in existing_subtags:
                         tag['subtags'].append({'name': new_subtag})
                     new_tags.append(tag)
@@ -688,11 +711,19 @@ class APIHandler(BaseHTTPRequestHandler):
                         continue
                     
                     for tag in tags:
+                        # 确保 tag 是字典
+                        if not isinstance(tag, dict):
+                            continue
                         if tag_type == 'primary' and tag.get('name') == old_name:
                             tag['name'] = new_name
                             modified = True
                         
-                        for subtag in tag.get('subtags', []):
+                        subtags = tag.get('subtags', [])
+                        if not isinstance(subtags, list):
+                            continue
+                        for subtag in subtags:
+                            if not isinstance(subtag, dict):
+                                continue
                             if tag_type == 'subtag' and subtag.get('name') == old_name:
                                 subtag['name'] = new_name
                                 modified = True
