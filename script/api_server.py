@@ -279,6 +279,37 @@ class APIHandler(BaseHTTPRequestHandler):
             
             self.send_json_response(200, status)
         
+        elif path == "/api/admin/logs":
+            # 获取最近的日志文件列表
+            token = self.get_auth_token()
+            if not verify_session(token):
+                self.send_json_response(401, {"error": "未授权访问"})
+                return
+            
+            logs_dir = get_project_root() / "logs"
+            logs = []
+            
+            if logs_dir.exists():
+                # 获取所有 .log 文件，按修改时间排序
+                log_files = sorted(
+                    logs_dir.glob("*.log"),
+                    key=lambda x: x.stat().st_mtime,
+                    reverse=True
+                )[:10]  # 最近 10 个日志
+                
+                for log_file in log_files:
+                    try:
+                        content = log_file.read_text(encoding='utf-8')
+                        logs.append({
+                            'name': log_file.name,
+                            'time': datetime.fromtimestamp(log_file.stat().st_mtime).isoformat(),
+                            'content': content[:5000]  # 最多 5000 字符
+                        })
+                    except:
+                        pass
+            
+            self.send_json_response(200, {"logs": logs})
+        
         elif path == "/api/admin/others":
             # 获取所有标记为 Others 的 features
             token = self.get_auth_token()

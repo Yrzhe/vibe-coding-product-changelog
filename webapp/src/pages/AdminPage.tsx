@@ -1,17 +1,10 @@
 import { useState, useEffect, useCallback } from 'react'
 import { cn } from '../lib/utils'
 
-interface UpdateLogEntry {
-  timestamp: string
-  mode?: string
-  updates: Record<string, {
-    status: string
-    old_count?: number
-    total_count?: number
-    new_count?: number
-    new_features?: Array<{ title: string; time: string }>
-    error?: string
-  }>
+interface ScriptLogEntry {
+  name: string
+  time: string
+  content: string
 }
 
 interface OthersFeature {
@@ -69,10 +62,11 @@ function AdminPage() {
   const [excludeTagsMessage, setExcludeTagsMessage] = useState('')
   
   // 运行状态
-  const [logs, setLogs] = useState<UpdateLogEntry[]>([])
-  const [logsLoading, setLogsLoading] = useState(true)
   const [crawlStatus, setCrawlStatus] = useState<RunStatus>({ lastRun: null, isRunning: false })
   const [summaryStatus, setSummaryStatus] = useState<RunStatus>({ lastRun: null, isRunning: false })
+  const [scriptLogs, setScriptLogs] = useState<ScriptLogEntry[]>([])
+  const [logsLoading, setLogsLoading] = useState(false)
+  const [expandedLog, setExpandedLog] = useState<string | null>(null)
   
   // Others 管理
   const [othersFeatures, setOthersFeatures] = useState<OthersFeature[]>([])
@@ -415,7 +409,7 @@ function AdminPage() {
     localStorage.removeItem('admin_token')
     setAuthToken(null)
     setIsAuthenticated(false)
-    setLogs([])
+    setScriptLogs([])
   }
 
   // 添加新功能
@@ -572,52 +566,23 @@ function AdminPage() {
   }
 
   const loadLogs = async () => {
+    if (!authToken) return
+    
     setLogsLoading(true)
-
     try {
-      let response: Response
-      try {
-        response = await fetch('/data/logs/index.json')
-      } catch {
-        setLogs([])
-        setLogsLoading(false)
-        return
-      }
-
-      if (!response.ok) {
-        setLogs([])
-        setLogsLoading(false)
-        return
-      }
-
-      const indexData = await response.json()
-      const logFiles: string[] = indexData.files || []
-
-      const hundredDaysAgo = new Date()
-      hundredDaysAgo.setDate(hundredDaysAgo.getDate() - 100)
-
-      const logPromises = logFiles.map(async (filename: string) => {
-        try {
-          const logResponse = await fetch(`/data/logs/${filename}`)
-          if (!logResponse.ok) return null
-          return await logResponse.json() as UpdateLogEntry
-        } catch {
-          return null
-        }
+      const response = await fetch('/api/admin/logs', {
+        headers: { 'Authorization': `Bearer ${authToken}` }
       })
-
-      const loadedLogs = (await Promise.all(logPromises))
-        .filter((log): log is UpdateLogEntry => log !== null)
-        .filter(log => {
-          const logDate = new Date(log.timestamp)
-          return logDate >= hundredDaysAgo
-        })
-        .sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime())
-
-      setLogs(loadedLogs)
+      
+      if (response.ok) {
+        const data = await response.json()
+        setScriptLogs(data.logs || [])
+      } else {
+        setScriptLogs([])
+      }
     } catch (err) {
       console.warn('Failed to load logs:', err)
-      setLogs([])
+      setScriptLogs([])
     } finally {
       setLogsLoading(false)
     }
@@ -1267,37 +1232,55 @@ function AdminPage() {
         </div>
       </div>
 
-      {/* 更新日志列表 */}
-      <div>
-        <div className="flex items-center justify-between mb-4">
-          <h2 className="text-lg font-medium">更新日志（最近 100 天）</h2>
+      {/* 运行日志 */}
+      <div className="bg-white rounded-lg border border-gray-200">
+        <div className="p-4 border-b border-gray-200 flex items-center justify-between">
+          <div>
+            <h3 className="font-medium text-gray-900">运行日志</h3>
+            <p className="text-xs text-gray-500">查看最近的脚本执行日志</p>
+          </div>
           <button
             onClick={loadLogs}
-            className="text-sm text-gray-500 hover:text-gray-700"
+            disabled={logsLoading}
+            className="px-3 py-1.5 text-sm text-gray-600 hover:text-gray-800 border border-gray-300 rounded hover:bg-gray-50"
           >
-            刷新
+            {logsLoading ? '加载中...' : '刷新'}
           </button>
         </div>
         
-        {logsLoading ? (
-          <div className="bg-white rounded-lg border border-gray-200 p-8 text-center text-gray-500">
-            加载中...
-          </div>
-        ) : logs.length === 0 ? (
-          <div className="bg-white rounded-lg border border-gray-200 p-8 text-center">
-            <div className="text-gray-500">暂无更新日志</div>
-            <p className="text-sm text-gray-400 mt-2">
-              运行 monitor 脚本后会生成更新日志
-            </p>
-          </div>
-        ) : (
-          <div className="space-y-4">
-            {logs.map((log, idx) => (
-              <LogCard key={idx} log={log} />
-            ))}
-          </div>
-        )}
+        <div className="p-4">
+          {scriptLogs.length === 0 ? (
+            <div className="text-center text-gray-500 py-4 text-sm">
+              暂无日志记录
+            </div>
+          ) : (
+            <div className="space-y-2 max-h-96 overflow-y-auto">
+              {scriptLogs.map((log) => (
+                <div 
+                  key={log.name}
+                  className="border border-gray-200 rounded-lg overflow-hidden"
+                >
+                  <button
+                    onClick={() => setExpandedLog(expandedLog === log.name ? null : log.name)}
+                    className="w-full px-3 py-2 bg-gray-50 hover:bg-gray-100 flex items-center justify-between text-left"
+                  >
+                    <span className="font-mono text-sm text-gray-700">{log.name}</span>
+                    <span className="text-xs text-gray-500">
+                      {new Date(log.time).toLocaleString('zh-CN')}
+                    </span>
+                  </button>
+                  {expandedLog === log.name && (
+                    <pre className="p-3 bg-gray-900 text-gray-100 text-xs overflow-x-auto max-h-64 overflow-y-auto">
+                      {log.content}
+                    </pre>
+                  )}
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
       </div>
+
     </div>
   )
 }
@@ -1701,124 +1684,6 @@ function FeatureTagCard({ feature, tagsData, isEditing, onEdit, onSave, onEditCo
               {saving ? '保存中...' : '保存修改'}
             </button>
           </div>
-        </div>
-      )}
-    </div>
-  )
-}
-
-interface LogCardProps {
-  log: UpdateLogEntry
-}
-
-function LogCard({ log }: LogCardProps) {
-  const [expanded, setExpanded] = useState(false)
-  const timestamp = new Date(log.timestamp)
-  const formattedDate = timestamp.toLocaleDateString('zh-CN', {
-    year: 'numeric',
-    month: '2-digit',
-    day: '2-digit',
-    hour: '2-digit',
-    minute: '2-digit'
-  })
-
-  const updates = Object.entries(log.updates || {})
-  const totalNew = updates.reduce((sum, [, info]) => sum + (info.new_count || 0), 0)
-  const hasErrors = updates.some(([, info]) => info.status === 'failed' || info.error)
-  const hasNewFeatures = totalNew > 0
-
-  return (
-    <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
-      <div
-        className="flex items-center justify-between p-4 cursor-pointer hover:bg-gray-50"
-        onClick={() => setExpanded(!expanded)}
-      >
-        <div className="flex items-center gap-3">
-          <div className={cn(
-            'size-3 rounded-full',
-            hasErrors ? 'bg-red-500' : hasNewFeatures ? 'bg-green-500' : 'bg-gray-400'
-          )} />
-          <div>
-            <div className="font-medium">{formattedDate}</div>
-            <div className="text-sm text-gray-500">
-              {log.mode === 'sync_status' ? '同步状态' : `模式: ${log.mode || 'incremental'}`}
-            </div>
-          </div>
-        </div>
-        <div className="flex items-center gap-4">
-          {totalNew > 0 && (
-            <span className="px-2 py-1 text-xs font-medium bg-green-100 text-green-700 rounded">
-              +{totalNew} 新增
-            </span>
-          )}
-          {hasErrors && (
-            <span className="px-2 py-1 text-xs font-medium bg-red-100 text-red-700 rounded">
-              错误
-            </span>
-          )}
-          <svg
-            className={cn('size-5 text-gray-400 transition-transform', expanded && 'rotate-180')}
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-          </svg>
-        </div>
-      </div>
-
-      {expanded && (
-        <div className="border-t border-gray-200 p-4 space-y-3">
-          {updates.map(([product, info]) => (
-            <div key={product} className="flex items-start justify-between py-2 border-b border-gray-100 last:border-0">
-              <div className="flex items-center gap-2">
-                <span className={cn(
-                  'size-2 rounded-full',
-                  info.status === 'success' ? 'bg-green-500' :
-                  info.status === 'failed' || info.error ? 'bg-red-500' :
-                  'bg-gray-400'
-                )} />
-                <span className="font-medium">{product}</span>
-              </div>
-              <div className="text-sm text-right">
-                {info.status === 'success' ? (
-                  <>
-                    {info.new_count && info.new_count > 0 ? (
-                      <span className="text-green-600">+{info.new_count} 新增</span>
-                    ) : (
-                      <span className="text-gray-500">无变化</span>
-                    )}
-                    {info.total_count && (
-                      <span className="text-gray-400 ml-2">(共 {info.total_count} 条)</span>
-                    )}
-                  </>
-                ) : info.error ? (
-                  <span className="text-red-600">{info.error}</span>
-                ) : (
-                  <span className="text-gray-500">{info.status}</span>
-                )}
-              </div>
-            </div>
-          ))}
-
-          {updates.some(([, info]) => info.new_features && info.new_features.length > 0) && (
-            <div className="mt-4 pt-4 border-t border-gray-200">
-              <h4 className="text-sm font-medium text-gray-700 mb-2">新增功能</h4>
-              <div className="space-y-2">
-                {updates.map(([product, info]) =>
-                  info.new_features?.map((feature, idx) => (
-                    <div key={`${product}-${idx}`} className="text-sm flex items-start gap-2">
-                      <span className="text-gray-400">{product}:</span>
-                      <span className="text-gray-700">{feature.title}</span>
-                      {feature.time && (
-                        <span className="text-gray-400 text-xs">({feature.time})</span>
-                      )}
-                    </div>
-                  ))
-                )}
-              </div>
-            </div>
-          )}
         </div>
       )}
     </div>

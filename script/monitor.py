@@ -107,11 +107,21 @@ def merge_features(old_feature_map: dict, new_features: list) -> tuple:
             old_feature = old_feature_map[key]
             old_tags = old_feature.get("tags", [])
 
-            # 如果旧条目有 tags，保留它们
-            if old_tags and isinstance(old_tags, list) and len(old_tags) > 0:
+            # 检查 tags 是否有效（不是空、None、"None" 字符串）
+            def has_valid_tags(tags):
+                if not tags:
+                    return False
+                if isinstance(tags, str):  # "None" 字符串
+                    return False
+                if isinstance(tags, list) and len(tags) > 0:
+                    return True
+                return False
+
+            # 如果旧条目有有效 tags，保留它们
+            if has_valid_tags(old_tags):
                 feature["tags"] = old_tags
             # 否则标记为需要打标
-            elif not feature.get("tags") or len(feature.get("tags", [])) == 0:
+            elif not has_valid_tags(feature.get("tags")):
                 new_keys.add(key)
         else:
             # 新条目
@@ -406,7 +416,17 @@ def monitor_all(force_full: bool = False):
             print(f"   ⏭️ 跳过（通过 Admin 手动管理）")
             # 但仍然检查是否需要打标
             _, features, _ = load_storage(name)
-            untagged = [f for f in features if not f.get("tags")]
+            # 检查未打标的：tags 为空、None、"None" 字符串、或空数组
+            def needs_tagging(f):
+                tags = f.get("tags")
+                if not tags:
+                    return True
+                if isinstance(tags, str):  # "None" 字符串
+                    return True
+                if isinstance(tags, list) and len(tags) == 0:
+                    return True
+                return False
+            untagged = [f for f in features if needs_tagging(f)]
             if untagged:
                 print(f"   🏷️ 发现 {len(untagged)} 条未打标，正在处理...")
                 run_tagging_for_product(name)
