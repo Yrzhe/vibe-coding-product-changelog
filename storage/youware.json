@@ -8,16 +8,59 @@
         "name": "feature",
         "features": [
             {
+                "title": "TailwindCSS Support",
+                "description": "YouWare now fully supports TailwindCSS for styling your projects. You can use Tailwind utility classes directly in your code for rapid, responsive design.",
+                "time": "2026-01-19",
+                "tags": [
+                    {
+                        "name": "Framework",
+                        "subtags": [
+                            {
+                                "name": "TailwindCSS"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "shadcn/ui Component Library",
+                "description": "Integrated shadcn/ui component library, providing a set of beautifully designed, accessible components that you can copy and customize for your projects.",
+                "time": "2026-01-19",
+                "tags": [
+                    {
+                        "name": "Framework",
+                        "subtags": [
+                            {
+                                "name": "shadcn"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Three.js 3D Rendering",
+                "description": "Added Three.js support for creating stunning 3D visualizations and interactive experiences directly within your YouWare projects.",
+                "time": "2026-01-19",
+                "tags": [
+                    {
+                        "name": "Framework",
+                        "subtags": [
+                            {
+                                "name": "Three.js"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
                 "title": "Fixed YouBase delete timestamp bug",
                 "description": "",
-                "time": "2026-01-12",
-                "tags": "None"
+                "time": "2026-01-12"
             },
             {
                 "title": "Resolved subdomain handling in batch API requests",
                 "description": "",
-                "time": "2026-01-12",
-                "tags": "None"
+                "time": "2026-01-12"
             },
             {
                 "title": "AI Integration Persistence",
@@ -37,8 +80,7 @@
             {
                 "title": "Fixed an issue with project handoff causing unexpected compacting.",
                 "description": "",
-                "time": "2026-01-05",
-                "tags": "None"
+                "time": "2026-01-05"
             },
             {
                 "title": "Improved repository push timing for better performance.",
@@ -156,14 +198,12 @@
             {
                 "title": "Fixed URL style issues when navigating between multiple editor pages",
                 "description": "",
-                "time": "2025-12-29",
-                "tags": "None"
+                "time": "2025-12-29"
             },
             {
                 "title": "Resolved YouBase reporting issues",
                 "description": "",
-                "time": "2025-12-29",
-                "tags": "None"
+                "time": "2025-12-29"
             },
             {
                 "title": "Fixed password project filtering in personal pages",
@@ -186,8 +226,7 @@
             {
                 "title": "Optimized options popup logic",
                 "description": "",
-                "time": "2025-12-29",
-                "tags": "None"
+                "time": "2025-12-29"
             },
             {
                 "title": "YouBase Beta is Now Open",
@@ -210,8 +249,7 @@
             {
                 "title": "Fixed streaming conversation issues where tables weren't properly recording user interaction states",
                 "description": "",
-                "time": "2025-12-22",
-                "tags": "None"
+                "time": "2025-12-22"
             },
             {
                 "title": "Resolved subdomain generation failures",
@@ -231,8 +269,7 @@
             {
                 "title": "Fixed occasional YouBase initialization errors",
                 "description": "",
-                "time": "2025-12-22",
-                "tags": "None"
+                "time": "2025-12-22"
             },
             {
                 "title": "Upgraded Next.js to version 15.4.10",
@@ -252,8 +289,7 @@
             {
                 "title": "Fixed Google Translate errors on the YouWare website",
                 "description": "",
-                "time": "2025-12-22",
-                "tags": "None"
+                "time": "2025-12-22"
             },
             {
                 "title": "Custom Domain",
@@ -318,8 +354,7 @@
             {
                 "title": "Fixed issues with large user input content handling",
                 "description": "",
-                "time": "2025-12-15",
-                "tags": "None"
+                "time": "2025-12-15"
             },
             {
                 "title": "Optimized error messaging when switching gateways",
@@ -404,14 +439,6 @@
                                 "name": "Next.js"
                             }
                         ]
-                    },
-                    {
-                        "name": "Security",
-                        "subtags": [
-                            {
-                                "name": "Security Scan"
-                            }
-                        ]
                     }
                 ]
             },
@@ -448,8 +475,7 @@
             {
                 "title": "Fixed errors that could occur during fullscreen translation",
                 "description": "",
-                "time": "2025-12-08",
-                "tags": "None"
+                "time": "2025-12-08"
             },
             {
                 "title": "Black Friday Annual Plan Offer",
@@ -499,8 +525,7 @@
             {
                 "title": "Fixed layout and style issues on the create page to ensure a more consistent editing experience.",
                 "description": "",
-                "time": "2025-12-01",
-                "tags": "None"
+                "time": "2025-12-01"
             },
             {
                 "title": "Fixed broken or missing images in the conversation list so uploaded pictures now display correctly.",
@@ -520,8 +545,7 @@
             {
                 "title": "Help Center",
                 "description": "You can now visit the new Help Center to read documentation such as quick guides, feature introductions, and integration descriptions. If you have further questions, you can ask the community. For VIP members, dedicated support is also available.",
-                "time": "2025-11-21",
-                "tags": "None"
+                "time": "2025-11-21"
             },
             {
                 "title": "MCP status cloud synchronization",
@@ -776,8 +800,7 @@
             {
                 "title": "Fixed the React project compilation exception and the Remix project revert failure issue.",
                 "description": "",
-                "time": "2025-11-07",
-                "tags": "None"
+                "time": "2025-11-07"
             },
             {
                 "title": "Landing Page",
@@ -1017,17 +1040,7 @@
             {
                 "title": "Fixed moderation error handling.",
                 "description": "",
-                "time": "2025-10-17",
-                "tags": [
-                    {
-                        "name": "Security",
-                        "subtags": [
-                            {
-                                "name": "Content Moderation"
-                            }
-                        ]
-                    }
-                ]
+                "time": "2025-10-17"
             },
             {
                 "title": "Mobile Notification",
@@ -1043,10 +1056,10 @@
                         ]
                     },
                     {
-                        "name": "Deployment",
+                        "name": "Editor",
                         "subtags": [
                             {
-                                "name": "iOS App"
+                                "name": "Mobile Editor"
                             }
                         ]
                     }
@@ -1192,13 +1205,10 @@
                 "time": "2025-09-26",
                 "tags": [
                     {
-                        "name": "Deployment",
+                        "name": "Editor",
                         "subtags": [
                             {
-                                "name": "iOS App"
-                            },
-                            {
-                                "name": "Android App"
+                                "name": "Mobile Editor"
                             }
                         ]
                     }
@@ -1246,14 +1256,6 @@
                 "time": "2025-09-26",
                 "tags": [
                     {
-                        "name": "Security",
-                        "subtags": [
-                            {
-                                "name": "Content Moderation"
-                            }
-                        ]
-                    },
-                    {
                         "name": "Team",
                         "subtags": [
                             {
@@ -1295,15 +1297,15 @@
                         "name": "Editor",
                         "subtags": [
                             {
-                                "name": "Console"
+                                "name": "Code Editor"
                             }
                         ]
                     },
                     {
-                        "name": "UI/UX",
+                        "name": "Deployment",
                         "subtags": [
                             {
-                                "name": "Navigation"
+                                "name": "Publishing"
                             }
                         ]
                     }
@@ -1344,14 +1346,6 @@
                                 "name": "Voice Input"
                             }
                         ]
-                    },
-                    {
-                        "name": "Deployment",
-                        "subtags": [
-                            {
-                                "name": "Android App"
-                            }
-                        ]
                     }
                 ]
             },
@@ -1373,8 +1367,7 @@
             {
                 "title": "Fixed IME and tab-state conflict.",
                 "description": "",
-                "time": "2025-09-26",
-                "tags": "None"
+                "time": "2025-09-26"
             },
             {
                 "title": "Creator Studio",
@@ -1426,14 +1419,6 @@
                                 "name": "Explore"
                             }
                         ]
-                    },
-                    {
-                        "name": "Security",
-                        "subtags": [
-                            {
-                                "name": "Content Moderation"
-                            }
-                        ]
                     }
                 ]
             },
@@ -1455,29 +1440,6 @@
                         "subtags": [
                             {
                                 "name": "Video Generation"
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "title": "Image Generation",
-                "description": "Upgraded Seedream to version 4.0, introducing image-to-image generation for more flexible creative workflows.",
-                "time": "2025-09-12",
-                "tags": [
-                    {
-                        "name": "AI Model",
-                        "subtags": [
-                            {
-                                "name": "Seedream"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Media",
-                        "subtags": [
-                            {
-                                "name": "Image Generation"
                             }
                         ]
                     }
@@ -1611,14 +1573,12 @@
             {
                 "title": "Fixed screen editing interaction issues.",
                 "description": "",
-                "time": "2025-09-12",
-                "tags": "None"
+                "time": "2025-09-12"
             },
             {
                 "title": "Fixed Markdown rendering errors.",
                 "description": "",
-                "time": "2025-09-12",
-                "tags": "None"
+                "time": "2025-09-12"
             },
             {
                 "title": "Fixed incomplete screenshots in shared project previews.",
@@ -1888,14 +1848,6 @@
                                 "name": "MCP"
                             }
                         ]
-                    },
-                    {
-                        "name": "Framework",
-                        "subtags": [
-                            {
-                                "name": "React"
-                            }
-                        ]
                     }
                 ]
             },
@@ -1979,14 +1931,6 @@
                                 "name": "Midjourney"
                             }
                         ]
-                    },
-                    {
-                        "name": "Security",
-                        "subtags": [
-                            {
-                                "name": "Content Moderation"
-                            }
-                        ]
                     }
                 ]
             },
@@ -2052,8 +1996,7 @@
             {
                 "title": "User Agreement",
                 "description": "A dedicated user agreement page is now available in the site footer, providing clear access to YouWare’s terms and compliance details.",
-                "time": "2025-08-15",
-                "tags": "None"
+                "time": "2025-08-15"
             },
             {
                 "title": "Agent Enhancements",
@@ -2142,14 +2085,12 @@
             {
                 "title": "Adjusted log levels and corrected error codes.",
                 "description": "",
-                "time": "2025-08-15",
-                "tags": "None"
+                "time": "2025-08-15"
             },
             {
                 "title": "Fixed login issues on some mobile devices.",
                 "description": "",
-                "time": "2025-08-15",
-                "tags": "None"
+                "time": "2025-08-15"
             },
             {
                 "title": "Fixed duplicate entries in search results.",
@@ -2169,8 +2110,7 @@
             {
                 "title": "Fixed tooltips not disappearing after exiting fullscreen mode.",
                 "description": "",
-                "time": "2025-08-15",
-                "tags": "None"
+                "time": "2025-08-15"
             },
             {
                 "title": "React Support",
@@ -2349,8 +2289,7 @@
             {
                 "title": "Fixed message continuity issue after login on the Create page.",
                 "description": "",
-                "time": "2025-08-08",
-                "tags": "None"
+                "time": "2025-08-08"
             },
             {
                 "title": "Fixed migration problems with legacy blog posts.",
@@ -2370,8 +2309,7 @@
             {
                 "title": "Fixed incorrect link rewrites causing page redirection.",
                 "description": "",
-                "time": "2025-08-08",
-                "tags": "None"
+                "time": "2025-08-08"
             },
             {
                 "title": "Plan Mode",
@@ -2468,13 +2406,10 @@
                 "time": "2025-07-31",
                 "tags": [
                     {
-                        "name": "Security",
+                        "name": "Performance",
                         "subtags": [
                             {
-                                "name": "Security Scan"
-                            },
-                            {
-                                "name": "Content Moderation"
+                                "name": "Speed"
                             }
                         ]
                     }
@@ -2529,29 +2464,17 @@
             {
                 "title": "Fixed arrow-key navigation causing page scroll jumps.",
                 "description": "",
-                "time": "2025-07-31",
-                "tags": [
-                    {
-                        "name": "Editor",
-                        "subtags": [
-                            {
-                                "name": "Keyboard Shortcuts"
-                            }
-                        ]
-                    }
-                ]
+                "time": "2025-07-31"
             },
             {
                 "title": "Fixed missing recommendation feed on project detail pages.",
                 "description": "",
-                "time": "2025-07-31",
-                "tags": "None"
+                "time": "2025-07-31"
             },
             {
                 "title": "Fixed re-login requirement after refreshing the Create page.",
                 "description": "",
-                "time": "2025-07-31",
-                "tags": "None"
+                "time": "2025-07-31"
             },
             {
                 "title": "Fixed Chrome translation conflict with Google sign-in.",
@@ -2624,8 +2547,7 @@
             {
                 "title": "Plugin Page",
                 "description": "A new Plugin Page introduces official YouWare extensions you can browse and install directly within the platform. You can explore available tools in one place without manual setup, expanding your creative capabilities effortlessly.",
-                "time": "2025-07-21",
-                "tags": "None"
+                "time": "2025-07-21"
             },
             {
                 "title": "Personalized Recommendations",
@@ -2755,14 +2677,12 @@
             {
                 "title": "Fixed duplicate content appearing in Prompt Prediction suggestions.",
                 "description": "",
-                "time": "2025-07-21",
-                "tags": "None"
+                "time": "2025-07-21"
             },
             {
                 "title": "Fixed excessive memory usage under specific conditions.",
                 "description": "",
-                "time": "2025-07-21",
-                "tags": "None"
+                "time": "2025-07-21"
             },
             {
                 "title": "AI App",
@@ -2819,7 +2739,16 @@
                 "title": "Prompt Prediction",
                 "description": "Adjusted detection timing to reduce false triggers; fixed IME cursor jitter.",
                 "time": "2025-07-14",
-                "tags": "None"
+                "tags": [
+                    {
+                        "name": "Agent",
+                        "subtags": [
+                            {
+                                "name": "Clarifying Questions"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "title": "Supabase MCP",
@@ -2951,24 +2880,6 @@
                 ]
             },
             {
-                "title": "Image Tools",
-                "description": "Integrated **Doubao** for image generation and **Flux** for image editing.",
-                "time": "2025-07-04",
-                "tags": [
-                    {
-                        "name": "AI Model",
-                        "subtags": [
-                            {
-                                "name": "Doubao"
-                            },
-                            {
-                                "name": "Flux"
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
                 "title": "Model Support",
                 "description": "Added compatibility for **Kimi K2** and other non-visual models (via K2 configuration).",
                 "time": "2025-07-04",
@@ -3034,8 +2945,7 @@
             {
                 "title": "Fixed text overflow in Thinking outputs.",
                 "description": "",
-                "time": "2025-07-04",
-                "tags": "None"
+                "time": "2025-07-04"
             },
             {
                 "title": "Tab Tab Prompt Completion",
@@ -3130,8 +3040,7 @@
             {
                 "title": "Fixed unclickable “Upgrade” button on the homepage.",
                 "description": "",
-                "time": "2025-06-27",
-                "tags": "None"
+                "time": "2025-06-27"
             },
             {
                 "title": "To-Do and Image Search",
@@ -3278,14 +3187,12 @@
             {
                 "title": "Fixed Chrome push tooltip display when content is empty.",
                 "description": "",
-                "time": "2025-06-20",
-                "tags": "None"
+                "time": "2025-06-20"
             },
             {
                 "title": "Fixed URL concatenation errors causing missing images.",
                 "description": "",
-                "time": "2025-06-20",
-                "tags": "None"
+                "time": "2025-06-20"
             },
             {
                 "title": "Improved settings dialog responsiveness.",
@@ -3379,8 +3286,7 @@
             {
                 "title": "Fixed delayed System Prompt updates.",
                 "description": "",
-                "time": "2025-06-13",
-                "tags": "None"
+                "time": "2025-06-13"
             },
             {
                 "title": "Google One Tap Login",
@@ -3403,10 +3309,10 @@
                 "time": "2025-06-06",
                 "tags": [
                     {
-                        "name": "Security",
+                        "name": "Community",
                         "subtags": [
                             {
-                                "name": "Content Moderation"
+                                "name": "Comments"
                             }
                         ]
                     }
@@ -3415,8 +3321,7 @@
             {
                 "title": "Prompt Cache",
                 "description": "Prompt caching has been introduced. Repeated requests now use cached results, reducing generation time and saving Credits.",
-                "time": "2025-06-06",
-                "tags": "None"
+                "time": "2025-06-06"
             },
             {
                 "title": "File Uploads",
@@ -3428,14 +3333,6 @@
                         "subtags": [
                             {
                                 "name": "File Upload"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Media",
-                        "subtags": [
-                            {
-                                "name": "Image Upload"
                             }
                         ]
                     }
@@ -3486,7 +3383,7 @@
                         "name": "Agent",
                         "subtags": [
                             {
-                                "name": "Tasks"
+                                "name": "Agent Mode"
                             },
                             {
                                 "name": "Automation"
@@ -3639,14 +3536,6 @@
                                 "name": "Agent Mode"
                             }
                         ]
-                    },
-                    {
-                        "name": "Media",
-                        "subtags": [
-                            {
-                                "name": "Image Understanding"
-                            }
-                        ]
                     }
                 ]
             },
@@ -3729,8 +3618,7 @@
             {
                 "title": "Fixed avatar display issue for email-login users on the Explore page.",
                 "description": "",
-                "time": "2025-05-31",
-                "tags": "None"
+                "time": "2025-05-31"
             },
             {
                 "title": "Fixed unavailable downloads after project publication.",
@@ -3753,8 +3641,7 @@
             {
                 "title": "Fixed incorrect language recognition in some Japanese projects.",
                 "description": "",
-                "time": "2025-05-31",
-                "tags": "None"
+                "time": "2025-05-31"
             },
             {
                 "title": "Fixed multi-character password input bug on Windows.",
@@ -3863,8 +3750,7 @@
             {
                 "title": "Fixed homepage “Load More” issue for new users.",
                 "description": "",
-                "time": "2025-05-23",
-                "tags": "None"
+                "time": "2025-05-23"
             },
             {
                 "title": "Fixed abnormal token usage caused by unspecified parameters during generation.",
@@ -3902,8 +3788,7 @@
             {
                 "title": "Fixed double-tab opening issue on profile page.",
                 "description": "",
-                "time": "2025-05-23",
-                "tags": "None"
+                "time": "2025-05-23"
             },
             {
                 "title": "Fixed repeated passcode prompts on www.youware.com domain.",
@@ -3992,8 +3877,7 @@
             {
                 "title": "Fixed History page failing to load additional records.",
                 "description": "",
-                "time": "2025-05-16",
-                "tags": "None"
+                "time": "2025-05-16"
             },
             {
                 "title": "Fixed duplicate project listings on the Explore page.",
@@ -4074,8 +3958,7 @@
             {
                 "title": "UI Behavior",
                 "description": "Disabled background scrolling when pop-ups are open and refined scrollbar visuals in the editor.",
-                "time": "2025-05-09",
-                "tags": "None"
+                "time": "2025-05-09"
             },
             {
                 "title": "Project Preview",
@@ -4106,13 +3989,10 @@
                 "time": "2025-05-09",
                 "tags": [
                     {
-                        "name": "Security",
+                        "name": "Agent",
                         "subtags": [
                             {
-                                "name": "Content Moderation"
-                            },
-                            {
-                                "name": "Security Scan"
+                                "name": "Prompt Engineering"
                             }
                         ]
                     }
@@ -4305,7 +4185,24 @@
                 "title": "Stability",
                 "description": "Improved system stability and error recovery to ensure long-running tasks complete smoothly without interruption.",
                 "time": "2025-04-25",
-                "tags": "None"
+                "tags": [
+                    {
+                        "name": "Agent",
+                        "subtags": [
+                            {
+                                "name": "Tasks"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "UI/UX",
+                        "subtags": [
+                            {
+                                "name": "Notifications"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "title": "Session Experience",
@@ -4348,32 +4245,27 @@
             {
                 "title": "Localization",
                 "description": "Improved multilingual adaptation with automatic browser language detection for a more localized interface.",
-                "time": "2025-04-25",
-                "tags": "None"
+                "time": "2025-04-25"
             },
             {
                 "title": "Fixed truncated output in long generations.",
                 "description": "",
-                "time": "2025-04-25",
-                "tags": "None"
+                "time": "2025-04-25"
             },
             {
                 "title": "Fixed parameter extraction errors in Think tool",
                 "description": "",
-                "time": "2025-04-25",
-                "tags": "None"
+                "time": "2025-04-25"
             },
             {
                 "title": "Fixed session leakage.",
                 "description": "",
-                "time": "2025-04-25",
-                "tags": "None"
+                "time": "2025-04-25"
             },
             {
                 "title": "Fixed duplicate rendering of chat attachments.",
                 "description": "",
-                "time": "2025-04-25",
-                "tags": "None"
+                "time": "2025-04-25"
             },
             {
                 "title": "Reactions on Project",
@@ -4461,14 +4353,6 @@
                                 "name": "Explore"
                             }
                         ]
-                    },
-                    {
-                        "name": "Security",
-                        "subtags": [
-                            {
-                                "name": "Content Moderation"
-                            }
-                        ]
                     }
                 ]
             },
@@ -4526,8 +4410,7 @@
             {
                 "title": "Fixed logout issues.",
                 "description": "",
-                "time": "2025-04-18",
-                "tags": "None"
+                "time": "2025-04-18"
             },
             {
                 "title": "Fixed permission errors on Safari preview pages.",
@@ -4547,14 +4430,12 @@
             {
                 "title": "Fixed avatar and username update failures.",
                 "description": "",
-                "time": "2025-04-18",
-                "tags": "None"
+                "time": "2025-04-18"
             },
             {
                 "title": "Fixed layout issues caused by overly long messages or email addresses.",
                 "description": "",
-                "time": "2025-04-18",
-                "tags": "None"
+                "time": "2025-04-18"
             },
             {
                 "title": "Text to Website",
