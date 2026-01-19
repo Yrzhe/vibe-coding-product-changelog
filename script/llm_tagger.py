@@ -361,6 +361,29 @@ def build_prompt(title: str, description: str, tags_data: dict) -> str:
 - 每个功能只选最准确的 1-2 个标签
 - 避免选择语义重叠的标签
 
+### 4.5 移动端 App 标签区分
+**iOS App / Android App = 生成移动应用的能力**
+- 只有产品支持"导出/生成 iOS App"或"导出/生成 Android App"时才打这个标签
+- 产品本身有移动端版本（如 "YouWare Mobile App"）不算 → 应打 "Mobile Editor" 或其他相关标签
+- 移动端编辑器功能 → "Mobile Editor"（属于 Editor）
+- 移动端推送通知 → "Push Notification"（属于 Community）
+
+### 4.6 YouWare 不支持的功能（请勿错打）
+**以下是 YouWare 明确没有的功能，不要给 YouWare 打这些标签**：
+- Security Scan（安全扫描）：除非明确提到安全漏洞扫描功能
+- Content Moderation（内容审核）：除非明确提到 AI 内容审核系统
+- Keyboard Shortcuts（键盘快捷键）：除非明确提到自定义快捷键功能
+
+### 4.7 Auth 归类
+**用户可用的认证服务归入 Backend/Auth**
+- 产品提供给用户项目使用的 Auth 服务（如 YouBase 的认证）→ "Database" 或 "Auth Related"（属于 Backend）
+- 用户登录产品的方式（如 Google 登录 YouWare）→ "Social Login"（属于 Auth）
+
+### 4.8 Framework 标签
+**前端框架/库支持**
+- TailwindCSS、shadcn、Three.js、React、Vue → "Framework" 相关标签
+- 如果明确提到支持某个框架 → 打对应的 Framework 二级标签
+
 ### 5. Bug 修复
 - 纯粹的 Bug 修复（无具体功能描述）→ 返回空数组
 - 如果 Bug 修复涉及具体功能，打对应功能的标签

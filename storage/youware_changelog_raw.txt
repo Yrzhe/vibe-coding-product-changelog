@@ -1,6 +1,20 @@
 # YouWare Changelog  
 *Product Iteration Highlights (Sep – Dec 2025)*
 ---
+## v2.7.5 – January 19, 2026
+
+### Features
+
+#### TailwindCSS Support
+YouWare now fully supports TailwindCSS for styling your projects. You can use Tailwind utility classes directly in your code for rapid, responsive design.
+
+#### shadcn/ui Component Library
+Integrated shadcn/ui component library, providing a set of beautifully designed, accessible components that you can copy and customize for your projects.
+
+#### Three.js 3D Rendering
+Added Three.js support for creating stunning 3D visualizations and interactive experiences directly within your YouWare projects.
+
+---
 ## v2.7.4 – January 12, 2026
 
 ### Patches
@@ -282,7 +296,6 @@ A new compliance section in the Explore page sidebar consolidates documentation,
 
 ### Improvements
 - **Video Generation:** Veo 3 now supports 9:16 vertical output, optimized for mobile and short-form video platforms.  
-- **Image Generation:** Upgraded Seedream to version 4.0, introducing image-to-image generation for more flexible creative workflows.  
 - **Model Pricing:** Reduced Veo 3 credit cost while maintaining the same generation quality.  
 - **Agent Performance:** Improved task recognition and contextual understanding, reducing first-response latency and enhancing stability for long-image parsing.  
 - **Backend Storage:** Increased file storage limit to **500MB**, ensuring smoother uploads and more reliable asset management.  
@@ -507,7 +520,6 @@ A Stop button lets you interrupt any ongoing process immediately. You can now ha
 The Agent now includes a To-do tool and improved Thinking logic. You can plan and coordinate complex multi-step tasks more clearly before execution, making automation more reliable.
 
 ### Integrations
-- **Image Tools:** Integrated **Doubao** for image generation and **Flux** for image editing.  
 - **Model Support:** Added compatibility for **Kimi K2** and other non-visual models (via K2 configuration).
 
 ### Improvements
