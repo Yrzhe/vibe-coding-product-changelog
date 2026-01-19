@@ -101,29 +101,69 @@ def save_run_status(crawl_time=None, summary_time=None):
 
 
 def run_script_async(script_name: str, task_type: str = None, callback=None):
-    """异步运行脚本"""
+    """异步运行脚本，并记录详细日志"""
     def run():
         global running_tasks
         if task_type:
             running_tasks[task_type] = True
         
         root = get_project_root()
+        logs_dir = root / "logs"
+        logs_dir.mkdir(exist_ok=True)
+        
         # Docker 中脚本在 /app 下，本地在 script/ 下
         if root == Path("/app"):
             script_path = root / script_name
         else:
             script_path = root / "script" / script_name
+        
+        start_time = datetime.now()
+        log_file = logs_dir / f"{task_type or 'script'}_{start_time.strftime('%Y%m%d_%H%M%S')}.log"
+        
         try:
+            print(f"[{start_time.isoformat()}] 开始运行: {script_name}")
+            
             result = subprocess.run(
                 [sys.executable, str(script_path)],
                 capture_output=True,
                 text=True,
                 timeout=600  # 10 分钟超时
             )
+            
+            end_time = datetime.now()
+            duration = (end_time - start_time).total_seconds()
+            
+            # 写入日志文件
+            with open(log_file, "w", encoding="utf-8") as f:
+                f.write(f"=== 脚本执行日志 ===\n")
+                f.write(f"脚本: {script_name}\n")
+                f.write(f"开始时间: {start_time.isoformat()}\n")
+                f.write(f"结束时间: {end_time.isoformat()}\n")
+                f.write(f"耗时: {duration:.1f} 秒\n")
+                f.write(f"返回码: {result.returncode}\n")
+                f.write(f"\n=== STDOUT ===\n")
+                f.write(result.stdout or "(无输出)")
+                f.write(f"\n\n=== STDERR ===\n")
+                f.write(result.stderr or "(无错误)")
+            
+            print(f"[{end_time.isoformat()}] 脚本完成: {script_name}, 耗时 {duration:.1f}秒, 返回码 {result.returncode}")
+            
+            if result.returncode != 0:
+                print(f"脚本错误输出: {result.stderr[:500] if result.stderr else '(无)'}")
+            
             if callback:
                 callback(result.returncode == 0)
+                
+        except subprocess.TimeoutExpired as e:
+            print(f"脚本执行超时: {script_name}")
+            with open(log_file, "w", encoding="utf-8") as f:
+                f.write(f"脚本执行超时 (>600秒): {script_name}\n")
+            if callback:
+                callback(False)
         except Exception as e:
-            print(f"脚本运行失败: {e}")
+            print(f"脚本运行失败: {script_name}, 错误: {e}")
+            with open(log_file, "w", encoding="utf-8") as f:
+                f.write(f"脚本运行失败: {e}\n")
             if callback:
                 callback(False)
         finally:

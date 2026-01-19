@@ -149,7 +149,13 @@ def run_crawler(product_name: str) -> bool:
     运行爬虫
     返回: 是否成功
     """
-    crawler_path = get_project_root() / "script" / "crawl" / f"{product_name}.py"
+    root = get_project_root()
+    
+    # Docker 环境中爬虫在 /app/crawl/，本地在 script/crawl/
+    if root == Path("/app"):
+        crawler_path = root / "crawl" / f"{product_name}.py"
+    else:
+        crawler_path = root / "script" / "crawl" / f"{product_name}.py"
 
     if not crawler_path.exists():
         print(f"  ⚠️ 爬虫脚本不存在: {crawler_path}")
@@ -179,10 +185,16 @@ def run_crawler(product_name: str) -> bool:
 
 def run_tagging_for_product(product_name: str) -> bool:
     """为指定产品运行打标（只处理没有 tags 的条目）"""
-    tag_script = get_project_root() / "script" / "llm_tagger.py"
+    root = get_project_root()
+    
+    # Docker 环境中脚本在 /app/，本地在 script/
+    if root == Path("/app"):
+        tag_script = root / "llm_tagger.py"
+    else:
+        tag_script = root / "script" / "llm_tagger.py"
 
     if not tag_script.exists():
-        print("  ⚠️ 打标脚本不存在")
+        print(f"  ⚠️ 打标脚本不存在: {tag_script}")
         return False
 
     try:
@@ -441,10 +453,16 @@ def monitor_all(force_full: bool = False):
 
 def run_ai_summary():
     """运行 AI 总结脚本"""
-    ai_script = get_project_root() / "script" / "ai_summary.py"
+    root = get_project_root()
+    
+    # Docker 环境中脚本在 /app/，本地在 script/
+    if root == Path("/app"):
+        ai_script = root / "ai_summary.py"
+    else:
+        ai_script = root / "script" / "ai_summary.py"
     
     if not ai_script.exists():
-        print("  ⚠️ AI 总结脚本不存在")
+        print(f"  ⚠️ AI 总结脚本不存在: {ai_script}")
         return
     
     print("\n🤖 正在更新 AI 总结...")
