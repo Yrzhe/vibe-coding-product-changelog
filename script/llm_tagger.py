@@ -512,9 +512,19 @@ def process_all_features(use_llm: bool = True, limit_per_file: int = None, targe
         features = data[1].get("features", [])
         
         # 找出需要打标的功能
+        # 未打标的条件：
+        # 1. tags 字段不存在
+        # 2. tags 是空数组 []
+        # 3. tags 是 None
+        # 排除：tags == "None" (字符串，表示无需打标)
         features_to_tag = []
         for i, feat in enumerate(features):
-            if "tags" not in feat:
+            tags = feat.get("tags")
+            # 跳过已标记为"无需打标"的
+            if tags == "None":
+                continue
+            # 未打标的情况
+            if tags is None or (isinstance(tags, list) and len(tags) == 0):
                 features_to_tag.append((i, feat))
         
         if limit_per_file:
