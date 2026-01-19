@@ -244,6 +244,30 @@ def save_update_log(updates: dict):
     print(f"\n📄 更新日志已保存到: {log_path}")
 
 
+def save_run_status(crawl_time=None, summary_time=None):
+    """保存运行状态（供 Admin 页面显示）"""
+    status_path = get_project_root() / "info" / "run_status.json"
+    
+    # 读取现有状态
+    status = {}
+    if status_path.exists():
+        try:
+            with open(status_path, "r", encoding="utf-8") as f:
+                status = json.load(f)
+        except:
+            pass
+    
+    # 更新状态
+    if crawl_time:
+        status["crawl_last_run"] = crawl_time
+    if summary_time:
+        status["summary_last_run"] = summary_time
+    
+    # 保存
+    with open(status_path, "w", encoding="utf-8") as f:
+        json.dump(status, f, ensure_ascii=False, indent=4)
+
+
 def monitor_product(name: str, url: str, force_full: bool = False) -> dict:
     """
     监控单个产品
@@ -402,6 +426,11 @@ def monitor_all(force_full: bool = False):
         
         # 自动触发 AI 总结更新
         run_ai_summary()
+        # 更新 AI 总结运行状态
+        save_run_status(summary_time=datetime.now().isoformat())
+
+    # 更新爬取运行状态（无论是否有新功能都更新）
+    save_run_status(crawl_time=datetime.now().isoformat())
 
     print("\n" + "=" * 60)
     print(f"监控完成，共发现 {total_new} 条新功能")
