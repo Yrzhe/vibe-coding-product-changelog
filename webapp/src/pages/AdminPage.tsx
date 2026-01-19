@@ -64,6 +64,7 @@ function AdminPage() {
   // 运行状态
   const [crawlStatus, setCrawlStatus] = useState<RunStatus>({ lastRun: null, isRunning: false })
   const [summaryStatus, setSummaryStatus] = useState<RunStatus>({ lastRun: null, isRunning: false })
+  const [taggingStatus, setTaggingStatus] = useState<{ isRunning: boolean }>({ isRunning: false })
   const [scriptLogs, setScriptLogs] = useState<ScriptLogEntry[]>([])
   const [logsLoading, setLogsLoading] = useState(false)
   const [expandedLog, setExpandedLog] = useState<string | null>(null)
@@ -636,6 +637,9 @@ function AdminPage() {
           lastRun: data.summary_last_run || null,
           isRunning: data.summary_running || false
         })
+        setTaggingStatus({
+          isRunning: data.tagging_running || false
+        })
         
         // 如果有任务正在运行，开始轮询
         if (data.crawl_running) {
@@ -643,6 +647,9 @@ function AdminPage() {
         }
         if (data.summary_running) {
           pollTaskStatus('summary')
+        }
+        if (data.tagging_running) {
+          pollTaskStatus('tagging')
         }
         return
       }
@@ -662,6 +669,7 @@ function AdminPage() {
           lastRun: data.summary_last_run || null,
           isRunning: false
         })
+        setTaggingStatus({ isRunning: false })
       }
     } catch {
       // 没有状态文件，使用默认值
@@ -692,13 +700,16 @@ function AdminPage() {
   }
 
   // 轮询检查任务状态
-  const pollTaskStatus = async (taskType: 'crawl' | 'summary') => {
+  const pollTaskStatus = async (taskType: 'crawl' | 'summary' | 'tagging') => {
     const checkStatus = async () => {
       try {
         const response = await fetch('/api/status')
         if (response.ok) {
           const data = await response.json()
-          const isRunning = taskType === 'crawl' ? data.crawl_running : data.summary_running
+          let isRunning = false
+          if (taskType === 'crawl') isRunning = data.crawl_running
+          else if (taskType === 'summary') isRunning = data.summary_running
+          else if (taskType === 'tagging') isRunning = data.tagging_running
           
           if (!isRunning) {
             // 任务完成
@@ -708,11 +719,16 @@ function AdminPage() {
                 isRunning: false
               })
               await loadLogs()
-            } else {
+            } else if (taskType === 'summary') {
               setSummaryStatus({
                 lastRun: data.summary_last_run || new Date().toISOString(),
                 isRunning: false
               })
+            } else if (taskType === 'tagging') {
+              setTaggingStatus({ isRunning: false })
+              // 刷新未打标列表
+              await loadUntaggedFeatures()
+              await loadLogs()
             }
             return true // 停止轮询
           }
@@ -773,6 +789,26 @@ function AdminPage() {
     } catch {
       alert('AI 总结需要后端支持。\n\n请在终端运行以下命令：\n\npython3 script/ai_summary.py')
       setSummaryStatus(prev => ({ ...prev, isRunning: false }))
+    }
+  }
+
+  // 一键自动打标
+  const runAutoTag = async () => {
+    setTaggingStatus({ isRunning: true })
+    
+    try {
+      const response = await fetch('/api/run-tag-all', { method: 'POST' })
+      
+      if (response.ok) {
+        // 开始轮询状态
+        pollTaskStatus('tagging')
+      } else {
+        alert('自动打标需要后端支持。\n\n请在终端运行以下命令：\n\npython3 script/llm_tagger.py')
+        setTaggingStatus({ isRunning: false })
+      }
+    } catch {
+      alert('自动打标需要后端支持。\n\n请在终端运行以下命令：\n\npython3 script/llm_tagger.py')
+      setTaggingStatus({ isRunning: false })
     }
   }
 
@@ -1005,13 +1041,33 @@ function AdminPage() {
             <h2 className="font-medium text-gray-900">未打标内容管理</h2>
             <p className="text-xs text-gray-500">管理未打标的功能，可手动打标或标记为"无需打标"</p>
           </div>
-          <button
-            onClick={loadUntaggedFeatures}
-            disabled={untaggedLoading}
-            className="px-3 py-1.5 text-sm text-gray-600 hover:text-gray-800 border border-gray-300 rounded hover:bg-gray-50"
-          >
-            刷新
-          </button>
+          <div className="flex items-center gap-2">
+            <button
+              onClick={runAutoTag}
+              disabled={taggingStatus.isRunning || untaggedFeatures.filter(f => f.status === 'untagged').length === 0}
+              className={cn(
+                'px-3 py-1.5 text-sm font-medium rounded transition-colors flex items-center gap-1.5',
+                taggingStatus.isRunning || untaggedFeatures.filter(f => f.status === 'untagged').length === 0
+                  ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
+                  : 'bg-green-600 text-white hover:bg-green-700'
+              )}
+            >
+              {taggingStatus.isRunning && (
+                <svg className="animate-spin size-3.5" fill="none" viewBox="0 0 24 24">
+                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+                </svg>
+              )}
+              {taggingStatus.isRunning ? '打标中...' : '一键打标'}
+            </button>
+            <button
+              onClick={loadUntaggedFeatures}
+              disabled={untaggedLoading}
+              className="px-3 py-1.5 text-sm text-gray-600 hover:text-gray-800 border border-gray-300 rounded hover:bg-gray-50"
+            >
+              刷新
+            </button>
+          </div>
         </div>
         
         <div className="p-4">

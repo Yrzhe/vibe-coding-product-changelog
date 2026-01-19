@@ -276,6 +276,7 @@ class APIHandler(BaseHTTPRequestHandler):
             # 添加当前运行状态
             status["crawl_running"] = running_tasks.get("crawl", False)
             status["summary_running"] = running_tasks.get("summary", False)
+            status["tagging_running"] = running_tasks.get("tagging", False)
             
             self.send_json_response(200, status)
         
@@ -576,6 +577,19 @@ class APIHandler(BaseHTTPRequestHandler):
             
             # 异步运行脚本
             run_script_async("ai_summary.py", task_type="summary")
+            
+            self.send_json_response(200, {"status": "started"})
+        
+        elif path == "/api/run-tag-all":
+            # 触发为所有未打标内容自动打标
+            if running_tasks.get("tagging"):
+                self.send_json_response(200, {"status": "already_running"})
+                return
+            
+            running_tasks["tagging"] = True
+            
+            # 异步运行打标脚本
+            run_script_async("llm_tagger.py", task_type="tagging")
             
             self.send_json_response(200, {"status": "started"})
         
