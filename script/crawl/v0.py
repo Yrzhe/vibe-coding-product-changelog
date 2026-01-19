@@ -100,14 +100,21 @@ def crawl_v0_changelog():
     return features
 
 
+def get_storage_dir():
+    """获取 storage 目录（支持本地和 Docker 环境）"""
+    script_dir = Path(__file__).parent
+    
+    # Docker 环境: /app/crawl/xxx.py -> storage 在 /app/storage
+    if script_dir == Path("/app/crawl"):
+        return Path("/app/storage")
+    
+    # 本地环境: script/crawl/xxx.py -> storage 在 ../../storage
+    return script_dir.parent.parent / "storage"
+
+
 def save_data(features: list):
     """保存数据到 storage/v0.json"""
-    # 获取项目根目录
-    script_dir = Path(__file__).parent
-    project_root = script_dir.parent.parent
-    storage_dir = project_root / "storage"
-    
-    # 确保 storage 目录存在
+    storage_dir = get_storage_dir()
     storage_dir.mkdir(exist_ok=True)
     
     # 构建输出数据结构
