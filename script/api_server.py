@@ -371,6 +371,96 @@ class APIHandler(BaseHTTPRequestHandler):
             else:
                 self.send_json_response(404, {"error": "标签文件不存在"})
         
+        elif path == "/api/admin/untagged":
+            # 获取所有未打标的 features（tags为空数组或undefined）
+            token = self.get_auth_token()
+            if not verify_session(token):
+                self.send_json_response(401, {"error": "未授权访问"})
+                return
+            
+            untagged_features = []
+            storage_dir = get_project_root() / "storage"
+            products = ['youware', 'base44', 'bolt', 'lovable', 'replit', 'rocket', 'trickle', 'v0']
+            
+            for product in products:
+                product_file = storage_dir / f"{product}.json"
+                if not product_file.exists():
+                    continue
+                
+                with open(product_file, 'r', encoding='utf-8') as f:
+                    data = json.load(f)
+                
+                feature_data = next((item for item in data if item.get('name') == 'feature'), None)
+                if not feature_data:
+                    continue
+                
+                for idx, feature in enumerate(feature_data.get('features', [])):
+                    tags = feature.get('tags')
+                    # 未打标: tags 不存在、为 None、为空数组
+                    # 无需打标: tags == "None" (字符串)
+                    is_untagged = (
+                        tags is None or 
+                        (isinstance(tags, list) and len(tags) == 0)
+                    )
+                    is_none_tag = tags == "None"
+                    
+                    if is_untagged:
+                        untagged_features.append({
+                            'product': product,
+                            'feature_index': idx,
+                            'title': feature.get('title', ''),
+                            'description': feature.get('description', ''),
+                            'time': feature.get('time', ''),
+                            'status': 'untagged'  # 未打标
+                        })
+                    elif is_none_tag:
+                        untagged_features.append({
+                            'product': product,
+                            'feature_index': idx,
+                            'title': feature.get('title', ''),
+                            'description': feature.get('description', ''),
+                            'time': feature.get('time', ''),
+                            'status': 'none'  # 已标记为无需打标
+                        })
+            
+            self.send_json_response(200, {"features": untagged_features})
+        
+        elif path == "/api/admin/used-subtags":
+            # 获取所有被使用的二级标签（用于隐藏未使用的标签）
+            token = self.get_auth_token()
+            if not verify_session(token):
+                self.send_json_response(401, {"error": "未授权访问"})
+                return
+            
+            used_subtags = set()
+            storage_dir = get_project_root() / "storage"
+            products = ['youware', 'base44', 'bolt', 'lovable', 'replit', 'rocket', 'trickle', 'v0']
+            
+            for product in products:
+                product_file = storage_dir / f"{product}.json"
+                if not product_file.exists():
+                    continue
+                
+                with open(product_file, 'r', encoding='utf-8') as f:
+                    data = json.load(f)
+                
+                feature_data = next((item for item in data if item.get('name') == 'feature'), None)
+                if not feature_data:
+                    continue
+                
+                for feature in feature_data.get('features', []):
+                    tags = feature.get('tags', [])
+                    if not isinstance(tags, list):
+                        continue
+                    for tag in tags:
+                        if not isinstance(tag, dict):
+                            continue
+                        for subtag in tag.get('subtags', []):
+                            if isinstance(subtag, dict) and subtag.get('name'):
+                                used_subtags.add(subtag.get('name'))
+            
+            self.send_json_response(200, {"used_subtags": list(used_subtags)})
+        
         else:
             self.send_response(404)
             self.end_headers()
@@ -663,8 +753,55 @@ class APIHandler(BaseHTTPRequestHandler):
             
             self.send_json_response(200, {"status": "updated"})
         
+        elif path == "/api/admin/feature/mark-none":
+            # 将 feature 标记为 "无需打标"（tags 设为 "None" 字符串）
+            token = self.get_auth_token()
+            if not verify_session(token):
+                self.send_json_response(401, {"error": "未授权访问"})
+                return
+            
+            body = self.read_request_body()
+            try:
+                data = json.loads(body)
+            except:
+                self.send_json_response(400, {"error": "无效的 JSON"})
+                return
+            
+            product = data.get('product')
+            feature_index = data.get('feature_index')
+            mark_as_none = data.get('mark_as_none', True)  # True = 标记为无需打标，False = 清除标记（变为未打标）
+            
+            if not product or feature_index is None:
+                self.send_json_response(400, {"error": "缺少必要参数"})
+                return
+            
+            product_file = get_project_root() / "storage" / f"{product}.json"
+            if not product_file.exists():
+                self.send_json_response(404, {"error": f"产品文件不存在: {product}"})
+                return
+            
+            with open(product_file, 'r', encoding='utf-8') as f:
+                product_data = json.load(f)
+            
+            feature_data = next((item for item in product_data if item.get('name') == 'feature'), None)
+            if not feature_data or feature_index >= len(feature_data.get('features', [])):
+                self.send_json_response(404, {"error": "找不到指定的 feature"})
+                return
+            
+            feature = feature_data['features'][feature_index]
+            
+            if mark_as_none:
+                feature['tags'] = "None"  # 设为字符串 "None" 表示无需打标
+            else:
+                feature['tags'] = []  # 设为空数组表示未打标
+            
+            with open(product_file, 'w', encoding='utf-8') as f:
+                json.dump(product_data, f, ensure_ascii=False, indent=4)
+            
+            self.send_json_response(200, {"status": "marked" if mark_as_none else "unmarked"})
+        
         elif path == "/api/admin/tag/rename":
-            # 统一重命名标签
+            # 统一重命名标签（支持合并同名标签）
             token = self.get_auth_token()
             if not verify_session(token):
                 self.send_json_response(401, {"error": "未授权访问"})
@@ -685,43 +822,87 @@ class APIHandler(BaseHTTPRequestHandler):
                 self.send_json_response(400, {"error": "缺少 old_name 或 new_name"})
                 return
             
+            if old_name == new_name:
+                self.send_json_response(400, {"error": "新旧名称相同"})
+                return
+            
             # 1. 更新 tag.json
             tag_file = get_project_root() / "info" / "tag.json"
             with open(tag_file, 'r', encoding='utf-8') as f:
                 tags_data = json.load(f)
             
+            is_merge = False  # 是否是合并操作
+            
             if tag_type == 'primary':
-                # 重命名一级标签
-                for p_tag in tags_data.get('primary_tags', []):
-                    if p_tag.get('name') == old_name:
-                        p_tag['name'] = new_name
-                        break
+                # 检查 new_name 是否已存在（合并操作）
+                existing_new = any(p.get('name') == new_name for p in tags_data.get('primary_tags', []))
+                is_merge = existing_new
                 
-                # 更新 subtag_to_primary 中的值
-                for subtag, primary in list(tags_data.get('subtag_to_primary', {}).items()):
-                    if primary == old_name:
-                        tags_data['subtag_to_primary'][subtag] = new_name
-            else:
-                # 重命名二级标签
-                # 更新 primary_tags 中的 subtags
-                for p_tag in tags_data.get('primary_tags', []):
-                    for subtag in p_tag.get('subtags', []):
-                        if subtag.get('name') == old_name:
-                            subtag['name'] = new_name
+                if is_merge:
+                    # 合并：找到旧标签和新标签
+                    old_tag = next((p for p in tags_data['primary_tags'] if p.get('name') == old_name), None)
+                    new_tag = next((p for p in tags_data['primary_tags'] if p.get('name') == new_name), None)
+                    
+                    if old_tag and new_tag:
+                        # 将旧标签的 subtags 合并到新标签
+                        existing_subtag_names = {s.get('name') for s in new_tag.get('subtags', [])}
+                        for subtag in old_tag.get('subtags', []):
+                            if subtag.get('name') not in existing_subtag_names:
+                                new_tag.setdefault('subtags', []).append(subtag)
+                        
+                        # 删除旧标签
+                        tags_data['primary_tags'] = [p for p in tags_data['primary_tags'] if p.get('name') != old_name]
+                        
+                        # 更新 subtag_to_primary 映射
+                        for subtag, primary in list(tags_data.get('subtag_to_primary', {}).items()):
+                            if primary == old_name:
+                                tags_data['subtag_to_primary'][subtag] = new_name
+                else:
+                    # 重命名一级标签
+                    for p_tag in tags_data.get('primary_tags', []):
+                        if p_tag.get('name') == old_name:
+                            p_tag['name'] = new_name
                             break
+                    
+                    # 更新 subtag_to_primary 中的值
+                    for subtag, primary in list(tags_data.get('subtag_to_primary', {}).items()):
+                        if primary == old_name:
+                            tags_data['subtag_to_primary'][subtag] = new_name
+            else:
+                # 检查 new_name 是否已存在（合并操作）
+                existing_new = new_name in tags_data.get('subtag_to_primary', {})
+                is_merge = existing_new
                 
-                # 更新 subtag_to_primary 映射
-                if old_name in tags_data.get('subtag_to_primary', {}):
-                    primary = tags_data['subtag_to_primary'].pop(old_name)
-                    tags_data['subtag_to_primary'][new_name] = primary
+                if is_merge:
+                    # 合并：删除旧的 subtag，保留新的
+                    for p_tag in tags_data.get('primary_tags', []):
+                        p_tag['subtags'] = [s for s in p_tag.get('subtags', []) if s.get('name') != old_name]
+                    
+                    # 删除旧的映射
+                    if old_name in tags_data.get('subtag_to_primary', {}):
+                        del tags_data['subtag_to_primary'][old_name]
+                else:
+                    # 重命名二级标签
+                    # 更新 primary_tags 中的 subtags
+                    for p_tag in tags_data.get('primary_tags', []):
+                        for subtag in p_tag.get('subtags', []):
+                            if subtag.get('name') == old_name:
+                                subtag['name'] = new_name
+                                break
+                    
+                    # 更新 subtag_to_primary 映射
+                    if old_name in tags_data.get('subtag_to_primary', {}):
+                        primary = tags_data['subtag_to_primary'].pop(old_name)
+                        tags_data['subtag_to_primary'][new_name] = primary
             
             with open(tag_file, 'w', encoding='utf-8') as f:
                 json.dump(tags_data, f, ensure_ascii=False, indent=4)
             
-            # 2. 更新所有产品文件中的标签
+            # 2. 更新所有产品文件中的标签（支持合并）
             storage_dir = get_project_root() / "storage"
             products = ['youware', 'base44', 'bolt', 'lovable', 'replit', 'rocket', 'trickle', 'v0']
             updated_count = 0
+            merged_count = 0
             
             for product in products:
                 product_file = storage_dir / f"{product}.json"
@@ -741,22 +922,45 @@ class APIHandler(BaseHTTPRequestHandler):
                     if not isinstance(tags, list):
                         continue
                     
-                    for tag in tags:
-                        # 确保 tag 是字典
-                        if not isinstance(tag, dict):
-                            continue
-                        if tag_type == 'primary' and tag.get('name') == old_name:
-                            tag['name'] = new_name
-                            modified = True
+                    if tag_type == 'primary':
+                        # 处理一级标签
+                        old_tag = next((t for t in tags if isinstance(t, dict) and t.get('name') == old_name), None)
+                        new_tag = next((t for t in tags if isinstance(t, dict) and t.get('name') == new_name), None)
                         
-                        subtags = tag.get('subtags', [])
-                        if not isinstance(subtags, list):
-                            continue
-                        for subtag in subtags:
-                            if not isinstance(subtag, dict):
+                        if old_tag:
+                            if new_tag and is_merge:
+                                # 合并：将旧标签的 subtags 合并到新标签
+                                existing = {s.get('name') for s in new_tag.get('subtags', []) if isinstance(s, dict)}
+                                for s in old_tag.get('subtags', []):
+                                    if isinstance(s, dict) and s.get('name') not in existing:
+                                        new_tag.setdefault('subtags', []).append(s)
+                                # 删除旧标签
+                                feature['tags'] = [t for t in tags if not (isinstance(t, dict) and t.get('name') == old_name)]
+                                merged_count += 1
+                            else:
+                                # 重命名
+                                old_tag['name'] = new_name
+                            modified = True
+                    else:
+                        # 处理二级标签
+                        for tag in tags:
+                            if not isinstance(tag, dict):
                                 continue
-                            if tag_type == 'subtag' and subtag.get('name') == old_name:
-                                subtag['name'] = new_name
+                            subtags = tag.get('subtags', [])
+                            if not isinstance(subtags, list):
+                                continue
+                            
+                            old_subtag_idx = next((i for i, s in enumerate(subtags) if isinstance(s, dict) and s.get('name') == old_name), None)
+                            new_subtag_exists = any(isinstance(s, dict) and s.get('name') == new_name for s in subtags)
+                            
+                            if old_subtag_idx is not None:
+                                if new_subtag_exists and is_merge:
+                                    # 合并：删除旧的（新的已存在）
+                                    subtags.pop(old_subtag_idx)
+                                    merged_count += 1
+                                else:
+                                    # 重命名
+                                    subtags[old_subtag_idx]['name'] = new_name
                                 modified = True
                 
                 if modified:
@@ -765,8 +969,9 @@ class APIHandler(BaseHTTPRequestHandler):
                     updated_count += 1
             
             self.send_json_response(200, {
-                "status": "renamed",
-                "updated_products": updated_count
+                "status": "merged" if is_merge else "renamed",
+                "updated_products": updated_count,
+                "merged_items": merged_count if is_merge else 0
             })
         
         elif path == "/api/admin/features":

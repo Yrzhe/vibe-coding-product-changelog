@@ -90,6 +90,22 @@ function AdminPage() {
   const [renameType, setRenameType] = useState<'primary' | 'subtag'>('subtag')
   const [renaming, setRenaming] = useState(false)
   const [renameMessage, setRenameMessage] = useState('')
+  
+  // 未打标管理
+  interface UntaggedFeature {
+    product: string
+    feature_index: number
+    title: string
+    description: string
+    time: string
+    status: 'untagged' | 'none'  // untagged=未打标, none=无需打标
+  }
+  const [untaggedFeatures, setUntaggedFeatures] = useState<UntaggedFeature[]>([])
+  const [untaggedLoading, setUntaggedLoading] = useState(false)
+  const [untaggedError, setUntaggedError] = useState<string | null>(null)
+  
+  // 已使用的二级标签（用于过滤未使用的）
+  const [usedSubtags, setUsedSubtags] = useState<Set<string>>(new Set())
 
   // 检查已保存的 session
   useEffect(() => {
@@ -108,6 +124,8 @@ function AdminPage() {
       loadExcludeTags()
       loadOthersFeatures()
       loadTagsData()
+      loadUntaggedFeatures()
+      loadUsedSubtags()
       // 自动加载 YouWare 功能列表
       loadFeatures('youware', 1, '')
     }
@@ -176,6 +194,91 @@ function AdminPage() {
       }
     } catch {
       console.warn('Failed to load tags data')
+    }
+  }
+
+  // 加载未打标的 features
+  const loadUntaggedFeatures = async () => {
+    if (!authToken) return
+    
+    setUntaggedLoading(true)
+    setUntaggedError(null)
+    try {
+      const controller = new AbortController()
+      const timeoutId = setTimeout(() => controller.abort(), 30000)
+      
+      const response = await fetch('/api/admin/untagged', {
+        headers: { 'Authorization': `Bearer ${authToken}` },
+        signal: controller.signal
+      })
+      
+      clearTimeout(timeoutId)
+      
+      if (response.ok) {
+        const data = await response.json()
+        setUntaggedFeatures(data.features || [])
+      } else if (response.status === 401) {
+        handleLogout()
+      } else {
+        const errorText = await response.text()
+        setUntaggedError(`API 错误 (${response.status}): ${errorText.slice(0, 100)}`)
+      }
+    } catch (error) {
+      if (error instanceof Error && error.name === 'AbortError') {
+        setUntaggedError('请求超时')
+      } else {
+        setUntaggedError(`加载失败: ${error instanceof Error ? error.message : '未知错误'}`)
+      }
+    } finally {
+      setUntaggedLoading(false)
+    }
+  }
+
+  // 加载已使用的二级标签
+  const loadUsedSubtags = async () => {
+    if (!authToken) return
+    
+    try {
+      const response = await fetch('/api/admin/used-subtags', {
+        headers: { 'Authorization': `Bearer ${authToken}` }
+      })
+      
+      if (response.ok) {
+        const data = await response.json()
+        setUsedSubtags(new Set(data.used_subtags || []))
+      }
+    } catch {
+      console.warn('Failed to load used subtags')
+    }
+  }
+
+  // 标记为无需打标
+  const markAsNoTag = async (product: string, featureIndex: number, markAsNone: boolean) => {
+    if (!authToken) return
+    
+    try {
+      const response = await fetch('/api/admin/feature/mark-none', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${authToken}`
+        },
+        body: JSON.stringify({
+          product,
+          feature_index: featureIndex,
+          mark_as_none: markAsNone
+        })
+      })
+      
+      if (response.ok) {
+        await loadUntaggedFeatures()
+      } else if (response.status === 401) {
+        handleLogout()
+      } else {
+        alert('操作失败')
+      }
+    } catch {
+      alert('操作失败：无法连接到后端服务')
     }
   }
 
@@ -895,6 +998,64 @@ function AdminPage() {
         </div>
       </div>
 
+      {/* 未打标内容管理 */}
+      <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
+        <div className="flex items-center justify-between p-4 border-b border-gray-200">
+          <div>
+            <h2 className="font-medium text-gray-900">未打标内容管理</h2>
+            <p className="text-xs text-gray-500">管理未打标的功能，可手动打标或标记为"无需打标"</p>
+          </div>
+          <button
+            onClick={loadUntaggedFeatures}
+            disabled={untaggedLoading}
+            className="px-3 py-1.5 text-sm text-gray-600 hover:text-gray-800 border border-gray-300 rounded hover:bg-gray-50"
+          >
+            刷新
+          </button>
+        </div>
+        
+        <div className="p-4">
+          {untaggedLoading ? (
+            <div className="text-center text-gray-500 py-8">加载中...</div>
+          ) : untaggedError ? (
+            <div className="text-center text-red-500 py-8">
+              <p>{untaggedError}</p>
+              <button 
+                onClick={loadUntaggedFeatures}
+                className="mt-2 text-sm text-blue-600 hover:underline"
+              >
+                重试
+              </button>
+            </div>
+          ) : untaggedFeatures.length === 0 ? (
+            <div className="text-center text-gray-500 py-8">没有未打标的内容</div>
+          ) : (
+            <div className="space-y-3 max-h-96 overflow-y-auto">
+              {untaggedFeatures.map((feature, idx) => (
+                <UntaggedFeatureCard
+                  key={`${feature.product}-${feature.feature_index}-${idx}`}
+                  feature={feature}
+                  tagsData={tagsData}
+                  onMarkNone={markAsNoTag}
+                  onTagged={async () => {
+                    await loadUntaggedFeatures()
+                    await loadUsedSubtags()
+                  }}
+                  authToken={authToken}
+                />
+              ))}
+            </div>
+          )}
+        </div>
+        
+        <div className="px-4 pb-4">
+          <div className="text-xs text-gray-400">
+            共 {untaggedFeatures.filter(f => f.status === 'untagged').length} 个未打标，
+            {untaggedFeatures.filter(f => f.status === 'none').length} 个已标记为无需打标
+          </div>
+        </div>
+      </div>
+
       {/* Others 标签管理 */}
       <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
         <div className="flex items-center justify-between p-4 border-b border-gray-200">
@@ -1103,6 +1264,21 @@ function AdminPage() {
             </div>
           )}
           
+          {/* 合并警告 */}
+          {renameNewName && renameOldName !== renameNewName && (
+            (() => {
+              const willMerge = renameType === 'primary'
+                ? tagsData?.primary_tags.some(p => p.name === renameNewName)
+                : usedSubtags.has(renameNewName) || tagsData?.primary_tags.some(p => p.subtags.some(s => s.name === renameNewName))
+              
+              return willMerge ? (
+                <div className="mt-3 p-2 bg-yellow-50 border border-yellow-200 rounded text-sm text-yellow-700">
+                  ⚠️ 目标标签 "{renameNewName}" 已存在，执行后将合并两个标签的内容
+                </div>
+              ) : null
+            })()
+          )}
+          
           {/* 当前标签列表 */}
           <div className="mt-4 pt-4 border-t border-gray-200">
             <h4 className="text-sm font-medium text-gray-700 mb-2">
@@ -1126,21 +1302,23 @@ function AdminPage() {
                 ))
               ) : (
                 tagsData?.primary_tags.flatMap(p => 
-                  p.subtags.map(s => (
-                    <button
-                      key={`${p.name}-${s.name}`}
-                      onClick={() => setRenameOldName(s.name)}
-                      className={cn(
-                        'px-2 py-0.5 text-xs rounded transition-colors',
-                        renameOldName === s.name
-                          ? 'bg-blue-600 text-white'
-                          : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                      )}
-                      title={`${p.name} > ${s.name}`}
-                    >
-                      {s.name}
-                    </button>
-                  ))
+                  p.subtags
+                    .filter(s => usedSubtags.has(s.name))  // 只显示有使用的二级标签
+                    .map(s => (
+                      <button
+                        key={`${p.name}-${s.name}`}
+                        onClick={() => setRenameOldName(s.name)}
+                        className={cn(
+                          'px-2 py-0.5 text-xs rounded transition-colors',
+                          renameOldName === s.name
+                            ? 'bg-blue-600 text-white'
+                            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                        )}
+                        title={`${p.name} > ${s.name}`}
+                      >
+                        {s.name}
+                      </button>
+                    ))
                 )
               )}
             </div>
@@ -1281,6 +1459,174 @@ function AdminPage() {
         </div>
       </div>
 
+    </div>
+  )
+}
+
+// 未打标功能卡片组件
+interface UntaggedFeatureType {
+  product: string
+  feature_index: number
+  title: string
+  description: string
+  time: string
+  status: 'untagged' | 'none'
+}
+
+interface UntaggedFeatureCardProps {
+  feature: UntaggedFeatureType
+  tagsData: TagsData | null
+  onMarkNone: (product: string, featureIndex: number, markAsNone: boolean) => Promise<void>
+  onTagged: () => Promise<void>
+  authToken: string | null
+}
+
+function UntaggedFeatureCard({ feature, tagsData, onMarkNone, onTagged, authToken }: UntaggedFeatureCardProps) {
+  const [selectedPrimary, setSelectedPrimary] = useState('')
+  const [selectedSubtag, setSelectedSubtag] = useState('')
+  const [updating, setUpdating] = useState(false)
+  const [showTagging, setShowTagging] = useState(false)
+  
+  const availableSubtags = selectedPrimary && tagsData
+    ? tagsData.primary_tags.find(p => p.name === selectedPrimary)?.subtags || []
+    : []
+  
+  const handleAddTag = async () => {
+    if (!selectedPrimary || !selectedSubtag || !authToken) return
+    
+    setUpdating(true)
+    try {
+      const response = await fetch('/api/admin/feature/update-tags', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${authToken}`
+        },
+        body: JSON.stringify({
+          product: feature.product,
+          feature_index: feature.feature_index,
+          tags: [{
+            name: selectedPrimary,
+            subtags: [{ name: selectedSubtag }]
+          }]
+        })
+      })
+      
+      if (response.ok) {
+        await onTagged()
+        setSelectedPrimary('')
+        setSelectedSubtag('')
+        setShowTagging(false)
+      } else {
+        alert('打标失败')
+      }
+    } finally {
+      setUpdating(false)
+    }
+  }
+  
+  return (
+    <div className={cn(
+      'border rounded-lg p-3',
+      feature.status === 'none' 
+        ? 'border-gray-300 bg-gray-100' 
+        : 'border-orange-200 bg-orange-50'
+    )}>
+      <div className="flex items-start justify-between">
+        <div className="flex-1 min-w-0">
+          <div className="flex items-center gap-2">
+            <span className="px-2 py-0.5 text-xs bg-blue-100 text-blue-700 rounded">
+              {feature.product}
+            </span>
+            <span className="text-xs text-gray-400">{feature.time}</span>
+            {feature.status === 'none' ? (
+              <span className="px-2 py-0.5 text-xs bg-gray-200 text-gray-600 rounded">无需打标</span>
+            ) : (
+              <span className="px-2 py-0.5 text-xs bg-orange-200 text-orange-700 rounded">未打标</span>
+            )}
+          </div>
+          <h4 className="font-medium text-gray-900 mt-1 truncate" title={feature.title}>
+            {feature.title}
+          </h4>
+          {feature.description && (
+            <p className="text-xs text-gray-500 mt-0.5 line-clamp-2">
+              {feature.description}
+            </p>
+          )}
+        </div>
+        
+        <div className="flex flex-col gap-1 ml-2">
+          {feature.status === 'none' ? (
+            <button
+              onClick={() => onMarkNone(feature.product, feature.feature_index, false)}
+              className="px-2 py-1 text-xs bg-blue-100 text-blue-700 rounded hover:bg-blue-200"
+            >
+              恢复打标
+            </button>
+          ) : (
+            <>
+              <button
+                onClick={() => setShowTagging(!showTagging)}
+                className={cn(
+                  'px-2 py-1 text-xs rounded',
+                  showTagging 
+                    ? 'bg-gray-200 text-gray-600' 
+                    : 'bg-green-100 text-green-700 hover:bg-green-200'
+                )}
+              >
+                {showTagging ? '取消' : '打标'}
+              </button>
+              <button
+                onClick={() => onMarkNone(feature.product, feature.feature_index, true)}
+                className="px-2 py-1 text-xs bg-gray-100 text-gray-600 rounded hover:bg-gray-200"
+              >
+                无需打标
+              </button>
+            </>
+          )}
+        </div>
+      </div>
+      
+      {showTagging && feature.status === 'untagged' && (
+        <div className="mt-3 pt-3 border-t border-orange-200">
+          <div className="flex items-center gap-2 mb-2">
+            <select
+              value={selectedPrimary}
+              onChange={(e) => {
+                setSelectedPrimary(e.target.value)
+                setSelectedSubtag('')
+              }}
+              className="flex-1 px-2 py-1 text-xs border border-gray-300 rounded"
+            >
+              <option value="">选择一级标签</option>
+              {tagsData?.primary_tags.filter(p => p.name !== 'Others').map(p => (
+                <option key={p.name} value={p.name}>{p.name}</option>
+              ))}
+            </select>
+            
+            {selectedPrimary && (
+              <select
+                value={selectedSubtag}
+                onChange={(e) => setSelectedSubtag(e.target.value)}
+                className="flex-1 px-2 py-1 text-xs border border-gray-300 rounded"
+              >
+                <option value="">选择二级标签</option>
+                {availableSubtags.map(s => (
+                  <option key={s.name} value={s.name}>{s.name}</option>
+                ))}
+              </select>
+            )}
+            
+            <button
+              onClick={handleAddTag}
+              disabled={!selectedPrimary || !selectedSubtag || updating}
+              className="px-3 py-1 text-xs bg-green-600 text-white rounded disabled:opacity-50 hover:bg-green-700"
+            >
+              {updating ? '...' : '确定'}
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   )
 }
