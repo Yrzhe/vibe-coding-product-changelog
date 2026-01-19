@@ -121,6 +121,7 @@ function MatrixPage({ tags, products }: MatrixPageProps) {
   const [excludeTags, setExcludeTags] = useState<string[]>([])
   const [expandedPrimaryTags, setExpandedPrimaryTags] = useState<Set<string>>(new Set())
   const [aiSummary, setAiSummary] = useState<AISummary | null>(null)
+  const [summaryExpanded, setSummaryExpanded] = useState(false)
 
   // 加载排除标签配置
   useEffect(() => {
@@ -307,25 +308,40 @@ function MatrixPage({ tags, products }: MatrixPageProps) {
 
       {/* AI Summary Overview */}
       {aiSummary?.matrix_overview && (
-        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg border border-blue-200 p-5">
-          <div className="flex items-start gap-4">
+        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg border border-blue-200">
+          <button
+            onClick={() => setSummaryExpanded(!summaryExpanded)}
+            className="w-full p-4 flex items-center gap-4 hover:bg-blue-50/50 transition-colors rounded-lg"
+          >
             <div className="shrink-0 size-10 bg-blue-100 rounded-full flex items-center justify-center">
               <svg className="size-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
               </svg>
             </div>
-            <div className="flex-1 min-w-0">
-              <h3 className="text-base font-semibold text-blue-900 mb-3">AI 竞品分析报告</h3>
-              <div className="prose prose-sm prose-blue max-w-none">
-                {renderMarkdownText(aiSummary.matrix_overview)}
-              </div>
+            <div className="flex-1 text-left">
+              <h3 className="text-base font-semibold text-blue-900">AI 竞品分析报告</h3>
               {aiSummary.last_updated && (
-                <p className="text-xs text-blue-500 mt-4 pt-3 border-t border-blue-200">
+                <p className="text-xs text-blue-500 mt-1">
                   更新于 {new Date(aiSummary.last_updated).toLocaleDateString('zh-CN')}
                 </p>
               )}
             </div>
-          </div>
+            <svg
+              className={cn("size-5 text-blue-600 transition-transform", summaryExpanded && "rotate-180")}
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          {summaryExpanded && (
+            <div className="px-5 pb-5">
+              <div className="pl-14 prose prose-sm prose-blue max-w-none">
+                {renderMarkdownText(aiSummary.matrix_overview)}
+              </div>
+            </div>
+          )}
         </div>
       )}
 
