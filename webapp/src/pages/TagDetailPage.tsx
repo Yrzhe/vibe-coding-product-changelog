@@ -51,10 +51,15 @@ function TagDetailPage({ tags, products }: TagDetailPageProps) {
   const tagInfo = tags.find(t => t.name === decodedPrimaryTag)
   const allSubtags = useMemo(() => getSubtags(tags, decodedPrimaryTag), [tags, decodedPrimaryTag])
   
-  // 过滤掉 exclude_tags 中的 subtag
+  // 过滤掉 exclude_tags 中的 subtag 以及没有任何产品使用的 subtag
   const subtags = useMemo(() => {
-    return allSubtags.filter(st => !excludeTags.includes(st))
-  }, [allSubtags, excludeTags])
+    return allSubtags.filter(st => {
+      if (excludeTags.includes(st)) return false
+      // 检查是否有任何产品使用这个 subtag
+      const features = getTagFeatures(products, decodedPrimaryTag, st)
+      return features.length > 0
+    })
+  }, [allSubtags, excludeTags, products, decodedPrimaryTag])
 
   // 加载排除标签配置
   useEffect(() => {

@@ -38,9 +38,16 @@ function TagsPage({ tags, products }: TagsPageProps) {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
         {filteredTags.map(tag => {
-          // 获取 subtags 并过滤掉 exclude_tags 中的
+          // 获取 subtags 并过滤掉：
+          // 1. exclude_tags 中的
+          // 2. 没有任何产品使用的
           const allSubtags = getSubtags(tags, tag.name)
-          const subtags = allSubtags.filter(st => !excludeTags.includes(st))
+          const subtags = allSubtags.filter(st => {
+            if (excludeTags.includes(st)) return false
+            // 检查是否有任何产品使用这个 subtag
+            const features = getTagFeatures(products, tag.name, st)
+            return features.length > 0
+          })
           const totalFeatures = subtags.reduce((sum, st) => {
             return sum + getTagFeatures(products, tag.name, st).length
           }, 0)

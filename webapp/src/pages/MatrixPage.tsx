@@ -148,9 +148,19 @@ function MatrixPage({ tags, products }: MatrixPageProps) {
 
   const tagRows = useMemo(() => {
     const allRows = flattenTags(filteredTags)
-    // 同时过滤掉 exclude_tags 中的 subtag
-    return allRows.filter(row => !excludeTags.includes(row.secondaryTag))
-  }, [filteredTags, excludeTags])
+    // 过滤掉：
+    // 1. exclude_tags 中的 subtag
+    // 2. 没有任何产品使用的 subtag
+    return allRows.filter(row => {
+      // 排除 exclude_tags
+      if (excludeTags.includes(row.secondaryTag)) return false
+      // 排除没有任何产品使用的标签
+      const hasAnyProduct = products.some(product => 
+        productHasTag(product, row.primaryTag, row.secondaryTag)
+      )
+      return hasAnyProduct
+    })
+  }, [filteredTags, excludeTags, products])
 
   // Group rows by primary tag
   const groupedRows = useMemo(() => {
