@@ -127,7 +127,7 @@ def run_script_async(script_name: str, task_type: str = None, callback=None):
                 [sys.executable, str(script_path)],
                 capture_output=True,
                 text=True,
-                timeout=600  # 10 分钟超时
+                timeout=1800  # 30 分钟超时
             )
             
             end_time = datetime.now()
@@ -157,7 +157,7 @@ def run_script_async(script_name: str, task_type: str = None, callback=None):
         except subprocess.TimeoutExpired as e:
             print(f"脚本执行超时: {script_name}")
             with open(log_file, "w", encoding="utf-8") as f:
-                f.write(f"脚本执行超时 (>600秒): {script_name}\n")
+                f.write(f"脚本执行超时 (>1800秒): {script_name}\n")
             if callback:
                 callback(False)
         except Exception as e:
