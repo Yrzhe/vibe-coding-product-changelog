@@ -47,13 +47,14 @@ services:
     environment:
       - TZ=Asia/Shanghai
       - PYTHONUNBUFFERED=1
-    entrypoint: ["/bin/sh", "-c"]
+    entrypoint: ["/bin/bash", "-c"]
     command:
       - |
         echo "Setting up cron job..."
-        mkdir -p /var/spool/cron/crontabs
-        echo "0 9 * * * cd /app && python3 monitor.py >> /app/logs/cron.log 2>&1" > /var/spool/cron/crontabs/root
-        chmod 600 /var/spool/cron/crontabs/root
+        echo "0 9 * * * cd /app && python3 monitor.py >> /app/logs/cron.log 2>&1" > /etc/cron.d/monitor-cron
+        chmod 0644 /etc/cron.d/monitor-cron
+        crontab /etc/cron.d/monitor-cron
         echo "Cron scheduled: daily at 09:00 (Asia/Shanghai)"
-        crond -f -l 2
+        echo "Starting cron daemon..."
+        cron -f
     restart: unless-stopped
