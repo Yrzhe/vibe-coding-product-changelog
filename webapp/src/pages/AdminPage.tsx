@@ -292,6 +292,31 @@ function AdminPage() {
     if (!authToken) return
     
     try {
+      // 如果是标记为"无需打标"
+      if (primaryTag === '__none__') {
+        const response = await fetch('/api/admin/feature/mark-none', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${authToken}`
+          },
+          body: JSON.stringify({
+            product,
+            feature_index: featureIndex
+          })
+        })
+        
+        if (response.ok) {
+          await loadOthersFeatures()
+          await loadTagsData()
+        } else if (response.status === 401) {
+          handleLogout()
+        } else {
+          alert('操作失败')
+        }
+        return
+      }
+      
       const response = await fetch('/api/admin/others/update', {
         method: 'POST',
         headers: {
@@ -1711,6 +1736,18 @@ function OthersFeatureCard({ feature, tagsData, onUpdate }: OthersFeatureCardPro
     : []
   
   const handleUpdate = async () => {
+    // 如果选择了"无需打标"
+    if (selectedPrimary === '__none__') {
+      setUpdating(true)
+      try {
+        await onUpdate(feature.product, feature.feature_index, '__none__', '')
+        setSelectedPrimary('')
+      } finally {
+        setUpdating(false)
+      }
+      return
+    }
+    
     const subtag = selectedSubtag === '__new__' ? newSubtag.trim() : selectedSubtag
     if (!selectedPrimary || !subtag) return
     
@@ -1764,12 +1801,13 @@ function OthersFeatureCard({ feature, tagsData, onUpdate }: OthersFeatureCardPro
           className="flex-1 px-2 py-1 text-sm border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
           <option value="">选择一级标签</option>
+          <option value="__none__" className="text-gray-500">⊘ 无需打标</option>
           {tagsData?.primary_tags.filter(p => p.name !== 'Others').map(p => (
             <option key={p.name} value={p.name}>{p.name}</option>
           ))}
         </select>
         
-        {selectedPrimary && (
+        {selectedPrimary && selectedPrimary !== '__none__' && (
           <select
             value={selectedSubtag}
             onChange={(e) => setSelectedSubtag(e.target.value)}
@@ -1795,10 +1833,10 @@ function OthersFeatureCard({ feature, tagsData, onUpdate }: OthersFeatureCardPro
         
         <button
           onClick={handleUpdate}
-          disabled={updating || !selectedPrimary || (!selectedSubtag || (selectedSubtag === '__new__' && !newSubtag.trim()))}
+          disabled={updating || !selectedPrimary || (selectedPrimary !== '__none__' && (!selectedSubtag || (selectedSubtag === '__new__' && !newSubtag.trim())))}
           className={cn(
             'px-3 py-1 text-sm font-medium rounded transition-colors',
-            updating || !selectedPrimary || (!selectedSubtag || (selectedSubtag === '__new__' && !newSubtag.trim()))
+            updating || !selectedPrimary || (selectedPrimary !== '__none__' && (!selectedSubtag || (selectedSubtag === '__new__' && !newSubtag.trim())))
               ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
               : 'bg-green-600 text-white hover:bg-green-700'
           )}
