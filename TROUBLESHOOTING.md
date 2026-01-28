@@ -1,5 +1,27 @@
 # 常见问题与解决方案
 
+## 0. Cron 任务报错 ModuleNotFoundError: No module named 'playwright'
+
+**现象**：
+cron.log 显示：
+```
+ModuleNotFoundError: No module named 'playwright'
+```
+但手动运行 `docker exec -it changelog-api python3 monitor.py` 正常。
+
+**原因**：
+Cron 运行环境和正常 shell 环境不同，没有正确的 PATH、PYTHONPATH 和 PLAYWRIGHT_BROWSERS_PATH 环境变量。
+
+**解决方案**：
+已在 docker-compose.yml 中修复。需要重建 scheduler 容器：
+```bash
+cd ~/vibe-coding-product-changelog
+git pull
+docker compose up -d --build scheduler
+```
+
+---
+
 ## 1. Scheduler 容器不断重启 - crond not found
 
 **现象**：

@@ -51,9 +51,12 @@ services:
     command:
       - |
         echo "Setting up cron job..."
-        echo "0 9 * * * cd /app && python3 monitor.py >> /app/logs/cron.log 2>&1" > /etc/cron.d/monitor-cron
+        # 设置完整的环境变量，确保 cron 能找到 Python 和已安装的包
+        echo "PATH=/usr/local/bin:/usr/bin:/bin" > /etc/cron.d/monitor-cron
+        echo "PYTHONPATH=/usr/local/lib/python3.11/site-packages" >> /etc/cron.d/monitor-cron
+        echo "PLAYWRIGHT_BROWSERS_PATH=/ms-playwright" >> /etc/cron.d/monitor-cron
+        echo "0 9 * * * root cd /app && /usr/local/bin/python3 monitor.py >> /app/logs/cron.log 2>&1" >> /etc/cron.d/monitor-cron
         chmod 0644 /etc/cron.d/monitor-cron
-        crontab /etc/cron.d/monitor-cron
         echo "Cron scheduled: daily at 09:00 (Asia/Shanghai)"
         echo "Starting cron daemon..."
         cron -f
