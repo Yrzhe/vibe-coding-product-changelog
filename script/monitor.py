@@ -176,7 +176,7 @@ def run_crawler(product_name: str) -> bool:
             [sys.executable, str(crawler_path)],
             capture_output=True,
             text=True,
-            timeout=180
+            timeout=300  # 5 分钟超时，base44 需要访问详情页较慢
         )
 
         if result.returncode != 0:

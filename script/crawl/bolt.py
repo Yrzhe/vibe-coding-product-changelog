@@ -57,8 +57,8 @@ def crawl_bolt_changelog():
     features = []
     
     with sync_playwright() as p:
-        # 使用 headful 模式确保页面完全加载
-        browser = p.chromium.launch(headless=False)
+        # 使用 headless 模式（Docker 环境必须）
+        browser = p.chromium.launch(headless=True)
         page = browser.new_page()
         
         print(f"正在访问 {url}...")
