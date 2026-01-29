@@ -677,25 +677,21 @@ class APIHandler(BaseHTTPRequestHandler):
             if not isinstance(current_tags, list):
                 current_tags = []
             
-            # 移除 Others 标签中该 subtag，添加到正确的 primary tag
+            # 完全移除 Others 标签，添加新的 primary tag + subtag
             new_tags = []
+            has_new_primary = False
+            
             for tag in current_tags:
                 # 确保 tag 是字典
                 if not isinstance(tag, dict):
                     continue
+                    
                 if tag.get('name') == 'Others':
-                    # 从 Others 中移除这个 subtag
-                    subtags = tag.get('subtags', [])
-                    if isinstance(subtags, list):
-                        remaining_subtags = [s for s in subtags if isinstance(s, dict) and s.get('name') != new_subtag]
-                    else:
-                        remaining_subtags = []
-                    if remaining_subtags:
-                        tag['subtags'] = remaining_subtags
-                        new_tags.append(tag)
-                    # 如果 Others 没有 subtag 了，就不添加了
+                    # 完全跳过 Others 标签（不保留）
+                    continue
                 elif tag.get('name') == new_primary_tag:
                     # 已有这个 primary tag，添加 subtag
+                    has_new_primary = True
                     subtags = tag.get('subtags', [])
                     if isinstance(subtags, list):
                         existing_subtags = [s.get('name') for s in subtags if isinstance(s, dict)]
@@ -708,9 +704,8 @@ class APIHandler(BaseHTTPRequestHandler):
                 else:
                     new_tags.append(tag)
             
-            # 检查是否需要新增 primary tag
-            has_primary = any(t.get('name') == new_primary_tag for t in new_tags)
-            if not has_primary:
+            # 如果没有这个 primary tag，新增
+            if not has_new_primary:
                 new_tags.append({
                     'name': new_primary_tag,
                     'subtags': [{'name': new_subtag}]
